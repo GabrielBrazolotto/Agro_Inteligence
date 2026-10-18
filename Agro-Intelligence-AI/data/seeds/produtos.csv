@@ -1,0 +1,1001 @@
+id,codigo,nome,categoria,unidade,preco_lista,custo_unitario,fabricante
+1,PRD-00001,Fertilizantes Fictício 0001,Fertilizantes,KG,5.0900,4.2200,Fabricante Fictício 01
+2,PRD-00002,Fertilizantes Fictício 0002,Fertilizantes,tonelada,3967.9200,3256.0400,Fabricante Fictício 02
+3,PRD-00003,Fertilizantes Fictício 0003,Fertilizantes,KG,5.0100,3.7600,Fabricante Fictício 03
+4,PRD-00004,Fertilizantes Fictício 0004,Fertilizantes,tonelada,2128.2700,1691.7600,Fabricante Fictício 04
+5,PRD-00005,Fertilizantes Fictício 0005,Fertilizantes,KG,3.8400,3.0000,Fabricante Fictício 05
+6,PRD-00006,Fertilizantes Fictício 0006,Fertilizantes,tonelada,2902.2300,2055.4400,Fabricante Fictício 06
+7,PRD-00007,Fertilizantes Fictício 0007,Fertilizantes,KG,5.5400,4.6200,Fabricante Fictício 07
+8,PRD-00008,Fertilizantes Fictício 0008,Fertilizantes,tonelada,4769.6100,3965.1200,Fabricante Fictício 08
+9,PRD-00009,Fertilizantes Fictício 0009,Fertilizantes,KG,4.0800,3.2400,Fabricante Fictício 09
+10,PRD-00010,Fertilizantes Fictício 0010,Fertilizantes,tonelada,4125.2400,3121.7100,Fabricante Fictício 10
+11,PRD-00011,Fertilizantes Fictício 0011,Fertilizantes,KG,4.7000,3.7000,Fabricante Fictício 11
+12,PRD-00012,Fertilizantes Fictício 0012,Fertilizantes,tonelada,3912.4000,3255.4100,Fabricante Fictício 12
+13,PRD-00013,Fertilizantes Fictício 0013,Fertilizantes,KG,5.6700,4.4400,Fabricante Fictício 13
+14,PRD-00014,Fertilizantes Fictício 0014,Fertilizantes,tonelada,4841.8000,3647.2800,Fabricante Fictício 14
+15,PRD-00015,Fertilizantes Fictício 0015,Fertilizantes,KG,5.0000,3.7200,Fabricante Fictício 15
+16,PRD-00016,Fertilizantes Fictício 0016,Fertilizantes,tonelada,3573.2800,2563.3200,Fabricante Fictício 16
+17,PRD-00017,Fertilizantes Fictício 0017,Fertilizantes,KG,4.4500,3.7300,Fabricante Fictício 17
+18,PRD-00018,Fertilizantes Fictício 0018,Fertilizantes,tonelada,2735.4700,2000.5700,Fabricante Fictício 18
+19,PRD-00019,Fertilizantes Fictício 0019,Fertilizantes,KG,3.7000,2.6700,Fabricante Fictício 19
+20,PRD-00020,Fertilizantes Fictício 0020,Fertilizantes,tonelada,2447.4600,2015.1200,Fabricante Fictício 20
+21,PRD-00021,Fertilizantes Fictício 0021,Fertilizantes,KG,5.7400,4.5100,Fabricante Fictício 01
+22,PRD-00022,Fertilizantes Fictício 0022,Fertilizantes,tonelada,4455.2100,3436.4300,Fabricante Fictício 02
+23,PRD-00023,Fertilizantes Fictício 0023,Fertilizantes,KG,5.6000,4.0500,Fabricante Fictício 03
+24,PRD-00024,Fertilizantes Fictício 0024,Fertilizantes,tonelada,5295.9100,4205.5900,Fabricante Fictício 04
+25,PRD-00025,Fertilizantes Fictício 0025,Fertilizantes,KG,5.9000,4.6900,Fabricante Fictício 05
+26,PRD-00026,Fertilizantes Fictício 0026,Fertilizantes,tonelada,5464.8200,4399.3500,Fabricante Fictício 06
+27,PRD-00027,Fertilizantes Fictício 0027,Fertilizantes,KG,4.5900,3.8900,Fabricante Fictício 07
+28,PRD-00028,Fertilizantes Fictício 0028,Fertilizantes,tonelada,2796.5600,2304.7600,Fabricante Fictício 08
+29,PRD-00029,Fertilizantes Fictício 0029,Fertilizantes,KG,2.4800,2.0800,Fabricante Fictício 09
+30,PRD-00030,Fertilizantes Fictício 0030,Fertilizantes,tonelada,3395.0000,2388.0300,Fabricante Fictício 10
+31,PRD-00031,Fertilizantes Fictício 0031,Fertilizantes,KG,4.0200,3.1900,Fabricante Fictício 11
+32,PRD-00032,Fertilizantes Fictício 0032,Fertilizantes,tonelada,2795.7800,1967.9000,Fabricante Fictício 12
+33,PRD-00033,Fertilizantes Fictício 0033,Fertilizantes,KG,5.2200,4.3700,Fabricante Fictício 13
+34,PRD-00034,Fertilizantes Fictício 0034,Fertilizantes,tonelada,2161.4700,1822.6000,Fabricante Fictício 14
+35,PRD-00035,Fertilizantes Fictício 0035,Fertilizantes,KG,3.2000,2.3600,Fabricante Fictício 15
+36,PRD-00036,Fertilizantes Fictício 0036,Fertilizantes,tonelada,5761.9000,4755.8900,Fabricante Fictício 16
+37,PRD-00037,Fertilizantes Fictício 0037,Fertilizantes,KG,4.4700,3.2300,Fabricante Fictício 17
+38,PRD-00038,Fertilizantes Fictício 0038,Fertilizantes,tonelada,4903.7500,3712.8000,Fabricante Fictício 18
+39,PRD-00039,Fertilizantes Fictício 0039,Fertilizantes,KG,3.5400,2.7700,Fabricante Fictício 19
+40,PRD-00040,Fertilizantes Fictício 0040,Fertilizantes,tonelada,4651.6300,3787.5200,Fabricante Fictício 20
+41,PRD-00041,Fertilizantes Fictício 0041,Fertilizantes,KG,4.1400,2.9300,Fabricante Fictício 01
+42,PRD-00042,Fertilizantes Fictício 0042,Fertilizantes,tonelada,4552.7100,3463.4500,Fabricante Fictício 02
+43,PRD-00043,Fertilizantes Fictício 0043,Fertilizantes,KG,4.3700,3.1200,Fabricante Fictício 03
+44,PRD-00044,Fertilizantes Fictício 0044,Fertilizantes,tonelada,3946.3700,3257.9700,Fabricante Fictício 04
+45,PRD-00045,Fertilizantes Fictício 0045,Fertilizantes,KG,3.8700,3.0500,Fabricante Fictício 05
+46,PRD-00046,Fertilizantes Fictício 0046,Fertilizantes,tonelada,4941.4400,3783.8500,Fabricante Fictício 06
+47,PRD-00047,Fertilizantes Fictício 0047,Fertilizantes,KG,5.0200,3.5500,Fabricante Fictício 07
+48,PRD-00048,Fertilizantes Fictício 0048,Fertilizantes,tonelada,5600.4800,4234.0800,Fabricante Fictício 08
+49,PRD-00049,Fertilizantes Fictício 0049,Fertilizantes,KG,4.3000,3.1000,Fabricante Fictício 09
+50,PRD-00050,Fertilizantes Fictício 0050,Fertilizantes,tonelada,5695.4500,4293.1700,Fabricante Fictício 10
+51,PRD-00051,Fertilizantes Fictício 0051,Fertilizantes,KG,3.6100,2.6300,Fabricante Fictício 11
+52,PRD-00052,Fertilizantes Fictício 0052,Fertilizantes,tonelada,2124.0200,1663.2300,Fabricante Fictício 12
+53,PRD-00053,Fertilizantes Fictício 0053,Fertilizantes,KG,4.9500,4.0600,Fabricante Fictício 13
+54,PRD-00054,Fertilizantes Fictício 0054,Fertilizantes,tonelada,2123.9100,1572.0400,Fabricante Fictício 14
+55,PRD-00055,Fertilizantes Fictício 0055,Fertilizantes,KG,4.9600,3.7100,Fabricante Fictício 15
+56,PRD-00056,Fertilizantes Fictício 0056,Fertilizantes,tonelada,3405.7600,2703.5700,Fabricante Fictício 16
+57,PRD-00057,Fertilizantes Fictício 0057,Fertilizantes,KG,5.8600,4.5700,Fabricante Fictício 17
+58,PRD-00058,Fertilizantes Fictício 0058,Fertilizantes,tonelada,2656.0100,2085.2200,Fabricante Fictício 18
+59,PRD-00059,Fertilizantes Fictício 0059,Fertilizantes,KG,3.2300,2.3000,Fabricante Fictício 19
+60,PRD-00060,Fertilizantes Fictício 0060,Fertilizantes,tonelada,3626.2100,2569.2600,Fabricante Fictício 20
+61,PRD-00061,Fertilizantes Fictício 0061,Fertilizantes,KG,5.6200,4.3400,Fabricante Fictício 01
+62,PRD-00062,Fertilizantes Fictício 0062,Fertilizantes,tonelada,5533.5200,4667.3500,Fabricante Fictício 02
+63,PRD-00063,Fertilizantes Fictício 0063,Fertilizantes,KG,5.4300,4.5200,Fabricante Fictício 03
+64,PRD-00064,Fertilizantes Fictício 0064,Fertilizantes,tonelada,3386.7400,2658.1900,Fabricante Fictício 04
+65,PRD-00065,Fertilizantes Fictício 0065,Fertilizantes,KG,5.9300,4.2300,Fabricante Fictício 05
+66,PRD-00066,Fertilizantes Fictício 0066,Fertilizantes,tonelada,2793.7900,2016.3300,Fabricante Fictício 06
+67,PRD-00067,Fertilizantes Fictício 0067,Fertilizantes,KG,5.5600,4.4900,Fabricante Fictício 07
+68,PRD-00068,Fertilizantes Fictício 0068,Fertilizantes,tonelada,3744.9900,2711.1500,Fabricante Fictício 08
+69,PRD-00069,Fertilizantes Fictício 0069,Fertilizantes,KG,2.6800,2.0000,Fabricante Fictício 09
+70,PRD-00070,Fertilizantes Fictício 0070,Fertilizantes,tonelada,5249.5700,4386.3900,Fabricante Fictício 10
+71,PRD-00071,Fertilizantes Fictício 0071,Fertilizantes,KG,2.3000,1.7400,Fabricante Fictício 11
+72,PRD-00072,Fertilizantes Fictício 0072,Fertilizantes,tonelada,4413.0000,3326.9100,Fabricante Fictício 12
+73,PRD-00073,Fertilizantes Fictício 0073,Fertilizantes,KG,3.5500,2.6900,Fabricante Fictício 13
+74,PRD-00074,Fertilizantes Fictício 0074,Fertilizantes,tonelada,5945.1700,4599.9200,Fabricante Fictício 14
+75,PRD-00075,Fertilizantes Fictício 0075,Fertilizantes,KG,3.1800,2.5000,Fabricante Fictício 15
+76,PRD-00076,Fertilizantes Fictício 0076,Fertilizantes,tonelada,5957.8500,4894.1800,Fabricante Fictício 16
+77,PRD-00077,Fertilizantes Fictício 0077,Fertilizantes,KG,5.1200,3.6600,Fabricante Fictício 17
+78,PRD-00078,Fertilizantes Fictício 0078,Fertilizantes,tonelada,2451.6800,2008.8300,Fabricante Fictício 18
+79,PRD-00079,Fertilizantes Fictício 0079,Fertilizantes,KG,4.7900,3.4000,Fabricante Fictício 19
+80,PRD-00080,Fertilizantes Fictício 0080,Fertilizantes,tonelada,5424.9500,3973.7900,Fabricante Fictício 20
+81,PRD-00081,Fertilizantes Fictício 0081,Fertilizantes,KG,4.3000,3.2500,Fabricante Fictício 01
+82,PRD-00082,Fertilizantes Fictício 0082,Fertilizantes,tonelada,4718.9900,3590.8400,Fabricante Fictício 02
+83,PRD-00083,Fertilizantes Fictício 0083,Fertilizantes,KG,4.7500,3.4300,Fabricante Fictício 03
+84,PRD-00084,Fertilizantes Fictício 0084,Fertilizantes,tonelada,2885.8300,2393.8100,Fabricante Fictício 04
+85,PRD-00085,Fertilizantes Fictício 0085,Fertilizantes,KG,2.3800,1.9700,Fabricante Fictício 05
+86,PRD-00086,Fertilizantes Fictício 0086,Fertilizantes,tonelada,3517.1200,2669.6100,Fabricante Fictício 06
+87,PRD-00087,Fertilizantes Fictício 0087,Fertilizantes,KG,4.8600,3.7600,Fabricante Fictício 07
+88,PRD-00088,Fertilizantes Fictício 0088,Fertilizantes,tonelada,2611.0800,2035.3800,Fabricante Fictício 08
+89,PRD-00089,Fertilizantes Fictício 0089,Fertilizantes,KG,2.5200,2.0900,Fabricante Fictício 09
+90,PRD-00090,Fertilizantes Fictício 0090,Fertilizantes,tonelada,5733.2100,4029.4900,Fabricante Fictício 10
+91,PRD-00091,Fertilizantes Fictício 0091,Fertilizantes,KG,3.1800,2.4800,Fabricante Fictício 11
+92,PRD-00092,Fertilizantes Fictício 0092,Fertilizantes,tonelada,5589.2800,4136.4500,Fabricante Fictício 12
+93,PRD-00093,Fertilizantes Fictício 0093,Fertilizantes,KG,4.5000,3.6300,Fabricante Fictício 13
+94,PRD-00094,Fertilizantes Fictício 0094,Fertilizantes,tonelada,3977.5100,2993.4900,Fabricante Fictício 14
+95,PRD-00095,Fertilizantes Fictício 0095,Fertilizantes,KG,5.8500,4.9700,Fabricante Fictício 15
+96,PRD-00096,Fertilizantes Fictício 0096,Fertilizantes,tonelada,4946.0100,3554.0900,Fabricante Fictício 16
+97,PRD-00097,Fertilizantes Fictício 0097,Fertilizantes,KG,2.0900,1.5700,Fabricante Fictício 17
+98,PRD-00098,Fertilizantes Fictício 0098,Fertilizantes,tonelada,3087.7400,2422.5400,Fabricante Fictício 18
+99,PRD-00099,Fertilizantes Fictício 0099,Fertilizantes,KG,2.2800,1.7500,Fabricante Fictício 19
+100,PRD-00100,Fertilizantes Fictício 0100,Fertilizantes,tonelada,3563.7800,2694.5800,Fabricante Fictício 20
+101,PRD-00101,Fertilizantes Fictício 0101,Fertilizantes,KG,2.6200,2.0300,Fabricante Fictício 01
+102,PRD-00102,Fertilizantes Fictício 0102,Fertilizantes,tonelada,4631.0900,3298.6600,Fabricante Fictício 02
+103,PRD-00103,Fertilizantes Fictício 0103,Fertilizantes,KG,4.8100,3.4800,Fabricante Fictício 03
+104,PRD-00104,Fertilizantes Fictício 0104,Fertilizantes,tonelada,2386.2800,1677.1700,Fabricante Fictício 04
+105,PRD-00105,Fertilizantes Fictício 0105,Fertilizantes,KG,4.1100,3.1600,Fabricante Fictício 05
+106,PRD-00106,Fertilizantes Fictício 0106,Fertilizantes,tonelada,3721.0100,2634.9100,Fabricante Fictício 06
+107,PRD-00107,Fertilizantes Fictício 0107,Fertilizantes,KG,5.2300,3.7700,Fabricante Fictício 07
+108,PRD-00108,Fertilizantes Fictício 0108,Fertilizantes,tonelada,2080.2800,1516.6700,Fabricante Fictício 08
+109,PRD-00109,Fertilizantes Fictício 0109,Fertilizantes,KG,2.6800,2.2700,Fabricante Fictício 09
+110,PRD-00110,Fertilizantes Fictício 0110,Fertilizantes,tonelada,4320.2500,3111.3700,Fabricante Fictício 10
+111,PRD-00111,Fertilizantes Fictício 0111,Fertilizantes,KG,5.9000,4.2700,Fabricante Fictício 11
+112,PRD-00112,Fertilizantes Fictício 0112,Fertilizantes,tonelada,3523.3900,2739.8400,Fabricante Fictício 12
+113,PRD-00113,Fertilizantes Fictício 0113,Fertilizantes,KG,3.8800,3.2700,Fabricante Fictício 13
+114,PRD-00114,Fertilizantes Fictício 0114,Fertilizantes,tonelada,5957.9100,4905.9600,Fabricante Fictício 14
+115,PRD-00115,Fertilizantes Fictício 0115,Fertilizantes,KG,4.0200,3.0500,Fabricante Fictício 15
+116,PRD-00116,Fertilizantes Fictício 0116,Fertilizantes,tonelada,5278.1200,4440.8100,Fabricante Fictício 16
+117,PRD-00117,Fertilizantes Fictício 0117,Fertilizantes,KG,4.2400,3.3700,Fabricante Fictício 17
+118,PRD-00118,Fertilizantes Fictício 0118,Fertilizantes,tonelada,3332.8100,2334.6700,Fabricante Fictício 18
+119,PRD-00119,Fertilizantes Fictício 0119,Fertilizantes,KG,4.2300,3.5000,Fabricante Fictício 19
+120,PRD-00120,Fertilizantes Fictício 0120,Fertilizantes,tonelada,5468.2900,4380.0600,Fabricante Fictício 20
+121,PRD-00121,Fertilizantes Fictício 0121,Fertilizantes,KG,5.3300,3.9500,Fabricante Fictício 01
+122,PRD-00122,Fertilizantes Fictício 0122,Fertilizantes,tonelada,5705.9300,4426.3000,Fabricante Fictício 02
+123,PRD-00123,Fertilizantes Fictício 0123,Fertilizantes,KG,4.9700,3.8400,Fabricante Fictício 03
+124,PRD-00124,Fertilizantes Fictício 0124,Fertilizantes,tonelada,3483.7900,2752.8100,Fabricante Fictício 04
+125,PRD-00125,Fertilizantes Fictício 0125,Fertilizantes,KG,3.8000,3.2000,Fabricante Fictício 05
+126,PRD-00126,Fertilizantes Fictício 0126,Fertilizantes,tonelada,3646.3000,2578.5300,Fabricante Fictício 06
+127,PRD-00127,Fertilizantes Fictício 0127,Fertilizantes,KG,5.7500,4.2300,Fabricante Fictício 07
+128,PRD-00128,Fertilizantes Fictício 0128,Fertilizantes,tonelada,3867.6200,2768.4100,Fabricante Fictício 08
+129,PRD-00129,Fertilizantes Fictício 0129,Fertilizantes,KG,5.0300,3.8700,Fabricante Fictício 09
+130,PRD-00130,Fertilizantes Fictício 0130,Fertilizantes,tonelada,5042.6100,3834.8700,Fabricante Fictício 10
+131,PRD-00131,Fertilizantes Fictício 0131,Fertilizantes,KG,3.9200,3.2400,Fabricante Fictício 11
+132,PRD-00132,Fertilizantes Fictício 0132,Fertilizantes,tonelada,2292.2000,1683.0900,Fabricante Fictício 12
+133,PRD-00133,Fertilizantes Fictício 0133,Fertilizantes,KG,3.5800,2.9800,Fabricante Fictício 13
+134,PRD-00134,Fertilizantes Fictício 0134,Fertilizantes,tonelada,3185.6600,2604.6500,Fabricante Fictício 14
+135,PRD-00135,Fertilizantes Fictício 0135,Fertilizantes,KG,2.3200,1.9300,Fabricante Fictício 15
+136,PRD-00136,Fertilizantes Fictício 0136,Fertilizantes,tonelada,5966.9400,4620.3300,Fabricante Fictício 16
+137,PRD-00137,Fertilizantes Fictício 0137,Fertilizantes,KG,4.7100,3.6300,Fabricante Fictício 17
+138,PRD-00138,Fertilizantes Fictício 0138,Fertilizantes,tonelada,3111.9600,2436.5200,Fabricante Fictício 18
+139,PRD-00139,Fertilizantes Fictício 0139,Fertilizantes,KG,3.9300,3.3300,Fabricante Fictício 19
+140,PRD-00140,Fertilizantes Fictício 0140,Fertilizantes,tonelada,4271.4900,3487.2600,Fabricante Fictício 20
+141,PRD-00141,Fertilizantes Fictício 0141,Fertilizantes,KG,4.4600,3.7500,Fabricante Fictício 01
+142,PRD-00142,Fertilizantes Fictício 0142,Fertilizantes,tonelada,4204.7000,3464.6700,Fabricante Fictício 02
+143,PRD-00143,Fertilizantes Fictício 0143,Fertilizantes,KG,3.6600,3.0800,Fabricante Fictício 03
+144,PRD-00144,Fertilizantes Fictício 0144,Fertilizantes,tonelada,3223.7700,2417.0600,Fabricante Fictício 04
+145,PRD-00145,Fertilizantes Fictício 0145,Fertilizantes,KG,2.3700,1.7800,Fabricante Fictício 05
+146,PRD-00146,Fertilizantes Fictício 0146,Fertilizantes,tonelada,5374.1000,3776.3600,Fabricante Fictício 06
+147,PRD-00147,Fertilizantes Fictício 0147,Fertilizantes,KG,3.4500,2.5800,Fabricante Fictício 07
+148,PRD-00148,Fertilizantes Fictício 0148,Fertilizantes,tonelada,5749.0200,4595.8700,Fabricante Fictício 08
+149,PRD-00149,Fertilizantes Fictício 0149,Fertilizantes,KG,4.2200,3.1200,Fabricante Fictício 09
+150,PRD-00150,Fertilizantes Fictício 0150,Fertilizantes,tonelada,2928.1500,2280.5500,Fabricante Fictício 10
+151,PRD-00151,Fertilizantes Fictício 0151,Fertilizantes,KG,5.4300,4.2900,Fabricante Fictício 11
+152,PRD-00152,Fertilizantes Fictício 0152,Fertilizantes,tonelada,5967.1000,4317.1000,Fabricante Fictício 12
+153,PRD-00153,Fertilizantes Fictício 0153,Fertilizantes,KG,5.6300,4.5700,Fabricante Fictício 13
+154,PRD-00154,Fertilizantes Fictício 0154,Fertilizantes,tonelada,4985.4400,3681.9000,Fabricante Fictício 14
+155,PRD-00155,Fertilizantes Fictício 0155,Fertilizantes,KG,5.4000,4.5100,Fabricante Fictício 15
+156,PRD-00156,Fertilizantes Fictício 0156,Fertilizantes,tonelada,5795.9400,4385.4600,Fabricante Fictício 16
+157,PRD-00157,Fertilizantes Fictício 0157,Fertilizantes,KG,5.4800,4.0100,Fabricante Fictício 17
+158,PRD-00158,Fertilizantes Fictício 0158,Fertilizantes,tonelada,3191.4300,2298.9200,Fabricante Fictício 18
+159,PRD-00159,Fertilizantes Fictício 0159,Fertilizantes,KG,3.7400,3.1000,Fabricante Fictício 19
+160,PRD-00160,Fertilizantes Fictício 0160,Fertilizantes,tonelada,2274.0900,1909.1900,Fabricante Fictício 20
+161,PRD-00161,Fertilizantes Fictício 0161,Fertilizantes,KG,5.1200,4.3500,Fabricante Fictício 01
+162,PRD-00162,Fertilizantes Fictício 0162,Fertilizantes,tonelada,4735.9000,3334.7200,Fabricante Fictício 02
+163,PRD-00163,Fertilizantes Fictício 0163,Fertilizantes,KG,5.4900,4.0200,Fabricante Fictício 03
+164,PRD-00164,Fertilizantes Fictício 0164,Fertilizantes,tonelada,3730.6300,3067.8800,Fabricante Fictício 04
+165,PRD-00165,Fertilizantes Fictício 0165,Fertilizantes,KG,2.5500,2.0500,Fabricante Fictício 05
+166,PRD-00166,Fertilizantes Fictício 0166,Fertilizantes,tonelada,3824.9400,3150.2700,Fabricante Fictício 06
+167,PRD-00167,Fertilizantes Fictício 0167,Fertilizantes,KG,2.6800,2.0600,Fabricante Fictício 07
+168,PRD-00168,Fertilizantes Fictício 0168,Fertilizantes,tonelada,5367.4100,4491.1900,Fabricante Fictício 08
+169,PRD-00169,Fertilizantes Fictício 0169,Fertilizantes,KG,5.6300,4.0400,Fabricante Fictício 09
+170,PRD-00170,Fertilizantes Fictício 0170,Fertilizantes,tonelada,2243.2500,1866.8400,Fabricante Fictício 10
+171,PRD-00171,Fertilizantes Fictício 0171,Fertilizantes,KG,2.9900,2.1200,Fabricante Fictício 11
+172,PRD-00172,Fertilizantes Fictício 0172,Fertilizantes,tonelada,5576.1400,4520.3100,Fabricante Fictício 12
+173,PRD-00173,Fertilizantes Fictício 0173,Fertilizantes,KG,2.1300,1.7800,Fabricante Fictício 13
+174,PRD-00174,Fertilizantes Fictício 0174,Fertilizantes,tonelada,2152.4300,1577.4900,Fabricante Fictício 14
+175,PRD-00175,Fertilizantes Fictício 0175,Fertilizantes,KG,3.4100,2.6000,Fabricante Fictício 15
+176,PRD-00176,Fertilizantes Fictício 0176,Fertilizantes,tonelada,3199.9100,2276.9900,Fabricante Fictício 16
+177,PRD-00177,Fertilizantes Fictício 0177,Fertilizantes,KG,2.9200,2.2400,Fabricante Fictício 17
+178,PRD-00178,Fertilizantes Fictício 0178,Fertilizantes,tonelada,3993.7900,2920.3900,Fabricante Fictício 18
+179,PRD-00179,Fertilizantes Fictício 0179,Fertilizantes,KG,4.4900,3.1600,Fabricante Fictício 19
+180,PRD-00180,Fertilizantes Fictício 0180,Fertilizantes,tonelada,2412.6100,1993.1800,Fabricante Fictício 20
+181,PRD-00181,Fertilizantes Fictício 0181,Fertilizantes,KG,5.9900,4.6000,Fabricante Fictício 01
+182,PRD-00182,Fertilizantes Fictício 0182,Fertilizantes,tonelada,2491.4500,1935.3500,Fabricante Fictício 02
+183,PRD-00183,Fertilizantes Fictício 0183,Fertilizantes,KG,4.9600,4.2000,Fabricante Fictício 03
+184,PRD-00184,Fertilizantes Fictício 0184,Fertilizantes,tonelada,3407.2300,2466.8900,Fabricante Fictício 04
+185,PRD-00185,Fertilizantes Fictício 0185,Fertilizantes,KG,5.4100,3.8300,Fabricante Fictício 05
+186,PRD-00186,Fertilizantes Fictício 0186,Fertilizantes,tonelada,3226.3800,2588.3200,Fabricante Fictício 06
+187,PRD-00187,Fertilizantes Fictício 0187,Fertilizantes,KG,5.8500,4.2700,Fabricante Fictício 07
+188,PRD-00188,Fertilizantes Fictício 0188,Fertilizantes,tonelada,5170.1400,3930.7100,Fabricante Fictício 08
+189,PRD-00189,Fertilizantes Fictício 0189,Fertilizantes,KG,2.4000,1.9700,Fabricante Fictício 09
+190,PRD-00190,Fertilizantes Fictício 0190,Fertilizantes,tonelada,3015.4000,2510.1700,Fabricante Fictício 10
+191,PRD-00191,Fertilizantes Fictício 0191,Fertilizantes,KG,3.9400,3.1200,Fabricante Fictício 11
+192,PRD-00192,Fertilizantes Fictício 0192,Fertilizantes,tonelada,3109.5800,2503.1200,Fabricante Fictício 12
+193,PRD-00193,Fertilizantes Fictício 0193,Fertilizantes,KG,2.3100,1.7700,Fabricante Fictício 13
+194,PRD-00194,Fertilizantes Fictício 0194,Fertilizantes,tonelada,3663.4300,2564.4500,Fabricante Fictício 14
+195,PRD-00195,Fertilizantes Fictício 0195,Fertilizantes,KG,4.7200,3.8900,Fabricante Fictício 15
+196,PRD-00196,Fertilizantes Fictício 0196,Fertilizantes,tonelada,5345.8200,4280.9900,Fabricante Fictício 16
+197,PRD-00197,Fertilizantes Fictício 0197,Fertilizantes,KG,5.4100,3.9100,Fabricante Fictício 17
+198,PRD-00198,Fertilizantes Fictício 0198,Fertilizantes,tonelada,4245.6300,3540.3900,Fabricante Fictício 18
+199,PRD-00199,Fertilizantes Fictício 0199,Fertilizantes,KG,5.8500,4.8400,Fabricante Fictício 19
+200,PRD-00200,Fertilizantes Fictício 0200,Fertilizantes,tonelada,4428.4800,3422.3500,Fabricante Fictício 20
+201,PRD-00201,Agroquímicos Fictício 0201,Agroquímicos,L,72.0500,50.6600,Fabricante Fictício 01
+202,PRD-00202,Agroquímicos Fictício 0202,Agroquímicos,L,74.5100,56.3400,Fabricante Fictício 02
+203,PRD-00203,Agroquímicos Fictício 0203,Agroquímicos,L,25.3600,18.0000,Fabricante Fictício 03
+204,PRD-00204,Agroquímicos Fictício 0204,Agroquímicos,L,157.9700,120.2400,Fabricante Fictício 04
+205,PRD-00205,Agroquímicos Fictício 0205,Agroquímicos,L,80.9100,67.8200,Fabricante Fictício 05
+206,PRD-00206,Agroquímicos Fictício 0206,Agroquímicos,L,108.1700,82.1400,Fabricante Fictício 06
+207,PRD-00207,Agroquímicos Fictício 0207,Agroquímicos,L,136.7000,99.0200,Fabricante Fictício 07
+208,PRD-00208,Agroquímicos Fictício 0208,Agroquímicos,L,48.9500,40.2300,Fabricante Fictício 08
+209,PRD-00209,Agroquímicos Fictício 0209,Agroquímicos,L,37.6800,28.4900,Fabricante Fictício 09
+210,PRD-00210,Agroquímicos Fictício 0210,Agroquímicos,L,64.3900,52.5500,Fabricante Fictício 10
+211,PRD-00211,Agroquímicos Fictício 0211,Agroquímicos,L,98.0200,75.9600,Fabricante Fictício 11
+212,PRD-00212,Agroquímicos Fictício 0212,Agroquímicos,L,59.7400,43.8600,Fabricante Fictício 12
+213,PRD-00213,Agroquímicos Fictício 0213,Agroquímicos,L,66.0800,53.2500,Fabricante Fictício 13
+214,PRD-00214,Agroquímicos Fictício 0214,Agroquímicos,L,97.8000,68.6300,Fabricante Fictício 14
+215,PRD-00215,Agroquímicos Fictício 0215,Agroquímicos,L,161.3000,131.2600,Fabricante Fictício 15
+216,PRD-00216,Agroquímicos Fictício 0216,Agroquímicos,L,143.3600,106.0800,Fabricante Fictício 16
+217,PRD-00217,Agroquímicos Fictício 0217,Agroquímicos,L,91.4500,65.9500,Fabricante Fictício 17
+218,PRD-00218,Agroquímicos Fictício 0218,Agroquímicos,L,35.6100,28.3300,Fabricante Fictício 18
+219,PRD-00219,Agroquímicos Fictício 0219,Agroquímicos,L,88.1200,65.3300,Fabricante Fictício 19
+220,PRD-00220,Agroquímicos Fictício 0220,Agroquímicos,L,96.8300,75.8700,Fabricante Fictício 20
+221,PRD-00221,Agroquímicos Fictício 0221,Agroquímicos,L,64.3700,51.8300,Fabricante Fictício 01
+222,PRD-00222,Agroquímicos Fictício 0222,Agroquímicos,L,52.0900,40.8400,Fabricante Fictício 02
+223,PRD-00223,Agroquímicos Fictício 0223,Agroquímicos,L,89.9300,75.0800,Fabricante Fictício 03
+224,PRD-00224,Agroquímicos Fictício 0224,Agroquímicos,L,119.1200,98.2200,Fabricante Fictício 04
+225,PRD-00225,Agroquímicos Fictício 0225,Agroquímicos,L,35.4700,29.9100,Fabricante Fictício 05
+226,PRD-00226,Agroquímicos Fictício 0226,Agroquímicos,L,102.2800,76.0000,Fabricante Fictício 06
+227,PRD-00227,Agroquímicos Fictício 0227,Agroquímicos,L,114.3800,89.2400,Fabricante Fictício 07
+228,PRD-00228,Agroquímicos Fictício 0228,Agroquímicos,L,130.5500,104.3900,Fabricante Fictício 08
+229,PRD-00229,Agroquímicos Fictício 0229,Agroquímicos,L,108.3000,79.3900,Fabricante Fictício 09
+230,PRD-00230,Agroquímicos Fictício 0230,Agroquímicos,L,36.7000,30.4600,Fabricante Fictício 10
+231,PRD-00231,Agroquímicos Fictício 0231,Agroquímicos,L,151.2200,120.6600,Fabricante Fictício 11
+232,PRD-00232,Agroquímicos Fictício 0232,Agroquímicos,L,120.1500,97.0700,Fabricante Fictício 12
+233,PRD-00233,Agroquímicos Fictício 0233,Agroquímicos,L,92.6800,74.4400,Fabricante Fictício 13
+234,PRD-00234,Agroquímicos Fictício 0234,Agroquímicos,L,179.6000,147.7100,Fabricante Fictício 14
+235,PRD-00235,Agroquímicos Fictício 0235,Agroquímicos,L,179.2000,133.4200,Fabricante Fictício 15
+236,PRD-00236,Agroquímicos Fictício 0236,Agroquímicos,L,126.7200,92.4800,Fabricante Fictício 16
+237,PRD-00237,Agroquímicos Fictício 0237,Agroquímicos,L,91.6100,70.3700,Fabricante Fictício 17
+238,PRD-00238,Agroquímicos Fictício 0238,Agroquímicos,L,126.5700,105.3600,Fabricante Fictício 18
+239,PRD-00239,Agroquímicos Fictício 0239,Agroquímicos,L,50.5300,36.4300,Fabricante Fictício 19
+240,PRD-00240,Agroquímicos Fictício 0240,Agroquímicos,L,34.2200,25.7900,Fabricante Fictício 20
+241,PRD-00241,Agroquímicos Fictício 0241,Agroquímicos,L,107.5300,79.8000,Fabricante Fictício 01
+242,PRD-00242,Agroquímicos Fictício 0242,Agroquímicos,L,51.9500,40.5300,Fabricante Fictício 02
+243,PRD-00243,Agroquímicos Fictício 0243,Agroquímicos,L,42.8100,34.1100,Fabricante Fictício 03
+244,PRD-00244,Agroquímicos Fictício 0244,Agroquímicos,L,78.1400,57.0500,Fabricante Fictício 04
+245,PRD-00245,Agroquímicos Fictício 0245,Agroquímicos,L,139.8400,116.7300,Fabricante Fictício 05
+246,PRD-00246,Agroquímicos Fictício 0246,Agroquímicos,L,105.2400,86.6100,Fabricante Fictício 06
+247,PRD-00247,Agroquímicos Fictício 0247,Agroquímicos,L,34.0800,25.6100,Fabricante Fictício 07
+248,PRD-00248,Agroquímicos Fictício 0248,Agroquímicos,L,153.3300,111.3000,Fabricante Fictício 08
+249,PRD-00249,Agroquímicos Fictício 0249,Agroquímicos,L,36.7300,29.0000,Fabricante Fictício 09
+250,PRD-00250,Agroquímicos Fictício 0250,Agroquímicos,L,150.2100,124.8800,Fabricante Fictício 10
+251,PRD-00251,Agroquímicos Fictício 0251,Agroquímicos,L,117.2500,92.1800,Fabricante Fictício 11
+252,PRD-00252,Agroquímicos Fictício 0252,Agroquímicos,L,155.2500,128.1300,Fabricante Fictício 12
+253,PRD-00253,Agroquímicos Fictício 0253,Agroquímicos,L,158.0400,129.6800,Fabricante Fictício 13
+254,PRD-00254,Agroquímicos Fictício 0254,Agroquímicos,L,74.3100,61.2400,Fabricante Fictício 14
+255,PRD-00255,Agroquímicos Fictício 0255,Agroquímicos,L,164.3000,134.7500,Fabricante Fictício 15
+256,PRD-00256,Agroquímicos Fictício 0256,Agroquímicos,L,105.2000,87.5200,Fabricante Fictício 16
+257,PRD-00257,Agroquímicos Fictício 0257,Agroquímicos,L,145.1200,105.6700,Fabricante Fictício 17
+258,PRD-00258,Agroquímicos Fictício 0258,Agroquímicos,L,139.7100,115.5700,Fabricante Fictício 18
+259,PRD-00259,Agroquímicos Fictício 0259,Agroquímicos,L,150.3400,121.2100,Fabricante Fictício 19
+260,PRD-00260,Agroquímicos Fictício 0260,Agroquímicos,L,178.0300,140.6600,Fabricante Fictício 20
+261,PRD-00261,Agroquímicos Fictício 0261,Agroquímicos,L,149.7700,116.3300,Fabricante Fictício 01
+262,PRD-00262,Agroquímicos Fictício 0262,Agroquímicos,L,96.0900,80.9100,Fabricante Fictício 02
+263,PRD-00263,Agroquímicos Fictício 0263,Agroquímicos,L,98.4700,72.0300,Fabricante Fictício 03
+264,PRD-00264,Agroquímicos Fictício 0264,Agroquímicos,L,120.3000,92.7200,Fabricante Fictício 04
+265,PRD-00265,Agroquímicos Fictício 0265,Agroquímicos,L,123.9000,100.3400,Fabricante Fictício 05
+266,PRD-00266,Agroquímicos Fictício 0266,Agroquímicos,L,123.5000,103.9000,Fabricante Fictício 06
+267,PRD-00267,Agroquímicos Fictício 0267,Agroquímicos,L,130.0200,96.2800,Fabricante Fictício 07
+268,PRD-00268,Agroquímicos Fictício 0268,Agroquímicos,L,150.2500,123.3400,Fabricante Fictício 08
+269,PRD-00269,Agroquímicos Fictício 0269,Agroquímicos,L,84.6200,67.6600,Fabricante Fictício 09
+270,PRD-00270,Agroquímicos Fictício 0270,Agroquímicos,L,34.3600,28.3100,Fabricante Fictício 10
+271,PRD-00271,Agroquímicos Fictício 0271,Agroquímicos,L,26.6100,22.1300,Fabricante Fictício 11
+272,PRD-00272,Agroquímicos Fictício 0272,Agroquímicos,L,115.9500,85.3700,Fabricante Fictício 12
+273,PRD-00273,Agroquímicos Fictício 0273,Agroquímicos,L,43.0000,35.0700,Fabricante Fictício 13
+274,PRD-00274,Agroquímicos Fictício 0274,Agroquímicos,L,42.2700,30.8300,Fabricante Fictício 14
+275,PRD-00275,Agroquímicos Fictício 0275,Agroquímicos,L,155.7400,131.3800,Fabricante Fictício 15
+276,PRD-00276,Agroquímicos Fictício 0276,Agroquímicos,L,92.4200,75.7000,Fabricante Fictício 16
+277,PRD-00277,Agroquímicos Fictício 0277,Agroquímicos,L,158.0400,129.5000,Fabricante Fictício 17
+278,PRD-00278,Agroquímicos Fictício 0278,Agroquímicos,L,68.2500,55.0200,Fabricante Fictício 18
+279,PRD-00279,Agroquímicos Fictício 0279,Agroquímicos,L,99.8700,84.8500,Fabricante Fictício 19
+280,PRD-00280,Agroquímicos Fictício 0280,Agroquímicos,L,94.6900,73.3400,Fabricante Fictício 20
+281,PRD-00281,Agroquímicos Fictício 0281,Agroquímicos,L,158.2200,128.8500,Fabricante Fictício 01
+282,PRD-00282,Agroquímicos Fictício 0282,Agroquímicos,L,42.0500,35.4700,Fabricante Fictício 02
+283,PRD-00283,Agroquímicos Fictício 0283,Agroquímicos,L,49.2200,40.7200,Fabricante Fictício 03
+284,PRD-00284,Agroquímicos Fictício 0284,Agroquímicos,L,51.6900,38.3800,Fabricante Fictício 04
+285,PRD-00285,Agroquímicos Fictício 0285,Agroquímicos,L,141.1400,98.8900,Fabricante Fictício 05
+286,PRD-00286,Agroquímicos Fictício 0286,Agroquímicos,L,81.3500,63.0200,Fabricante Fictício 06
+287,PRD-00287,Agroquímicos Fictício 0287,Agroquímicos,L,172.3700,123.0600,Fabricante Fictício 07
+288,PRD-00288,Agroquímicos Fictício 0288,Agroquímicos,L,104.7200,74.1100,Fabricante Fictício 08
+289,PRD-00289,Agroquímicos Fictício 0289,Agroquímicos,L,83.3200,64.7400,Fabricante Fictício 09
+290,PRD-00290,Agroquímicos Fictício 0290,Agroquímicos,L,103.0300,74.2800,Fabricante Fictício 10
+291,PRD-00291,Agroquímicos Fictício 0291,Agroquímicos,L,55.9200,45.0900,Fabricante Fictício 11
+292,PRD-00292,Agroquímicos Fictício 0292,Agroquímicos,L,147.0900,121.4200,Fabricante Fictício 12
+293,PRD-00293,Agroquímicos Fictício 0293,Agroquímicos,L,50.4400,40.5400,Fabricante Fictício 13
+294,PRD-00294,Agroquímicos Fictício 0294,Agroquímicos,L,78.6300,66.7500,Fabricante Fictício 14
+295,PRD-00295,Agroquímicos Fictício 0295,Agroquímicos,L,61.3400,48.0500,Fabricante Fictício 15
+296,PRD-00296,Agroquímicos Fictício 0296,Agroquímicos,L,105.8100,84.7000,Fabricante Fictício 16
+297,PRD-00297,Agroquímicos Fictício 0297,Agroquímicos,L,110.7000,78.2400,Fabricante Fictício 17
+298,PRD-00298,Agroquímicos Fictício 0298,Agroquímicos,L,122.2900,85.6500,Fabricante Fictício 18
+299,PRD-00299,Agroquímicos Fictício 0299,Agroquímicos,L,62.4900,44.9200,Fabricante Fictício 19
+300,PRD-00300,Agroquímicos Fictício 0300,Agroquímicos,L,145.5000,103.8300,Fabricante Fictício 20
+301,PRD-00301,Agroquímicos Fictício 0301,Agroquímicos,L,27.7500,22.7700,Fabricante Fictício 01
+302,PRD-00302,Agroquímicos Fictício 0302,Agroquímicos,L,53.1200,42.8800,Fabricante Fictício 02
+303,PRD-00303,Agroquímicos Fictício 0303,Agroquímicos,L,119.0200,88.3600,Fabricante Fictício 03
+304,PRD-00304,Agroquímicos Fictício 0304,Agroquímicos,L,47.8700,36.5700,Fabricante Fictício 04
+305,PRD-00305,Agroquímicos Fictício 0305,Agroquímicos,L,98.0900,82.7100,Fabricante Fictício 05
+306,PRD-00306,Agroquímicos Fictício 0306,Agroquímicos,L,166.9400,136.1400,Fabricante Fictício 06
+307,PRD-00307,Agroquímicos Fictício 0307,Agroquímicos,L,155.7600,127.9000,Fabricante Fictício 07
+308,PRD-00308,Agroquímicos Fictício 0308,Agroquímicos,L,41.6600,33.0200,Fabricante Fictício 08
+309,PRD-00309,Agroquímicos Fictício 0309,Agroquímicos,L,118.8400,87.6300,Fabricante Fictício 09
+310,PRD-00310,Agroquímicos Fictício 0310,Agroquímicos,L,83.4900,61.6000,Fabricante Fictício 10
+311,PRD-00311,Agroquímicos Fictício 0311,Agroquímicos,L,43.5100,34.4800,Fabricante Fictício 11
+312,PRD-00312,Agroquímicos Fictício 0312,Agroquímicos,L,132.8800,97.0800,Fabricante Fictício 12
+313,PRD-00313,Agroquímicos Fictício 0313,Agroquímicos,L,110.4000,77.5300,Fabricante Fictício 13
+314,PRD-00314,Agroquímicos Fictício 0314,Agroquímicos,L,106.0800,76.9300,Fabricante Fictício 14
+315,PRD-00315,Agroquímicos Fictício 0315,Agroquímicos,L,55.5700,42.9800,Fabricante Fictício 15
+316,PRD-00316,Agroquímicos Fictício 0316,Agroquímicos,L,168.7800,133.5700,Fabricante Fictício 16
+317,PRD-00317,Agroquímicos Fictício 0317,Agroquímicos,L,132.8300,108.7700,Fabricante Fictício 17
+318,PRD-00318,Agroquímicos Fictício 0318,Agroquímicos,L,35.1500,25.1200,Fabricante Fictício 18
+319,PRD-00319,Agroquímicos Fictício 0319,Agroquímicos,L,111.7700,92.4600,Fabricante Fictício 19
+320,PRD-00320,Agroquímicos Fictício 0320,Agroquímicos,L,115.2300,86.6000,Fabricante Fictício 20
+321,PRD-00321,Agroquímicos Fictício 0321,Agroquímicos,L,44.9200,36.7700,Fabricante Fictício 01
+322,PRD-00322,Agroquímicos Fictício 0322,Agroquímicos,L,132.5900,103.6500,Fabricante Fictício 02
+323,PRD-00323,Agroquímicos Fictício 0323,Agroquímicos,L,48.8500,38.0200,Fabricante Fictício 03
+324,PRD-00324,Agroquímicos Fictício 0324,Agroquímicos,L,86.7700,67.0500,Fabricante Fictício 04
+325,PRD-00325,Agroquímicos Fictício 0325,Agroquímicos,L,152.2400,121.9300,Fabricante Fictício 05
+326,PRD-00326,Agroquímicos Fictício 0326,Agroquímicos,L,127.8600,93.4500,Fabricante Fictício 06
+327,PRD-00327,Agroquímicos Fictício 0327,Agroquímicos,L,80.4300,61.2900,Fabricante Fictício 07
+328,PRD-00328,Agroquímicos Fictício 0328,Agroquímicos,L,85.7100,70.5500,Fabricante Fictício 08
+329,PRD-00329,Agroquímicos Fictício 0329,Agroquímicos,L,156.9700,123.2900,Fabricante Fictício 09
+330,PRD-00330,Agroquímicos Fictício 0330,Agroquímicos,L,57.9100,43.9300,Fabricante Fictício 10
+331,PRD-00331,Agroquímicos Fictício 0331,Agroquímicos,L,114.5000,88.9500,Fabricante Fictício 11
+332,PRD-00332,Agroquímicos Fictício 0332,Agroquímicos,L,92.7500,68.3400,Fabricante Fictício 12
+333,PRD-00333,Agroquímicos Fictício 0333,Agroquímicos,L,132.2800,110.3400,Fabricante Fictício 13
+334,PRD-00334,Agroquímicos Fictício 0334,Agroquímicos,L,32.9000,27.5300,Fabricante Fictício 14
+335,PRD-00335,Agroquímicos Fictício 0335,Agroquímicos,L,65.6900,53.6200,Fabricante Fictício 15
+336,PRD-00336,Agroquímicos Fictício 0336,Agroquímicos,L,175.0700,144.5000,Fabricante Fictício 16
+337,PRD-00337,Agroquímicos Fictício 0337,Agroquímicos,L,54.0500,45.1400,Fabricante Fictício 17
+338,PRD-00338,Agroquímicos Fictício 0338,Agroquímicos,L,109.5700,91.9100,Fabricante Fictício 18
+339,PRD-00339,Agroquímicos Fictício 0339,Agroquímicos,L,27.7600,22.9400,Fabricante Fictício 19
+340,PRD-00340,Agroquímicos Fictício 0340,Agroquímicos,L,28.1700,23.8300,Fabricante Fictício 20
+341,PRD-00341,Agroquímicos Fictício 0341,Agroquímicos,L,176.5400,147.2100,Fabricante Fictício 01
+342,PRD-00342,Agroquímicos Fictício 0342,Agroquímicos,L,62.7000,47.7800,Fabricante Fictício 02
+343,PRD-00343,Agroquímicos Fictício 0343,Agroquímicos,L,40.8600,34.0700,Fabricante Fictício 03
+344,PRD-00344,Agroquímicos Fictício 0344,Agroquímicos,L,41.2300,33.0000,Fabricante Fictício 04
+345,PRD-00345,Agroquímicos Fictício 0345,Agroquímicos,L,67.8600,53.5200,Fabricante Fictício 05
+346,PRD-00346,Agroquímicos Fictício 0346,Agroquímicos,L,115.5300,90.5200,Fabricante Fictício 06
+347,PRD-00347,Agroquímicos Fictício 0347,Agroquímicos,L,87.4200,67.4500,Fabricante Fictício 07
+348,PRD-00348,Agroquímicos Fictício 0348,Agroquímicos,L,174.8900,143.5100,Fabricante Fictício 08
+349,PRD-00349,Agroquímicos Fictício 0349,Agroquímicos,L,110.2200,82.2400,Fabricante Fictício 09
+350,PRD-00350,Agroquímicos Fictício 0350,Agroquímicos,L,129.9200,102.9200,Fabricante Fictício 10
+351,PRD-00351,Agroquímicos Fictício 0351,Agroquímicos,L,162.0700,118.0000,Fabricante Fictício 11
+352,PRD-00352,Agroquímicos Fictício 0352,Agroquímicos,L,172.2000,130.9000,Fabricante Fictício 12
+353,PRD-00353,Agroquímicos Fictício 0353,Agroquímicos,L,103.6200,84.5200,Fabricante Fictício 13
+354,PRD-00354,Agroquímicos Fictício 0354,Agroquímicos,L,103.3400,77.4800,Fabricante Fictício 14
+355,PRD-00355,Agroquímicos Fictício 0355,Agroquímicos,L,30.5900,22.4700,Fabricante Fictício 15
+356,PRD-00356,Agroquímicos Fictício 0356,Agroquímicos,L,145.8200,104.6200,Fabricante Fictício 16
+357,PRD-00357,Agroquímicos Fictício 0357,Agroquímicos,L,63.2700,44.3500,Fabricante Fictício 17
+358,PRD-00358,Agroquímicos Fictício 0358,Agroquímicos,L,137.8500,115.1300,Fabricante Fictício 18
+359,PRD-00359,Agroquímicos Fictício 0359,Agroquímicos,L,75.3800,56.5500,Fabricante Fictício 19
+360,PRD-00360,Agroquímicos Fictício 0360,Agroquímicos,L,90.4100,64.6900,Fabricante Fictício 20
+361,PRD-00361,Agroquímicos Fictício 0361,Agroquímicos,L,74.3400,53.9000,Fabricante Fictício 01
+362,PRD-00362,Agroquímicos Fictício 0362,Agroquímicos,L,38.3000,31.7500,Fabricante Fictício 02
+363,PRD-00363,Agroquímicos Fictício 0363,Agroquímicos,L,161.9000,131.0700,Fabricante Fictício 03
+364,PRD-00364,Agroquímicos Fictício 0364,Agroquímicos,L,98.0300,71.5300,Fabricante Fictício 04
+365,PRD-00365,Agroquímicos Fictício 0365,Agroquímicos,L,76.3000,58.8700,Fabricante Fictício 05
+366,PRD-00366,Agroquímicos Fictício 0366,Agroquímicos,L,144.3900,120.1900,Fabricante Fictício 06
+367,PRD-00367,Agroquímicos Fictício 0367,Agroquímicos,L,124.4500,90.5000,Fabricante Fictício 07
+368,PRD-00368,Agroquímicos Fictício 0368,Agroquímicos,L,40.2600,33.8200,Fabricante Fictício 08
+369,PRD-00369,Agroquímicos Fictício 0369,Agroquímicos,L,51.5800,41.2300,Fabricante Fictício 09
+370,PRD-00370,Agroquímicos Fictício 0370,Agroquímicos,L,160.9600,130.8700,Fabricante Fictício 10
+371,PRD-00371,Agroquímicos Fictício 0371,Agroquímicos,L,127.9900,101.8200,Fabricante Fictício 11
+372,PRD-00372,Agroquímicos Fictício 0372,Agroquímicos,L,178.8000,149.6300,Fabricante Fictício 12
+373,PRD-00373,Agroquímicos Fictício 0373,Agroquímicos,L,89.6200,63.4100,Fabricante Fictício 13
+374,PRD-00374,Agroquímicos Fictício 0374,Agroquímicos,L,60.5400,46.3900,Fabricante Fictício 14
+375,PRD-00375,Agroquímicos Fictício 0375,Agroquímicos,L,76.7300,63.8100,Fabricante Fictício 15
+376,PRD-00376,Agroquímicos Fictício 0376,Agroquímicos,L,164.0400,119.2500,Fabricante Fictício 16
+377,PRD-00377,Agroquímicos Fictício 0377,Agroquímicos,L,27.6900,21.4500,Fabricante Fictício 17
+378,PRD-00378,Agroquímicos Fictício 0378,Agroquímicos,L,52.5400,41.3100,Fabricante Fictício 18
+379,PRD-00379,Agroquímicos Fictício 0379,Agroquímicos,L,69.3700,50.2200,Fabricante Fictício 19
+380,PRD-00380,Agroquímicos Fictício 0380,Agroquímicos,L,162.5200,130.0900,Fabricante Fictício 20
+381,PRD-00381,Agroquímicos Fictício 0381,Agroquímicos,L,50.4100,35.6100,Fabricante Fictício 01
+382,PRD-00382,Agroquímicos Fictício 0382,Agroquímicos,L,109.1400,87.0400,Fabricante Fictício 02
+383,PRD-00383,Agroquímicos Fictício 0383,Agroquímicos,L,161.3400,119.5900,Fabricante Fictício 03
+384,PRD-00384,Agroquímicos Fictício 0384,Agroquímicos,L,68.4300,50.5700,Fabricante Fictício 04
+385,PRD-00385,Agroquímicos Fictício 0385,Agroquímicos,L,117.0200,85.9000,Fabricante Fictício 05
+386,PRD-00386,Agroquímicos Fictício 0386,Agroquímicos,L,115.5800,92.5300,Fabricante Fictício 06
+387,PRD-00387,Agroquímicos Fictício 0387,Agroquímicos,L,111.1500,81.0600,Fabricante Fictício 07
+388,PRD-00388,Agroquímicos Fictício 0388,Agroquímicos,L,158.3700,122.4000,Fabricante Fictício 08
+389,PRD-00389,Agroquímicos Fictício 0389,Agroquímicos,L,136.7400,102.1200,Fabricante Fictício 09
+390,PRD-00390,Agroquímicos Fictício 0390,Agroquímicos,L,25.2800,19.5900,Fabricante Fictício 10
+391,PRD-00391,Agroquímicos Fictício 0391,Agroquímicos,L,48.1900,38.6100,Fabricante Fictício 11
+392,PRD-00392,Agroquímicos Fictício 0392,Agroquímicos,L,84.5400,68.9000,Fabricante Fictício 12
+393,PRD-00393,Agroquímicos Fictício 0393,Agroquímicos,L,165.9200,129.5100,Fabricante Fictício 13
+394,PRD-00394,Agroquímicos Fictício 0394,Agroquímicos,L,42.0000,35.1500,Fabricante Fictício 14
+395,PRD-00395,Agroquímicos Fictício 0395,Agroquímicos,L,134.3800,107.8300,Fabricante Fictício 15
+396,PRD-00396,Agroquímicos Fictício 0396,Agroquímicos,L,28.8800,21.8400,Fabricante Fictício 16
+397,PRD-00397,Agroquímicos Fictício 0397,Agroquímicos,L,68.8600,48.2900,Fabricante Fictício 17
+398,PRD-00398,Agroquímicos Fictício 0398,Agroquímicos,L,148.8000,114.1000,Fabricante Fictício 18
+399,PRD-00399,Agroquímicos Fictício 0399,Agroquímicos,L,25.2200,19.3900,Fabricante Fictício 19
+400,PRD-00400,Agroquímicos Fictício 0400,Agroquímicos,L,90.3600,65.1400,Fabricante Fictício 20
+401,PRD-00401,Sementes de soja Fictício 0401,Sementes de soja,saca_40KG,324.5000,244.0000,Fabricante Fictício 01
+402,PRD-00402,Sementes de soja Fictício 0402,Sementes de soja,saca_40KG,350.6700,285.6200,Fabricante Fictício 02
+403,PRD-00403,Sementes de soja Fictício 0403,Sementes de soja,saca_40KG,287.8400,211.9800,Fabricante Fictício 03
+404,PRD-00404,Sementes de soja Fictício 0404,Sementes de soja,saca_40KG,319.4800,265.5500,Fabricante Fictício 04
+405,PRD-00405,Sementes de soja Fictício 0405,Sementes de soja,saca_40KG,335.1900,268.3500,Fabricante Fictício 05
+406,PRD-00406,Sementes de soja Fictício 0406,Sementes de soja,saca_40KG,301.1000,229.1000,Fabricante Fictício 06
+407,PRD-00407,Sementes de soja Fictício 0407,Sementes de soja,saca_40KG,320.1900,241.8900,Fabricante Fictício 07
+408,PRD-00408,Sementes de soja Fictício 0408,Sementes de soja,saca_40KG,361.6800,258.4300,Fabricante Fictício 08
+409,PRD-00409,Sementes de soja Fictício 0409,Sementes de soja,saca_40KG,419.9400,319.8000,Fabricante Fictício 09
+410,PRD-00410,Sementes de soja Fictício 0410,Sementes de soja,saca_40KG,362.2100,257.2100,Fabricante Fictício 10
+411,PRD-00411,Sementes de soja Fictício 0411,Sementes de soja,saca_40KG,300.8000,252.2300,Fabricante Fictício 11
+412,PRD-00412,Sementes de soja Fictício 0412,Sementes de soja,saca_40KG,247.5400,189.1700,Fabricante Fictício 12
+413,PRD-00413,Sementes de soja Fictício 0413,Sementes de soja,saca_40KG,268.8700,211.8900,Fabricante Fictício 13
+414,PRD-00414,Sementes de soja Fictício 0414,Sementes de soja,saca_40KG,389.5400,318.3300,Fabricante Fictício 14
+415,PRD-00415,Sementes de soja Fictício 0415,Sementes de soja,saca_40KG,350.1900,249.0800,Fabricante Fictício 15
+416,PRD-00416,Sementes de soja Fictício 0416,Sementes de soja,saca_40KG,354.0000,252.3600,Fabricante Fictício 16
+417,PRD-00417,Sementes de soja Fictício 0417,Sementes de soja,saca_40KG,428.9600,317.8800,Fabricante Fictício 17
+418,PRD-00418,Sementes de soja Fictício 0418,Sementes de soja,saca_40KG,412.0000,293.3600,Fabricante Fictício 18
+419,PRD-00419,Sementes de soja Fictício 0419,Sementes de soja,saca_40KG,329.4100,253.0500,Fabricante Fictício 19
+420,PRD-00420,Sementes de soja Fictício 0420,Sementes de soja,saca_40KG,321.4500,269.4400,Fabricante Fictício 20
+421,PRD-00421,Sementes de soja Fictício 0421,Sementes de soja,saca_40KG,361.8000,262.2700,Fabricante Fictício 01
+422,PRD-00422,Sementes de soja Fictício 0422,Sementes de soja,saca_40KG,253.5200,183.6400,Fabricante Fictício 02
+423,PRD-00423,Sementes de soja Fictício 0423,Sementes de soja,saca_40KG,304.8900,246.0900,Fabricante Fictício 03
+424,PRD-00424,Sementes de soja Fictício 0424,Sementes de soja,saca_40KG,290.5300,243.9900,Fabricante Fictício 04
+425,PRD-00425,Sementes de soja Fictício 0425,Sementes de soja,saca_40KG,334.1100,255.8200,Fabricante Fictício 05
+426,PRD-00426,Sementes de soja Fictício 0426,Sementes de soja,saca_40KG,331.5000,271.2000,Fabricante Fictício 06
+427,PRD-00427,Sementes de soja Fictício 0427,Sementes de soja,saca_40KG,337.2300,274.6200,Fabricante Fictício 07
+428,PRD-00428,Sementes de soja Fictício 0428,Sementes de soja,saca_40KG,422.0700,327.8100,Fabricante Fictício 08
+429,PRD-00429,Sementes de soja Fictício 0429,Sementes de soja,saca_40KG,369.2500,266.9500,Fabricante Fictício 09
+430,PRD-00430,Sementes de soja Fictício 0430,Sementes de soja,saca_40KG,246.8800,196.7500,Fabricante Fictício 10
+431,PRD-00431,Sementes de soja Fictício 0431,Sementes de soja,saca_40KG,298.9700,230.6900,Fabricante Fictício 11
+432,PRD-00432,Sementes de soja Fictício 0432,Sementes de soja,saca_40KG,426.0500,303.1300,Fabricante Fictício 12
+433,PRD-00433,Sementes de soja Fictício 0433,Sementes de soja,saca_40KG,348.1900,263.1200,Fabricante Fictício 13
+434,PRD-00434,Sementes de soja Fictício 0434,Sementes de soja,saca_40KG,298.5200,213.0800,Fabricante Fictício 14
+435,PRD-00435,Sementes de soja Fictício 0435,Sementes de soja,saca_40KG,246.0000,187.0200,Fabricante Fictício 15
+436,PRD-00436,Sementes de soja Fictício 0436,Sementes de soja,saca_40KG,382.5100,299.7000,Fabricante Fictício 16
+437,PRD-00437,Sementes de soja Fictício 0437,Sementes de soja,saca_40KG,324.0600,232.9600,Fabricante Fictício 17
+438,PRD-00438,Sementes de soja Fictício 0438,Sementes de soja,saca_40KG,306.9700,220.0500,Fabricante Fictício 18
+439,PRD-00439,Sementes de soja Fictício 0439,Sementes de soja,saca_40KG,319.2200,236.5500,Fabricante Fictício 19
+440,PRD-00440,Sementes de soja Fictício 0440,Sementes de soja,saca_40KG,400.5400,305.6800,Fabricante Fictício 20
+441,PRD-00441,Sementes de soja Fictício 0441,Sementes de soja,saca_40KG,278.1500,199.1400,Fabricante Fictício 01
+442,PRD-00442,Sementes de soja Fictício 0442,Sementes de soja,saca_40KG,382.6400,268.4200,Fabricante Fictício 02
+443,PRD-00443,Sementes de soja Fictício 0443,Sementes de soja,saca_40KG,358.6600,298.0800,Fabricante Fictício 03
+444,PRD-00444,Sementes de soja Fictício 0444,Sementes de soja,saca_40KG,248.9600,210.1000,Fabricante Fictício 04
+445,PRD-00445,Sementes de soja Fictício 0445,Sementes de soja,saca_40KG,404.5700,317.9200,Fabricante Fictício 05
+446,PRD-00446,Sementes de soja Fictício 0446,Sementes de soja,saca_40KG,318.0900,261.6400,Fabricante Fictício 06
+447,PRD-00447,Sementes de soja Fictício 0447,Sementes de soja,saca_40KG,386.0600,292.8400,Fabricante Fictício 07
+448,PRD-00448,Sementes de soja Fictício 0448,Sementes de soja,saca_40KG,372.8600,316.3200,Fabricante Fictício 08
+449,PRD-00449,Sementes de soja Fictício 0449,Sementes de soja,saca_40KG,276.8000,208.5400,Fabricante Fictício 09
+450,PRD-00450,Sementes de soja Fictício 0450,Sementes de soja,saca_40KG,300.9900,241.8000,Fabricante Fictício 10
+451,PRD-00451,Sementes de soja Fictício 0451,Sementes de soja,saca_40KG,369.1100,295.5300,Fabricante Fictício 11
+452,PRD-00452,Sementes de soja Fictício 0452,Sementes de soja,saca_40KG,256.1800,184.9700,Fabricante Fictício 12
+453,PRD-00453,Sementes de soja Fictício 0453,Sementes de soja,saca_40KG,267.7300,202.4300,Fabricante Fictício 13
+454,PRD-00454,Sementes de soja Fictício 0454,Sementes de soja,saca_40KG,317.8400,249.9100,Fabricante Fictício 14
+455,PRD-00455,Sementes de soja Fictício 0455,Sementes de soja,saca_40KG,303.1100,248.0600,Fabricante Fictício 15
+456,PRD-00456,Sementes de soja Fictício 0456,Sementes de soja,saca_40KG,301.6700,229.3700,Fabricante Fictício 16
+457,PRD-00457,Sementes de soja Fictício 0457,Sementes de soja,saca_40KG,298.8300,253.7600,Fabricante Fictício 17
+458,PRD-00458,Sementes de soja Fictício 0458,Sementes de soja,saca_40KG,277.1300,195.2600,Fabricante Fictício 18
+459,PRD-00459,Sementes de soja Fictício 0459,Sementes de soja,saca_40KG,439.3700,338.0700,Fabricante Fictício 19
+460,PRD-00460,Sementes de soja Fictício 0460,Sementes de soja,saca_40KG,314.3000,243.3700,Fabricante Fictício 20
+461,PRD-00461,Sementes de soja Fictício 0461,Sementes de soja,saca_40KG,321.5100,250.5800,Fabricante Fictício 01
+462,PRD-00462,Sementes de soja Fictício 0462,Sementes de soja,saca_40KG,285.4800,212.9000,Fabricante Fictício 02
+463,PRD-00463,Sementes de soja Fictício 0463,Sementes de soja,saca_40KG,285.4900,219.2100,Fabricante Fictício 03
+464,PRD-00464,Sementes de soja Fictício 0464,Sementes de soja,saca_40KG,389.4400,307.6300,Fabricante Fictício 04
+465,PRD-00465,Sementes de soja Fictício 0465,Sementes de soja,saca_40KG,363.7000,274.9000,Fabricante Fictício 05
+466,PRD-00466,Sementes de soja Fictício 0466,Sementes de soja,saca_40KG,295.2900,220.4100,Fabricante Fictício 06
+467,PRD-00467,Sementes de soja Fictício 0467,Sementes de soja,saca_40KG,311.3100,250.5400,Fabricante Fictício 07
+468,PRD-00468,Sementes de soja Fictício 0468,Sementes de soja,saca_40KG,254.5900,198.8100,Fabricante Fictício 08
+469,PRD-00469,Sementes de soja Fictício 0469,Sementes de soja,saca_40KG,340.7000,281.0000,Fabricante Fictício 09
+470,PRD-00470,Sementes de soja Fictício 0470,Sementes de soja,saca_40KG,289.5000,245.9500,Fabricante Fictício 10
+471,PRD-00471,Sementes de soja Fictício 0471,Sementes de soja,saca_40KG,349.4100,280.2800,Fabricante Fictício 11
+472,PRD-00472,Sementes de soja Fictício 0472,Sementes de soja,saca_40KG,275.0600,233.5100,Fabricante Fictício 12
+473,PRD-00473,Sementes de soja Fictício 0473,Sementes de soja,saca_40KG,249.6400,174.9100,Fabricante Fictício 13
+474,PRD-00474,Sementes de soja Fictício 0474,Sementes de soja,saca_40KG,358.5700,258.2800,Fabricante Fictício 14
+475,PRD-00475,Sementes de soja Fictício 0475,Sementes de soja,saca_40KG,396.1700,311.6600,Fabricante Fictício 15
+476,PRD-00476,Sementes de soja Fictício 0476,Sementes de soja,saca_40KG,255.4500,216.1600,Fabricante Fictício 16
+477,PRD-00477,Sementes de soja Fictício 0477,Sementes de soja,saca_40KG,315.6300,263.7200,Fabricante Fictício 17
+478,PRD-00478,Sementes de soja Fictício 0478,Sementes de soja,saca_40KG,284.0600,239.4300,Fabricante Fictício 18
+479,PRD-00479,Sementes de soja Fictício 0479,Sementes de soja,saca_40KG,400.4800,322.1500,Fabricante Fictício 19
+480,PRD-00480,Sementes de soja Fictício 0480,Sementes de soja,saca_40KG,307.1300,228.6200,Fabricante Fictício 20
+481,PRD-00481,Sementes de soja Fictício 0481,Sementes de soja,saca_40KG,250.2300,176.2000,Fabricante Fictício 01
+482,PRD-00482,Sementes de soja Fictício 0482,Sementes de soja,saca_40KG,417.2400,315.6600,Fabricante Fictício 02
+483,PRD-00483,Sementes de soja Fictício 0483,Sementes de soja,saca_40KG,279.1600,197.8400,Fabricante Fictício 03
+484,PRD-00484,Sementes de soja Fictício 0484,Sementes de soja,saca_40KG,335.4300,261.7600,Fabricante Fictício 04
+485,PRD-00485,Sementes de soja Fictício 0485,Sementes de soja,saca_40KG,333.3200,275.2200,Fabricante Fictício 05
+486,PRD-00486,Sementes de soja Fictício 0486,Sementes de soja,saca_40KG,413.6300,307.6900,Fabricante Fictício 06
+487,PRD-00487,Sementes de soja Fictício 0487,Sementes de soja,saca_40KG,431.7200,328.2000,Fabricante Fictício 07
+488,PRD-00488,Sementes de soja Fictício 0488,Sementes de soja,saca_40KG,244.0000,174.5000,Fabricante Fictício 08
+489,PRD-00489,Sementes de soja Fictício 0489,Sementes de soja,saca_40KG,343.9200,242.1100,Fabricante Fictício 09
+490,PRD-00490,Sementes de soja Fictício 0490,Sementes de soja,saca_40KG,292.7700,245.5200,Fabricante Fictício 10
+491,PRD-00491,Sementes de soja Fictício 0491,Sementes de soja,saca_40KG,299.6900,226.5100,Fabricante Fictício 11
+492,PRD-00492,Sementes de soja Fictício 0492,Sementes de soja,saca_40KG,263.4400,203.7100,Fabricante Fictício 12
+493,PRD-00493,Sementes de soja Fictício 0493,Sementes de soja,saca_40KG,316.6000,227.0000,Fabricante Fictício 13
+494,PRD-00494,Sementes de soja Fictício 0494,Sementes de soja,saca_40KG,390.5800,312.8500,Fabricante Fictício 14
+495,PRD-00495,Sementes de soja Fictício 0495,Sementes de soja,saca_40KG,306.0200,219.9900,Fabricante Fictício 15
+496,PRD-00496,Sementes de soja Fictício 0496,Sementes de soja,saca_40KG,366.0500,301.3000,Fabricante Fictício 16
+497,PRD-00497,Sementes de soja Fictício 0497,Sementes de soja,saca_40KG,415.1800,349.1600,Fabricante Fictício 17
+498,PRD-00498,Sementes de soja Fictício 0498,Sementes de soja,saca_40KG,255.3300,209.2400,Fabricante Fictício 18
+499,PRD-00499,Sementes de soja Fictício 0499,Sementes de soja,saca_40KG,284.2700,207.4700,Fabricante Fictício 19
+500,PRD-00500,Sementes de soja Fictício 0500,Sementes de soja,saca_40KG,384.4400,297.8600,Fabricante Fictício 20
+501,PRD-00501,Sementes de soja Fictício 0501,Sementes de soja,saca_40KG,299.3700,227.0200,Fabricante Fictício 01
+502,PRD-00502,Sementes de soja Fictício 0502,Sementes de soja,saca_40KG,295.2000,232.2800,Fabricante Fictício 02
+503,PRD-00503,Sementes de soja Fictício 0503,Sementes de soja,saca_40KG,364.6400,273.9700,Fabricante Fictício 03
+504,PRD-00504,Sementes de soja Fictício 0504,Sementes de soja,saca_40KG,350.6700,287.3700,Fabricante Fictício 04
+505,PRD-00505,Sementes de soja Fictício 0505,Sementes de soja,saca_40KG,436.9200,358.7000,Fabricante Fictício 05
+506,PRD-00506,Sementes de soja Fictício 0506,Sementes de soja,saca_40KG,383.1500,304.0300,Fabricante Fictício 06
+507,PRD-00507,Sementes de soja Fictício 0507,Sementes de soja,saca_40KG,432.3100,309.5700,Fabricante Fictício 07
+508,PRD-00508,Sementes de soja Fictício 0508,Sementes de soja,saca_40KG,311.6300,240.9600,Fabricante Fictício 08
+509,PRD-00509,Sementes de soja Fictício 0509,Sementes de soja,saca_40KG,352.6900,253.3100,Fabricante Fictício 09
+510,PRD-00510,Sementes de soja Fictício 0510,Sementes de soja,saca_40KG,412.6200,303.5200,Fabricante Fictício 10
+511,PRD-00511,Sementes de soja Fictício 0511,Sementes de soja,saca_40KG,326.8800,273.4800,Fabricante Fictício 11
+512,PRD-00512,Sementes de soja Fictício 0512,Sementes de soja,saca_40KG,334.7300,238.9100,Fabricante Fictício 12
+513,PRD-00513,Sementes de soja Fictício 0513,Sementes de soja,saca_40KG,336.8400,266.6800,Fabricante Fictício 13
+514,PRD-00514,Sementes de soja Fictício 0514,Sementes de soja,saca_40KG,297.3800,213.9700,Fabricante Fictício 14
+515,PRD-00515,Sementes de soja Fictício 0515,Sementes de soja,saca_40KG,363.7500,254.9000,Fabricante Fictício 15
+516,PRD-00516,Sementes de soja Fictício 0516,Sementes de soja,saca_40KG,306.5200,240.9600,Fabricante Fictício 16
+517,PRD-00517,Sementes de soja Fictício 0517,Sementes de soja,saca_40KG,285.0900,226.5800,Fabricante Fictício 17
+518,PRD-00518,Sementes de soja Fictício 0518,Sementes de soja,saca_40KG,272.2500,223.1300,Fabricante Fictício 18
+519,PRD-00519,Sementes de soja Fictício 0519,Sementes de soja,saca_40KG,345.4500,276.2500,Fabricante Fictício 19
+520,PRD-00520,Sementes de soja Fictício 0520,Sementes de soja,saca_40KG,251.2300,202.7100,Fabricante Fictício 20
+521,PRD-00521,Sementes de soja Fictício 0521,Sementes de soja,saca_40KG,242.3400,185.7600,Fabricante Fictício 01
+522,PRD-00522,Sementes de soja Fictício 0522,Sementes de soja,saca_40KG,387.8700,316.5000,Fabricante Fictício 02
+523,PRD-00523,Sementes de soja Fictício 0523,Sementes de soja,saca_40KG,439.0600,327.4100,Fabricante Fictício 03
+524,PRD-00524,Sementes de soja Fictício 0524,Sementes de soja,saca_40KG,405.7300,334.6600,Fabricante Fictício 04
+525,PRD-00525,Sementes de soja Fictício 0525,Sementes de soja,saca_40KG,376.0600,282.5700,Fabricante Fictício 05
+526,PRD-00526,Sementes de soja Fictício 0526,Sementes de soja,saca_40KG,249.2100,186.9200,Fabricante Fictício 06
+527,PRD-00527,Sementes de soja Fictício 0527,Sementes de soja,saca_40KG,244.7200,176.9100,Fabricante Fictício 07
+528,PRD-00528,Sementes de soja Fictício 0528,Sementes de soja,saca_40KG,361.1700,271.6300,Fabricante Fictício 08
+529,PRD-00529,Sementes de soja Fictício 0529,Sementes de soja,saca_40KG,256.7500,216.2800,Fabricante Fictício 09
+530,PRD-00530,Sementes de soja Fictício 0530,Sementes de soja,saca_40KG,284.4300,225.2100,Fabricante Fictício 10
+531,PRD-00531,Sementes de soja Fictício 0531,Sementes de soja,saca_40KG,301.3300,253.8200,Fabricante Fictício 11
+532,PRD-00532,Sementes de soja Fictício 0532,Sementes de soja,saca_40KG,294.5900,224.7000,Fabricante Fictício 12
+533,PRD-00533,Sementes de soja Fictício 0533,Sementes de soja,saca_40KG,396.9900,301.1600,Fabricante Fictício 13
+534,PRD-00534,Sementes de soja Fictício 0534,Sementes de soja,saca_40KG,350.6800,285.5600,Fabricante Fictício 14
+535,PRD-00535,Sementes de soja Fictício 0535,Sementes de soja,saca_40KG,367.1000,283.4400,Fabricante Fictício 15
+536,PRD-00536,Sementes de soja Fictício 0536,Sementes de soja,saca_40KG,325.1200,251.1000,Fabricante Fictício 16
+537,PRD-00537,Sementes de soja Fictício 0537,Sementes de soja,saca_40KG,296.3400,228.2000,Fabricante Fictício 17
+538,PRD-00538,Sementes de soja Fictício 0538,Sementes de soja,saca_40KG,392.5900,330.2500,Fabricante Fictício 18
+539,PRD-00539,Sementes de soja Fictício 0539,Sementes de soja,saca_40KG,352.9500,253.2600,Fabricante Fictício 19
+540,PRD-00540,Sementes de soja Fictício 0540,Sementes de soja,saca_40KG,266.7800,191.6300,Fabricante Fictício 20
+541,PRD-00541,Sementes de soja Fictício 0541,Sementes de soja,saca_40KG,359.0000,291.6200,Fabricante Fictício 01
+542,PRD-00542,Sementes de soja Fictício 0542,Sementes de soja,saca_40KG,427.7900,310.2100,Fabricante Fictício 02
+543,PRD-00543,Sementes de soja Fictício 0543,Sementes de soja,saca_40KG,428.7100,356.6000,Fabricante Fictício 03
+544,PRD-00544,Sementes de soja Fictício 0544,Sementes de soja,saca_40KG,322.5900,272.0800,Fabricante Fictício 04
+545,PRD-00545,Sementes de soja Fictício 0545,Sementes de soja,saca_40KG,304.6300,238.8400,Fabricante Fictício 05
+546,PRD-00546,Sementes de soja Fictício 0546,Sementes de soja,saca_40KG,381.0400,292.6700,Fabricante Fictício 06
+547,PRD-00547,Sementes de soja Fictício 0547,Sementes de soja,saca_40KG,368.5600,311.1500,Fabricante Fictício 07
+548,PRD-00548,Sementes de soja Fictício 0548,Sementes de soja,saca_40KG,436.7900,366.1300,Fabricante Fictício 08
+549,PRD-00549,Sementes de soja Fictício 0549,Sementes de soja,saca_40KG,374.2100,309.2400,Fabricante Fictício 09
+550,PRD-00550,Sementes de soja Fictício 0550,Sementes de soja,saca_40KG,431.7200,360.1200,Fabricante Fictício 10
+551,PRD-00551,Sementes de soja Fictício 0551,Sementes de soja,saca_40KG,359.8900,283.4800,Fabricante Fictício 11
+552,PRD-00552,Sementes de soja Fictício 0552,Sementes de soja,saca_40KG,378.3700,302.7700,Fabricante Fictício 12
+553,PRD-00553,Sementes de soja Fictício 0553,Sementes de soja,saca_40KG,327.5200,246.9300,Fabricante Fictício 13
+554,PRD-00554,Sementes de soja Fictício 0554,Sementes de soja,saca_40KG,319.0900,251.1300,Fabricante Fictício 14
+555,PRD-00555,Sementes de soja Fictício 0555,Sementes de soja,saca_40KG,366.1200,286.7600,Fabricante Fictício 15
+556,PRD-00556,Sementes de soja Fictício 0556,Sementes de soja,saca_40KG,262.5000,204.0200,Fabricante Fictício 16
+557,PRD-00557,Sementes de soja Fictício 0557,Sementes de soja,saca_40KG,344.1100,240.9200,Fabricante Fictício 17
+558,PRD-00558,Sementes de soja Fictício 0558,Sementes de soja,saca_40KG,244.0800,174.7000,Fabricante Fictício 18
+559,PRD-00559,Sementes de soja Fictício 0559,Sementes de soja,saca_40KG,262.4200,222.9900,Fabricante Fictício 19
+560,PRD-00560,Sementes de soja Fictício 0560,Sementes de soja,saca_40KG,411.6100,331.5400,Fabricante Fictício 20
+561,PRD-00561,Sementes de soja Fictício 0561,Sementes de soja,saca_40KG,371.7400,294.8500,Fabricante Fictício 01
+562,PRD-00562,Sementes de soja Fictício 0562,Sementes de soja,saca_40KG,325.1900,242.2100,Fabricante Fictício 02
+563,PRD-00563,Sementes de soja Fictício 0563,Sementes de soja,saca_40KG,439.1800,339.3800,Fabricante Fictício 03
+564,PRD-00564,Sementes de soja Fictício 0564,Sementes de soja,saca_40KG,429.0400,344.6400,Fabricante Fictício 04
+565,PRD-00565,Sementes de soja Fictício 0565,Sementes de soja,saca_40KG,362.7200,272.5700,Fabricante Fictício 05
+566,PRD-00566,Sementes de soja Fictício 0566,Sementes de soja,saca_40KG,303.1700,212.8400,Fabricante Fictício 06
+567,PRD-00567,Sementes de soja Fictício 0567,Sementes de soja,saca_40KG,296.8200,248.7400,Fabricante Fictício 07
+568,PRD-00568,Sementes de soja Fictício 0568,Sementes de soja,saca_40KG,408.3000,312.2100,Fabricante Fictício 08
+569,PRD-00569,Sementes de soja Fictício 0569,Sementes de soja,saca_40KG,340.9900,283.8200,Fabricante Fictício 09
+570,PRD-00570,Sementes de soja Fictício 0570,Sementes de soja,saca_40KG,401.1900,323.6700,Fabricante Fictício 10
+571,PRD-00571,Sementes de soja Fictício 0571,Sementes de soja,saca_40KG,306.2500,215.8600,Fabricante Fictício 11
+572,PRD-00572,Sementes de soja Fictício 0572,Sementes de soja,saca_40KG,371.8400,280.7600,Fabricante Fictício 12
+573,PRD-00573,Sementes de soja Fictício 0573,Sementes de soja,saca_40KG,385.2500,278.4900,Fabricante Fictício 13
+574,PRD-00574,Sementes de soja Fictício 0574,Sementes de soja,saca_40KG,278.0900,214.5200,Fabricante Fictício 14
+575,PRD-00575,Sementes de soja Fictício 0575,Sementes de soja,saca_40KG,277.2000,221.4600,Fabricante Fictício 15
+576,PRD-00576,Sementes de soja Fictício 0576,Sementes de soja,saca_40KG,329.5900,251.7900,Fabricante Fictício 16
+577,PRD-00577,Sementes de soja Fictício 0577,Sementes de soja,saca_40KG,241.5500,195.6400,Fabricante Fictício 17
+578,PRD-00578,Sementes de soja Fictício 0578,Sementes de soja,saca_40KG,298.9200,236.9900,Fabricante Fictício 18
+579,PRD-00579,Sementes de soja Fictício 0579,Sementes de soja,saca_40KG,281.9700,226.3400,Fabricante Fictício 19
+580,PRD-00580,Sementes de soja Fictício 0580,Sementes de soja,saca_40KG,349.5200,250.0300,Fabricante Fictício 20
+581,PRD-00581,Sementes de soja Fictício 0581,Sementes de soja,saca_40KG,428.2700,301.3600,Fabricante Fictício 01
+582,PRD-00582,Sementes de soja Fictício 0582,Sementes de soja,saca_40KG,439.2100,331.0700,Fabricante Fictício 02
+583,PRD-00583,Sementes de soja Fictício 0583,Sementes de soja,saca_40KG,429.5400,328.3100,Fabricante Fictício 03
+584,PRD-00584,Sementes de soja Fictício 0584,Sementes de soja,saca_40KG,309.2400,244.8700,Fabricante Fictício 04
+585,PRD-00585,Sementes de soja Fictício 0585,Sementes de soja,saca_40KG,244.4500,188.2700,Fabricante Fictício 05
+586,PRD-00586,Sementes de soja Fictício 0586,Sementes de soja,saca_40KG,352.1600,263.1700,Fabricante Fictício 06
+587,PRD-00587,Sementes de soja Fictício 0587,Sementes de soja,saca_40KG,301.5800,253.1000,Fabricante Fictício 07
+588,PRD-00588,Sementes de soja Fictício 0588,Sementes de soja,saca_40KG,274.3700,193.9000,Fabricante Fictício 08
+589,PRD-00589,Sementes de soja Fictício 0589,Sementes de soja,saca_40KG,240.3600,198.4300,Fabricante Fictício 09
+590,PRD-00590,Sementes de soja Fictício 0590,Sementes de soja,saca_40KG,301.3900,211.4300,Fabricante Fictício 10
+591,PRD-00591,Sementes de soja Fictício 0591,Sementes de soja,saca_40KG,416.2600,335.8600,Fabricante Fictício 11
+592,PRD-00592,Sementes de soja Fictício 0592,Sementes de soja,saca_40KG,339.6100,287.9000,Fabricante Fictício 12
+593,PRD-00593,Sementes de soja Fictício 0593,Sementes de soja,saca_40KG,327.5700,236.1100,Fabricante Fictício 13
+594,PRD-00594,Sementes de soja Fictício 0594,Sementes de soja,saca_40KG,303.4700,249.6000,Fabricante Fictício 14
+595,PRD-00595,Sementes de soja Fictício 0595,Sementes de soja,saca_40KG,263.5300,197.7400,Fabricante Fictício 15
+596,PRD-00596,Sementes de soja Fictício 0596,Sementes de soja,saca_40KG,259.8300,207.5600,Fabricante Fictício 16
+597,PRD-00597,Sementes de soja Fictício 0597,Sementes de soja,saca_40KG,390.3600,298.7500,Fabricante Fictício 17
+598,PRD-00598,Sementes de soja Fictício 0598,Sementes de soja,saca_40KG,387.2000,317.6600,Fabricante Fictício 18
+599,PRD-00599,Sementes de soja Fictício 0599,Sementes de soja,saca_40KG,263.6600,203.1900,Fabricante Fictício 19
+600,PRD-00600,Sementes de soja Fictício 0600,Sementes de soja,saca_40KG,304.9700,222.6600,Fabricante Fictício 20
+601,PRD-00601,Sementes de milho Fictício 0601,Sementes de milho,saca_20KG,818.8000,693.5300,Fabricante Fictício 01
+602,PRD-00602,Sementes de milho Fictício 0602,Sementes de milho,saca_20KG,719.4400,607.9500,Fabricante Fictício 02
+603,PRD-00603,Sementes de milho Fictício 0603,Sementes de milho,saca_20KG,725.2100,576.5500,Fabricante Fictício 03
+604,PRD-00604,Sementes de milho Fictício 0604,Sementes de milho,saca_20KG,778.4200,553.8800,Fabricante Fictício 04
+605,PRD-00605,Sementes de milho Fictício 0605,Sementes de milho,saca_20KG,630.8000,458.5300,Fabricante Fictício 05
+606,PRD-00606,Sementes de milho Fictício 0606,Sementes de milho,saca_20KG,739.5000,562.7500,Fabricante Fictício 06
+607,PRD-00607,Sementes de milho Fictício 0607,Sementes de milho,saca_20KG,532.9700,391.8800,Fabricante Fictício 07
+608,PRD-00608,Sementes de milho Fictício 0608,Sementes de milho,saca_20KG,930.0800,763.5300,Fabricante Fictício 08
+609,PRD-00609,Sementes de milho Fictício 0609,Sementes de milho,saca_20KG,687.0200,555.6700,Fabricante Fictício 09
+610,PRD-00610,Sementes de milho Fictício 0610,Sementes de milho,saca_20KG,611.4300,437.0000,Fabricante Fictício 10
+611,PRD-00611,Sementes de milho Fictício 0611,Sementes de milho,saca_20KG,774.3700,613.6100,Fabricante Fictício 11
+612,PRD-00612,Sementes de milho Fictício 0612,Sementes de milho,saca_20KG,904.8100,650.7500,Fabricante Fictício 12
+613,PRD-00613,Sementes de milho Fictício 0613,Sementes de milho,saca_20KG,564.5200,468.9600,Fabricante Fictício 13
+614,PRD-00614,Sementes de milho Fictício 0614,Sementes de milho,saca_20KG,563.8000,473.8400,Fabricante Fictício 14
+615,PRD-00615,Sementes de milho Fictício 0615,Sementes de milho,saca_20KG,469.5000,348.2400,Fabricante Fictício 15
+616,PRD-00616,Sementes de milho Fictício 0616,Sementes de milho,saca_20KG,918.9100,762.9500,Fabricante Fictício 16
+617,PRD-00617,Sementes de milho Fictício 0617,Sementes de milho,saca_20KG,504.3300,421.5700,Fabricante Fictício 17
+618,PRD-00618,Sementes de milho Fictício 0618,Sementes de milho,saca_20KG,869.0200,620.5000,Fabricante Fictício 18
+619,PRD-00619,Sementes de milho Fictício 0619,Sementes de milho,saca_20KG,807.6200,583.5200,Fabricante Fictício 19
+620,PRD-00620,Sementes de milho Fictício 0620,Sementes de milho,saca_20KG,687.5900,523.5700,Fabricante Fictício 20
+621,PRD-00621,Sementes de milho Fictício 0621,Sementes de milho,saca_20KG,517.3500,413.3600,Fabricante Fictício 01
+622,PRD-00622,Sementes de milho Fictício 0622,Sementes de milho,saca_20KG,901.9600,651.6200,Fabricante Fictício 02
+623,PRD-00623,Sementes de milho Fictício 0623,Sementes de milho,saca_20KG,564.1600,415.7300,Fabricante Fictício 03
+624,PRD-00624,Sementes de milho Fictício 0624,Sementes de milho,saca_20KG,788.3400,645.6100,Fabricante Fictício 04
+625,PRD-00625,Sementes de milho Fictício 0625,Sementes de milho,saca_20KG,482.3100,359.3700,Fabricante Fictício 05
+626,PRD-00626,Sementes de milho Fictício 0626,Sementes de milho,saca_20KG,846.5100,605.4300,Fabricante Fictício 06
+627,PRD-00627,Sementes de milho Fictício 0627,Sementes de milho,saca_20KG,622.1200,468.2500,Fabricante Fictício 07
+628,PRD-00628,Sementes de milho Fictício 0628,Sementes de milho,saca_20KG,549.8700,427.3100,Fabricante Fictício 08
+629,PRD-00629,Sementes de milho Fictício 0629,Sementes de milho,saca_20KG,607.2100,506.5800,Fabricante Fictício 09
+630,PRD-00630,Sementes de milho Fictício 0630,Sementes de milho,saca_20KG,692.9900,522.2300,Fabricante Fictício 10
+631,PRD-00631,Sementes de milho Fictício 0631,Sementes de milho,saca_20KG,890.8500,630.7100,Fabricante Fictício 11
+632,PRD-00632,Sementes de milho Fictício 0632,Sementes de milho,saca_20KG,810.2300,626.3300,Fabricante Fictício 12
+633,PRD-00633,Sementes de milho Fictício 0633,Sementes de milho,saca_20KG,523.5100,441.5400,Fabricante Fictício 13
+634,PRD-00634,Sementes de milho Fictício 0634,Sementes de milho,saca_20KG,798.4300,669.8200,Fabricante Fictício 14
+635,PRD-00635,Sementes de milho Fictício 0635,Sementes de milho,saca_20KG,606.2900,506.7400,Fabricante Fictício 15
+636,PRD-00636,Sementes de milho Fictício 0636,Sementes de milho,saca_20KG,560.6500,447.1200,Fabricante Fictício 16
+637,PRD-00637,Sementes de milho Fictício 0637,Sementes de milho,saca_20KG,674.4900,503.5600,Fabricante Fictício 17
+638,PRD-00638,Sementes de milho Fictício 0638,Sementes de milho,saca_20KG,870.2800,733.0800,Fabricante Fictício 18
+639,PRD-00639,Sementes de milho Fictício 0639,Sementes de milho,saca_20KG,665.4500,493.8000,Fabricante Fictício 19
+640,PRD-00640,Sementes de milho Fictício 0640,Sementes de milho,saca_20KG,742.5600,529.4000,Fabricante Fictício 20
+641,PRD-00641,Sementes de milho Fictício 0641,Sementes de milho,saca_20KG,621.1600,437.7500,Fabricante Fictício 01
+642,PRD-00642,Sementes de milho Fictício 0642,Sementes de milho,saca_20KG,661.1900,488.7800,Fabricante Fictício 02
+643,PRD-00643,Sementes de milho Fictício 0643,Sementes de milho,saca_20KG,636.6700,514.6300,Fabricante Fictício 03
+644,PRD-00644,Sementes de milho Fictício 0644,Sementes de milho,saca_20KG,776.8300,642.1200,Fabricante Fictício 04
+645,PRD-00645,Sementes de milho Fictício 0645,Sementes de milho,saca_20KG,801.7500,597.6400,Fabricante Fictício 05
+646,PRD-00646,Sementes de milho Fictício 0646,Sementes de milho,saca_20KG,713.0000,558.2800,Fabricante Fictício 06
+647,PRD-00647,Sementes de milho Fictício 0647,Sementes de milho,saca_20KG,636.7200,519.6600,Fabricante Fictício 07
+648,PRD-00648,Sementes de milho Fictício 0648,Sementes de milho,saca_20KG,689.9600,573.4300,Fabricante Fictício 08
+649,PRD-00649,Sementes de milho Fictício 0649,Sementes de milho,saca_20KG,754.1500,584.5600,Fabricante Fictício 09
+650,PRD-00650,Sementes de milho Fictício 0650,Sementes de milho,saca_20KG,726.7900,536.7200,Fabricante Fictício 10
+651,PRD-00651,Sementes de milho Fictício 0651,Sementes de milho,saca_20KG,628.0600,493.4000,Fabricante Fictício 11
+652,PRD-00652,Sementes de milho Fictício 0652,Sementes de milho,saca_20KG,695.6600,589.8200,Fabricante Fictício 12
+653,PRD-00653,Sementes de milho Fictício 0653,Sementes de milho,saca_20KG,526.4400,388.8000,Fabricante Fictício 13
+654,PRD-00654,Sementes de milho Fictício 0654,Sementes de milho,saca_20KG,770.6500,586.8500,Fabricante Fictício 14
+655,PRD-00655,Sementes de milho Fictício 0655,Sementes de milho,saca_20KG,815.3000,627.1500,Fabricante Fictício 15
+656,PRD-00656,Sementes de milho Fictício 0656,Sementes de milho,saca_20KG,556.4000,459.7900,Fabricante Fictício 16
+657,PRD-00657,Sementes de milho Fictício 0657,Sementes de milho,saca_20KG,506.3000,384.3400,Fabricante Fictício 17
+658,PRD-00658,Sementes de milho Fictício 0658,Sementes de milho,saca_20KG,808.6900,685.3200,Fabricante Fictício 18
+659,PRD-00659,Sementes de milho Fictício 0659,Sementes de milho,saca_20KG,794.5400,647.9300,Fabricante Fictício 19
+660,PRD-00660,Sementes de milho Fictício 0660,Sementes de milho,saca_20KG,707.4100,551.0700,Fabricante Fictício 20
+661,PRD-00661,Sementes de milho Fictício 0661,Sementes de milho,saca_20KG,740.6600,628.3700,Fabricante Fictício 01
+662,PRD-00662,Sementes de milho Fictício 0662,Sementes de milho,saca_20KG,787.7500,631.0900,Fabricante Fictício 02
+663,PRD-00663,Sementes de milho Fictício 0663,Sementes de milho,saca_20KG,595.4700,447.8000,Fabricante Fictício 03
+664,PRD-00664,Sementes de milho Fictício 0664,Sementes de milho,saca_20KG,450.0700,355.3200,Fabricante Fictício 04
+665,PRD-00665,Sementes de milho Fictício 0665,Sementes de milho,saca_20KG,813.1300,585.8800,Fabricante Fictício 05
+666,PRD-00666,Sementes de milho Fictício 0666,Sementes de milho,saca_20KG,461.5000,338.7200,Fabricante Fictício 06
+667,PRD-00667,Sementes de milho Fictício 0667,Sementes de milho,saca_20KG,666.4500,505.1500,Fabricante Fictício 07
+668,PRD-00668,Sementes de milho Fictício 0668,Sementes de milho,saca_20KG,808.5300,592.6900,Fabricante Fictício 08
+669,PRD-00669,Sementes de milho Fictício 0669,Sementes de milho,saca_20KG,602.8800,461.5600,Fabricante Fictício 09
+670,PRD-00670,Sementes de milho Fictício 0670,Sementes de milho,saca_20KG,516.5200,422.0200,Fabricante Fictício 10
+671,PRD-00671,Sementes de milho Fictício 0671,Sementes de milho,saca_20KG,736.1200,562.5900,Fabricante Fictício 11
+672,PRD-00672,Sementes de milho Fictício 0672,Sementes de milho,saca_20KG,545.9100,444.0100,Fabricante Fictício 12
+673,PRD-00673,Sementes de milho Fictício 0673,Sementes de milho,saca_20KG,911.7600,749.5800,Fabricante Fictício 13
+674,PRD-00674,Sementes de milho Fictício 0674,Sementes de milho,saca_20KG,859.5600,651.0400,Fabricante Fictício 14
+675,PRD-00675,Sementes de milho Fictício 0675,Sementes de milho,saca_20KG,900.5800,755.7200,Fabricante Fictício 15
+676,PRD-00676,Sementes de milho Fictício 0676,Sementes de milho,saca_20KG,867.1100,680.1500,Fabricante Fictício 16
+677,PRD-00677,Sementes de milho Fictício 0677,Sementes de milho,saca_20KG,600.6500,444.0600,Fabricante Fictício 17
+678,PRD-00678,Sementes de milho Fictício 0678,Sementes de milho,saca_20KG,804.1900,634.5200,Fabricante Fictício 18
+679,PRD-00679,Sementes de milho Fictício 0679,Sementes de milho,saca_20KG,712.3000,552.9700,Fabricante Fictício 19
+680,PRD-00680,Sementes de milho Fictício 0680,Sementes de milho,saca_20KG,623.3300,507.2800,Fabricante Fictício 20
+681,PRD-00681,Sementes de milho Fictício 0681,Sementes de milho,saca_20KG,581.0300,470.6000,Fabricante Fictício 01
+682,PRD-00682,Sementes de milho Fictício 0682,Sementes de milho,saca_20KG,494.4800,356.0400,Fabricante Fictício 02
+683,PRD-00683,Sementes de milho Fictício 0683,Sementes de milho,saca_20KG,949.8400,788.2600,Fabricante Fictício 03
+684,PRD-00684,Sementes de milho Fictício 0684,Sementes de milho,saca_20KG,791.8500,644.8100,Fabricante Fictício 04
+685,PRD-00685,Sementes de milho Fictício 0685,Sementes de milho,saca_20KG,877.0100,642.1200,Fabricante Fictício 05
+686,PRD-00686,Sementes de milho Fictício 0686,Sementes de milho,saca_20KG,680.5600,537.5800,Fabricante Fictício 06
+687,PRD-00687,Sementes de milho Fictício 0687,Sementes de milho,saca_20KG,739.6500,606.8600,Fabricante Fictício 07
+688,PRD-00688,Sementes de milho Fictício 0688,Sementes de milho,saca_20KG,528.3000,385.4500,Fabricante Fictício 08
+689,PRD-00689,Sementes de milho Fictício 0689,Sementes de milho,saca_20KG,765.7900,547.4100,Fabricante Fictício 09
+690,PRD-00690,Sementes de milho Fictício 0690,Sementes de milho,saca_20KG,806.9000,634.8700,Fabricante Fictício 10
+691,PRD-00691,Sementes de milho Fictício 0691,Sementes de milho,saca_20KG,700.6400,515.2300,Fabricante Fictício 11
+692,PRD-00692,Sementes de milho Fictício 0692,Sementes de milho,saca_20KG,799.7400,624.0800,Fabricante Fictício 12
+693,PRD-00693,Sementes de milho Fictício 0693,Sementes de milho,saca_20KG,856.0400,625.5100,Fabricante Fictício 13
+694,PRD-00694,Sementes de milho Fictício 0694,Sementes de milho,saca_20KG,740.1800,578.9200,Fabricante Fictício 14
+695,PRD-00695,Sementes de milho Fictício 0695,Sementes de milho,saca_20KG,862.1200,713.4800,Fabricante Fictício 15
+696,PRD-00696,Sementes de milho Fictício 0696,Sementes de milho,saca_20KG,683.1400,537.0400,Fabricante Fictício 16
+697,PRD-00697,Sementes de milho Fictício 0697,Sementes de milho,saca_20KG,900.2200,657.2700,Fabricante Fictício 17
+698,PRD-00698,Sementes de milho Fictício 0698,Sementes de milho,saca_20KG,935.5800,752.3100,Fabricante Fictício 18
+699,PRD-00699,Sementes de milho Fictício 0699,Sementes de milho,saca_20KG,748.0400,630.1500,Fabricante Fictício 19
+700,PRD-00700,Sementes de milho Fictício 0700,Sementes de milho,saca_20KG,462.0600,380.9500,Fabricante Fictício 20
+701,PRD-00701,Sementes de milho Fictício 0701,Sementes de milho,saca_20KG,686.8200,526.4400,Fabricante Fictício 01
+702,PRD-00702,Sementes de milho Fictício 0702,Sementes de milho,saca_20KG,492.4700,353.8200,Fabricante Fictício 02
+703,PRD-00703,Sementes de milho Fictício 0703,Sementes de milho,saca_20KG,905.4300,753.4400,Fabricante Fictício 03
+704,PRD-00704,Sementes de milho Fictício 0704,Sementes de milho,saca_20KG,876.6500,614.9200,Fabricante Fictício 04
+705,PRD-00705,Sementes de milho Fictício 0705,Sementes de milho,saca_20KG,808.4700,662.7100,Fabricante Fictício 05
+706,PRD-00706,Sementes de milho Fictício 0706,Sementes de milho,saca_20KG,503.2500,386.8400,Fabricante Fictício 06
+707,PRD-00707,Sementes de milho Fictício 0707,Sementes de milho,saca_20KG,770.2900,541.2500,Fabricante Fictício 07
+708,PRD-00708,Sementes de milho Fictício 0708,Sementes de milho,saca_20KG,495.5800,409.0400,Fabricante Fictício 08
+709,PRD-00709,Sementes de milho Fictício 0709,Sementes de milho,saca_20KG,817.7100,587.3600,Fabricante Fictício 09
+710,PRD-00710,Sementes de milho Fictício 0710,Sementes de milho,saca_20KG,486.3600,348.5900,Fabricante Fictício 10
+711,PRD-00711,Sementes de milho Fictício 0711,Sementes de milho,saca_20KG,779.3000,622.4400,Fabricante Fictício 11
+712,PRD-00712,Sementes de milho Fictício 0712,Sementes de milho,saca_20KG,812.3800,656.8500,Fabricante Fictício 12
+713,PRD-00713,Sementes de milho Fictício 0713,Sementes de milho,saca_20KG,592.1000,467.6300,Fabricante Fictício 13
+714,PRD-00714,Sementes de milho Fictício 0714,Sementes de milho,saca_20KG,534.9300,451.0500,Fabricante Fictício 14
+715,PRD-00715,Sementes de milho Fictício 0715,Sementes de milho,saca_20KG,552.8000,457.3900,Fabricante Fictício 15
+716,PRD-00716,Sementes de milho Fictício 0716,Sementes de milho,saca_20KG,642.9000,472.1700,Fabricante Fictício 16
+717,PRD-00717,Sementes de milho Fictício 0717,Sementes de milho,saca_20KG,755.8300,586.6500,Fabricante Fictício 17
+718,PRD-00718,Sementes de milho Fictício 0718,Sementes de milho,saca_20KG,524.9800,386.8600,Fabricante Fictício 18
+719,PRD-00719,Sementes de milho Fictício 0719,Sementes de milho,saca_20KG,739.6800,628.0700,Fabricante Fictício 19
+720,PRD-00720,Sementes de milho Fictício 0720,Sementes de milho,saca_20KG,623.3100,520.1700,Fabricante Fictício 20
+721,PRD-00721,Sementes de milho Fictício 0721,Sementes de milho,saca_20KG,669.5700,485.5400,Fabricante Fictício 01
+722,PRD-00722,Sementes de milho Fictício 0722,Sementes de milho,saca_20KG,784.1400,569.9300,Fabricante Fictício 02
+723,PRD-00723,Sementes de milho Fictício 0723,Sementes de milho,saca_20KG,851.8800,638.2800,Fabricante Fictício 03
+724,PRD-00724,Sementes de milho Fictício 0724,Sementes de milho,saca_20KG,516.3100,377.8100,Fabricante Fictício 04
+725,PRD-00725,Sementes de milho Fictício 0725,Sementes de milho,saca_20KG,890.5900,715.2000,Fabricante Fictício 05
+726,PRD-00726,Sementes de milho Fictício 0726,Sementes de milho,saca_20KG,660.4700,560.6200,Fabricante Fictício 06
+727,PRD-00727,Sementes de milho Fictício 0727,Sementes de milho,saca_20KG,859.8500,721.1800,Fabricante Fictício 07
+728,PRD-00728,Sementes de milho Fictício 0728,Sementes de milho,saca_20KG,464.1100,331.8800,Fabricante Fictício 08
+729,PRD-00729,Sementes de milho Fictício 0729,Sementes de milho,saca_20KG,908.2100,661.4300,Fabricante Fictício 09
+730,PRD-00730,Sementes de milho Fictício 0730,Sementes de milho,saca_20KG,498.0000,388.5500,Fabricante Fictício 10
+731,PRD-00731,Sementes de milho Fictício 0731,Sementes de milho,saca_20KG,895.1500,742.7700,Fabricante Fictício 11
+732,PRD-00732,Sementes de milho Fictício 0732,Sementes de milho,saca_20KG,510.7500,418.2500,Fabricante Fictício 12
+733,PRD-00733,Sementes de milho Fictício 0733,Sementes de milho,saca_20KG,465.9900,334.9900,Fabricante Fictício 13
+734,PRD-00734,Sementes de milho Fictício 0734,Sementes de milho,saca_20KG,675.5800,504.0400,Fabricante Fictício 14
+735,PRD-00735,Sementes de milho Fictício 0735,Sementes de milho,saca_20KG,635.1600,509.0700,Fabricante Fictício 15
+736,PRD-00736,Sementes de milho Fictício 0736,Sementes de milho,saca_20KG,882.8500,654.3800,Fabricante Fictício 16
+737,PRD-00737,Sementes de milho Fictício 0737,Sementes de milho,saca_20KG,505.3200,374.0400,Fabricante Fictício 17
+738,PRD-00738,Sementes de milho Fictício 0738,Sementes de milho,saca_20KG,521.9100,414.9200,Fabricante Fictício 18
+739,PRD-00739,Sementes de milho Fictício 0739,Sementes de milho,saca_20KG,578.0900,458.5800,Fabricante Fictício 19
+740,PRD-00740,Sementes de milho Fictício 0740,Sementes de milho,saca_20KG,526.2100,409.1000,Fabricante Fictício 20
+741,PRD-00741,Sementes de milho Fictício 0741,Sementes de milho,saca_20KG,609.9300,492.2100,Fabricante Fictício 01
+742,PRD-00742,Sementes de milho Fictício 0742,Sementes de milho,saca_20KG,766.3400,546.9200,Fabricante Fictício 02
+743,PRD-00743,Sementes de milho Fictício 0743,Sementes de milho,saca_20KG,619.8600,491.3000,Fabricante Fictício 03
+744,PRD-00744,Sementes de milho Fictício 0744,Sementes de milho,saca_20KG,757.3100,642.1300,Fabricante Fictício 04
+745,PRD-00745,Sementes de milho Fictício 0745,Sementes de milho,saca_20KG,779.7900,613.1700,Fabricante Fictício 05
+746,PRD-00746,Sementes de milho Fictício 0746,Sementes de milho,saca_20KG,462.2200,351.3000,Fabricante Fictício 06
+747,PRD-00747,Sementes de milho Fictício 0747,Sementes de milho,saca_20KG,764.9100,612.5700,Fabricante Fictício 07
+748,PRD-00748,Sementes de milho Fictício 0748,Sementes de milho,saca_20KG,922.1300,726.9300,Fabricante Fictício 08
+749,PRD-00749,Sementes de milho Fictício 0749,Sementes de milho,saca_20KG,492.7600,375.4000,Fabricante Fictício 09
+750,PRD-00750,Sementes de milho Fictício 0750,Sementes de milho,saca_20KG,746.0300,577.7600,Fabricante Fictício 10
+751,PRD-00751,Sementes de milho Fictício 0751,Sementes de milho,saca_20KG,651.5100,499.8400,Fabricante Fictício 11
+752,PRD-00752,Sementes de milho Fictício 0752,Sementes de milho,saca_20KG,680.7300,490.1400,Fabricante Fictício 12
+753,PRD-00753,Sementes de milho Fictício 0753,Sementes de milho,saca_20KG,814.1100,586.3200,Fabricante Fictício 13
+754,PRD-00754,Sementes de milho Fictício 0754,Sementes de milho,saca_20KG,786.7200,612.9700,Fabricante Fictício 14
+755,PRD-00755,Sementes de milho Fictício 0755,Sementes de milho,saca_20KG,783.6500,637.2700,Fabricante Fictício 15
+756,PRD-00756,Sementes de milho Fictício 0756,Sementes de milho,saca_20KG,668.8100,522.9000,Fabricante Fictício 16
+757,PRD-00757,Sementes de milho Fictício 0757,Sementes de milho,saca_20KG,796.7700,601.4400,Fabricante Fictício 17
+758,PRD-00758,Sementes de milho Fictício 0758,Sementes de milho,saca_20KG,659.3900,511.2300,Fabricante Fictício 18
+759,PRD-00759,Sementes de milho Fictício 0759,Sementes de milho,saca_20KG,745.7200,593.6100,Fabricante Fictício 19
+760,PRD-00760,Sementes de milho Fictício 0760,Sementes de milho,saca_20KG,699.7100,549.1400,Fabricante Fictício 20
+761,PRD-00761,Sementes de milho Fictício 0761,Sementes de milho,saca_20KG,633.7500,452.7200,Fabricante Fictício 01
+762,PRD-00762,Sementes de milho Fictício 0762,Sementes de milho,saca_20KG,760.2400,555.1000,Fabricante Fictício 02
+763,PRD-00763,Sementes de milho Fictício 0763,Sementes de milho,saca_20KG,909.1300,688.3700,Fabricante Fictício 03
+764,PRD-00764,Sementes de milho Fictício 0764,Sementes de milho,saca_20KG,490.2800,377.1600,Fabricante Fictício 04
+765,PRD-00765,Sementes de milho Fictício 0765,Sementes de milho,saca_20KG,875.2500,700.4500,Fabricante Fictício 05
+766,PRD-00766,Sementes de milho Fictício 0766,Sementes de milho,saca_20KG,698.5800,516.6500,Fabricante Fictício 06
+767,PRD-00767,Sementes de milho Fictício 0767,Sementes de milho,saca_20KG,655.3700,537.8800,Fabricante Fictício 07
+768,PRD-00768,Sementes de milho Fictício 0768,Sementes de milho,saca_20KG,552.5500,411.3800,Fabricante Fictício 08
+769,PRD-00769,Sementes de milho Fictício 0769,Sementes de milho,saca_20KG,744.5700,572.3400,Fabricante Fictício 09
+770,PRD-00770,Sementes de milho Fictício 0770,Sementes de milho,saca_20KG,481.0100,384.9400,Fabricante Fictício 10
+771,PRD-00771,Sementes de milho Fictício 0771,Sementes de milho,saca_20KG,933.0700,770.3300,Fabricante Fictício 11
+772,PRD-00772,Sementes de milho Fictício 0772,Sementes de milho,saca_20KG,810.1400,633.9000,Fabricante Fictício 12
+773,PRD-00773,Sementes de milho Fictício 0773,Sementes de milho,saca_20KG,571.1100,465.7300,Fabricante Fictício 13
+774,PRD-00774,Sementes de milho Fictício 0774,Sementes de milho,saca_20KG,509.6700,363.9000,Fabricante Fictício 14
+775,PRD-00775,Sementes de milho Fictício 0775,Sementes de milho,saca_20KG,630.1300,501.0300,Fabricante Fictício 15
+776,PRD-00776,Sementes de milho Fictício 0776,Sementes de milho,saca_20KG,546.1000,389.8000,Fabricante Fictício 16
+777,PRD-00777,Sementes de milho Fictício 0777,Sementes de milho,saca_20KG,768.1300,598.8600,Fabricante Fictício 17
+778,PRD-00778,Sementes de milho Fictício 0778,Sementes de milho,saca_20KG,936.3700,693.4500,Fabricante Fictício 18
+779,PRD-00779,Sementes de milho Fictício 0779,Sementes de milho,saca_20KG,791.2800,656.9700,Fabricante Fictício 19
+780,PRD-00780,Sementes de milho Fictício 0780,Sementes de milho,saca_20KG,677.6200,474.3400,Fabricante Fictício 20
+781,PRD-00781,Sementes de milho Fictício 0781,Sementes de milho,saca_20KG,830.1000,667.6000,Fabricante Fictício 01
+782,PRD-00782,Sementes de milho Fictício 0782,Sementes de milho,saca_20KG,479.1800,365.2600,Fabricante Fictício 02
+783,PRD-00783,Sementes de milho Fictício 0783,Sementes de milho,saca_20KG,829.0100,644.8900,Fabricante Fictício 03
+784,PRD-00784,Sementes de milho Fictício 0784,Sementes de milho,saca_20KG,944.1500,781.2200,Fabricante Fictício 04
+785,PRD-00785,Sementes de milho Fictício 0785,Sementes de milho,saca_20KG,640.2300,522.4000,Fabricante Fictício 05
+786,PRD-00786,Sementes de milho Fictício 0786,Sementes de milho,saca_20KG,925.7700,714.5700,Fabricante Fictício 06
+787,PRD-00787,Sementes de milho Fictício 0787,Sementes de milho,saca_20KG,914.2200,715.0900,Fabricante Fictício 07
+788,PRD-00788,Sementes de milho Fictício 0788,Sementes de milho,saca_20KG,936.8900,737.8900,Fabricante Fictício 08
+789,PRD-00789,Sementes de milho Fictício 0789,Sementes de milho,saca_20KG,849.4200,650.8400,Fabricante Fictício 09
+790,PRD-00790,Sementes de milho Fictício 0790,Sementes de milho,saca_20KG,750.1200,537.8300,Fabricante Fictício 10
+791,PRD-00791,Sementes de milho Fictício 0791,Sementes de milho,saca_20KG,940.9900,691.5500,Fabricante Fictício 11
+792,PRD-00792,Sementes de milho Fictício 0792,Sementes de milho,saca_20KG,771.3100,639.5200,Fabricante Fictício 12
+793,PRD-00793,Sementes de milho Fictício 0793,Sementes de milho,saca_20KG,673.1100,475.2800,Fabricante Fictício 13
+794,PRD-00794,Sementes de milho Fictício 0794,Sementes de milho,saca_20KG,581.0200,461.9600,Fabricante Fictício 14
+795,PRD-00795,Sementes de milho Fictício 0795,Sementes de milho,saca_20KG,575.7400,436.6100,Fabricante Fictício 15
+796,PRD-00796,Sementes de milho Fictício 0796,Sementes de milho,saca_20KG,581.4600,455.4000,Fabricante Fictício 16
+797,PRD-00797,Sementes de milho Fictício 0797,Sementes de milho,saca_20KG,899.6500,694.4300,Fabricante Fictício 17
+798,PRD-00798,Sementes de milho Fictício 0798,Sementes de milho,saca_20KG,461.2300,389.2800,Fabricante Fictício 18
+799,PRD-00799,Sementes de milho Fictício 0799,Sementes de milho,saca_20KG,611.5100,448.0500,Fabricante Fictício 19
+800,PRD-00800,Sementes de milho Fictício 0800,Sementes de milho,saca_20KG,866.0800,657.9200,Fabricante Fictício 20
+801,PRD-00801,Nutrição foliar Fictício 0801,Nutrição foliar,L,50.5000,41.4000,Fabricante Fictício 01
+802,PRD-00802,Nutrição foliar Fictício 0802,Nutrição foliar,L,75.4900,54.1400,Fabricante Fictício 02
+803,PRD-00803,Nutrição foliar Fictício 0803,Nutrição foliar,L,161.5900,114.7100,Fabricante Fictício 03
+804,PRD-00804,Nutrição foliar Fictício 0804,Nutrição foliar,L,134.2100,112.7700,Fabricante Fictício 04
+805,PRD-00805,Nutrição foliar Fictício 0805,Nutrição foliar,L,53.1300,37.3500,Fabricante Fictício 05
+806,PRD-00806,Nutrição foliar Fictício 0806,Nutrição foliar,L,169.2900,129.1700,Fabricante Fictício 06
+807,PRD-00807,Nutrição foliar Fictício 0807,Nutrição foliar,L,136.3800,98.3600,Fabricante Fictício 07
+808,PRD-00808,Nutrição foliar Fictício 0808,Nutrição foliar,L,132.2200,111.1800,Fabricante Fictício 08
+809,PRD-00809,Nutrição foliar Fictício 0809,Nutrição foliar,L,151.1400,117.3800,Fabricante Fictício 09
+810,PRD-00810,Nutrição foliar Fictício 0810,Nutrição foliar,L,146.2200,115.4000,Fabricante Fictício 10
+811,PRD-00811,Nutrição foliar Fictício 0811,Nutrição foliar,L,133.4500,109.1200,Fabricante Fictício 11
+812,PRD-00812,Nutrição foliar Fictício 0812,Nutrição foliar,L,131.6900,97.4100,Fabricante Fictício 12
+813,PRD-00813,Nutrição foliar Fictício 0813,Nutrição foliar,L,171.0700,139.7200,Fabricante Fictício 13
+814,PRD-00814,Nutrição foliar Fictício 0814,Nutrição foliar,L,164.7300,131.8300,Fabricante Fictício 14
+815,PRD-00815,Nutrição foliar Fictício 0815,Nutrição foliar,L,127.7100,91.1200,Fabricante Fictício 15
+816,PRD-00816,Nutrição foliar Fictício 0816,Nutrição foliar,L,149.1600,120.7000,Fabricante Fictício 16
+817,PRD-00817,Nutrição foliar Fictício 0817,Nutrição foliar,L,74.2200,59.3600,Fabricante Fictício 17
+818,PRD-00818,Nutrição foliar Fictício 0818,Nutrição foliar,L,39.3700,30.1200,Fabricante Fictício 18
+819,PRD-00819,Nutrição foliar Fictício 0819,Nutrição foliar,L,78.5900,63.2400,Fabricante Fictício 19
+820,PRD-00820,Nutrição foliar Fictício 0820,Nutrição foliar,L,114.4600,93.1800,Fabricante Fictício 20
+821,PRD-00821,Nutrição foliar Fictício 0821,Nutrição foliar,L,149.8600,123.1900,Fabricante Fictício 01
+822,PRD-00822,Nutrição foliar Fictício 0822,Nutrição foliar,L,169.9800,142.9800,Fabricante Fictício 02
+823,PRD-00823,Nutrição foliar Fictício 0823,Nutrição foliar,L,57.9400,49.1900,Fabricante Fictício 03
+824,PRD-00824,Nutrição foliar Fictício 0824,Nutrição foliar,L,165.7200,134.2800,Fabricante Fictício 04
+825,PRD-00825,Nutrição foliar Fictício 0825,Nutrição foliar,L,150.3700,112.1300,Fabricante Fictício 05
+826,PRD-00826,Nutrição foliar Fictício 0826,Nutrição foliar,L,151.4300,126.4300,Fabricante Fictício 06
+827,PRD-00827,Nutrição foliar Fictício 0827,Nutrição foliar,L,43.9500,34.4900,Fabricante Fictício 07
+828,PRD-00828,Nutrição foliar Fictício 0828,Nutrição foliar,L,53.7800,41.4500,Fabricante Fictício 08
+829,PRD-00829,Nutrição foliar Fictício 0829,Nutrição foliar,L,46.9900,37.7600,Fabricante Fictício 09
+830,PRD-00830,Nutrição foliar Fictício 0830,Nutrição foliar,L,111.0600,87.9400,Fabricante Fictício 10
+831,PRD-00831,Nutrição foliar Fictício 0831,Nutrição foliar,L,105.4100,85.1300,Fabricante Fictício 11
+832,PRD-00832,Nutrição foliar Fictício 0832,Nutrição foliar,L,26.3100,19.5900,Fabricante Fictício 12
+833,PRD-00833,Nutrição foliar Fictício 0833,Nutrição foliar,L,122.9900,102.5500,Fabricante Fictício 13
+834,PRD-00834,Nutrição foliar Fictício 0834,Nutrição foliar,L,168.8800,142.6300,Fabricante Fictício 14
+835,PRD-00835,Nutrição foliar Fictício 0835,Nutrição foliar,L,164.5200,131.8800,Fabricante Fictício 15
+836,PRD-00836,Nutrição foliar Fictício 0836,Nutrição foliar,L,124.5600,94.9700,Fabricante Fictício 16
+837,PRD-00837,Nutrição foliar Fictício 0837,Nutrição foliar,L,131.0100,92.5100,Fabricante Fictício 17
+838,PRD-00838,Nutrição foliar Fictício 0838,Nutrição foliar,L,90.6300,74.4100,Fabricante Fictício 18
+839,PRD-00839,Nutrição foliar Fictício 0839,Nutrição foliar,L,120.6000,93.8000,Fabricante Fictício 19
+840,PRD-00840,Nutrição foliar Fictício 0840,Nutrição foliar,L,45.4100,38.4200,Fabricante Fictício 20
+841,PRD-00841,Nutrição foliar Fictício 0841,Nutrição foliar,L,163.3600,120.7400,Fabricante Fictício 01
+842,PRD-00842,Nutrição foliar Fictício 0842,Nutrição foliar,L,36.7200,26.5100,Fabricante Fictício 02
+843,PRD-00843,Nutrição foliar Fictício 0843,Nutrição foliar,L,126.3400,101.0500,Fabricante Fictício 03
+844,PRD-00844,Nutrição foliar Fictício 0844,Nutrição foliar,L,58.4700,40.9400,Fabricante Fictício 04
+845,PRD-00845,Nutrição foliar Fictício 0845,Nutrição foliar,L,52.2400,41.4500,Fabricante Fictício 05
+846,PRD-00846,Nutrição foliar Fictício 0846,Nutrição foliar,L,109.7200,91.6200,Fabricante Fictício 06
+847,PRD-00847,Nutrição foliar Fictício 0847,Nutrição foliar,L,134.4300,97.6300,Fabricante Fictício 07
+848,PRD-00848,Nutrição foliar Fictício 0848,Nutrição foliar,L,119.7300,98.7500,Fabricante Fictício 08
+849,PRD-00849,Nutrição foliar Fictício 0849,Nutrição foliar,L,174.0000,146.4800,Fabricante Fictício 09
+850,PRD-00850,Nutrição foliar Fictício 0850,Nutrição foliar,L,167.4700,136.1800,Fabricante Fictício 10
+851,PRD-00851,Nutrição foliar Fictício 0851,Nutrição foliar,L,109.6200,88.1900,Fabricante Fictício 11
+852,PRD-00852,Nutrição foliar Fictício 0852,Nutrição foliar,L,96.7200,72.5200,Fabricante Fictício 12
+853,PRD-00853,Nutrição foliar Fictício 0853,Nutrição foliar,L,63.3700,50.4400,Fabricante Fictício 13
+854,PRD-00854,Nutrição foliar Fictício 0854,Nutrição foliar,L,103.1300,83.5200,Fabricante Fictício 14
+855,PRD-00855,Nutrição foliar Fictício 0855,Nutrição foliar,L,166.3400,136.2900,Fabricante Fictício 15
+856,PRD-00856,Nutrição foliar Fictício 0856,Nutrição foliar,L,157.1500,126.7000,Fabricante Fictício 16
+857,PRD-00857,Nutrição foliar Fictício 0857,Nutrição foliar,L,156.2600,112.5700,Fabricante Fictício 17
+858,PRD-00858,Nutrição foliar Fictício 0858,Nutrição foliar,L,95.7200,70.1200,Fabricante Fictício 18
+859,PRD-00859,Nutrição foliar Fictício 0859,Nutrição foliar,L,63.4000,49.5800,Fabricante Fictício 19
+860,PRD-00860,Nutrição foliar Fictício 0860,Nutrição foliar,L,114.3200,93.8800,Fabricante Fictício 20
+861,PRD-00861,Nutrição foliar Fictício 0861,Nutrição foliar,L,138.8900,111.1100,Fabricante Fictício 01
+862,PRD-00862,Nutrição foliar Fictício 0862,Nutrição foliar,L,118.8700,100.4800,Fabricante Fictício 02
+863,PRD-00863,Nutrição foliar Fictício 0863,Nutrição foliar,L,29.4000,24.4900,Fabricante Fictício 03
+864,PRD-00864,Nutrição foliar Fictício 0864,Nutrição foliar,L,138.3900,107.2100,Fabricante Fictício 04
+865,PRD-00865,Nutrição foliar Fictício 0865,Nutrição foliar,L,120.0500,100.4200,Fabricante Fictício 05
+866,PRD-00866,Nutrição foliar Fictício 0866,Nutrição foliar,L,146.5600,108.6800,Fabricante Fictício 06
+867,PRD-00867,Nutrição foliar Fictício 0867,Nutrição foliar,L,165.3500,133.2700,Fabricante Fictício 07
+868,PRD-00868,Nutrição foliar Fictício 0868,Nutrição foliar,L,31.6200,23.9600,Fabricante Fictício 08
+869,PRD-00869,Nutrição foliar Fictício 0869,Nutrição foliar,L,71.6900,51.0000,Fabricante Fictício 09
+870,PRD-00870,Nutrição foliar Fictício 0870,Nutrição foliar,L,85.0600,62.1500,Fabricante Fictício 10
+871,PRD-00871,Nutrição foliar Fictício 0871,Nutrição foliar,L,39.0300,31.0100,Fabricante Fictício 11
+872,PRD-00872,Nutrição foliar Fictício 0872,Nutrição foliar,L,168.0100,122.2800,Fabricante Fictício 12
+873,PRD-00873,Nutrição foliar Fictício 0873,Nutrição foliar,L,142.5500,102.4700,Fabricante Fictício 13
+874,PRD-00874,Nutrição foliar Fictício 0874,Nutrição foliar,L,54.9100,42.7400,Fabricante Fictício 14
+875,PRD-00875,Nutrição foliar Fictício 0875,Nutrição foliar,L,33.4700,28.2100,Fabricante Fictício 15
+876,PRD-00876,Nutrição foliar Fictício 0876,Nutrição foliar,L,58.4600,45.0300,Fabricante Fictício 16
+877,PRD-00877,Nutrição foliar Fictício 0877,Nutrição foliar,L,171.8400,130.8100,Fabricante Fictício 17
+878,PRD-00878,Nutrição foliar Fictício 0878,Nutrição foliar,L,144.5600,101.7200,Fabricante Fictício 18
+879,PRD-00879,Nutrição foliar Fictício 0879,Nutrição foliar,L,44.6700,36.6800,Fabricante Fictício 19
+880,PRD-00880,Nutrição foliar Fictício 0880,Nutrição foliar,L,107.2500,83.9400,Fabricante Fictício 20
+881,PRD-00881,Nutrição foliar Fictício 0881,Nutrição foliar,L,89.1200,71.6100,Fabricante Fictício 01
+882,PRD-00882,Nutrição foliar Fictício 0882,Nutrição foliar,L,44.7100,34.0900,Fabricante Fictício 02
+883,PRD-00883,Nutrição foliar Fictício 0883,Nutrição foliar,L,89.1400,73.0700,Fabricante Fictício 03
+884,PRD-00884,Nutrição foliar Fictício 0884,Nutrição foliar,L,64.3600,48.7800,Fabricante Fictício 04
+885,PRD-00885,Nutrição foliar Fictício 0885,Nutrição foliar,L,156.7600,127.1400,Fabricante Fictício 05
+886,PRD-00886,Nutrição foliar Fictício 0886,Nutrição foliar,L,168.1600,135.1700,Fabricante Fictício 06
+887,PRD-00887,Nutrição foliar Fictício 0887,Nutrição foliar,L,167.8200,133.3800,Fabricante Fictício 07
+888,PRD-00888,Nutrição foliar Fictício 0888,Nutrição foliar,L,139.4100,113.8100,Fabricante Fictício 08
+889,PRD-00889,Nutrição foliar Fictício 0889,Nutrição foliar,L,26.7200,20.2000,Fabricante Fictício 09
+890,PRD-00890,Nutrição foliar Fictício 0890,Nutrição foliar,L,161.5500,124.1400,Fabricante Fictício 10
+891,PRD-00891,Nutrição foliar Fictício 0891,Nutrição foliar,L,144.4700,107.7400,Fabricante Fictício 11
+892,PRD-00892,Nutrição foliar Fictício 0892,Nutrição foliar,L,141.8700,119.6200,Fabricante Fictício 12
+893,PRD-00893,Nutrição foliar Fictício 0893,Nutrição foliar,L,57.9800,43.9700,Fabricante Fictício 13
+894,PRD-00894,Nutrição foliar Fictício 0894,Nutrição foliar,L,38.4200,27.7900,Fabricante Fictício 14
+895,PRD-00895,Nutrição foliar Fictício 0895,Nutrição foliar,L,96.8000,70.0900,Fabricante Fictício 15
+896,PRD-00896,Nutrição foliar Fictício 0896,Nutrição foliar,L,64.8200,46.5900,Fabricante Fictício 16
+897,PRD-00897,Nutrição foliar Fictício 0897,Nutrição foliar,L,72.0900,54.2300,Fabricante Fictício 17
+898,PRD-00898,Nutrição foliar Fictício 0898,Nutrição foliar,L,176.6900,125.2000,Fabricante Fictício 18
+899,PRD-00899,Nutrição foliar Fictício 0899,Nutrição foliar,L,36.6000,29.9600,Fabricante Fictício 19
+900,PRD-00900,Nutrição foliar Fictício 0900,Nutrição foliar,L,30.6300,25.8100,Fabricante Fictício 20
+901,PRD-00901,Nutrição foliar Fictício 0901,Nutrição foliar,L,167.8600,136.5100,Fabricante Fictício 01
+902,PRD-00902,Nutrição foliar Fictício 0902,Nutrição foliar,L,27.7200,22.1000,Fabricante Fictício 02
+903,PRD-00903,Nutrição foliar Fictício 0903,Nutrição foliar,L,40.2300,28.6800,Fabricante Fictício 03
+904,PRD-00904,Nutrição foliar Fictício 0904,Nutrição foliar,L,36.3600,25.7300,Fabricante Fictício 04
+905,PRD-00905,Nutrição foliar Fictício 0905,Nutrição foliar,L,103.0900,72.6000,Fabricante Fictício 05
+906,PRD-00906,Nutrição foliar Fictício 0906,Nutrição foliar,L,59.6700,47.2600,Fabricante Fictício 06
+907,PRD-00907,Nutrição foliar Fictício 0907,Nutrição foliar,L,62.7400,45.8700,Fabricante Fictício 07
+908,PRD-00908,Nutrição foliar Fictício 0908,Nutrição foliar,L,164.4000,121.7800,Fabricante Fictício 08
+909,PRD-00909,Nutrição foliar Fictício 0909,Nutrição foliar,L,61.3100,43.9900,Fabricante Fictício 09
+910,PRD-00910,Nutrição foliar Fictício 0910,Nutrição foliar,L,77.9000,57.0000,Fabricante Fictício 10
+911,PRD-00911,Nutrição foliar Fictício 0911,Nutrição foliar,L,32.2600,27.1600,Fabricante Fictício 11
+912,PRD-00912,Nutrição foliar Fictício 0912,Nutrição foliar,L,140.0600,101.2500,Fabricante Fictício 12
+913,PRD-00913,Nutrição foliar Fictício 0913,Nutrição foliar,L,160.4500,113.5800,Fabricante Fictício 13
+914,PRD-00914,Nutrição foliar Fictício 0914,Nutrição foliar,L,96.0000,73.8100,Fabricante Fictício 14
+915,PRD-00915,Nutrição foliar Fictício 0915,Nutrição foliar,L,43.5200,34.7300,Fabricante Fictício 15
+916,PRD-00916,Nutrição foliar Fictício 0916,Nutrição foliar,L,119.4900,85.3100,Fabricante Fictício 16
+917,PRD-00917,Nutrição foliar Fictício 0917,Nutrição foliar,L,85.9800,65.3200,Fabricante Fictício 17
+918,PRD-00918,Nutrição foliar Fictício 0918,Nutrição foliar,L,86.2400,71.0100,Fabricante Fictício 18
+919,PRD-00919,Nutrição foliar Fictício 0919,Nutrição foliar,L,106.7000,83.7000,Fabricante Fictício 19
+920,PRD-00920,Nutrição foliar Fictício 0920,Nutrição foliar,L,107.4600,82.9500,Fabricante Fictício 20
+921,PRD-00921,Nutrição foliar Fictício 0921,Nutrição foliar,L,147.8600,110.4600,Fabricante Fictício 01
+922,PRD-00922,Nutrição foliar Fictício 0922,Nutrição foliar,L,175.4600,133.7800,Fabricante Fictício 02
+923,PRD-00923,Nutrição foliar Fictício 0923,Nutrição foliar,L,35.4200,25.5400,Fabricante Fictício 03
+924,PRD-00924,Nutrição foliar Fictício 0924,Nutrição foliar,L,38.9200,27.6400,Fabricante Fictício 04
+925,PRD-00925,Nutrição foliar Fictício 0925,Nutrição foliar,L,120.2200,85.8600,Fabricante Fictício 05
+926,PRD-00926,Nutrição foliar Fictício 0926,Nutrição foliar,L,174.4800,132.1900,Fabricante Fictício 06
+927,PRD-00927,Nutrição foliar Fictício 0927,Nutrição foliar,L,137.4600,100.9800,Fabricante Fictício 07
+928,PRD-00928,Nutrição foliar Fictício 0928,Nutrição foliar,L,66.5200,55.4500,Fabricante Fictício 08
+929,PRD-00929,Nutrição foliar Fictício 0929,Nutrição foliar,L,32.4700,26.0300,Fabricante Fictício 09
+930,PRD-00930,Nutrição foliar Fictício 0930,Nutrição foliar,L,74.6200,62.5200,Fabricante Fictício 10
+931,PRD-00931,Nutrição foliar Fictício 0931,Nutrição foliar,L,90.0200,70.4600,Fabricante Fictício 11
+932,PRD-00932,Nutrição foliar Fictício 0932,Nutrição foliar,L,81.3400,59.6900,Fabricante Fictício 12
+933,PRD-00933,Nutrição foliar Fictício 0933,Nutrição foliar,L,162.3000,124.0400,Fabricante Fictício 13
+934,PRD-00934,Nutrição foliar Fictício 0934,Nutrição foliar,L,136.2600,111.7100,Fabricante Fictício 14
+935,PRD-00935,Nutrição foliar Fictício 0935,Nutrição foliar,L,54.1500,40.5700,Fabricante Fictício 15
+936,PRD-00936,Nutrição foliar Fictício 0936,Nutrição foliar,L,162.0400,134.0500,Fabricante Fictício 16
+937,PRD-00937,Nutrição foliar Fictício 0937,Nutrição foliar,L,162.4200,127.9500,Fabricante Fictício 17
+938,PRD-00938,Nutrição foliar Fictício 0938,Nutrição foliar,L,85.4000,66.8300,Fabricante Fictício 18
+939,PRD-00939,Nutrição foliar Fictício 0939,Nutrição foliar,L,142.5300,104.0400,Fabricante Fictício 19
+940,PRD-00940,Nutrição foliar Fictício 0940,Nutrição foliar,L,179.0100,140.5700,Fabricante Fictício 20
+941,PRD-00941,Nutrição foliar Fictício 0941,Nutrição foliar,L,55.9600,44.7500,Fabricante Fictício 01
+942,PRD-00942,Nutrição foliar Fictício 0942,Nutrição foliar,L,105.8800,77.6300,Fabricante Fictício 02
+943,PRD-00943,Nutrição foliar Fictício 0943,Nutrição foliar,L,161.0000,122.5500,Fabricante Fictício 03
+944,PRD-00944,Nutrição foliar Fictício 0944,Nutrição foliar,L,174.4700,146.5900,Fabricante Fictício 04
+945,PRD-00945,Nutrição foliar Fictício 0945,Nutrição foliar,L,102.1300,72.7800,Fabricante Fictício 05
+946,PRD-00946,Nutrição foliar Fictício 0946,Nutrição foliar,L,40.0400,33.1500,Fabricante Fictício 06
+947,PRD-00947,Nutrição foliar Fictício 0947,Nutrição foliar,L,34.9100,28.2800,Fabricante Fictício 07
+948,PRD-00948,Nutrição foliar Fictício 0948,Nutrição foliar,L,93.9200,74.8400,Fabricante Fictício 08
+949,PRD-00949,Nutrição foliar Fictício 0949,Nutrição foliar,L,82.6400,69.4600,Fabricante Fictício 09
+950,PRD-00950,Nutrição foliar Fictício 0950,Nutrição foliar,L,115.5700,86.7400,Fabricante Fictício 10
+951,PRD-00951,Nutrição foliar Fictício 0951,Nutrição foliar,L,46.7100,34.9200,Fabricante Fictício 11
+952,PRD-00952,Nutrição foliar Fictício 0952,Nutrição foliar,L,36.4800,28.0300,Fabricante Fictício 12
+953,PRD-00953,Nutrição foliar Fictício 0953,Nutrição foliar,L,37.5700,28.3400,Fabricante Fictício 13
+954,PRD-00954,Nutrição foliar Fictício 0954,Nutrição foliar,L,74.2200,60.0000,Fabricante Fictício 14
+955,PRD-00955,Nutrição foliar Fictício 0955,Nutrição foliar,L,84.4100,60.7900,Fabricante Fictício 15
+956,PRD-00956,Nutrição foliar Fictício 0956,Nutrição foliar,L,147.3100,115.9100,Fabricante Fictício 16
+957,PRD-00957,Nutrição foliar Fictício 0957,Nutrição foliar,L,52.0800,41.7500,Fabricante Fictício 17
+958,PRD-00958,Nutrição foliar Fictício 0958,Nutrição foliar,L,157.2200,122.3200,Fabricante Fictício 18
+959,PRD-00959,Nutrição foliar Fictício 0959,Nutrição foliar,L,144.4400,114.8800,Fabricante Fictício 19
+960,PRD-00960,Nutrição foliar Fictício 0960,Nutrição foliar,L,90.3200,67.9400,Fabricante Fictício 20
+961,PRD-00961,Nutrição foliar Fictício 0961,Nutrição foliar,L,56.1900,47.2100,Fabricante Fictício 01
+962,PRD-00962,Nutrição foliar Fictício 0962,Nutrição foliar,L,125.4200,91.0900,Fabricante Fictício 02
+963,PRD-00963,Nutrição foliar Fictício 0963,Nutrição foliar,L,61.2900,44.4200,Fabricante Fictício 03
+964,PRD-00964,Nutrição foliar Fictício 0964,Nutrição foliar,L,37.1300,27.0400,Fabricante Fictício 04
+965,PRD-00965,Nutrição foliar Fictício 0965,Nutrição foliar,L,81.5200,66.4200,Fabricante Fictício 05
+966,PRD-00966,Nutrição foliar Fictício 0966,Nutrição foliar,L,178.8500,129.2300,Fabricante Fictício 06
+967,PRD-00967,Nutrição foliar Fictício 0967,Nutrição foliar,L,48.3500,35.3100,Fabricante Fictício 07
+968,PRD-00968,Nutrição foliar Fictício 0968,Nutrição foliar,L,159.6100,116.6500,Fabricante Fictício 08
+969,PRD-00969,Nutrição foliar Fictício 0969,Nutrição foliar,L,119.3600,84.2600,Fabricante Fictício 09
+970,PRD-00970,Nutrição foliar Fictício 0970,Nutrição foliar,L,99.5100,75.9800,Fabricante Fictício 10
+971,PRD-00971,Nutrição foliar Fictício 0971,Nutrição foliar,L,106.5800,84.8000,Fabricante Fictício 11
+972,PRD-00972,Nutrição foliar Fictício 0972,Nutrição foliar,L,94.1100,73.7400,Fabricante Fictício 12
+973,PRD-00973,Nutrição foliar Fictício 0973,Nutrição foliar,L,156.5800,124.7400,Fabricante Fictício 13
+974,PRD-00974,Nutrição foliar Fictício 0974,Nutrição foliar,L,94.9900,70.8500,Fabricante Fictício 14
+975,PRD-00975,Nutrição foliar Fictício 0975,Nutrição foliar,L,50.1000,36.2400,Fabricante Fictício 15
+976,PRD-00976,Nutrição foliar Fictício 0976,Nutrição foliar,L,75.3700,58.9900,Fabricante Fictício 16
+977,PRD-00977,Nutrição foliar Fictício 0977,Nutrição foliar,L,141.4400,103.1400,Fabricante Fictício 17
+978,PRD-00978,Nutrição foliar Fictício 0978,Nutrição foliar,L,161.0300,121.5500,Fabricante Fictício 18
+979,PRD-00979,Nutrição foliar Fictício 0979,Nutrição foliar,L,167.1900,130.0000,Fabricante Fictício 19
+980,PRD-00980,Nutrição foliar Fictício 0980,Nutrição foliar,L,133.6300,105.5900,Fabricante Fictício 20
+981,PRD-00981,Nutrição foliar Fictício 0981,Nutrição foliar,L,30.4800,22.0400,Fabricante Fictício 01
+982,PRD-00982,Nutrição foliar Fictício 0982,Nutrição foliar,L,129.4400,107.6600,Fabricante Fictício 02
+983,PRD-00983,Nutrição foliar Fictício 0983,Nutrição foliar,L,97.7100,78.0600,Fabricante Fictício 03
+984,PRD-00984,Nutrição foliar Fictício 0984,Nutrição foliar,L,150.3500,116.5000,Fabricante Fictício 04
+985,PRD-00985,Nutrição foliar Fictício 0985,Nutrição foliar,L,87.2800,65.5800,Fabricante Fictício 05
+986,PRD-00986,Nutrição foliar Fictício 0986,Nutrição foliar,L,136.2200,115.4600,Fabricante Fictício 06
+987,PRD-00987,Nutrição foliar Fictício 0987,Nutrição foliar,L,114.5800,81.2200,Fabricante Fictício 07
+988,PRD-00988,Nutrição foliar Fictício 0988,Nutrição foliar,L,86.4900,65.7900,Fabricante Fictício 08
+989,PRD-00989,Nutrição foliar Fictício 0989,Nutrição foliar,L,72.6600,61.6400,Fabricante Fictício 09
+990,PRD-00990,Nutrição foliar Fictício 0990,Nutrição foliar,L,132.2400,107.8300,Fabricante Fictício 10
+991,PRD-00991,Nutrição foliar Fictício 0991,Nutrição foliar,L,96.8200,78.7000,Fabricante Fictício 11
+992,PRD-00992,Nutrição foliar Fictício 0992,Nutrição foliar,L,80.5000,63.0700,Fabricante Fictício 12
+993,PRD-00993,Nutrição foliar Fictício 0993,Nutrição foliar,L,135.1900,105.2700,Fabricante Fictício 13
+994,PRD-00994,Nutrição foliar Fictício 0994,Nutrição foliar,L,137.1600,115.2000,Fabricante Fictício 14
+995,PRD-00995,Nutrição foliar Fictício 0995,Nutrição foliar,L,127.5900,92.1700,Fabricante Fictício 15
+996,PRD-00996,Nutrição foliar Fictício 0996,Nutrição foliar,L,173.1800,124.4800,Fabricante Fictício 16
+997,PRD-00997,Nutrição foliar Fictício 0997,Nutrição foliar,L,117.1800,92.7400,Fabricante Fictício 17
+998,PRD-00998,Nutrição foliar Fictício 0998,Nutrição foliar,L,109.2800,80.9400,Fabricante Fictício 18
+999,PRD-00999,Nutrição foliar Fictício 0999,Nutrição foliar,L,39.0400,32.1200,Fabricante Fictício 19
+1000,PRD-01000,Nutrição foliar Fictício 1000,Nutrição foliar,L,116.2200,96.8000,Fabricante Fictício 20

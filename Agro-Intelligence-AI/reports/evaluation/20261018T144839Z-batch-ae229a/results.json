@@ -1,0 +1,1621 @@
+{
+  "run_id": "20261018T144839Z-batch-ae229a",
+  "selected_cases": [
+    "G15"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G15",
+      "category": "composta",
+      "question": "Compare excesso de estoque, faturamento e descontos; consulte a política comercial antes de recomendar uma ação.",
+      "expected_behavior": "Dois agentes compartilham pares; distinguir descontos sintéticos de política autorizada.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos",
+        "duckdb_comercial",
+        "duckdb_impacto_pares",
+        "chroma_rag_comercial"
+      ],
+      "references": [
+        "sql:excess",
+        "sql:revenue",
+        "data/documents/politica_comercial.md#PC-001"
+      ],
+      "checks": []
+    }
+  ],
+  "phase": "all",
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 1,
+  "calls": [
+    {
+      "case_id": "G15",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 27518,
+        "output": 2321,
+        "total": 29839
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0183",
+              "s0184",
+              "s0001"
+            ],
+            "reason": "O período de 01/10/2025 a 30/09/2026 e a data de posição de estoque em 30/09/2026 estão confirmados pelos snippets."
+          },
+          {
+            "claim_id": "c002",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0197"
+            ],
+            "reason": "O valor de R$ 493.126.517,02 para faturamento realizado está sustentado pelo snippet s0197."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0004",
+              "s0232",
+              "s0233",
+              "s0235",
+              "s0237",
+              "s0253",
+              "s0254",
+              "s0256",
+              "s0258"
+            ],
+            "reason": "O número de 60 excessos e os exemplos de produtos PRD-00021 e PRD-00022 com volumes de 5.000 unidades contra limite de 1.000 estão confirmados."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0309",
+              "s0310",
+              "s0311"
+            ],
+            "reason": "Os valores de R$ 1.707.369,32 de receita e R$ -208.264,67 de prejuízo para 62 linhas estão sustentados."
+          },
+          {
+            "claim_id": "c006",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c007",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A referência à política comercial está sustentada pelo documento indicado."
+          },
+          {
+            "claim_id": "c008",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A regra de até 5% de desconto para pedidos a partir de R$ 15.000,00 está descrita no documento."
+          },
+          {
+            "claim_id": "c009",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A regra de 5% a 8% com aprovação do gerente está descrita no documento."
+          },
+          {
+            "claim_id": "c010",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A proibição de descontos acima de 8% está descrita no documento."
+          },
+          {
+            "claim_id": "c011",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A regra de 2% de desconto para pagamento à vista, não cumulativo, está descrita no documento."
+          },
+          {
+            "claim_id": "c012",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "O documento confirma que os valores e condições são fictícios para fins didáticos."
+          },
+          {
+            "claim_id": "c013",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c014",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Frase introdutória sem afirmação factual."
+          },
+          {
+            "claim_id": "c015",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+          },
+          {
+            "claim_id": "c016",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+          },
+          {
+            "claim_id": "c017",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+          },
+          {
+            "claim_id": "c018",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0382"
+            ],
+            "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+          },
+          {
+            "claim_id": "c019",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [],
+            "reason": "Aviso sobre limitação de análise do agente."
+          }
+        ],
+        "explanation": "As informações fornecidas sobre faturamento, excesso de estoque e práticas de desconto estão devidamente sustentadas pelos dados de indicadores comerciais e pelo documento de política comercial. As recomendações de ação seguem estritamente as regras estabelecidas no documento de política comercial fornecido.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "Define o escopo temporal da consulta."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Introduz o tema da comparação solicitada."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Fornece o dado de faturamento solicitado."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Fornece o dado de excesso de estoque solicitado."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Fornece o dado de descontos solicitado."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": true,
+            "reason": "Introduz a seção de regras comerciais."
+          },
+          {
+            "unit_id": "u007",
+            "relevant": true,
+            "reason": "Referencia a fonte da política comercial."
+          },
+          {
+            "unit_id": "u008",
+            "relevant": true,
+            "reason": "Descreve regra de desconto."
+          },
+          {
+            "unit_id": "u009",
+            "relevant": true,
+            "reason": "Descreve regra de desconto."
+          },
+          {
+            "unit_id": "u010",
+            "relevant": true,
+            "reason": "Descreve regra de desconto."
+          },
+          {
+            "unit_id": "u011",
+            "relevant": true,
+            "reason": "Descreve regra de pagamento à vista."
+          },
+          {
+            "unit_id": "u012",
+            "relevant": true,
+            "reason": "Esclarece a natureza dos dados sintéticos."
+          },
+          {
+            "unit_id": "u013",
+            "relevant": true,
+            "reason": "Introduz a seção de recomendações."
+          },
+          {
+            "unit_id": "u014",
+            "relevant": true,
+            "reason": "Contextualiza a recomendação."
+          },
+          {
+            "unit_id": "u015",
+            "relevant": true,
+            "reason": "Apresenta recomendação de ação."
+          },
+          {
+            "unit_id": "u016",
+            "relevant": true,
+            "reason": "Apresenta recomendação de ação."
+          },
+          {
+            "unit_id": "u017",
+            "relevant": true,
+            "reason": "Apresenta recomendação de ação."
+          },
+          {
+            "unit_id": "u018",
+            "relevant": true,
+            "reason": "Apresenta recomendação de ação."
+          },
+          {
+            "unit_id": "u019",
+            "relevant": true,
+            "reason": "Informa sobre limitações técnicas da resposta."
+          }
+        ]
+      },
+      "latency_ms": 5478.599
+    }
+  ],
+  "results": [
+    {
+      "id": "G15",
+      "category": "composta",
+      "question": "Compare excesso de estoque, faturamento e descontos; consulte a política comercial antes de recomendar uma ação.",
+      "expected_behavior": "Dois agentes compartilham pares; distinguir descontos sintéticos de política autorizada.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos",
+        "duckdb_comercial",
+        "duckdb_impacto_pares",
+        "chroma_rag_comercial"
+      ],
+      "references": [
+        "sql:excess",
+        "sql:revenue",
+        "data/documents/politica_comercial.md#PC-001"
+      ],
+      "checks": [],
+      "generation_status": "reused",
+      "answer": "**Período Consultado**: Comercial de 01/10/2025 a 30/09/2026; Posição de estoque em 30/09/2026.\n\n### Comparativo: Excesso, Faturamento e Descontos\n\n1. **Faturamento Realizado**: A receita total de vendas faturadas no período foi de **R$ 493.126.517,02** (desconsiderando pedidos pendentes ou cancelados).\n2. **Excesso de Estoque**: Identificaram-se **60 posições de excesso**. Por exemplo, os produtos PRD-00021 (com 5.000 KG nos centros CTR-001, CTR-002 e CTR-003) e PRD-00022 (com 5.000 toneladas nos centros CTR-004 e CTR-005) apresentam volumes muito superiores ao limite máximo estipulado de 1.000 unidades por centro.\n3. **Práticas de Desconto**: No faturamento, o cenário sintético de \"desconto elevado e margem negativa\" acumulou **R$ 1.707.369,32** em receita faturada (62 linhas), resultando em prejuízo de R$ -208.264,67.\n\n### Regras da Política Comercial\n\nConforme a regra oficial descrita em `[politica_comercial.md, trecho 1]`:\n* **Até 5% de desconto**: Aprovado diretamente pelo vendedor para pedidos a partir de R$ 15.000,00.\n* **Entre 5% e 8% de desconto**: Exige aprovação prévia do gerente comercial.\n* **Acima de 8% de desconto**: Não é permitido sob nenhuma hipótese.\n* **Pagamento à vista**: Concede 2% de desconto adicional, porém **não cumulativo** com outros descontos.\n\nOs casos de margem negativa e descontos excessivos presentes na base de dados representam **cenários sintéticos de teste** e não políticas autorizadas pela empresa.\n\n### Ação Recomendada\n\nPara escoar os volumes em excesso (como os lotes de PRD-00021 e PRD-00022) sem comprometer a rentabilidade nem violar a governança:\n1. **Campanha Promocional Direcionada**: Ativar a força de vendas para negociar os produtos em excesso oferecendo desconto regular de até 5% para pedidos qualificados (mínimo de R$ 15.000,00) `[politica_comercial.md, trecho 1]`.\n2. **Aprovação Gerencial**: Caso necessário para fechar volumes maiores com clientes estratégicos, submeter propostas de até 8% de desconto à gerência comercial `[politica_comercial.md, trecho 1]`.\n3. **Incentivo à Vista**: Estimular a modalidade de pagamento à vista com 2% de desconto para acelerar o caixa, sem acumular com outras deduções `[politica_comercial.md, trecho 1]`.\n4. **Proibição de Margem Negativa**: Veta-se a concessão de descontos anômalos acima de 8% que gerem margens operacionais negativas.\n\n**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "estoque.abastecimento",
+          "content": {
+            "totais": {
+              "data_estoque": "2026-09-30",
+              "posicoes": 3000,
+              "rupturas_observadas": 60,
+              "excessos": 60,
+              "pares_sinalizados": 755,
+              "rupturas_com_carteira": 41,
+              "carteira_em_ruptura": "4399084.73",
+              "insuficiencias_com_saldo": 695,
+              "carteira_em_insuficiencia_com_saldo": "69752075.66",
+              "carteira_nos_pares_sinalizados": "74151160.39"
+            },
+            "prioridades_amostra": [
+              {
+                "produto_id": 736,
+                "centro_id": 2,
+                "produto": "PRD-00736",
+                "centro": "CTR-002",
+                "unidade": "saca_20KG",
+                "disponivel": 371,
+                "carteira_quantidade": 667,
+                "carteira_valor": "574218.03"
+              },
+              {
+                "produto_id": 626,
+                "centro_id": 3,
+                "produto": "PRD-00626",
+                "centro": "CTR-003",
+                "unidade": "saca_20KG",
+                "disponivel": 349,
+                "carteira_quantidade": 655,
+                "carteira_valor": "543491.95"
+              },
+              {
+                "produto_id": 616,
+                "centro_id": 3,
+                "produto": "PRD-00616",
+                "centro": "CTR-003",
+                "unidade": "saca_20KG",
+                "disponivel": 418,
+                "carteira_quantidade": 561,
+                "carteira_valor": "523019.51"
+              },
+              {
+                "produto_id": 416,
+                "centro_id": 1,
+                "produto": "PRD-00416",
+                "centro": "CTR-001",
+                "unidade": "saca_40KG",
+                "disponivel": 288,
+                "carteira_quantidade": 1465,
+                "carteira_valor": "507889.78"
+              },
+              {
+                "produto_id": 471,
+                "centro_id": 2,
+                "produto": "PRD-00471",
+                "centro": "CTR-002",
+                "unidade": "saca_40KG",
+                "disponivel": 430,
+                "carteira_quantidade": 1468,
+                "carteira_valor": "505322.91"
+              },
+              {
+                "produto_id": 616,
+                "centro_id": 2,
+                "produto": "PRD-00616",
+                "centro": "CTR-002",
+                "unidade": "saca_20KG",
+                "disponivel": 426,
+                "carteira_quantidade": 550,
+                "carteira_valor": "501756.66"
+              },
+              {
+                "produto_id": 601,
+                "centro_id": 3,
+                "produto": "PRD-00601",
+                "centro": "CTR-003",
+                "unidade": "saca_20KG",
+                "disponivel": 241,
+                "carteira_quantidade": 602,
+                "carteira_valor": "489628.59"
+              },
+              {
+                "produto_id": 487,
+                "centro_id": 5,
+                "produto": "PRD-00487",
+                "centro": "CTR-005",
+                "unidade": "saca_40KG",
+                "disponivel": 415,
+                "carteira_quantidade": 1126,
+                "carteira_valor": "478818.77"
+              },
+              {
+                "produto_id": 156,
+                "centro_id": 2,
+                "produto": "PRD-00156",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 53,
+                "carteira_quantidade": 84,
+                "carteira_valor": "478081.98"
+              },
+              {
+                "produto_id": 591,
+                "centro_id": 1,
+                "produto": "PRD-00591",
+                "centro": "CTR-001",
+                "unidade": "saca_40KG",
+                "disponivel": 92,
+                "carteira_quantidade": 1156,
+                "carteira_valor": "472648.06"
+              },
+              {
+                "produto_id": 676,
+                "centro_id": 3,
+                "produto": "PRD-00676",
+                "centro": "CTR-003",
+                "unidade": "saca_20KG",
+                "disponivel": 224,
+                "carteira_quantidade": 540,
+                "carteira_valor": "465934.58"
+              },
+              {
+                "produto_id": 496,
+                "centro_id": 1,
+                "produto": "PRD-00496",
+                "centro": "CTR-001",
+                "unidade": "saca_40KG",
+                "disponivel": 143,
+                "carteira_quantidade": 1245,
+                "carteira_valor": "451552.29"
+              },
+              {
+                "produto_id": 546,
+                "centro_id": 1,
+                "produto": "PRD-00546",
+                "centro": "CTR-001",
+                "unidade": "saca_40KG",
+                "disponivel": 169,
+                "carteira_quantidade": 1163,
+                "carteira_valor": "441474.93"
+              },
+              {
+                "produto_id": 631,
+                "centro_id": 3,
+                "produto": "PRD-00631",
+                "centro": "CTR-003",
+                "unidade": "saca_20KG",
+                "disponivel": 58,
+                "carteira_quantidade": 495,
+                "carteira_valor": "434385.76"
+              },
+              {
+                "produto_id": 421,
+                "centro_id": 2,
+                "produto": "PRD-00421",
+                "centro": "CTR-002",
+                "unidade": "saca_40KG",
+                "disponivel": 253,
+                "carteira_quantidade": 1173,
+                "carteira_valor": "423499.08"
+              },
+              {
+                "produto_id": 662,
+                "centro_id": 4,
+                "produto": "PRD-00662",
+                "centro": "CTR-004",
+                "unidade": "saca_20KG",
+                "disponivel": 380,
+                "carteira_quantidade": 543,
+                "carteira_valor": "423308.60"
+              },
+              {
+                "produto_id": 546,
+                "centro_id": 2,
+                "produto": "PRD-00546",
+                "centro": "CTR-002",
+                "unidade": "saca_40KG",
+                "disponivel": 562,
+                "carteira_quantidade": 1103,
+                "carteira_valor": "421735.91"
+              },
+              {
+                "produto_id": 486,
+                "centro_id": 1,
+                "produto": "PRD-00486",
+                "centro": "CTR-001",
+                "unidade": "saca_40KG",
+                "disponivel": 142,
+                "carteira_quantidade": 985,
+                "carteira_valor": "406255.32"
+              },
+              {
+                "produto_id": 781,
+                "centro_id": 2,
+                "produto": "PRD-00781",
+                "centro": "CTR-002",
+                "unidade": "saca_20KG",
+                "disponivel": 112,
+                "carteira_quantidade": 484,
+                "carteira_valor": "401980.29"
+              },
+              {
+                "produto_id": 552,
+                "centro_id": 5,
+                "produto": "PRD-00552",
+                "centro": "CTR-005",
+                "unidade": "saca_40KG",
+                "disponivel": 372,
+                "carteira_quantidade": 1032,
+                "carteira_valor": "394597.56"
+              }
+            ],
+            "escopo_prioridades": "sinalizados",
+            "natureza": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "estoque_resumo": [
+              {
+                "unidade": "KG",
+                "pares_produto_centro": 300,
+                "disponivel": 233446,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "888117.83"
+              },
+              {
+                "unidade": "L",
+                "pares_produto_centro": 1200,
+                "disponivel": 425332,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "41312128.07"
+              },
+              {
+                "unidade": "saca_20KG",
+                "pares_produto_centro": 600,
+                "disponivel": 208296,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "141845310.52"
+              },
+              {
+                "unidade": "saca_40KG",
+                "pares_produto_centro": 600,
+                "disponivel": 218247,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "69955289.47"
+              },
+              {
+                "unidade": "tonelada",
+                "pares_produto_centro": 300,
+                "disponivel": 233878,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "834991667.58"
+              }
+            ],
+            "alertas_estoque": [
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              }
+            ],
+            "cenarios_comerciais": [
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "cancelada",
+                "linhas": 7,
+                "receita_liquida": "248264.37",
+                "margem": "-30229.40"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "faturada",
+                "linhas": 62,
+                "receita_liquida": "1707369.32",
+                "margem": "-208264.67"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "pendente",
+                "linhas": 31,
+                "receita_liquida": "864747.90",
+                "margem": "-105537.22"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "cancelada",
+                "linhas": 4,
+                "receita_liquida": "202050.10",
+                "margem": "80815.81"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "faturada",
+                "linhas": 75,
+                "receita_liquida": "3308758.84",
+                "margem": "1323473.44"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "pendente",
+                "linhas": 21,
+                "receita_liquida": "529808.37",
+                "margem": "211929.79"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "cancelada",
+                "linhas": 8,
+                "receita_liquida": "255015.36",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "faturada",
+                "linhas": 70,
+                "receita_liquida": "1946446.37",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "pendente",
+                "linhas": 22,
+                "receita_liquida": "834481.78",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "normal",
+                "status": "cancelada",
+                "linhas": 989,
+                "receita_liquida": "34079265.34",
+                "margem": "7025912.59"
+              },
+              {
+                "cenario": "normal",
+                "status": "faturada",
+                "linhas": 14224,
+                "receita_liquida": "486163942.49",
+                "margem": "98907847.44"
+              },
+              {
+                "cenario": "normal",
+                "status": "pendente",
+                "linhas": 4487,
+                "receita_liquida": "152917325.49",
+                "margem": "31130185.42"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e3",
+          "origin": "comercial.impacto_compartilhado",
+          "content": {
+            "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+            "pares_consultados": 20,
+            "por_familia": [
+              {
+                "categoria": "Sementes de soja",
+                "unidade": "saca_40KG",
+                "linhas_pendentes": 59,
+                "pedidos": 55,
+                "carteira_pendente": "4503794.61",
+                "margem_carteira": "936377.43"
+              },
+              {
+                "categoria": "Sementes de milho",
+                "unidade": "saca_20KG",
+                "linhas_pendentes": 50,
+                "pedidos": 48,
+                "carteira_pendente": "4357723.97",
+                "margem_carteira": "823949.80"
+              },
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "tonelada",
+                "linhas_pendentes": 5,
+                "pedidos": 5,
+                "carteira_pendente": "478081.98",
+                "margem_carteira": "104204.18"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e4",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.2886497378349304
+            },
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.35884058475494385
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.3737322688102722
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "estoque",
+          "tool": "duckdb_estoque_pedidos",
+          "status": "ok"
+        },
+        {
+          "agent": "estoque",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_pares",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "failed",
+          "category": "api",
+          "http": 504,
+          "reference": "3ca194e204fd"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "invalid_judgment",
+          "score": null,
+          "reason": "invalid_evidence_reference",
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 19,
+          "units": 19,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "generation_attempted": false,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "rejected_cached_responses": [],
+      "response_key": "9a6257d4d6995e0bc74f9238b3c9354519f41378d68003f0e9048dfb99902c0b",
+      "response_origin": {
+        "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135451Z-batch-f873ad\\results.json",
+        "fresh_generation": true
+      },
+      "historical_api_failures": [
+        {
+          "stage": "gemini_analise",
+          "category": "api",
+          "http_code": 504
+        }
+      ],
+      "generation_latency_ms": null,
+      "deterministic": [],
+      "completeness": {
+        "status": "not_applicable"
+      },
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "current_assessment": {
+        "faithfulness": {
+          "status": "invalid_judgment",
+          "score": null,
+          "reason": "invalid_evidence_reference",
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "rejected_faithfulness_judgment": {
+          "claims": [
+            {
+              "claim_id": "c001",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0183",
+                "s0184",
+                "s0001"
+              ],
+              "reason": "O período de 01/10/2025 a 30/09/2026 e a data de posição de estoque em 30/09/2026 estão confirmados pelos snippets."
+            },
+            {
+              "claim_id": "c002",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título sem afirmação factual."
+            },
+            {
+              "claim_id": "c003",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0197"
+              ],
+              "reason": "O valor de R$ 493.126.517,02 para faturamento realizado está sustentado pelo snippet s0197."
+            },
+            {
+              "claim_id": "c004",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0004",
+                "s0232",
+                "s0233",
+                "s0235",
+                "s0237",
+                "s0253",
+                "s0254",
+                "s0256",
+                "s0258"
+              ],
+              "reason": "O número de 60 excessos e os exemplos de produtos PRD-00021 e PRD-00022 com volumes de 5.000 unidades contra limite de 1.000 estão confirmados."
+            },
+            {
+              "claim_id": "c005",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0309",
+                "s0310",
+                "s0311"
+              ],
+              "reason": "Os valores de R$ 1.707.369,32 de receita e R$ -208.264,67 de prejuízo para 62 linhas estão sustentados."
+            },
+            {
+              "claim_id": "c006",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título sem afirmação factual."
+            },
+            {
+              "claim_id": "c007",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A referência à política comercial está sustentada pelo documento indicado."
+            },
+            {
+              "claim_id": "c008",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A regra de até 5% de desconto para pedidos a partir de R$ 15.000,00 está descrita no documento."
+            },
+            {
+              "claim_id": "c009",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A regra de 5% a 8% com aprovação do gerente está descrita no documento."
+            },
+            {
+              "claim_id": "c010",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A proibição de descontos acima de 8% está descrita no documento."
+            },
+            {
+              "claim_id": "c011",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A regra de 2% de desconto para pagamento à vista, não cumulativo, está descrita no documento."
+            },
+            {
+              "claim_id": "c012",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "O documento confirma que os valores e condições são fictícios para fins didáticos."
+            },
+            {
+              "claim_id": "c013",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título sem afirmação factual."
+            },
+            {
+              "claim_id": "c014",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Frase introdutória sem afirmação factual."
+            },
+            {
+              "claim_id": "c015",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+            },
+            {
+              "claim_id": "c016",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+            },
+            {
+              "claim_id": "c017",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+            },
+            {
+              "claim_id": "c018",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0382"
+              ],
+              "reason": "A recomendação está alinhada com a política comercial descrita no documento."
+            },
+            {
+              "claim_id": "c019",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [],
+              "reason": "Aviso sobre limitação de análise do agente."
+            }
+          ],
+          "explanation": "As informações fornecidas sobre faturamento, excesso de estoque e práticas de desconto estão devidamente sustentadas pelos dados de indicadores comerciais e pelo documento de política comercial. As recomendações de ação seguem estritamente as regras estabelecidas no documento de política comercial fornecido.",
+          "verdicts": [
+            {
+              "unit_id": "u001",
+              "relevant": true,
+              "reason": "Define o escopo temporal da consulta."
+            },
+            {
+              "unit_id": "u002",
+              "relevant": true,
+              "reason": "Introduz o tema da comparação solicitada."
+            },
+            {
+              "unit_id": "u003",
+              "relevant": true,
+              "reason": "Fornece o dado de faturamento solicitado."
+            },
+            {
+              "unit_id": "u004",
+              "relevant": true,
+              "reason": "Fornece o dado de excesso de estoque solicitado."
+            },
+            {
+              "unit_id": "u005",
+              "relevant": true,
+              "reason": "Fornece o dado de descontos solicitado."
+            },
+            {
+              "unit_id": "u006",
+              "relevant": true,
+              "reason": "Introduz a seção de regras comerciais."
+            },
+            {
+              "unit_id": "u007",
+              "relevant": true,
+              "reason": "Referencia a fonte da política comercial."
+            },
+            {
+              "unit_id": "u008",
+              "relevant": true,
+              "reason": "Descreve regra de desconto."
+            },
+            {
+              "unit_id": "u009",
+              "relevant": true,
+              "reason": "Descreve regra de desconto."
+            },
+            {
+              "unit_id": "u010",
+              "relevant": true,
+              "reason": "Descreve regra de desconto."
+            },
+            {
+              "unit_id": "u011",
+              "relevant": true,
+              "reason": "Descreve regra de pagamento à vista."
+            },
+            {
+              "unit_id": "u012",
+              "relevant": true,
+              "reason": "Esclarece a natureza dos dados sintéticos."
+            },
+            {
+              "unit_id": "u013",
+              "relevant": true,
+              "reason": "Introduz a seção de recomendações."
+            },
+            {
+              "unit_id": "u014",
+              "relevant": true,
+              "reason": "Contextualiza a recomendação."
+            },
+            {
+              "unit_id": "u015",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação."
+            },
+            {
+              "unit_id": "u016",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação."
+            },
+            {
+              "unit_id": "u017",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação."
+            },
+            {
+              "unit_id": "u018",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação."
+            },
+            {
+              "unit_id": "u019",
+              "relevant": true,
+              "reason": "Informa sobre limitações técnicas da resposta."
+            }
+          ]
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 19,
+          "units": 19,
+          "protocol": "indexed_answer_lines_v2"
+        },
+        "relevancy_judgment": {
+          "verdicts": [
+            {
+              "unit_id": "u001",
+              "relevant": true,
+              "reason": "Define o escopo temporal da consulta.",
+              "quote": "**Período Consultado**: Comercial de 01/10/2025 a 30/09/2026; Posição de estoque em 30/09/2026.",
+              "start": 0,
+              "end": 95
+            },
+            {
+              "unit_id": "u002",
+              "relevant": true,
+              "reason": "Introduz o tema da comparação solicitada.",
+              "quote": "### Comparativo: Excesso, Faturamento e Descontos",
+              "start": 97,
+              "end": 146
+            },
+            {
+              "unit_id": "u003",
+              "relevant": true,
+              "reason": "Fornece o dado de faturamento solicitado.",
+              "quote": "1. **Faturamento Realizado**: A receita total de vendas faturadas no período foi de **R$ 493.126.517,02** (desconsiderando pedidos pendentes ou cancelados).",
+              "start": 148,
+              "end": 304
+            },
+            {
+              "unit_id": "u004",
+              "relevant": true,
+              "reason": "Fornece o dado de excesso de estoque solicitado.",
+              "quote": "2. **Excesso de Estoque**: Identificaram-se **60 posições de excesso**. Por exemplo, os produtos PRD-00021 (com 5.000 KG nos centros CTR-001, CTR-002 e CTR-003) e PRD-00022 (com 5.000 toneladas nos centros CTR-004 e CTR-005) apresentam volumes muito superiores ao limite máximo estipulado de 1.000 unidades por centro.",
+              "start": 305,
+              "end": 623
+            },
+            {
+              "unit_id": "u005",
+              "relevant": true,
+              "reason": "Fornece o dado de descontos solicitado.",
+              "quote": "3. **Práticas de Desconto**: No faturamento, o cenário sintético de \"desconto elevado e margem negativa\" acumulou **R$ 1.707.369,32** em receita faturada (62 linhas), resultando em prejuízo de R$ -208.264,67.",
+              "start": 624,
+              "end": 832
+            },
+            {
+              "unit_id": "u006",
+              "relevant": true,
+              "reason": "Introduz a seção de regras comerciais.",
+              "quote": "### Regras da Política Comercial",
+              "start": 834,
+              "end": 866
+            },
+            {
+              "unit_id": "u007",
+              "relevant": true,
+              "reason": "Referencia a fonte da política comercial.",
+              "quote": "Conforme a regra oficial descrita em `[politica_comercial.md, trecho 1]`:",
+              "start": 868,
+              "end": 941
+            },
+            {
+              "unit_id": "u008",
+              "relevant": true,
+              "reason": "Descreve regra de desconto.",
+              "quote": "* **Até 5% de desconto**: Aprovado diretamente pelo vendedor para pedidos a partir de R$ 15.000,00.",
+              "start": 942,
+              "end": 1041
+            },
+            {
+              "unit_id": "u009",
+              "relevant": true,
+              "reason": "Descreve regra de desconto.",
+              "quote": "* **Entre 5% e 8% de desconto**: Exige aprovação prévia do gerente comercial.",
+              "start": 1042,
+              "end": 1119
+            },
+            {
+              "unit_id": "u010",
+              "relevant": true,
+              "reason": "Descreve regra de desconto.",
+              "quote": "* **Acima de 8% de desconto**: Não é permitido sob nenhuma hipótese.",
+              "start": 1120,
+              "end": 1188
+            },
+            {
+              "unit_id": "u011",
+              "relevant": true,
+              "reason": "Descreve regra de pagamento à vista.",
+              "quote": "* **Pagamento à vista**: Concede 2% de desconto adicional, porém **não cumulativo** com outros descontos.",
+              "start": 1189,
+              "end": 1294
+            },
+            {
+              "unit_id": "u012",
+              "relevant": true,
+              "reason": "Esclarece a natureza dos dados sintéticos.",
+              "quote": "Os casos de margem negativa e descontos excessivos presentes na base de dados representam **cenários sintéticos de teste** e não políticas autorizadas pela empresa.",
+              "start": 1296,
+              "end": 1460
+            },
+            {
+              "unit_id": "u013",
+              "relevant": true,
+              "reason": "Introduz a seção de recomendações.",
+              "quote": "### Ação Recomendada",
+              "start": 1462,
+              "end": 1482
+            },
+            {
+              "unit_id": "u014",
+              "relevant": true,
+              "reason": "Contextualiza a recomendação.",
+              "quote": "Para escoar os volumes em excesso (como os lotes de PRD-00021 e PRD-00022) sem comprometer a rentabilidade nem violar a governança:",
+              "start": 1484,
+              "end": 1615
+            },
+            {
+              "unit_id": "u015",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação.",
+              "quote": "1. **Campanha Promocional Direcionada**: Ativar a força de vendas para negociar os produtos em excesso oferecendo desconto regular de até 5% para pedidos qualificados (mínimo de R$ 15.000,00) `[politica_comercial.md, trecho 1]`.",
+              "start": 1616,
+              "end": 1844
+            },
+            {
+              "unit_id": "u016",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação.",
+              "quote": "2. **Aprovação Gerencial**: Caso necessário para fechar volumes maiores com clientes estratégicos, submeter propostas de até 8% de desconto à gerência comercial `[politica_comercial.md, trecho 1]`.",
+              "start": 1845,
+              "end": 2042
+            },
+            {
+              "unit_id": "u017",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação.",
+              "quote": "3. **Incentivo à Vista**: Estimular a modalidade de pagamento à vista com 2% de desconto para acelerar o caixa, sem acumular com outras deduções `[politica_comercial.md, trecho 1]`.",
+              "start": 2043,
+              "end": 2224
+            },
+            {
+              "unit_id": "u018",
+              "relevant": true,
+              "reason": "Apresenta recomendação de ação.",
+              "quote": "4. **Proibição de Margem Negativa**: Veta-se a concessão de descontos anômalos acima de 8% que gerem margens operacionais negativas.",
+              "start": 2225,
+              "end": 2357
+            },
+            {
+              "unit_id": "u019",
+              "relevant": true,
+              "reason": "Informa sobre limitações técnicas da resposta.",
+              "quote": "**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+              "start": 2359,
+              "end": 2556
+            }
+          ],
+          "explanation": "As informações fornecidas sobre faturamento, excesso de estoque e práticas de desconto estão devidamente sustentadas pelos dados de indicadores comerciais e pelo documento de política comercial. As recomendações de ação seguem estritamente as regras estabelecidas no documento de política comercial fornecido."
+        },
+        "answer_units": [
+          {
+            "unit_id": "u001",
+            "start": 0,
+            "end": 95,
+            "text": "**Período Consultado**: Comercial de 01/10/2025 a 30/09/2026; Posição de estoque em 30/09/2026."
+          },
+          {
+            "unit_id": "u002",
+            "start": 97,
+            "end": 146,
+            "text": "### Comparativo: Excesso, Faturamento e Descontos"
+          },
+          {
+            "unit_id": "u003",
+            "start": 148,
+            "end": 304,
+            "text": "1. **Faturamento Realizado**: A receita total de vendas faturadas no período foi de **R$ 493.126.517,02** (desconsiderando pedidos pendentes ou cancelados)."
+          },
+          {
+            "unit_id": "u004",
+            "start": 305,
+            "end": 623,
+            "text": "2. **Excesso de Estoque**: Identificaram-se **60 posições de excesso**. Por exemplo, os produtos PRD-00021 (com 5.000 KG nos centros CTR-001, CTR-002 e CTR-003) e PRD-00022 (com 5.000 toneladas nos centros CTR-004 e CTR-005) apresentam volumes muito superiores ao limite máximo estipulado de 1.000 unidades por centro."
+          },
+          {
+            "unit_id": "u005",
+            "start": 624,
+            "end": 832,
+            "text": "3. **Práticas de Desconto**: No faturamento, o cenário sintético de \"desconto elevado e margem negativa\" acumulou **R$ 1.707.369,32** em receita faturada (62 linhas), resultando em prejuízo de R$ -208.264,67."
+          },
+          {
+            "unit_id": "u006",
+            "start": 834,
+            "end": 866,
+            "text": "### Regras da Política Comercial"
+          },
+          {
+            "unit_id": "u007",
+            "start": 868,
+            "end": 941,
+            "text": "Conforme a regra oficial descrita em `[politica_comercial.md, trecho 1]`:"
+          },
+          {
+            "unit_id": "u008",
+            "start": 942,
+            "end": 1041,
+            "text": "* **Até 5% de desconto**: Aprovado diretamente pelo vendedor para pedidos a partir de R$ 15.000,00."
+          },
+          {
+            "unit_id": "u009",
+            "start": 1042,
+            "end": 1119,
+            "text": "* **Entre 5% e 8% de desconto**: Exige aprovação prévia do gerente comercial."
+          },
+          {
+            "unit_id": "u010",
+            "start": 1120,
+            "end": 1188,
+            "text": "* **Acima de 8% de desconto**: Não é permitido sob nenhuma hipótese."
+          },
+          {
+            "unit_id": "u011",
+            "start": 1189,
+            "end": 1294,
+            "text": "* **Pagamento à vista**: Concede 2% de desconto adicional, porém **não cumulativo** com outros descontos."
+          },
+          {
+            "unit_id": "u012",
+            "start": 1296,
+            "end": 1460,
+            "text": "Os casos de margem negativa e descontos excessivos presentes na base de dados representam **cenários sintéticos de teste** e não políticas autorizadas pela empresa."
+          },
+          {
+            "unit_id": "u013",
+            "start": 1462,
+            "end": 1482,
+            "text": "### Ação Recomendada"
+          },
+          {
+            "unit_id": "u014",
+            "start": 1484,
+            "end": 1615,
+            "text": "Para escoar os volumes em excesso (como os lotes de PRD-00021 e PRD-00022) sem comprometer a rentabilidade nem violar a governança:"
+          },
+          {
+            "unit_id": "u015",
+            "start": 1616,
+            "end": 1844,
+            "text": "1. **Campanha Promocional Direcionada**: Ativar a força de vendas para negociar os produtos em excesso oferecendo desconto regular de até 5% para pedidos qualificados (mínimo de R$ 15.000,00) `[politica_comercial.md, trecho 1]`."
+          },
+          {
+            "unit_id": "u016",
+            "start": 1845,
+            "end": 2042,
+            "text": "2. **Aprovação Gerencial**: Caso necessário para fechar volumes maiores com clientes estratégicos, submeter propostas de até 8% de desconto à gerência comercial `[politica_comercial.md, trecho 1]`."
+          },
+          {
+            "unit_id": "u017",
+            "start": 2043,
+            "end": 2224,
+            "text": "3. **Incentivo à Vista**: Estimular a modalidade de pagamento à vista com 2% de desconto para acelerar o caixa, sem acumular com outras deduções `[politica_comercial.md, trecho 1]`."
+          },
+          {
+            "unit_id": "u018",
+            "start": 2225,
+            "end": 2357,
+            "text": "4. **Proibição de Margem Negativa**: Veta-se a concessão de descontos anômalos acima de 8% que gerem margens operacionais negativas."
+          },
+          {
+            "unit_id": "u019",
+            "start": 2359,
+            "end": 2556,
+            "text": "**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas."
+          }
+        ],
+        "usage": {
+          "input": 27518,
+          "output": 2321,
+          "total": 29839
+        },
+        "judge_model": "gemini-3.1-flash-lite",
+        "cost": null,
+        "protocols": {
+          "faithfulness": "indexed_claim_evidence_v2",
+          "answer_relevancy": "indexed_answer_lines_v2"
+        },
+        "response_model_version": "gemini-3.1-flash-lite"
+      },
+      "evaluation_latency_ms": 6092.319,
+      "metric_origins": {
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T144839Z-batch-ae229a\\results.json"
+        }
+      },
+      "total_latency_ms": 6102.622
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 1,
+  "stop_reason": null,
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 1,
+    "api_failed_questions": 0,
+    "cost": null,
+    "questions_with_any_metric": 1,
+    "questions_fully_evaluated": 0,
+    "questions_partially_evaluated": 1,
+    "faithfulness": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 1,
+      "mean": 1.0,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 0,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "review_verdicts_and_deterministic_checks",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 0,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

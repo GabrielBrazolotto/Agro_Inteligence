@@ -1,0 +1,145 @@
+{
+  "dataset": "Can You Predict Product Backorders? (public mirror)",
+  "source_page": "https://github.com/akhiilkasare/Back-Order-Prediction-iNeuron/tree/3bf0817ebb1a20e675ff02244660507e59f180f2",
+  "source_url": "https://raw.githubusercontent.com/akhiilkasare/Back-Order-Prediction-iNeuron/3bf0817ebb1a20e675ff02244660507e59f180f2/Dataset.zip",
+  "member": "Training_Dataset_v2.csv",
+  "source_rows": 1687861,
+  "eligible_rows": 1687860,
+  "used_rows": 200000,
+  "excluded_invalid_target_or_sku": 1,
+  "archive_sha256": "70ed395f05bcac971cd610dfb5c31832548e5fc0804b8aa58b131c99c9dc7c5f",
+  "sampling": "uniform_without_replacement_not_balanced",
+  "sku_unique": true,
+  "positive_rows": 1367,
+  "target": "went_on_backorder",
+  "positive_class": "Yes",
+  "features": [
+    "national_inv",
+    "lead_time",
+    "in_transit_qty",
+    "forecast_3_month",
+    "sales_1_month",
+    "sales_3_month",
+    "min_bank"
+  ],
+  "excluded_features": [
+    "sku",
+    "local_bo_qty",
+    "potential_issue",
+    "pieces_past_due",
+    "deck_risk",
+    "oe_constraint",
+    "ppap_risk",
+    "stop_auto_buy",
+    "rev_stop"
+  ],
+  "seed": 20261015,
+  "splits": {
+    "train": {
+      "rows": 128000,
+      "positives": 875,
+      "positive_rate": 0.0068359375,
+      "groups": 64018
+    },
+    "validation": {
+      "rows": 32000,
+      "positives": 219,
+      "positive_rate": 0.00684375,
+      "groups": 16006
+    },
+    "test": {
+      "rows": 40000,
+      "positives": 273,
+      "positive_rate": 0.006825,
+      "groups": 20004
+    }
+  },
+  "split_strategy": "two_stage_stratified_group_kfold_on_feature_vector",
+  "temporal_validation": false,
+  "group_overlap": 0,
+  "threshold": 0.9099999999999999,
+  "threshold_selection": "max_validation_F2_on_fixed_grid_0.05_0.95",
+  "validation_f2": 0.36559888579387184,
+  "test_metrics": {
+    "accuracy": 0.9814,
+    "precision": 0.1669024045261669,
+    "recall": 0.43223443223443225,
+    "f1": 0.24081632653061225,
+    "roc_auc": 0.9359281860603381,
+    "average_precision": 0.16473081378524357,
+    "confusion_matrix": [
+      [
+        39138,
+        589
+      ],
+      [
+        155,
+        118
+      ]
+    ]
+  },
+  "baseline_test_metrics": {
+    "accuracy": 0.993175,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.5,
+    "average_precision": 0.006825,
+    "confusion_matrix": [
+      [
+        39727,
+        0
+      ],
+      [
+        273,
+        0
+      ]
+    ]
+  },
+  "artifact_sha256": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+  "probabilities_calibrated": false,
+  "training_ranges": {
+    "national_inv": {
+      "min": -17698.0,
+      "max": 1370327.0
+    },
+    "lead_time": {
+      "min": 0.0,
+      "max": 52.0
+    },
+    "in_transit_qty": {
+      "min": 0.0,
+      "max": 159861.0
+    },
+    "forecast_3_month": {
+      "min": 0.0,
+      "max": 1427612.0
+    },
+    "sales_1_month": {
+      "min": 0.0,
+      "max": 741762.0
+    },
+    "sales_3_month": {
+      "min": 0.0,
+      "max": 1058559.0
+    },
+    "min_bank": {
+      "min": 0.0,
+      "max": 205786.0
+    }
+  },
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "joblib": "1.5.3"
+  },
+  "python": "3.11.9",
+  "limitations": [
+    "Sem datas para validação temporal ou garantia de horizonte futuro.",
+    "Amostra de dataset público de cadeia de suprimentos; não agro brasileiro.",
+    "Scores de classificador com pesos de classe não são probabilidades calibradas.",
+    "Disponibilidade dos atributos e rótulos na origem não foi auditada no ERP.",
+    "Não foi treinado nem validado com os dados comerciais sintéticos locais."
+  ]
+}

@@ -1,0 +1,4721 @@
+{
+  "run_id": "20261018T122104Z-batch-a8ba57",
+  "selected_cases": [
+    "G04",
+    "G05"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G04",
+      "category": "faturamento",
+      "question": "Como evoluiu o faturamento por mês nos 12 meses disponíveis? Liste uma linha por mês no formato YYYY-MM com o valor exato.",
+      "expected_behavior": "Usar faturadas agrupadas por mês, sem incluir pendentes/canceladas.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:monthly"
+      ],
+      "checks": [
+        "monthly"
+      ]
+    },
+    {
+      "id": "G05",
+      "category": "regional_margens",
+      "question": "Quais regiões possuem maior faturamento e qual a margem regional consolidada de cada uma? Liste uma linha por região com nome, receita exata e margem percentual.",
+      "expected_behavior": "Ordenar receita; margem ponderada = 100*(receita-custo)/receita, somente faturadas.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:regional"
+      ],
+      "checks": [
+        "regional"
+      ]
+    }
+  ],
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 9,
+  "calls": [
+    {
+      "case_id": "G04",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 9402,
+        "output": 3598,
+        "total": 13000
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c002",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Aviso sem afirmação factual."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0011",
+              "s0012",
+              "s0013",
+              "s0015",
+              "s0016"
+            ],
+            "reason": "Os valores de faturamento, carteira pendente e margem faturada coincidem com os totais fornecidos nos snippets s0013, s0015 e s0016 para o período de 2025-10-01 a 2026-09-30."
+          },
+          {
+            "claim_id": "c004",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título de seção sem afirmação factual."
+          },
+          {
+            "claim_id": "c005",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título de documento sem afirmação factual."
+          },
+          {
+            "claim_id": "c006",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "A vigência didática do documento PC-001 está confirmada no snippet s0066."
+          },
+          {
+            "claim_id": "c007",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c008",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "As regras de desconto estão descritas conforme o snippet s0066."
+          },
+          {
+            "claim_id": "c009",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c010",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "As condições de pagamento e tratamento de pedidos estão descritas conforme o snippet s0066."
+          },
+          {
+            "claim_id": "c011",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c012",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "A natureza fictícia dos dados é confirmada no snippet s0066."
+          },
+          {
+            "claim_id": "c013",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c014",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título de seção sem afirmação factual."
+          },
+          {
+            "claim_id": "c015",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título de documento sem afirmação factual."
+          },
+          {
+            "claim_id": "c016",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "A vigência didática do documento LOG-001 está confirmada no snippet s0070."
+          },
+          {
+            "claim_id": "c017",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c018",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "As condições de atendimento e prazos de entrega estão descritas conforme o snippet s0070."
+          },
+          {
+            "claim_id": "c019",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c020",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "As condições de frete e devolução estão descritas conforme o snippet s0070."
+          },
+          {
+            "claim_id": "c021",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c022",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "A natureza fictícia das condições é confirmada no snippet s0070."
+          },
+          {
+            "claim_id": "c023",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c024",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título de seção sem afirmação factual."
+          },
+          {
+            "claim_id": "c025",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título de documento sem afirmação factual."
+          },
+          {
+            "claim_id": "c026",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "A vigência didática do documento CAT-001 está confirmada no snippet s0074."
+          },
+          {
+            "claim_id": "c027",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c028",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "Os preços de lista dos produtos estão descritos conforme o snippet s0074."
+          },
+          {
+            "claim_id": "c029",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c030",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "As observações sobre a natureza fictícia dos produtos e catálogo estão descritas conforme o snippet s0074."
+          },
+          {
+            "claim_id": "c031",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento sem afirmação factual."
+          },
+          {
+            "claim_id": "c032",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0002"
+            ],
+            "reason": "O sistema indica limitações de consulta, o que corrobora a indisponibilidade de certos dados."
+          },
+          {
+            "claim_id": "c033",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001"
+            ],
+            "reason": "A natureza sintética dos dados é confirmada no snippet s0001."
+          }
+        ],
+        "explanation": "A resposta fornecida não atendeu à solicitação do usuário de listar o faturamento mensal, limitando-se a apresentar resumos de documentos e totais gerais. Os dados mensais necessários para responder à pergunta estão presentes nos snippets s0030 a s0065, mas não foram utilizados na resposta.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": false,
+            "reason": "Digressão sobre o status da ferramenta."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": false,
+            "reason": "Digressão sobre o status da ferramenta."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": false,
+            "reason": "Não responde à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": false,
+            "reason": "Digressão sobre a fonte consultada."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u007",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u008",
+            "relevant": false,
+            "reason": "Digressão sobre política comercial."
+          },
+          {
+            "unit_id": "u009",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u010",
+            "relevant": false,
+            "reason": "Digressão sobre política comercial."
+          },
+          {
+            "unit_id": "u011",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u012",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u013",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u014",
+            "relevant": false,
+            "reason": "Digressão sobre a fonte consultada."
+          },
+          {
+            "unit_id": "u015",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u016",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u017",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u018",
+            "relevant": false,
+            "reason": "Digressão sobre logística."
+          },
+          {
+            "unit_id": "u019",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u020",
+            "relevant": false,
+            "reason": "Digressão sobre logística."
+          },
+          {
+            "unit_id": "u021",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u022",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u023",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u024",
+            "relevant": false,
+            "reason": "Digressão sobre a fonte consultada."
+          },
+          {
+            "unit_id": "u025",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u026",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u027",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u028",
+            "relevant": false,
+            "reason": "Digressão sobre catálogo."
+          },
+          {
+            "unit_id": "u029",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u030",
+            "relevant": false,
+            "reason": "Digressão sobre o documento."
+          },
+          {
+            "unit_id": "u031",
+            "relevant": false,
+            "reason": "Espaçamento."
+          },
+          {
+            "unit_id": "u032",
+            "relevant": false,
+            "reason": "Digressão sobre o status da ferramenta."
+          },
+          {
+            "unit_id": "u033",
+            "relevant": false,
+            "reason": "Digressão sobre a natureza dos dados."
+          }
+        ]
+      },
+      "latency_ms": 7926.096
+    },
+    {
+      "case_id": "G05",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 447.089
+    },
+    {
+      "case_id": "G05",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 3084,
+        "output": 376,
+        "total": 3460
+      },
+      "latency_ms": 1666.882
+    },
+    {
+      "case_id": "G05",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 3471,
+        "output": 328,
+        "total": 4922,
+        "reasoning": 1123
+      },
+      "latency_ms": 7183.313
+    },
+    {
+      "case_id": "G05",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 11927,
+        "output": 1301,
+        "total": 13228
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0011",
+              "s0012",
+              "s0159"
+            ],
+            "reason": "O período de 01/10/2025 a 30/09/2026 está confirmado pelos snippets s0011 e s0012, e a política comercial é referenciada no s0159."
+          },
+          {
+            "claim_id": "c002",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0033",
+              "s0036"
+            ],
+            "reason": "A receita faturada de R$ 225.379.335,16 e a margem de 20,2163% (arredondada para 20,22%) coincidem com os dados do snippet s0033 e s0036."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0040",
+              "s0043"
+            ],
+            "reason": "A receita faturada de R$ 125.389.865,57 e a margem de 20,6741% (arredondada para 20,67%) coincidem com os dados do snippet s0040 e s0043."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0047",
+              "s0050"
+            ],
+            "reason": "A receita faturada de R$ 74.180.338,74 e a margem de 20,2254% (arredondada para 20,23%) coincidem com os dados do snippet s0047 e s0050."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0054",
+              "s0057"
+            ],
+            "reason": "A receita faturada de R$ 43.933.226,58 e a margem de 19,6242% (arredondada para 19,62%) coincidem com os dados do snippet s0054 e s0057."
+          },
+          {
+            "claim_id": "c006",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0061",
+              "s0064"
+            ],
+            "reason": "A receita faturada de R$ 24.243.750,97 e a margem de 20,2592% (arredondada para 20,26%) coincidem com os dados do snippet s0061 e s0064."
+          },
+          {
+            "claim_id": "c007",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001"
+            ],
+            "reason": "O aviso sobre a natureza sintética dos dados e a exclusão de pedidos pendentes/cancelados está sustentado pelo snippet s0001."
+          }
+        ],
+        "explanation": "A resposta fornece os dados solicitados de faturamento e margem por região, utilizando os valores exatos presentes nos indicadores comerciais fornecidos, com arredondamentos consistentes para as margens percentuais.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "Introduz o contexto da consulta e o período analisado."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação com os dados da região Oeste Simulado."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação com os dados da região Centro Simulado."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação com os dados da região Vale Simulado."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação com os dados da região Sul Simulado."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação com os dados da região Cerrado Simulado."
+          },
+          {
+            "unit_id": "u007",
+            "relevant": true,
+            "reason": "Fornece nota de esclarecimento necessária sobre a natureza dos dados."
+          }
+        ]
+      },
+      "latency_ms": 4577.514
+    }
+  ],
+  "results": [
+    {
+      "id": "G04",
+      "category": "faturamento",
+      "question": "Como evoluiu o faturamento por mês nos 12 meses disponíveis? Liste uma linha por mês no formato YYYY-MM com o valor exato.",
+      "expected_behavior": "Usar faturadas agrupadas por mês, sem incluir pendentes/canceladas.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:monthly"
+      ],
+      "checks": [
+        "monthly"
+      ],
+      "generation_status": "reused",
+      "answer": "**Resumo factual das ferramentas — sem síntese do Gemini.**\n\n**Resposta incompleta:** a síntese do Gemini ficou indisponível. Este resumo contém somente os resultados disponíveis das ferramentas.\n\nPeríodo 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.\n\nTrecho consultado [politica_comercial.md, trecho 1]:\n\n> # Política comercial fictícia — Agro Intelligence AI\n> Documento PC-001. Vigência didática: setembro a dezembro de 2026.\n> \n> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n> \n> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n> \n> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n> \n\nTrecho consultado [logistica_atendimento.md, trecho 1]:\n\n> # Entrega e atendimento fictícios\n> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.\n> \n> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n> \n> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n> \n> Todas as condições são simulações acadêmicas e não representam uma empresa real.\n> \n\nTrecho consultado [catalogo_comercial.md, trecho 1]:\n\n> # Catálogo comercial fictício\n> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.\n> \n> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n> \n> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n> \n\nHá consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.\n\nDados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "mensal": [
+              {
+                "mes": "2025-10",
+                "receita_faturada": "69100257.04",
+                "carteira_pendente": "19312146.84"
+              },
+              {
+                "mes": "2025-11",
+                "receita_faturada": "47569449.23",
+                "carteira_pendente": "14718965.52"
+              },
+              {
+                "mes": "2025-12",
+                "receita_faturada": "22958227.98",
+                "carteira_pendente": "6899802.23"
+              },
+              {
+                "mes": "2026-01",
+                "receita_faturada": "20195392.48",
+                "carteira_pendente": "6190956.60"
+              },
+              {
+                "mes": "2026-02",
+                "receita_faturada": "24733899.94",
+                "carteira_pendente": "7341237.46"
+              },
+              {
+                "mes": "2026-03",
+                "receita_faturada": "21990732.75",
+                "carteira_pendente": "9406211.94"
+              },
+              {
+                "mes": "2026-04",
+                "receita_faturada": "19900242.28",
+                "carteira_pendente": "7607415.97"
+              },
+              {
+                "mes": "2026-05",
+                "receita_faturada": "18898851.47",
+                "carteira_pendente": "5836759.65"
+              },
+              {
+                "mes": "2026-06",
+                "receita_faturada": "31224307.20",
+                "carteira_pendente": "11496612.31"
+              },
+              {
+                "mes": "2026-07",
+                "receita_faturada": "49589766.87",
+                "carteira_pendente": "12604227.39"
+              },
+              {
+                "mes": "2026-08",
+                "receita_faturada": "84051605.74",
+                "carteira_pendente": "25960661.80"
+              },
+              {
+                "mes": "2026-09",
+                "receita_faturada": "82913784.04",
+                "carteira_pendente": "27771365.83"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.3896902799606323
+            },
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.40149396657943726
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.40946877002716064
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "failed",
+          "category": "timeout",
+          "http": null,
+          "reference": "acde0309a51c"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "failed",
+          "category": "daily_limit",
+          "http": 429,
+          "reference": "b77b7adeebec"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 14,
+          "claims": 14,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.0,
+          "relevant": 0,
+          "units": 33,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "generation_attempted": false,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "response_key": "4a0d375b7c0d5474494c880425788b79eddb5832d6f7d34ada0950445d6343ed",
+      "response_origin": {
+        "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T143301Z-batch-32dd30\\results.json",
+        "fresh_generation": true
+      },
+      "historical_api_failures": [
+        {
+          "stage": "gemini_analise",
+          "category": "timeout",
+          "http_code": null
+        },
+        {
+          "stage": "gemini_sintese",
+          "category": "daily_limit",
+          "http_code": 429
+        }
+      ],
+      "generation_latency_ms": null,
+      "deterministic": [
+        {
+          "check": "monthly",
+          "status": "failed",
+          "reference_rows": [
+            {
+              "mes": "2025-10",
+              "valor": "69100257.04"
+            },
+            {
+              "mes": "2025-11",
+              "valor": "47569449.23"
+            },
+            {
+              "mes": "2025-12",
+              "valor": "22958227.98"
+            },
+            {
+              "mes": "2026-01",
+              "valor": "20195392.48"
+            },
+            {
+              "mes": "2026-02",
+              "valor": "24733899.94"
+            },
+            {
+              "mes": "2026-03",
+              "valor": "21990732.75"
+            },
+            {
+              "mes": "2026-04",
+              "valor": "19900242.28"
+            },
+            {
+              "mes": "2026-05",
+              "valor": "18898851.47"
+            },
+            {
+              "mes": "2026-06",
+              "valor": "31224307.20"
+            },
+            {
+              "mes": "2026-07",
+              "valor": "49589766.87"
+            },
+            {
+              "mes": "2026-08",
+              "valor": "84051605.74"
+            },
+            {
+              "mes": "2026-09",
+              "valor": "82913784.04"
+            }
+          ],
+          "missing_or_inaccurate_values": [
+            {
+              "field": "valor",
+              "expected": "69100257.04",
+              "group": "2025-10"
+            },
+            {
+              "field": "valor",
+              "expected": "47569449.23",
+              "group": "2025-11"
+            },
+            {
+              "field": "valor",
+              "expected": "22958227.98",
+              "group": "2025-12"
+            },
+            {
+              "field": "valor",
+              "expected": "20195392.48",
+              "group": "2026-01"
+            },
+            {
+              "field": "valor",
+              "expected": "24733899.94",
+              "group": "2026-02"
+            },
+            {
+              "field": "valor",
+              "expected": "21990732.75",
+              "group": "2026-03"
+            },
+            {
+              "field": "valor",
+              "expected": "19900242.28",
+              "group": "2026-04"
+            },
+            {
+              "field": "valor",
+              "expected": "18898851.47",
+              "group": "2026-05"
+            },
+            {
+              "field": "valor",
+              "expected": "31224307.20",
+              "group": "2026-06"
+            },
+            {
+              "field": "valor",
+              "expected": "49589766.87",
+              "group": "2026-07"
+            },
+            {
+              "field": "valor",
+              "expected": "84051605.74",
+              "group": "2026-08"
+            },
+            {
+              "field": "valor",
+              "expected": "82913784.04",
+              "group": "2026-09"
+            }
+          ]
+        }
+      ],
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "current_assessment": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 14,
+          "claims": 14,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "faithfulness_judgment": {
+          "claims": [
+            {
+              "claim_id": "c001",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título sem afirmação factual.",
+              "quote": "**Resumo factual das ferramentas — sem síntese do Gemini.**",
+              "start": 0,
+              "end": 59,
+              "evidence": []
+            },
+            {
+              "claim_id": "c002",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Aviso sem afirmação factual.",
+              "quote": "**Resposta incompleta:** a síntese do Gemini ficou indisponível. Este resumo contém somente os resultados disponíveis das ferramentas.",
+              "start": 61,
+              "end": 195,
+              "evidence": []
+            },
+            {
+              "claim_id": "c003",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0011",
+                "s0012",
+                "s0013",
+                "s0015",
+                "s0016"
+              ],
+              "reason": "Os valores de faturamento, carteira pendente e margem faturada coincidem com os totais fornecidos nos snippets s0013, s0015 e s0016 para o período de 2025-10-01 a 2026-09-30.",
+              "quote": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.",
+              "start": 197,
+              "end": 332,
+              "evidence": [
+                {
+                  "snippet_id": "s0011",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/inicio",
+                  "value": "2025-10-01"
+                },
+                {
+                  "snippet_id": "s0012",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/fim",
+                  "value": "2026-09-30"
+                },
+                {
+                  "snippet_id": "s0013",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/receita_faturada",
+                  "value": "493126517.02"
+                },
+                {
+                  "snippet_id": "s0015",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/margem_faturada",
+                  "value": "100023056.21"
+                },
+                {
+                  "snippet_id": "s0016",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/carteira_pendente",
+                  "value": "155146363.54"
+                }
+              ]
+            },
+            {
+              "claim_id": "c004",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título de seção sem afirmação factual.",
+              "quote": "Trecho consultado [politica_comercial.md, trecho 1]:",
+              "start": 334,
+              "end": 386,
+              "evidence": []
+            },
+            {
+              "claim_id": "c005",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título de documento sem afirmação factual.",
+              "quote": "> # Política comercial fictícia — Agro Intelligence AI",
+              "start": 388,
+              "end": 442,
+              "evidence": []
+            },
+            {
+              "claim_id": "c006",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "A vigência didática do documento PC-001 está confirmada no snippet s0066.",
+              "quote": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 443,
+              "end": 510,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c007",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 511,
+              "end": 513,
+              "evidence": []
+            },
+            {
+              "claim_id": "c008",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "As regras de desconto estão descritas conforme o snippet s0066.",
+              "quote": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.",
+              "start": 514,
+              "end": 740,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c009",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 741,
+              "end": 743,
+              "evidence": []
+            },
+            {
+              "claim_id": "c010",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "As condições de pagamento e tratamento de pedidos estão descritas conforme o snippet s0066.",
+              "quote": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.",
+              "start": 744,
+              "end": 1026,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c011",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 1027,
+              "end": 1029,
+              "evidence": []
+            },
+            {
+              "claim_id": "c012",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "A natureza fictícia dos dados é confirmada no snippet s0066.",
+              "quote": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.",
+              "start": 1030,
+              "end": 1120,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c013",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 1121,
+              "end": 1123,
+              "evidence": []
+            },
+            {
+              "claim_id": "c014",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título de seção sem afirmação factual.",
+              "quote": "Trecho consultado [logistica_atendimento.md, trecho 1]:",
+              "start": 1125,
+              "end": 1180,
+              "evidence": []
+            },
+            {
+              "claim_id": "c015",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título de documento sem afirmação factual.",
+              "quote": "> # Entrega e atendimento fictícios",
+              "start": 1182,
+              "end": 1217,
+              "evidence": []
+            },
+            {
+              "claim_id": "c016",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "A vigência didática do documento LOG-001 está confirmada no snippet s0070.",
+              "quote": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 1218,
+              "end": 1286,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c017",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 1287,
+              "end": 1289,
+              "evidence": []
+            },
+            {
+              "claim_id": "c018",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "As condições de atendimento e prazos de entrega estão descritas conforme o snippet s0070.",
+              "quote": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.",
+              "start": 1290,
+              "end": 1525,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c019",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 1526,
+              "end": 1528,
+              "evidence": []
+            },
+            {
+              "claim_id": "c020",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "As condições de frete e devolução estão descritas conforme o snippet s0070.",
+              "quote": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.",
+              "start": 1529,
+              "end": 1816,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c021",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 1817,
+              "end": 1819,
+              "evidence": []
+            },
+            {
+              "claim_id": "c022",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "A natureza fictícia das condições é confirmada no snippet s0070.",
+              "quote": "> Todas as condições são simulações acadêmicas e não representam uma empresa real.",
+              "start": 1820,
+              "end": 1902,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c023",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 1903,
+              "end": 1905,
+              "evidence": []
+            },
+            {
+              "claim_id": "c024",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título de seção sem afirmação factual.",
+              "quote": "Trecho consultado [catalogo_comercial.md, trecho 1]:",
+              "start": 1907,
+              "end": 1959,
+              "evidence": []
+            },
+            {
+              "claim_id": "c025",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título de documento sem afirmação factual.",
+              "quote": "> # Catálogo comercial fictício",
+              "start": 1961,
+              "end": 1992,
+              "evidence": []
+            },
+            {
+              "claim_id": "c026",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "A vigência didática do documento CAT-001 está confirmada no snippet s0074.",
+              "quote": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 1993,
+              "end": 2061,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c027",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 2062,
+              "end": 2064,
+              "evidence": []
+            },
+            {
+              "claim_id": "c028",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "Os preços de lista dos produtos estão descritos conforme o snippet s0074.",
+              "quote": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.",
+              "start": 2065,
+              "end": 2274,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c029",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 2275,
+              "end": 2277,
+              "evidence": []
+            },
+            {
+              "claim_id": "c030",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "As observações sobre a natureza fictícia dos produtos e catálogo estão descritas conforme o snippet s0074.",
+              "quote": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.",
+              "start": 2278,
+              "end": 2526,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c031",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento sem afirmação factual.",
+              "quote": "> ",
+              "start": 2527,
+              "end": 2529,
+              "evidence": []
+            },
+            {
+              "claim_id": "c032",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0002"
+              ],
+              "reason": "O sistema indica limitações de consulta, o que corrobora a indisponibilidade de certos dados.",
+              "quote": "Há consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.",
+              "start": 2531,
+              "end": 2629,
+              "evidence": [
+                {
+                  "snippet_id": "s0002",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/limite_por_consulta",
+                  "value": 20
+                }
+              ]
+            },
+            {
+              "claim_id": "c033",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0001"
+              ],
+              "reason": "A natureza sintética dos dados é confirmada no snippet s0001.",
+              "quote": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+              "start": 2631,
+              "end": 2742,
+              "evidence": [
+                {
+                  "snippet_id": "s0001",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/regra",
+                  "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+                }
+              ]
+            }
+          ],
+          "explanation": "A resposta fornecida não atendeu à solicitação do usuário de listar o faturamento mensal, limitando-se a apresentar resumos de documentos e totais gerais. Os dados mensais necessários para responder à pergunta estão presentes nos snippets s0030 a s0065, mas não foram utilizados na resposta."
+        },
+        "claim_units": [
+          {
+            "claim_id": "c001",
+            "text": "**Resumo factual das ferramentas — sem síntese do Gemini.**",
+            "start": 0,
+            "end": 59
+          },
+          {
+            "claim_id": "c002",
+            "text": "**Resposta incompleta:** a síntese do Gemini ficou indisponível. Este resumo contém somente os resultados disponíveis das ferramentas.",
+            "start": 61,
+            "end": 195
+          },
+          {
+            "claim_id": "c003",
+            "text": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.",
+            "start": 197,
+            "end": 332
+          },
+          {
+            "claim_id": "c004",
+            "text": "Trecho consultado [politica_comercial.md, trecho 1]:",
+            "start": 334,
+            "end": 386
+          },
+          {
+            "claim_id": "c005",
+            "text": "> # Política comercial fictícia — Agro Intelligence AI",
+            "start": 388,
+            "end": 442
+          },
+          {
+            "claim_id": "c006",
+            "text": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026.",
+            "start": 443,
+            "end": 510
+          },
+          {
+            "claim_id": "c007",
+            "text": "> ",
+            "start": 511,
+            "end": 513
+          },
+          {
+            "claim_id": "c008",
+            "text": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.",
+            "start": 514,
+            "end": 740
+          },
+          {
+            "claim_id": "c009",
+            "text": "> ",
+            "start": 741,
+            "end": 743
+          },
+          {
+            "claim_id": "c010",
+            "text": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.",
+            "start": 744,
+            "end": 1026
+          },
+          {
+            "claim_id": "c011",
+            "text": "> ",
+            "start": 1027,
+            "end": 1029
+          },
+          {
+            "claim_id": "c012",
+            "text": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.",
+            "start": 1030,
+            "end": 1120
+          },
+          {
+            "claim_id": "c013",
+            "text": "> ",
+            "start": 1121,
+            "end": 1123
+          },
+          {
+            "claim_id": "c014",
+            "text": "Trecho consultado [logistica_atendimento.md, trecho 1]:",
+            "start": 1125,
+            "end": 1180
+          },
+          {
+            "claim_id": "c015",
+            "text": "> # Entrega e atendimento fictícios",
+            "start": 1182,
+            "end": 1217
+          },
+          {
+            "claim_id": "c016",
+            "text": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.",
+            "start": 1218,
+            "end": 1286
+          },
+          {
+            "claim_id": "c017",
+            "text": "> ",
+            "start": 1287,
+            "end": 1289
+          },
+          {
+            "claim_id": "c018",
+            "text": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.",
+            "start": 1290,
+            "end": 1525
+          },
+          {
+            "claim_id": "c019",
+            "text": "> ",
+            "start": 1526,
+            "end": 1528
+          },
+          {
+            "claim_id": "c020",
+            "text": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.",
+            "start": 1529,
+            "end": 1816
+          },
+          {
+            "claim_id": "c021",
+            "text": "> ",
+            "start": 1817,
+            "end": 1819
+          },
+          {
+            "claim_id": "c022",
+            "text": "> Todas as condições são simulações acadêmicas e não representam uma empresa real.",
+            "start": 1820,
+            "end": 1902
+          },
+          {
+            "claim_id": "c023",
+            "text": "> ",
+            "start": 1903,
+            "end": 1905
+          },
+          {
+            "claim_id": "c024",
+            "text": "Trecho consultado [catalogo_comercial.md, trecho 1]:",
+            "start": 1907,
+            "end": 1959
+          },
+          {
+            "claim_id": "c025",
+            "text": "> # Catálogo comercial fictício",
+            "start": 1961,
+            "end": 1992
+          },
+          {
+            "claim_id": "c026",
+            "text": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.",
+            "start": 1993,
+            "end": 2061
+          },
+          {
+            "claim_id": "c027",
+            "text": "> ",
+            "start": 2062,
+            "end": 2064
+          },
+          {
+            "claim_id": "c028",
+            "text": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.",
+            "start": 2065,
+            "end": 2274
+          },
+          {
+            "claim_id": "c029",
+            "text": "> ",
+            "start": 2275,
+            "end": 2277
+          },
+          {
+            "claim_id": "c030",
+            "text": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.",
+            "start": 2278,
+            "end": 2526
+          },
+          {
+            "claim_id": "c031",
+            "text": "> ",
+            "start": 2527,
+            "end": 2529
+          },
+          {
+            "claim_id": "c032",
+            "text": "Há consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.",
+            "start": 2531,
+            "end": 2629
+          },
+          {
+            "claim_id": "c033",
+            "text": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+            "start": 2631,
+            "end": 2742
+          }
+        ],
+        "evidence_snippets": [
+          {
+            "snippet_id": "s0001",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/regra",
+            "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+          },
+          {
+            "snippet_id": "s0002",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/limite_por_consulta",
+            "value": 20
+          },
+          {
+            "snippet_id": "s0003",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/regioes",
+            "value": 5
+          },
+          {
+            "snippet_id": "s0004",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/centros",
+            "value": 15
+          },
+          {
+            "snippet_id": "s0005",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/clientes",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0006",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/produtos",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0007",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/historico_precos",
+            "value": 12000
+          },
+          {
+            "snippet_id": "s0008",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/pedidos",
+            "value": 8000
+          },
+          {
+            "snippet_id": "s0009",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/vendas",
+            "value": 20000
+          },
+          {
+            "snippet_id": "s0010",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/estoque",
+            "value": 3000
+          },
+          {
+            "snippet_id": "s0011",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/inicio",
+            "value": "2025-10-01"
+          },
+          {
+            "snippet_id": "s0012",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/fim",
+            "value": "2026-09-30"
+          },
+          {
+            "snippet_id": "s0013",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/receita_faturada",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0014",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/custo_faturado",
+            "value": "393103460.81"
+          },
+          {
+            "snippet_id": "s0015",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/margem_faturada",
+            "value": "100023056.21"
+          },
+          {
+            "snippet_id": "s0016",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/carteira_pendente",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0017",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/valor_cancelado",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0018",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0019",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/linhas",
+            "value": 1008
+          },
+          {
+            "snippet_id": "s0020",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/pedidos",
+            "value": 396
+          },
+          {
+            "snippet_id": "s0021",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/valor",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0022",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0023",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/linhas",
+            "value": 14431
+          },
+          {
+            "snippet_id": "s0024",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/pedidos",
+            "value": 5772
+          },
+          {
+            "snippet_id": "s0025",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/valor",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0026",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0027",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/linhas",
+            "value": 4561
+          },
+          {
+            "snippet_id": "s0028",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/pedidos",
+            "value": 1832
+          },
+          {
+            "snippet_id": "s0029",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/valor",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0030",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/0/mes",
+            "value": "2025-10"
+          },
+          {
+            "snippet_id": "s0031",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/0/receita_faturada",
+            "value": "69100257.04"
+          },
+          {
+            "snippet_id": "s0032",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/0/carteira_pendente",
+            "value": "19312146.84"
+          },
+          {
+            "snippet_id": "s0033",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/1/mes",
+            "value": "2025-11"
+          },
+          {
+            "snippet_id": "s0034",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/1/receita_faturada",
+            "value": "47569449.23"
+          },
+          {
+            "snippet_id": "s0035",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/1/carteira_pendente",
+            "value": "14718965.52"
+          },
+          {
+            "snippet_id": "s0036",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/2/mes",
+            "value": "2025-12"
+          },
+          {
+            "snippet_id": "s0037",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/2/receita_faturada",
+            "value": "22958227.98"
+          },
+          {
+            "snippet_id": "s0038",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/2/carteira_pendente",
+            "value": "6899802.23"
+          },
+          {
+            "snippet_id": "s0039",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/3/mes",
+            "value": "2026-01"
+          },
+          {
+            "snippet_id": "s0040",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/3/receita_faturada",
+            "value": "20195392.48"
+          },
+          {
+            "snippet_id": "s0041",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/3/carteira_pendente",
+            "value": "6190956.60"
+          },
+          {
+            "snippet_id": "s0042",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/4/mes",
+            "value": "2026-02"
+          },
+          {
+            "snippet_id": "s0043",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/4/receita_faturada",
+            "value": "24733899.94"
+          },
+          {
+            "snippet_id": "s0044",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/4/carteira_pendente",
+            "value": "7341237.46"
+          },
+          {
+            "snippet_id": "s0045",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/5/mes",
+            "value": "2026-03"
+          },
+          {
+            "snippet_id": "s0046",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/5/receita_faturada",
+            "value": "21990732.75"
+          },
+          {
+            "snippet_id": "s0047",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/5/carteira_pendente",
+            "value": "9406211.94"
+          },
+          {
+            "snippet_id": "s0048",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/6/mes",
+            "value": "2026-04"
+          },
+          {
+            "snippet_id": "s0049",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/6/receita_faturada",
+            "value": "19900242.28"
+          },
+          {
+            "snippet_id": "s0050",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/6/carteira_pendente",
+            "value": "7607415.97"
+          },
+          {
+            "snippet_id": "s0051",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/7/mes",
+            "value": "2026-05"
+          },
+          {
+            "snippet_id": "s0052",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/7/receita_faturada",
+            "value": "18898851.47"
+          },
+          {
+            "snippet_id": "s0053",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/7/carteira_pendente",
+            "value": "5836759.65"
+          },
+          {
+            "snippet_id": "s0054",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/8/mes",
+            "value": "2026-06"
+          },
+          {
+            "snippet_id": "s0055",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/8/receita_faturada",
+            "value": "31224307.20"
+          },
+          {
+            "snippet_id": "s0056",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/8/carteira_pendente",
+            "value": "11496612.31"
+          },
+          {
+            "snippet_id": "s0057",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/9/mes",
+            "value": "2026-07"
+          },
+          {
+            "snippet_id": "s0058",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/9/receita_faturada",
+            "value": "49589766.87"
+          },
+          {
+            "snippet_id": "s0059",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/9/carteira_pendente",
+            "value": "12604227.39"
+          },
+          {
+            "snippet_id": "s0060",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/10/mes",
+            "value": "2026-08"
+          },
+          {
+            "snippet_id": "s0061",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/10/receita_faturada",
+            "value": "84051605.74"
+          },
+          {
+            "snippet_id": "s0062",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/10/carteira_pendente",
+            "value": "25960661.80"
+          },
+          {
+            "snippet_id": "s0063",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/11/mes",
+            "value": "2026-09"
+          },
+          {
+            "snippet_id": "s0064",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/11/receita_faturada",
+            "value": "82913784.04"
+          },
+          {
+            "snippet_id": "s0065",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/11/carteira_pendente",
+            "value": "27771365.83"
+          },
+          {
+            "snippet_id": "s0066",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/text",
+            "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+          },
+          {
+            "snippet_id": "s0067",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/source",
+            "value": "politica_comercial.md"
+          },
+          {
+            "snippet_id": "s0068",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0069",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/distance",
+            "value": 0.3896902799606323
+          },
+          {
+            "snippet_id": "s0070",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/text",
+            "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+          },
+          {
+            "snippet_id": "s0071",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/source",
+            "value": "logistica_atendimento.md"
+          },
+          {
+            "snippet_id": "s0072",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0073",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/distance",
+            "value": 0.40149396657943726
+          },
+          {
+            "snippet_id": "s0074",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/text",
+            "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+          },
+          {
+            "snippet_id": "s0075",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/source",
+            "value": "catalogo_comercial.md"
+          },
+          {
+            "snippet_id": "s0076",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0077",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/distance",
+            "value": 0.40946877002716064
+          }
+        ],
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.0,
+          "relevant": 0,
+          "units": 33,
+          "protocol": "indexed_answer_lines_v2"
+        },
+        "relevancy_judgment": {
+          "verdicts": [
+            {
+              "unit_id": "u001",
+              "relevant": false,
+              "reason": "Digressão sobre o status da ferramenta.",
+              "quote": "**Resumo factual das ferramentas — sem síntese do Gemini.**",
+              "start": 0,
+              "end": 59
+            },
+            {
+              "unit_id": "u002",
+              "relevant": false,
+              "reason": "Digressão sobre o status da ferramenta.",
+              "quote": "**Resposta incompleta:** a síntese do Gemini ficou indisponível. Este resumo contém somente os resultados disponíveis das ferramentas.",
+              "start": 61,
+              "end": 195
+            },
+            {
+              "unit_id": "u003",
+              "relevant": false,
+              "reason": "Não responde à solicitação de faturamento mensal.",
+              "quote": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.",
+              "start": 197,
+              "end": 332
+            },
+            {
+              "unit_id": "u004",
+              "relevant": false,
+              "reason": "Digressão sobre a fonte consultada.",
+              "quote": "Trecho consultado [politica_comercial.md, trecho 1]:",
+              "start": 334,
+              "end": 386
+            },
+            {
+              "unit_id": "u005",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> # Política comercial fictícia — Agro Intelligence AI",
+              "start": 388,
+              "end": 442
+            },
+            {
+              "unit_id": "u006",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 443,
+              "end": 510
+            },
+            {
+              "unit_id": "u007",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 511,
+              "end": 513
+            },
+            {
+              "unit_id": "u008",
+              "relevant": false,
+              "reason": "Digressão sobre política comercial.",
+              "quote": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.",
+              "start": 514,
+              "end": 740
+            },
+            {
+              "unit_id": "u009",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 741,
+              "end": 743
+            },
+            {
+              "unit_id": "u010",
+              "relevant": false,
+              "reason": "Digressão sobre política comercial.",
+              "quote": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.",
+              "start": 744,
+              "end": 1026
+            },
+            {
+              "unit_id": "u011",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 1027,
+              "end": 1029
+            },
+            {
+              "unit_id": "u012",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.",
+              "start": 1030,
+              "end": 1120
+            },
+            {
+              "unit_id": "u013",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 1121,
+              "end": 1123
+            },
+            {
+              "unit_id": "u014",
+              "relevant": false,
+              "reason": "Digressão sobre a fonte consultada.",
+              "quote": "Trecho consultado [logistica_atendimento.md, trecho 1]:",
+              "start": 1125,
+              "end": 1180
+            },
+            {
+              "unit_id": "u015",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> # Entrega e atendimento fictícios",
+              "start": 1182,
+              "end": 1217
+            },
+            {
+              "unit_id": "u016",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 1218,
+              "end": 1286
+            },
+            {
+              "unit_id": "u017",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 1287,
+              "end": 1289
+            },
+            {
+              "unit_id": "u018",
+              "relevant": false,
+              "reason": "Digressão sobre logística.",
+              "quote": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.",
+              "start": 1290,
+              "end": 1525
+            },
+            {
+              "unit_id": "u019",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 1526,
+              "end": 1528
+            },
+            {
+              "unit_id": "u020",
+              "relevant": false,
+              "reason": "Digressão sobre logística.",
+              "quote": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.",
+              "start": 1529,
+              "end": 1816
+            },
+            {
+              "unit_id": "u021",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 1817,
+              "end": 1819
+            },
+            {
+              "unit_id": "u022",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> Todas as condições são simulações acadêmicas e não representam uma empresa real.",
+              "start": 1820,
+              "end": 1902
+            },
+            {
+              "unit_id": "u023",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 1903,
+              "end": 1905
+            },
+            {
+              "unit_id": "u024",
+              "relevant": false,
+              "reason": "Digressão sobre a fonte consultada.",
+              "quote": "Trecho consultado [catalogo_comercial.md, trecho 1]:",
+              "start": 1907,
+              "end": 1959
+            },
+            {
+              "unit_id": "u025",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> # Catálogo comercial fictício",
+              "start": 1961,
+              "end": 1992
+            },
+            {
+              "unit_id": "u026",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 1993,
+              "end": 2061
+            },
+            {
+              "unit_id": "u027",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 2062,
+              "end": 2064
+            },
+            {
+              "unit_id": "u028",
+              "relevant": false,
+              "reason": "Digressão sobre catálogo.",
+              "quote": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.",
+              "start": 2065,
+              "end": 2274
+            },
+            {
+              "unit_id": "u029",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 2275,
+              "end": 2277
+            },
+            {
+              "unit_id": "u030",
+              "relevant": false,
+              "reason": "Digressão sobre o documento.",
+              "quote": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.",
+              "start": 2278,
+              "end": 2526
+            },
+            {
+              "unit_id": "u031",
+              "relevant": false,
+              "reason": "Espaçamento.",
+              "quote": "> ",
+              "start": 2527,
+              "end": 2529
+            },
+            {
+              "unit_id": "u032",
+              "relevant": false,
+              "reason": "Digressão sobre o status da ferramenta.",
+              "quote": "Há consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.",
+              "start": 2531,
+              "end": 2629
+            },
+            {
+              "unit_id": "u033",
+              "relevant": false,
+              "reason": "Digressão sobre a natureza dos dados.",
+              "quote": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+              "start": 2631,
+              "end": 2742
+            }
+          ],
+          "explanation": "A resposta fornecida não atendeu à solicitação do usuário de listar o faturamento mensal, limitando-se a apresentar resumos de documentos e totais gerais. Os dados mensais necessários para responder à pergunta estão presentes nos snippets s0030 a s0065, mas não foram utilizados na resposta."
+        },
+        "answer_units": [
+          {
+            "unit_id": "u001",
+            "start": 0,
+            "end": 59,
+            "text": "**Resumo factual das ferramentas — sem síntese do Gemini.**"
+          },
+          {
+            "unit_id": "u002",
+            "start": 61,
+            "end": 195,
+            "text": "**Resposta incompleta:** a síntese do Gemini ficou indisponível. Este resumo contém somente os resultados disponíveis das ferramentas."
+          },
+          {
+            "unit_id": "u003",
+            "start": 197,
+            "end": 332,
+            "text": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21."
+          },
+          {
+            "unit_id": "u004",
+            "start": 334,
+            "end": 386,
+            "text": "Trecho consultado [politica_comercial.md, trecho 1]:"
+          },
+          {
+            "unit_id": "u005",
+            "start": 388,
+            "end": 442,
+            "text": "> # Política comercial fictícia — Agro Intelligence AI"
+          },
+          {
+            "unit_id": "u006",
+            "start": 443,
+            "end": 510,
+            "text": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026."
+          },
+          {
+            "unit_id": "u007",
+            "start": 511,
+            "end": 513,
+            "text": "> "
+          },
+          {
+            "unit_id": "u008",
+            "start": 514,
+            "end": 740,
+            "text": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política."
+          },
+          {
+            "unit_id": "u009",
+            "start": 741,
+            "end": 743,
+            "text": "> "
+          },
+          {
+            "unit_id": "u010",
+            "start": 744,
+            "end": 1026,
+            "text": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas."
+          },
+          {
+            "unit_id": "u011",
+            "start": 1027,
+            "end": 1029,
+            "text": "> "
+          },
+          {
+            "unit_id": "u012",
+            "start": 1030,
+            "end": 1120,
+            "text": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR."
+          },
+          {
+            "unit_id": "u013",
+            "start": 1121,
+            "end": 1123,
+            "text": "> "
+          },
+          {
+            "unit_id": "u014",
+            "start": 1125,
+            "end": 1180,
+            "text": "Trecho consultado [logistica_atendimento.md, trecho 1]:"
+          },
+          {
+            "unit_id": "u015",
+            "start": 1182,
+            "end": 1217,
+            "text": "> # Entrega e atendimento fictícios"
+          },
+          {
+            "unit_id": "u016",
+            "start": 1218,
+            "end": 1286,
+            "text": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026."
+          },
+          {
+            "unit_id": "u017",
+            "start": 1287,
+            "end": 1289,
+            "text": "> "
+          },
+          {
+            "unit_id": "u018",
+            "start": 1290,
+            "end": 1525,
+            "text": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido."
+          },
+          {
+            "unit_id": "u019",
+            "start": 1526,
+            "end": 1528,
+            "text": "> "
+          },
+          {
+            "unit_id": "u020",
+            "start": 1529,
+            "end": 1816,
+            "text": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe."
+          },
+          {
+            "unit_id": "u021",
+            "start": 1817,
+            "end": 1819,
+            "text": "> "
+          },
+          {
+            "unit_id": "u022",
+            "start": 1820,
+            "end": 1902,
+            "text": "> Todas as condições são simulações acadêmicas e não representam uma empresa real."
+          },
+          {
+            "unit_id": "u023",
+            "start": 1903,
+            "end": 1905,
+            "text": "> "
+          },
+          {
+            "unit_id": "u024",
+            "start": 1907,
+            "end": 1959,
+            "text": "Trecho consultado [catalogo_comercial.md, trecho 1]:"
+          },
+          {
+            "unit_id": "u025",
+            "start": 1961,
+            "end": 1992,
+            "text": "> # Catálogo comercial fictício"
+          },
+          {
+            "unit_id": "u026",
+            "start": 1993,
+            "end": 2061,
+            "text": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026."
+          },
+          {
+            "unit_id": "u027",
+            "start": 2062,
+            "end": 2064,
+            "text": "> "
+          },
+          {
+            "unit_id": "u028",
+            "start": 2065,
+            "end": 2274,
+            "text": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00."
+          },
+          {
+            "unit_id": "u029",
+            "start": 2275,
+            "end": 2277,
+            "text": "> "
+          },
+          {
+            "unit_id": "u030",
+            "start": 2278,
+            "end": 2526,
+            "text": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade."
+          },
+          {
+            "unit_id": "u031",
+            "start": 2527,
+            "end": 2529,
+            "text": "> "
+          },
+          {
+            "unit_id": "u032",
+            "start": 2531,
+            "end": 2629,
+            "text": "Há consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas."
+          },
+          {
+            "unit_id": "u033",
+            "start": 2631,
+            "end": 2742,
+            "text": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas."
+          }
+        ],
+        "usage": {
+          "input": 9402,
+          "output": 3598,
+          "total": 13000
+        },
+        "judge_model": "gemini-3.1-flash-lite",
+        "cost": null,
+        "protocols": {
+          "faithfulness": "indexed_claim_evidence_v2",
+          "answer_relevancy": "indexed_answer_lines_v2"
+        },
+        "response_model_version": "gemini-3.1-flash-lite"
+      },
+      "evaluation_latency_ms": 8533.298,
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T122104Z-batch-a8ba57\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T122104Z-batch-a8ba57\\results.json"
+        }
+      },
+      "total_latency_ms": 8588.702
+    },
+    {
+      "id": "G05",
+      "category": "regional_margens",
+      "question": "Quais regiões possuem maior faturamento e qual a margem regional consolidada de cada uma? Liste uma linha por região com nome, receita exata e margem percentual.",
+      "expected_behavior": "Ordenar receita; margem ponderada = 100*(receita-custo)/receita, somente faturadas.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:regional"
+      ],
+      "checks": [
+        "regional"
+      ],
+      "generation_status": "ok",
+      "answer": "No período consultado (01/10/2025 a 30/09/2026), considerando exclusivamente as vendas faturadas conforme [politica_comercial.md, trecho 1], o faturamento e a margem regional consolidada de cada região são:\n\n* **Oeste Simulado**: Receita Faturada R$ 225.379.335,16 | Margem Consolidada: 20,22%\n* **Centro Simulado**: Receita Faturada R$ 125.389.865,57 | Margem Consolidada: 20,67%\n* **Vale Simulado**: Receita Faturada R$ 74.180.338,74 | Margem Consolidada: 20,23%\n* **Sul Simulado**: Receita Faturada R$ 43.933.226,58 | Margem Consolidada: 19,62%\n* **Cerrado Simulado**: Receita Faturada R$ 24.243.750,97 | Margem Consolidada: 20,26%\n\n*Nota: Todos os dados são 100% sintéticos e simulados para fins didáticos. A receita considera apenas itens faturados; carteira pendente e pedidos cancelados foram excluídos da receita realizada.*",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "por_regiao": [
+              {
+                "codigo": "REG-01",
+                "regiao": "Oeste Simulado",
+                "linhas": 6564,
+                "receita_faturada": "225379335.16",
+                "custo_faturado": "179815924.23",
+                "margem_faturada": "45563410.93",
+                "margem_pct": 20.2163
+              },
+              {
+                "codigo": "REG-02",
+                "regiao": "Centro Simulado",
+                "linhas": 3666,
+                "receita_faturada": "125389865.57",
+                "custo_faturado": "99466638.84",
+                "margem_faturada": "25923226.73",
+                "margem_pct": 20.6741
+              },
+              {
+                "codigo": "REG-03",
+                "regiao": "Vale Simulado",
+                "linhas": 2149,
+                "receita_faturada": "74180338.74",
+                "custo_faturado": "59177051.11",
+                "margem_faturada": "15003287.63",
+                "margem_pct": 20.2254
+              },
+              {
+                "codigo": "REG-04",
+                "regiao": "Sul Simulado",
+                "linhas": 1325,
+                "receita_faturada": "43933226.58",
+                "custo_faturado": "35311685.69",
+                "margem_faturada": "8621540.89",
+                "margem_pct": 19.6242
+              },
+              {
+                "codigo": "REG-05",
+                "regiao": "Cerrado Simulado",
+                "linhas": 727,
+                "receita_faturada": "24243750.97",
+                "custo_faturado": "19332160.94",
+                "margem_faturada": "4911590.03",
+                "margem_pct": 20.2592
+              }
+            ],
+            "por_familia": [
+              {
+                "categoria": "Sementes de milho",
+                "receita_faturada": "162506834.49",
+                "margem": "32908359.10",
+                "margem_pct": 20.2504,
+                "desconto_valor": "5408230.72"
+              },
+              {
+                "categoria": "Sementes de soja",
+                "receita_faturada": "144043729.09",
+                "margem": "29126600.06",
+                "margem_pct": 20.2207,
+                "desconto_valor": "4854286.92"
+              },
+              {
+                "categoria": "Fertilizantes",
+                "receita_faturada": "125656163.18",
+                "margem": "25941450.42",
+                "margem_pct": 20.6448,
+                "desconto_valor": "4184920.11"
+              },
+              {
+                "categoria": "Nutrição foliar",
+                "receita_faturada": "32205850.67",
+                "margem": "6401909.72",
+                "margem_pct": 19.8781,
+                "desconto_valor": "1101195.26"
+              },
+              {
+                "categoria": "Agroquímicos",
+                "receita_faturada": "28713939.59",
+                "margem": "5644736.91",
+                "margem_pct": 19.6585,
+                "desconto_valor": "942438.47"
+              }
+            ],
+            "cenarios_comerciais": [
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "cancelada",
+                "linhas": 7,
+                "receita_liquida": "248264.37",
+                "margem": "-30229.40"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "faturada",
+                "linhas": 62,
+                "receita_liquida": "1707369.32",
+                "margem": "-208264.67"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "pendente",
+                "linhas": 31,
+                "receita_liquida": "864747.90",
+                "margem": "-105537.22"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "cancelada",
+                "linhas": 4,
+                "receita_liquida": "202050.10",
+                "margem": "80815.81"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "faturada",
+                "linhas": 75,
+                "receita_liquida": "3308758.84",
+                "margem": "1323473.44"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "pendente",
+                "linhas": 21,
+                "receita_liquida": "529808.37",
+                "margem": "211929.79"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "cancelada",
+                "linhas": 8,
+                "receita_liquida": "255015.36",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "faturada",
+                "linhas": 70,
+                "receita_liquida": "1946446.37",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "pendente",
+                "linhas": 22,
+                "receita_liquida": "834481.78",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "normal",
+                "status": "cancelada",
+                "linhas": 989,
+                "receita_liquida": "34079265.34",
+                "margem": "7025912.59"
+              },
+              {
+                "cenario": "normal",
+                "status": "faturada",
+                "linhas": 14224,
+                "receita_liquida": "486163942.49",
+                "margem": "98907847.44"
+              },
+              {
+                "cenario": "normal",
+                "status": "pendente",
+                "linhas": 4487,
+                "receita_liquida": "152917325.49",
+                "margem": "31130185.42"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.4385533332824707
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.4393852949142456
+            },
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.45534610748291016
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 7,
+          "claims": 7,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 7,
+          "units": 7,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "generation_attempted": true,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "trace_id": "482d1ee5d4f48d522d5dbca755280835",
+      "response_key": "d739542bf5dd4f9d1fabea4267e868860f471283ae9260f41c4745f29d8b550f",
+      "generation_latency_ms": 44231.239,
+      "deterministic": [
+        {
+          "check": "regional",
+          "status": "passed",
+          "reference_rows": [
+            {
+              "regiao": "Oeste Simulado",
+              "valor": "225379335.16",
+              "margem_pct": 20.2163
+            },
+            {
+              "regiao": "Centro Simulado",
+              "valor": "125389865.57",
+              "margem_pct": 20.6741
+            },
+            {
+              "regiao": "Vale Simulado",
+              "valor": "74180338.74",
+              "margem_pct": 20.2254
+            },
+            {
+              "regiao": "Sul Simulado",
+              "valor": "43933226.58",
+              "margem_pct": 19.6242
+            },
+            {
+              "regiao": "Cerrado Simulado",
+              "valor": "24243750.97",
+              "margem_pct": 20.2592
+            }
+          ],
+          "missing_or_inaccurate_values": []
+        }
+      ],
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "current_assessment": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 7,
+          "claims": 7,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "faithfulness_judgment": {
+          "claims": [
+            {
+              "claim_id": "c001",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0011",
+                "s0012",
+                "s0159"
+              ],
+              "reason": "O período de 01/10/2025 a 30/09/2026 está confirmado pelos snippets s0011 e s0012, e a política comercial é referenciada no s0159.",
+              "quote": "No período consultado (01/10/2025 a 30/09/2026), considerando exclusivamente as vendas faturadas conforme [politica_comercial.md, trecho 1], o faturamento e a margem regional consolidada de cada região são:",
+              "start": 0,
+              "end": 206,
+              "evidence": [
+                {
+                  "snippet_id": "s0011",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/inicio",
+                  "value": "2025-10-01"
+                },
+                {
+                  "snippet_id": "s0012",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/fim",
+                  "value": "2026-09-30"
+                },
+                {
+                  "snippet_id": "s0159",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/source",
+                  "value": "politica_comercial.md"
+                }
+              ]
+            },
+            {
+              "claim_id": "c002",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0033",
+                "s0036"
+              ],
+              "reason": "A receita faturada de R$ 225.379.335,16 e a margem de 20,2163% (arredondada para 20,22%) coincidem com os dados do snippet s0033 e s0036.",
+              "quote": "* **Oeste Simulado**: Receita Faturada R$ 225.379.335,16 | Margem Consolidada: 20,22%",
+              "start": 208,
+              "end": 293,
+              "evidence": [
+                {
+                  "snippet_id": "s0033",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/0/receita_faturada",
+                  "value": "225379335.16"
+                },
+                {
+                  "snippet_id": "s0036",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/0/margem_pct",
+                  "value": 20.2163
+                }
+              ]
+            },
+            {
+              "claim_id": "c003",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0040",
+                "s0043"
+              ],
+              "reason": "A receita faturada de R$ 125.389.865,57 e a margem de 20,6741% (arredondada para 20,67%) coincidem com os dados do snippet s0040 e s0043.",
+              "quote": "* **Centro Simulado**: Receita Faturada R$ 125.389.865,57 | Margem Consolidada: 20,67%",
+              "start": 294,
+              "end": 380,
+              "evidence": [
+                {
+                  "snippet_id": "s0040",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/1/receita_faturada",
+                  "value": "125389865.57"
+                },
+                {
+                  "snippet_id": "s0043",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/1/margem_pct",
+                  "value": 20.6741
+                }
+              ]
+            },
+            {
+              "claim_id": "c004",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0047",
+                "s0050"
+              ],
+              "reason": "A receita faturada de R$ 74.180.338,74 e a margem de 20,2254% (arredondada para 20,23%) coincidem com os dados do snippet s0047 e s0050.",
+              "quote": "* **Vale Simulado**: Receita Faturada R$ 74.180.338,74 | Margem Consolidada: 20,23%",
+              "start": 381,
+              "end": 464,
+              "evidence": [
+                {
+                  "snippet_id": "s0047",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/2/receita_faturada",
+                  "value": "74180338.74"
+                },
+                {
+                  "snippet_id": "s0050",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/2/margem_pct",
+                  "value": 20.2254
+                }
+              ]
+            },
+            {
+              "claim_id": "c005",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0054",
+                "s0057"
+              ],
+              "reason": "A receita faturada de R$ 43.933.226,58 e a margem de 19,6242% (arredondada para 19,62%) coincidem com os dados do snippet s0054 e s0057.",
+              "quote": "* **Sul Simulado**: Receita Faturada R$ 43.933.226,58 | Margem Consolidada: 19,62%",
+              "start": 465,
+              "end": 547,
+              "evidence": [
+                {
+                  "snippet_id": "s0054",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/3/receita_faturada",
+                  "value": "43933226.58"
+                },
+                {
+                  "snippet_id": "s0057",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/3/margem_pct",
+                  "value": 19.6242
+                }
+              ]
+            },
+            {
+              "claim_id": "c006",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0061",
+                "s0064"
+              ],
+              "reason": "A receita faturada de R$ 24.243.750,97 e a margem de 20,2592% (arredondada para 20,26%) coincidem com os dados do snippet s0061 e s0064.",
+              "quote": "* **Cerrado Simulado**: Receita Faturada R$ 24.243.750,97 | Margem Consolidada: 20,26%",
+              "start": 548,
+              "end": 634,
+              "evidence": [
+                {
+                  "snippet_id": "s0061",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/4/receita_faturada",
+                  "value": "24243750.97"
+                },
+                {
+                  "snippet_id": "s0064",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/por_regiao/4/margem_pct",
+                  "value": 20.2592
+                }
+              ]
+            },
+            {
+              "claim_id": "c007",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0001"
+              ],
+              "reason": "O aviso sobre a natureza sintética dos dados e a exclusão de pedidos pendentes/cancelados está sustentado pelo snippet s0001.",
+              "quote": "*Nota: Todos os dados são 100% sintéticos e simulados para fins didáticos. A receita considera apenas itens faturados; carteira pendente e pedidos cancelados foram excluídos da receita realizada.*",
+              "start": 636,
+              "end": 832,
+              "evidence": [
+                {
+                  "snippet_id": "s0001",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/regra",
+                  "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+                }
+              ]
+            }
+          ],
+          "explanation": "A resposta fornece os dados solicitados de faturamento e margem por região, utilizando os valores exatos presentes nos indicadores comerciais fornecidos, com arredondamentos consistentes para as margens percentuais."
+        },
+        "claim_units": [
+          {
+            "claim_id": "c001",
+            "text": "No período consultado (01/10/2025 a 30/09/2026), considerando exclusivamente as vendas faturadas conforme [politica_comercial.md, trecho 1], o faturamento e a margem regional consolidada de cada região são:",
+            "start": 0,
+            "end": 206
+          },
+          {
+            "claim_id": "c002",
+            "text": "* **Oeste Simulado**: Receita Faturada R$ 225.379.335,16 | Margem Consolidada: 20,22%",
+            "start": 208,
+            "end": 293
+          },
+          {
+            "claim_id": "c003",
+            "text": "* **Centro Simulado**: Receita Faturada R$ 125.389.865,57 | Margem Consolidada: 20,67%",
+            "start": 294,
+            "end": 380
+          },
+          {
+            "claim_id": "c004",
+            "text": "* **Vale Simulado**: Receita Faturada R$ 74.180.338,74 | Margem Consolidada: 20,23%",
+            "start": 381,
+            "end": 464
+          },
+          {
+            "claim_id": "c005",
+            "text": "* **Sul Simulado**: Receita Faturada R$ 43.933.226,58 | Margem Consolidada: 19,62%",
+            "start": 465,
+            "end": 547
+          },
+          {
+            "claim_id": "c006",
+            "text": "* **Cerrado Simulado**: Receita Faturada R$ 24.243.750,97 | Margem Consolidada: 20,26%",
+            "start": 548,
+            "end": 634
+          },
+          {
+            "claim_id": "c007",
+            "text": "*Nota: Todos os dados são 100% sintéticos e simulados para fins didáticos. A receita considera apenas itens faturados; carteira pendente e pedidos cancelados foram excluídos da receita realizada.*",
+            "start": 636,
+            "end": 832
+          }
+        ],
+        "evidence_snippets": [
+          {
+            "snippet_id": "s0001",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/regra",
+            "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+          },
+          {
+            "snippet_id": "s0002",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/limite_por_consulta",
+            "value": 20
+          },
+          {
+            "snippet_id": "s0003",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/regioes",
+            "value": 5
+          },
+          {
+            "snippet_id": "s0004",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/centros",
+            "value": 15
+          },
+          {
+            "snippet_id": "s0005",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/clientes",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0006",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/produtos",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0007",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/historico_precos",
+            "value": 12000
+          },
+          {
+            "snippet_id": "s0008",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/pedidos",
+            "value": 8000
+          },
+          {
+            "snippet_id": "s0009",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/vendas",
+            "value": 20000
+          },
+          {
+            "snippet_id": "s0010",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/estoque",
+            "value": 3000
+          },
+          {
+            "snippet_id": "s0011",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/inicio",
+            "value": "2025-10-01"
+          },
+          {
+            "snippet_id": "s0012",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/fim",
+            "value": "2026-09-30"
+          },
+          {
+            "snippet_id": "s0013",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/receita_faturada",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0014",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/custo_faturado",
+            "value": "393103460.81"
+          },
+          {
+            "snippet_id": "s0015",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/margem_faturada",
+            "value": "100023056.21"
+          },
+          {
+            "snippet_id": "s0016",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/carteira_pendente",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0017",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/valor_cancelado",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0018",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0019",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/linhas",
+            "value": 1008
+          },
+          {
+            "snippet_id": "s0020",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/pedidos",
+            "value": 396
+          },
+          {
+            "snippet_id": "s0021",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/valor",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0022",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0023",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/linhas",
+            "value": 14431
+          },
+          {
+            "snippet_id": "s0024",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/pedidos",
+            "value": 5772
+          },
+          {
+            "snippet_id": "s0025",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/valor",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0026",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0027",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/linhas",
+            "value": 4561
+          },
+          {
+            "snippet_id": "s0028",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/pedidos",
+            "value": 1832
+          },
+          {
+            "snippet_id": "s0029",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/valor",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0030",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/codigo",
+            "value": "REG-01"
+          },
+          {
+            "snippet_id": "s0031",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/regiao",
+            "value": "Oeste Simulado"
+          },
+          {
+            "snippet_id": "s0032",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/linhas",
+            "value": 6564
+          },
+          {
+            "snippet_id": "s0033",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/receita_faturada",
+            "value": "225379335.16"
+          },
+          {
+            "snippet_id": "s0034",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/custo_faturado",
+            "value": "179815924.23"
+          },
+          {
+            "snippet_id": "s0035",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/margem_faturada",
+            "value": "45563410.93"
+          },
+          {
+            "snippet_id": "s0036",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/0/margem_pct",
+            "value": 20.2163
+          },
+          {
+            "snippet_id": "s0037",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/codigo",
+            "value": "REG-02"
+          },
+          {
+            "snippet_id": "s0038",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/regiao",
+            "value": "Centro Simulado"
+          },
+          {
+            "snippet_id": "s0039",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/linhas",
+            "value": 3666
+          },
+          {
+            "snippet_id": "s0040",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/receita_faturada",
+            "value": "125389865.57"
+          },
+          {
+            "snippet_id": "s0041",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/custo_faturado",
+            "value": "99466638.84"
+          },
+          {
+            "snippet_id": "s0042",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/margem_faturada",
+            "value": "25923226.73"
+          },
+          {
+            "snippet_id": "s0043",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/1/margem_pct",
+            "value": 20.6741
+          },
+          {
+            "snippet_id": "s0044",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/codigo",
+            "value": "REG-03"
+          },
+          {
+            "snippet_id": "s0045",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/regiao",
+            "value": "Vale Simulado"
+          },
+          {
+            "snippet_id": "s0046",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/linhas",
+            "value": 2149
+          },
+          {
+            "snippet_id": "s0047",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/receita_faturada",
+            "value": "74180338.74"
+          },
+          {
+            "snippet_id": "s0048",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/custo_faturado",
+            "value": "59177051.11"
+          },
+          {
+            "snippet_id": "s0049",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/margem_faturada",
+            "value": "15003287.63"
+          },
+          {
+            "snippet_id": "s0050",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/2/margem_pct",
+            "value": 20.2254
+          },
+          {
+            "snippet_id": "s0051",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/codigo",
+            "value": "REG-04"
+          },
+          {
+            "snippet_id": "s0052",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/regiao",
+            "value": "Sul Simulado"
+          },
+          {
+            "snippet_id": "s0053",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/linhas",
+            "value": 1325
+          },
+          {
+            "snippet_id": "s0054",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/receita_faturada",
+            "value": "43933226.58"
+          },
+          {
+            "snippet_id": "s0055",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/custo_faturado",
+            "value": "35311685.69"
+          },
+          {
+            "snippet_id": "s0056",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/margem_faturada",
+            "value": "8621540.89"
+          },
+          {
+            "snippet_id": "s0057",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/3/margem_pct",
+            "value": 19.6242
+          },
+          {
+            "snippet_id": "s0058",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/codigo",
+            "value": "REG-05"
+          },
+          {
+            "snippet_id": "s0059",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/regiao",
+            "value": "Cerrado Simulado"
+          },
+          {
+            "snippet_id": "s0060",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/linhas",
+            "value": 727
+          },
+          {
+            "snippet_id": "s0061",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/receita_faturada",
+            "value": "24243750.97"
+          },
+          {
+            "snippet_id": "s0062",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/custo_faturado",
+            "value": "19332160.94"
+          },
+          {
+            "snippet_id": "s0063",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/margem_faturada",
+            "value": "4911590.03"
+          },
+          {
+            "snippet_id": "s0064",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_regiao/4/margem_pct",
+            "value": 20.2592
+          },
+          {
+            "snippet_id": "s0065",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/0/categoria",
+            "value": "Sementes de milho"
+          },
+          {
+            "snippet_id": "s0066",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/0/receita_faturada",
+            "value": "162506834.49"
+          },
+          {
+            "snippet_id": "s0067",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/0/margem",
+            "value": "32908359.10"
+          },
+          {
+            "snippet_id": "s0068",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/0/margem_pct",
+            "value": 20.2504
+          },
+          {
+            "snippet_id": "s0069",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/0/desconto_valor",
+            "value": "5408230.72"
+          },
+          {
+            "snippet_id": "s0070",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/1/categoria",
+            "value": "Sementes de soja"
+          },
+          {
+            "snippet_id": "s0071",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/1/receita_faturada",
+            "value": "144043729.09"
+          },
+          {
+            "snippet_id": "s0072",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/1/margem",
+            "value": "29126600.06"
+          },
+          {
+            "snippet_id": "s0073",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/1/margem_pct",
+            "value": 20.2207
+          },
+          {
+            "snippet_id": "s0074",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/1/desconto_valor",
+            "value": "4854286.92"
+          },
+          {
+            "snippet_id": "s0075",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/2/categoria",
+            "value": "Fertilizantes"
+          },
+          {
+            "snippet_id": "s0076",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/2/receita_faturada",
+            "value": "125656163.18"
+          },
+          {
+            "snippet_id": "s0077",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/2/margem",
+            "value": "25941450.42"
+          },
+          {
+            "snippet_id": "s0078",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/2/margem_pct",
+            "value": 20.6448
+          },
+          {
+            "snippet_id": "s0079",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/2/desconto_valor",
+            "value": "4184920.11"
+          },
+          {
+            "snippet_id": "s0080",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/3/categoria",
+            "value": "Nutrição foliar"
+          },
+          {
+            "snippet_id": "s0081",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/3/receita_faturada",
+            "value": "32205850.67"
+          },
+          {
+            "snippet_id": "s0082",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/3/margem",
+            "value": "6401909.72"
+          },
+          {
+            "snippet_id": "s0083",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/3/margem_pct",
+            "value": 19.8781
+          },
+          {
+            "snippet_id": "s0084",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/3/desconto_valor",
+            "value": "1101195.26"
+          },
+          {
+            "snippet_id": "s0085",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/4/categoria",
+            "value": "Agroquímicos"
+          },
+          {
+            "snippet_id": "s0086",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/4/receita_faturada",
+            "value": "28713939.59"
+          },
+          {
+            "snippet_id": "s0087",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/4/margem",
+            "value": "5644736.91"
+          },
+          {
+            "snippet_id": "s0088",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/4/margem_pct",
+            "value": 19.6585
+          },
+          {
+            "snippet_id": "s0089",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/por_familia/4/desconto_valor",
+            "value": "942438.47"
+          },
+          {
+            "snippet_id": "s0090",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/0/cenario",
+            "value": "desconto_elevado_margem_negativa"
+          },
+          {
+            "snippet_id": "s0091",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/0/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0092",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/0/linhas",
+            "value": 7
+          },
+          {
+            "snippet_id": "s0093",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/0/receita_liquida",
+            "value": "248264.37"
+          },
+          {
+            "snippet_id": "s0094",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/0/margem",
+            "value": "-30229.40"
+          },
+          {
+            "snippet_id": "s0095",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/1/cenario",
+            "value": "desconto_elevado_margem_negativa"
+          },
+          {
+            "snippet_id": "s0096",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/1/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0097",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/1/linhas",
+            "value": 62
+          },
+          {
+            "snippet_id": "s0098",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/1/receita_liquida",
+            "value": "1707369.32"
+          },
+          {
+            "snippet_id": "s0099",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/1/margem",
+            "value": "-208264.67"
+          },
+          {
+            "snippet_id": "s0100",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/2/cenario",
+            "value": "desconto_elevado_margem_negativa"
+          },
+          {
+            "snippet_id": "s0101",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/2/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0102",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/2/linhas",
+            "value": 31
+          },
+          {
+            "snippet_id": "s0103",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/2/receita_liquida",
+            "value": "864747.90"
+          },
+          {
+            "snippet_id": "s0104",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/2/margem",
+            "value": "-105537.22"
+          },
+          {
+            "snippet_id": "s0105",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/3/cenario",
+            "value": "margem_alta"
+          },
+          {
+            "snippet_id": "s0106",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/3/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0107",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/3/linhas",
+            "value": 4
+          },
+          {
+            "snippet_id": "s0108",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/3/receita_liquida",
+            "value": "202050.10"
+          },
+          {
+            "snippet_id": "s0109",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/3/margem",
+            "value": "80815.81"
+          },
+          {
+            "snippet_id": "s0110",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/4/cenario",
+            "value": "margem_alta"
+          },
+          {
+            "snippet_id": "s0111",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/4/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0112",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/4/linhas",
+            "value": 75
+          },
+          {
+            "snippet_id": "s0113",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/4/receita_liquida",
+            "value": "3308758.84"
+          },
+          {
+            "snippet_id": "s0114",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/4/margem",
+            "value": "1323473.44"
+          },
+          {
+            "snippet_id": "s0115",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/5/cenario",
+            "value": "margem_alta"
+          },
+          {
+            "snippet_id": "s0116",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/5/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0117",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/5/linhas",
+            "value": 21
+          },
+          {
+            "snippet_id": "s0118",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/5/receita_liquida",
+            "value": "529808.37"
+          },
+          {
+            "snippet_id": "s0119",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/5/margem",
+            "value": "211929.79"
+          },
+          {
+            "snippet_id": "s0120",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/6/cenario",
+            "value": "margem_comprimida"
+          },
+          {
+            "snippet_id": "s0121",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/6/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0122",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/6/linhas",
+            "value": 8
+          },
+          {
+            "snippet_id": "s0123",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/6/receita_liquida",
+            "value": "255015.36"
+          },
+          {
+            "snippet_id": "s0124",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/6/margem",
+            "value": "0.00"
+          },
+          {
+            "snippet_id": "s0125",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/7/cenario",
+            "value": "margem_comprimida"
+          },
+          {
+            "snippet_id": "s0126",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/7/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0127",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/7/linhas",
+            "value": 70
+          },
+          {
+            "snippet_id": "s0128",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/7/receita_liquida",
+            "value": "1946446.37"
+          },
+          {
+            "snippet_id": "s0129",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/7/margem",
+            "value": "0.00"
+          },
+          {
+            "snippet_id": "s0130",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/8/cenario",
+            "value": "margem_comprimida"
+          },
+          {
+            "snippet_id": "s0131",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/8/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0132",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/8/linhas",
+            "value": 22
+          },
+          {
+            "snippet_id": "s0133",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/8/receita_liquida",
+            "value": "834481.78"
+          },
+          {
+            "snippet_id": "s0134",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/8/margem",
+            "value": "0.00"
+          },
+          {
+            "snippet_id": "s0135",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/9/cenario",
+            "value": "normal"
+          },
+          {
+            "snippet_id": "s0136",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/9/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0137",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/9/linhas",
+            "value": 989
+          },
+          {
+            "snippet_id": "s0138",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/9/receita_liquida",
+            "value": "34079265.34"
+          },
+          {
+            "snippet_id": "s0139",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/9/margem",
+            "value": "7025912.59"
+          },
+          {
+            "snippet_id": "s0140",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/10/cenario",
+            "value": "normal"
+          },
+          {
+            "snippet_id": "s0141",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/10/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0142",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/10/linhas",
+            "value": 14224
+          },
+          {
+            "snippet_id": "s0143",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/10/receita_liquida",
+            "value": "486163942.49"
+          },
+          {
+            "snippet_id": "s0144",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/10/margem",
+            "value": "98907847.44"
+          },
+          {
+            "snippet_id": "s0145",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/11/cenario",
+            "value": "normal"
+          },
+          {
+            "snippet_id": "s0146",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/11/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0147",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/11/linhas",
+            "value": 4487
+          },
+          {
+            "snippet_id": "s0148",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/11/receita_liquida",
+            "value": "152917325.49"
+          },
+          {
+            "snippet_id": "s0149",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/cenarios_comerciais/11/margem",
+            "value": "31130185.42"
+          },
+          {
+            "snippet_id": "s0150",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/text",
+            "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+          },
+          {
+            "snippet_id": "s0151",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/source",
+            "value": "logistica_atendimento.md"
+          },
+          {
+            "snippet_id": "s0152",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0153",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/distance",
+            "value": 0.4385533332824707
+          },
+          {
+            "snippet_id": "s0154",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/text",
+            "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+          },
+          {
+            "snippet_id": "s0155",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/source",
+            "value": "catalogo_comercial.md"
+          },
+          {
+            "snippet_id": "s0156",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0157",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/distance",
+            "value": 0.4393852949142456
+          },
+          {
+            "snippet_id": "s0158",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/text",
+            "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+          },
+          {
+            "snippet_id": "s0159",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/source",
+            "value": "politica_comercial.md"
+          },
+          {
+            "snippet_id": "s0160",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0161",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/distance",
+            "value": 0.45534610748291016
+          }
+        ],
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 7,
+          "units": 7,
+          "protocol": "indexed_answer_lines_v2"
+        },
+        "relevancy_judgment": {
+          "verdicts": [
+            {
+              "unit_id": "u001",
+              "relevant": true,
+              "reason": "Introduz o contexto da consulta e o período analisado.",
+              "quote": "No período consultado (01/10/2025 a 30/09/2026), considerando exclusivamente as vendas faturadas conforme [politica_comercial.md, trecho 1], o faturamento e a margem regional consolidada de cada região são:",
+              "start": 0,
+              "end": 206
+            },
+            {
+              "unit_id": "u002",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação com os dados da região Oeste Simulado.",
+              "quote": "* **Oeste Simulado**: Receita Faturada R$ 225.379.335,16 | Margem Consolidada: 20,22%",
+              "start": 208,
+              "end": 293
+            },
+            {
+              "unit_id": "u003",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação com os dados da região Centro Simulado.",
+              "quote": "* **Centro Simulado**: Receita Faturada R$ 125.389.865,57 | Margem Consolidada: 20,67%",
+              "start": 294,
+              "end": 380
+            },
+            {
+              "unit_id": "u004",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação com os dados da região Vale Simulado.",
+              "quote": "* **Vale Simulado**: Receita Faturada R$ 74.180.338,74 | Margem Consolidada: 20,23%",
+              "start": 381,
+              "end": 464
+            },
+            {
+              "unit_id": "u005",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação com os dados da região Sul Simulado.",
+              "quote": "* **Sul Simulado**: Receita Faturada R$ 43.933.226,58 | Margem Consolidada: 19,62%",
+              "start": 465,
+              "end": 547
+            },
+            {
+              "unit_id": "u006",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação com os dados da região Cerrado Simulado.",
+              "quote": "* **Cerrado Simulado**: Receita Faturada R$ 24.243.750,97 | Margem Consolidada: 20,26%",
+              "start": 548,
+              "end": 634
+            },
+            {
+              "unit_id": "u007",
+              "relevant": true,
+              "reason": "Fornece nota de esclarecimento necessária sobre a natureza dos dados.",
+              "quote": "*Nota: Todos os dados são 100% sintéticos e simulados para fins didáticos. A receita considera apenas itens faturados; carteira pendente e pedidos cancelados foram excluídos da receita realizada.*",
+              "start": 636,
+              "end": 832
+            }
+          ],
+          "explanation": "A resposta fornece os dados solicitados de faturamento e margem por região, utilizando os valores exatos presentes nos indicadores comerciais fornecidos, com arredondamentos consistentes para as margens percentuais."
+        },
+        "answer_units": [
+          {
+            "unit_id": "u001",
+            "start": 0,
+            "end": 206,
+            "text": "No período consultado (01/10/2025 a 30/09/2026), considerando exclusivamente as vendas faturadas conforme [politica_comercial.md, trecho 1], o faturamento e a margem regional consolidada de cada região são:"
+          },
+          {
+            "unit_id": "u002",
+            "start": 208,
+            "end": 293,
+            "text": "* **Oeste Simulado**: Receita Faturada R$ 225.379.335,16 | Margem Consolidada: 20,22%"
+          },
+          {
+            "unit_id": "u003",
+            "start": 294,
+            "end": 380,
+            "text": "* **Centro Simulado**: Receita Faturada R$ 125.389.865,57 | Margem Consolidada: 20,67%"
+          },
+          {
+            "unit_id": "u004",
+            "start": 381,
+            "end": 464,
+            "text": "* **Vale Simulado**: Receita Faturada R$ 74.180.338,74 | Margem Consolidada: 20,23%"
+          },
+          {
+            "unit_id": "u005",
+            "start": 465,
+            "end": 547,
+            "text": "* **Sul Simulado**: Receita Faturada R$ 43.933.226,58 | Margem Consolidada: 19,62%"
+          },
+          {
+            "unit_id": "u006",
+            "start": 548,
+            "end": 634,
+            "text": "* **Cerrado Simulado**: Receita Faturada R$ 24.243.750,97 | Margem Consolidada: 20,26%"
+          },
+          {
+            "unit_id": "u007",
+            "start": 636,
+            "end": 832,
+            "text": "*Nota: Todos os dados são 100% sintéticos e simulados para fins didáticos. A receita considera apenas itens faturados; carteira pendente e pedidos cancelados foram excluídos da receita realizada.*"
+          }
+        ],
+        "usage": {
+          "input": 11927,
+          "output": 1301,
+          "total": 13228
+        },
+        "judge_model": "gemini-3.1-flash-lite",
+        "cost": null,
+        "protocols": {
+          "faithfulness": "indexed_claim_evidence_v2",
+          "answer_relevancy": "indexed_answer_lines_v2"
+        },
+        "response_model_version": "gemini-3.1-flash-lite"
+      },
+      "evaluation_latency_ms": 12353.834,
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T122104Z-batch-a8ba57\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T122104Z-batch-a8ba57\\results.json"
+        }
+      },
+      "total_latency_ms": 56632.348
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 5,
+  "stop_reason": null,
+  "summary": {
+    "attempted_questions": 2,
+    "answers_received": 2,
+    "questions_evaluated": 2,
+    "api_failed_questions": 0,
+    "cost": null,
+    "questions_with_any_metric": 2,
+    "questions_fully_evaluated": 2,
+    "questions_partially_evaluated": 0,
+    "faithfulness": {
+      "evaluated": 2,
+      "mean": 1.0,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 2,
+      "mean": 0.5,
+      "below_threshold": 1,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 1,
+      "failed": 1
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "review_verdicts_and_deterministic_checks",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 1,
+      "failed": 1
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

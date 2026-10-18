@@ -1,0 +1,500 @@
+{
+  "run_id": "20261018T125431Z-batch-1c778c",
+  "selected_cases": [
+    "G09"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G09",
+      "category": "rag_politica",
+      "question": "A política comercial permite desconto de 9% se o gerente aprovar?",
+      "expected_behavior": "Não: acima de 8% não permitido; não inventar exceção.",
+      "expected_tools": [
+        "chroma_rag_comercial"
+      ],
+      "references": [
+        "data/documents/politica_comercial.md#PC-001"
+      ],
+      "checks": []
+    }
+  ],
+  "phase": "generate",
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 100,
+  "calls": [
+    {
+      "case_id": "G04",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 547.719
+    },
+    {
+      "case_id": "G04",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2268,
+        "output": 434,
+        "total": 2702
+      },
+      "latency_ms": 1684.004
+    },
+    {
+      "case_id": "G04",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2724,
+        "output": 390,
+        "total": 4334,
+        "reasoning": 1220
+      },
+      "latency_ms": 6912.216
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 434.586
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2655,
+        "output": 206,
+        "total": 2861
+      },
+      "latency_ms": 19791.49
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 503
+      },
+      "latency_ms": 3179.381
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2870,
+        "output": 400,
+        "total": 4613,
+        "reasoning": 1343
+      },
+      "latency_ms": 8631.146
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 444.22
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2292,
+        "output": 62,
+        "total": 2354
+      },
+      "latency_ms": 4376.386
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2360,
+        "output": 154,
+        "total": 3024,
+        "reasoning": 510
+      },
+      "latency_ms": 3748.69
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 463.615
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2290,
+        "output": 217,
+        "total": 2507
+      },
+      "latency_ms": 1811.605
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2516,
+        "output": 53,
+        "total": 2949,
+        "reasoning": 380
+      },
+      "latency_ms": 3008.307
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 432.796
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2287,
+        "output": 111,
+        "total": 2398
+      },
+      "latency_ms": 6375.67
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2404,
+        "output": 175,
+        "total": 3185,
+        "reasoning": 606
+      },
+      "latency_ms": 4887.728
+    }
+  ],
+  "results": [
+    {
+      "id": "G09",
+      "category": "rag_politica",
+      "question": "A política comercial permite desconto de 9% se o gerente aprovar?",
+      "expected_behavior": "Não: acima de 8% não permitido; não inventar exceção.",
+      "expected_tools": [
+        "chroma_rag_comercial"
+      ],
+      "references": [
+        "data/documents/politica_comercial.md#PC-001"
+      ],
+      "checks": [],
+      "generation_status": "ok",
+      "answer": "**Não.** A política comercial não permite desconto de 9%, mesmo com a aprovação do gerente comercial.\n\nConforme estabelecido em **[politica_comercial.md, trecho 1]**, as regras para concessão de descontos sobre o preço de lista são estritas:\n\n* **Até 5%:** Pode ser aprovado pelo vendedor para pedidos a partir de R$ 15.000,00;\n* **Acima de 5% até 8%:** Exige obrigatoriamente a aprovação do gerente comercial;\n* **Acima de 8%:** **Não são permitidos** segundo as diretrizes da política.\n\nPortanto, qualquer desconto superior a 8% ultrapassa a alçada gerencial e não possui previsão de aprovação na política comercial vigente.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "cenarios_comerciais": [
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "cancelada",
+                "linhas": 7,
+                "receita_liquida": "248264.37",
+                "margem": "-30229.40"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "faturada",
+                "linhas": 62,
+                "receita_liquida": "1707369.32",
+                "margem": "-208264.67"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "pendente",
+                "linhas": 31,
+                "receita_liquida": "864747.90",
+                "margem": "-105537.22"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "cancelada",
+                "linhas": 4,
+                "receita_liquida": "202050.10",
+                "margem": "80815.81"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "faturada",
+                "linhas": 75,
+                "receita_liquida": "3308758.84",
+                "margem": "1323473.44"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "pendente",
+                "linhas": 21,
+                "receita_liquida": "529808.37",
+                "margem": "211929.79"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "cancelada",
+                "linhas": 8,
+                "receita_liquida": "255015.36",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "faturada",
+                "linhas": 70,
+                "receita_liquida": "1946446.37",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "pendente",
+                "linhas": 22,
+                "receita_liquida": "834481.78",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "normal",
+                "status": "cancelada",
+                "linhas": 989,
+                "receita_liquida": "34079265.34",
+                "margem": "7025912.59"
+              },
+              {
+                "cenario": "normal",
+                "status": "faturada",
+                "linhas": 14224,
+                "receita_liquida": "486163942.49",
+                "margem": "98907847.44"
+              },
+              {
+                "cenario": "normal",
+                "status": "pendente",
+                "linhas": 4487,
+                "receita_liquida": "152917325.49",
+                "margem": "31130185.42"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.2666553258895874
+            },
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.35897231101989746
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.3794882297515869
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "pending"
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "pending"
+        }
+      },
+      "generation_attempted": true,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "rejected_cached_responses": [],
+      "trace_id": "ba353a2fd419171bb4bf38538a703eb8",
+      "response_key": "dc74bc87bcfe62db34fe9487f19713fa62009d44bcf3cb491e5d0ef3db3e172a",
+      "generation_latency_ms": 46706.115,
+      "deterministic": [],
+      "completeness": {
+        "status": "not_applicable"
+      },
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "metric_origins": {},
+      "total_latency_ms": 46706.414
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 16,
+  "stop_reason": null,
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 0,
+    "api_failed_questions": 0,
+    "cost": null,
+    "questions_with_any_metric": 0,
+    "questions_fully_evaluated": 0,
+    "questions_partially_evaluated": 0,
+    "faithfulness": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 0,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "insufficient_judged_answers",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 0,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

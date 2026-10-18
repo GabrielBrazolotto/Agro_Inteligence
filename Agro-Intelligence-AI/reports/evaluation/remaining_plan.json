@@ -1,0 +1,422 @@
+{
+  "consolidated": {
+    "cases": [
+      {
+        "id": "G01",
+        "status": "evaluated",
+        "executed": true,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "evaluated",
+            "score": 1.0,
+            "supported": 3,
+            "claims": 3
+          },
+          "answer_relevancy": {
+            "status": "evaluated",
+            "score": 0.6666666666666666,
+            "relevant": 2,
+            "units": 3
+          }
+        },
+        "response_key": "05a8ae9cb19f623ac2853b804ff4808dbee32b5c0ddfdc4f9e42883e297f077a",
+        "metric_origins": {
+          "faithfulness": {
+            "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+            "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+            "legacy_import": true
+          },
+          "answer_relevancy": {
+            "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+            "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+            "legacy_import": true
+          }
+        }
+      },
+      {
+        "id": "G02",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G03",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G04",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G05",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G06",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G07",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G08",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G09",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G10",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G11",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G12",
+        "status": "partially_evaluated",
+        "executed": true,
+        "infrastructure_failure": true,
+        "metrics": {
+          "faithfulness": {
+            "status": "evaluated",
+            "score": 1.0,
+            "supported": 9,
+            "claims": 9
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null,
+            "reason": "api_error"
+          }
+        },
+        "response_key": "cb53df3c82884befba34c04a9cb952b772eb6d3f5316ae159a78e72984517698",
+        "metric_origins": {
+          "faithfulness": {
+            "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+            "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+            "legacy_import": true
+          }
+        }
+      },
+      {
+        "id": "G13",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G14",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G15",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G16",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G17",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      },
+      {
+        "id": "G18",
+        "status": "not_executed",
+        "executed": false,
+        "infrastructure_failure": false,
+        "metrics": {
+          "faithfulness": {
+            "status": "not_executed",
+            "score": null
+          },
+          "answer_relevancy": {
+            "status": "not_executed",
+            "score": null
+          }
+        },
+        "response_key": null,
+        "metric_origins": {}
+      }
+    ],
+    "summary": {
+      "total_cases": 18,
+      "evaluated": 1,
+      "partially_evaluated": 1,
+      "response_available": 0,
+      "infrastructure_failure": 1,
+      "validation_failure": 0,
+      "not_executed": 16,
+      "executed": 2,
+      "infrastructure_failure_without_response": 0,
+      "cases_with_infrastructure_failure": 1
+    }
+  },
+  "baseline_pending": [
+    "G12"
+  ],
+  "remaining_case_ids": [
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "G17",
+    "G18"
+  ],
+  "batches": [
+    [
+      "G02",
+      "G03"
+    ],
+    [
+      "G04",
+      "G05"
+    ],
+    [
+      "G06",
+      "G07"
+    ],
+    [
+      "G08",
+      "G09"
+    ],
+    [
+      "G10",
+      "G11"
+    ],
+    [
+      "G13",
+      "G14"
+    ],
+    [
+      "G15",
+      "G16"
+    ],
+    [
+      "G17",
+      "G18"
+    ]
+  ],
+  "automatic_execution": false
+}

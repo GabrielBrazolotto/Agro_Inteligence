@@ -1,0 +1,60 @@
+{
+  "mode": "live",
+  "phase": "judge",
+  "concurrency": 1,
+  "planned_cases": [
+    "G04",
+    "G06",
+    "G07",
+    "G08",
+    "G09",
+    "G10"
+  ],
+  "local_limits": {
+    "gemini-3.5-flash": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    },
+    "gemini-3.1-flash-lite": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    },
+    "gemini-embedding-001": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    }
+  },
+  "demo_reserve_per_model": 5,
+  "steps": [
+    {
+      "case": "G04",
+      "phase": "judge",
+      "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T130925Z-pipeline-8d9806\\judge-G04\\results.json"
+    },
+    {
+      "case": "G06",
+      "phase": "judge",
+      "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T130925Z-pipeline-8d9806\\judge-G06\\results.json"
+    }
+  ],
+  "actual_api_calls": 2,
+  "stop_reason": "evaluation_failure",
+  "total_daily_limit": null,
+  "total_demo_reserve": 0,
+  "usage_by_model": {
+    "gemini-3.1-flash-lite": {
+      "requests": 2,
+      "failed": 1,
+      "known_total_tokens": 15897,
+      "requests_without_total_usage": 1
+    }
+  },
+  "cost": null,
+  "current": {
+    "case": "G06",
+    "phase": "judge"
+  }
+}

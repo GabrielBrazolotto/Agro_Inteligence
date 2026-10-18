@@ -1,0 +1,190 @@
+{
+  "run_id": "20261017T140620Z-batch-92ce1f",
+  "selected_cases": [
+    "G12"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G12",
+      "category": "ml_valido",
+      "question": "Preveja o risco de backorder com estoque=10; prazo=8; transito=0; previsao_3m=100; vendas_1m=20; vendas_3m=60; estoque_minimo=15",
+      "expected_behavior": "Executar scikit-learn com exatamente sete entradas; score não calibrado e limitações do domínio.",
+      "expected_tools": [
+        "validacao_e_inferencia_ml_local"
+      ],
+      "references": [
+        "models/backorder/metadata.json",
+        "agro_ai/ml/schema.py"
+      ],
+      "checks": []
+    }
+  ],
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 1,
+  "calls": [
+    {
+      "case_id": "G12",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 503
+      },
+      "latency_ms": 8504.016
+    }
+  ],
+  "results": [
+    {
+      "id": "G12",
+      "category": "ml_valido",
+      "question": "Preveja o risco de backorder com estoque=10; prazo=8; transito=0; previsao_3m=100; vendas_1m=20; vendas_3m=60; estoque_minimo=15",
+      "expected_behavior": "Executar scikit-learn com exatamente sete entradas; score não calibrado e limitações do domínio.",
+      "expected_tools": [
+        "validacao_e_inferencia_ml_local"
+      ],
+      "references": [
+        "models/backorder/metadata.json",
+        "agro_ai/ml/schema.py"
+      ],
+      "checks": [],
+      "generation_status": "reused",
+      "answer": "**Previsão ML experimental: Risco sinalizado de backorder.**\n\nScore da classe backorder: **0.9267**; limiar validado: **0.91**. O score não é uma probabilidade calibrada nem garantia de ruptura futura.\n\nAtributos usados pelo modelo:\n\n- `national_inv`: 10\n- `lead_time`: 8\n- `in_transit_qty`: 0\n- `forecast_3_month`: 100\n- `sales_1_month`: 20\n- `sales_3_month`: 60\n- `min_bank`: 15\n\nFonte: [dataset público de backorders](https://github.com/akhiilkasare/Back-Order-Prediction-iNeuron/tree/3bf0817ebb1a20e675ff02244660507e59f180f2). Inferência feita pelo modelo scikit-learn treinado; o Gemini não calcula esta previsão. Não validado para uma cooperativa agroindustrial brasileira; backorder é um proxy de indisponibilidade para atender pedidos, não um diagnóstico agronômico ou um alerta operacional certificado.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "ml.inference",
+          "content": {
+            "class": 1,
+            "score": 0.9266898444319546,
+            "threshold": 0.9099999999999999,
+            "features": {
+              "national_inv": 10.0,
+              "lead_time": 8.0,
+              "in_transit_qty": 0.0,
+              "forecast_3_month": 100.0,
+              "sales_1_month": 20.0,
+              "sales_3_month": 60.0,
+              "min_bank": 15.0
+            },
+            "source": "https://github.com/akhiilkasare/Back-Order-Prediction-iNeuron/tree/3bf0817ebb1a20e675ff02244660507e59f180f2",
+            "calibrated": false,
+            "outside_training_range": []
+          }
+        }
+      ],
+      "tools": [
+        {
+          "agent": "estoque",
+          "tool": "validacao_e_inferencia_ml_local",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 9,
+          "claims": 9
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "api_error"
+        }
+      },
+      "generation_attempted": false,
+      "response_key": "cb53df3c82884befba34c04a9cb952b772eb6d3f5316ae159a78e72984517698",
+      "response_origin": {
+        "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+        "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+        "legacy_import": true
+      },
+      "historical_api_failures": [],
+      "generation_latency_ms": null,
+      "deterministic": [],
+      "reused_metrics": [
+        "faithfulness"
+      ],
+      "requested_metrics": [
+        "answer_relevancy"
+      ],
+      "evaluation_failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 503
+      },
+      "evaluation_latency_ms": 9105.028,
+      "metric_origins": {
+        "faithfulness": {
+          "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+          "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+          "legacy_import": true
+        }
+      },
+      "total_latency_ms": 9107.447
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 1,
+  "stop_reason": "evaluation_failure",
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 0,
+    "api_failed_questions": 1,
+    "cost": null,
+    "questions_with_any_metric": 1,
+    "questions_fully_evaluated": 0,
+    "questions_partially_evaluated": 1,
+    "faithfulness": {
+      "evaluated": 1,
+      "mean": 1.0,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 0,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "insufficient_judged_answers",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 0,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

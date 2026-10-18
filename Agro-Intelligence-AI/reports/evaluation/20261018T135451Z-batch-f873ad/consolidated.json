@@ -1,0 +1,598 @@
+{
+  "cases": [
+    {
+      "id": "G01",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 3,
+          "claims": 3
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.6666666666666666,
+          "relevant": 2,
+          "units": 3
+        }
+      },
+      "response_key": "05a8ae9cb19f623ac2853b804ff4808dbee32b5c0ddfdc4f9e42883e297f077a",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+          "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+          "legacy_import": true
+        },
+        "answer_relevancy": {
+          "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+          "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+          "legacy_import": true
+        }
+      }
+    },
+    {
+      "id": "G02",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 5,
+          "claims": 5,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 6,
+          "units": 6,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "f017e660685a473054c95d8495a32686531011806d33439788e9d2b54079c4e6",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T143219Z-batch-862a7b\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T142045Z-batch-d6b957\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G03",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 1,
+          "claims": 1,
+          "protocol": "claim_verdict_judge_v1"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.8,
+          "relevant": 4,
+          "units": 5,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "782d7038536dd9e3b401e5c508627a094f0966584ee2e55f255c42bfc4119343",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T142045Z-batch-d6b957\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T142045Z-batch-d6b957\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G04",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [
+        {
+          "response_key": "4a0d375b7c0d5474494c880425788b79eddb5832d6f7d34ada0950445d6343ed",
+          "origin": {
+            "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T143301Z-batch-32dd30\\results.json",
+            "fresh_generation": true
+          },
+          "completeness": {
+            "status": "failed",
+            "reason": "missing_duplicate_or_inaccurate_monthly_lines",
+            "expected_periods": [
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07",
+              "2026-08",
+              "2026-09"
+            ],
+            "missing_or_invalid_periods": [
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07",
+              "2026-08",
+              "2026-09"
+            ]
+          },
+          "historical_metrics": {
+            "faithfulness": {
+              "status": "evaluated",
+              "score": 1.0,
+              "supported": 14,
+              "claims": 14,
+              "protocol": "indexed_claim_evidence_v2"
+            },
+            "answer_relevancy": {
+              "status": "evaluated",
+              "score": 0.0,
+              "relevant": 0,
+              "units": 33,
+              "protocol": "indexed_answer_lines_v2"
+            }
+          }
+        }
+      ],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 29,
+          "claims": 29,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.3181818181818182,
+          "relevant": 14,
+          "units": 44,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "94c8de2929feb3295e86bc640d5f8983618ef35ac8600646f6004d51b737a61f",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T130925Z-pipeline-8d9806\\judge-G04\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T130925Z-pipeline-8d9806\\judge-G04\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G05",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 7,
+          "claims": 7,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 7,
+          "units": 7,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "d739542bf5dd4f9d1fabea4267e868860f471283ae9260f41c4745f29d8b550f",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T122104Z-batch-a8ba57\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T122104Z-batch-a8ba57\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G06",
+      "status": "partially_evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "invalid_judgment",
+          "score": null,
+          "reason": "invalid_evidence_reference",
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 9,
+          "units": 9,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "ceb0192a42d31758806479a98ae72e1e5788e487d326dd4fc13eb5136d2eaa56",
+      "metric_origins": {
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G06\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G07",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 4,
+          "claims": 4,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 5,
+          "units": 5,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "cf0e1a6e618aa8f14dfa11cf5a221b218b70720b9a74abec3c46dee756af081d",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G07\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G07\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G08",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 2,
+          "claims": 2,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 2,
+          "units": 2,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "edea4af0eae112c83c78f9c74f59c03f4532409f5c9918697eda6b6582400530",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G08\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G08\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G09",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 6,
+          "claims": 6,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 6,
+          "units": 6,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "dc74bc87bcfe62db34fe9487f19713fa62009d44bcf3cb491e5d0ef3db3e172a",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G09\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G09\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G10",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 16,
+          "claims": 16,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.9473684210526315,
+          "relevant": 18,
+          "units": 19,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "03bf15463ab1b62ef253afcbb5afddf5b1ecab0bc3d6d7e88787f71d48fd57ea",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G10\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G10\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G11",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 13,
+          "claims": 13,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.06060606060606061,
+          "relevant": 2,
+          "units": 33,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "7535556f4cd37fb2a81156802a0a7b5daf5d887ee4a5ea15c8179ce6e4ab61f8",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135242Z-batch-93d58e\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135242Z-batch-93d58e\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G12",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 9,
+          "claims": 9
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 11,
+          "units": 11,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "cb53df3c82884befba34c04a9cb952b772eb6d3f5316ae159a78e72984517698",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "reports\\evaluation\\20261017T134931Z-two-cases\\results.json",
+          "sha256": "a650026fa6bd4a2a5a65b0260302af860f6e96e7c18d2e3f969324947e791e35",
+          "legacy_import": true
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T141952Z-batch-7fcfdc\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G13",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 10,
+          "claims": 10,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 11,
+          "units": 11,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "91e8e0faca8a665637be1efe63dd9624162c954c73fdb9635ee91dbdd97eee85",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135451Z-batch-f873ad\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135451Z-batch-f873ad\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G14",
+      "status": "evaluated",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 10,
+          "claims": 10,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 15,
+          "units": 15,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "response_key": "0a1257862c7e12c614aa9b92bcc70e96f71187771933209878d87db9c5b89205",
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135451Z-batch-f873ad\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T135451Z-batch-f873ad\\results.json"
+        }
+      }
+    },
+    {
+      "id": "G15",
+      "status": "response_available",
+      "executed": true,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": true,
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "pending"
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "pending"
+        }
+      },
+      "response_key": "9a6257d4d6995e0bc74f9238b3c9354519f41378d68003f0e9048dfb99902c0b",
+      "metric_origins": {}
+    },
+    {
+      "id": "G16",
+      "status": "not_executed",
+      "executed": false,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null
+        }
+      },
+      "response_key": null,
+      "metric_origins": {}
+    },
+    {
+      "id": "G17",
+      "status": "not_executed",
+      "executed": false,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null
+        }
+      },
+      "response_key": null,
+      "metric_origins": {}
+    },
+    {
+      "id": "G18",
+      "status": "not_executed",
+      "executed": false,
+      "rejected_cached_responses": [],
+      "infrastructure_failure": false,
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null
+        }
+      },
+      "response_key": null,
+      "metric_origins": {}
+    }
+  ],
+  "summary": {
+    "total_cases": 18,
+    "evaluated": 13,
+    "partially_evaluated": 1,
+    "response_available": 1,
+    "response_incomplete": 0,
+    "infrastructure_failure": 1,
+    "validation_failure": 0,
+    "not_executed": 3,
+    "executed": 15,
+    "infrastructure_failure_without_response": 0,
+    "cases_with_infrastructure_failure": 1
+  }
+}

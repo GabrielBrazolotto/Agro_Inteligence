@@ -1,0 +1,1497 @@
+{
+  "authentication": {
+    "ok": true,
+    "category": "ok"
+  },
+  "traces": [
+    {
+      "trace_id": "c5041274d2604310b2b437adc0038c7d",
+      "question_number": 1,
+      "linked": true,
+      "spans": [
+        {
+          "id": "e004bd2c9a3498aa",
+          "parent": "fc47eadfd2bd6965",
+          "name": "agro.chat.response",
+          "start": "2026-10-17T12:32:40.381000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.156,
+            "status": "ok",
+            "output_characters": 1511
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "ebef47a1a0438957",
+          "parent": "614509c70729dabf",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:32:33.564000+00:00",
+          "duration_ms": 6817.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 6816.285,
+            "status": "ok",
+            "first_token_ms": 3941.306,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 3809,
+            "output": 620,
+            "total": 5203,
+            "reasoning": 774
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "614509c70729dabf",
+          "parent": "fc47eadfd2bd6965",
+          "name": "agro.orchestration.response",
+          "start": "2026-10-17T12:32:33.564000+00:00",
+          "duration_ms": 6817.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 6816.735,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "b26ceb58afa65f28",
+          "parent": "0dd70bd0062d3510",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:32:25.832000+00:00",
+          "duration_ms": 7731.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 7731.828,
+            "status": "ok",
+            "first_token_ms": 6304.909,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 3385,
+            "output": 412,
+            "total": 5052,
+            "reasoning": 1255
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "0dd70bd0062d3510",
+          "parent": "6baada3d11d951bf",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:32:25.831000+00:00",
+          "duration_ms": 7733.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 7732.387,
+            "status": "ok",
+            "tool": "gemini_analise",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "866d23fd7d90d040",
+          "parent": "9fe1967f7284d1d2",
+          "name": "agro.gemini.embeddings",
+          "start": "2026-10-17T12:32:25.292000+00:00",
+          "duration_ms": 537.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 537.312,
+            "status": "ok",
+            "input_characters": 65,
+            "model_name": "gemini-embedding-001"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "9fe1967f7284d1d2",
+          "parent": "22c357855932f4bf",
+          "name": "agro.chroma.retrieve",
+          "start": "2026-10-17T12:32:25.291000+00:00",
+          "duration_ms": 540.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 539.776,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "b546bddeade1994c",
+          "parent": "22c357855932f4bf",
+          "name": "agro.chroma.synchronize",
+          "start": "2026-10-17T12:32:25.244000+00:00",
+          "duration_ms": 47.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 46.97,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "22c357855932f4bf",
+          "parent": "6baada3d11d951bf",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:32:25.244000+00:00",
+          "duration_ms": 587.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 587.676,
+            "status": "ok",
+            "tool": "chroma_rag_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "57713da55720404d",
+          "parent": "59a10c0ecdbc410a",
+          "name": "agro.duckdb.commercial_snapshot",
+          "start": "2026-10-17T12:32:25.117000+00:00",
+          "duration_ms": 125.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 125.632,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "6baada3d11d951bf",
+          "parent": "b5ec68304358d500",
+          "name": "agro.agent.comercial",
+          "start": "2026-10-17T12:32:25.116000+00:00",
+          "duration_ms": 8448.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 8447.702,
+            "status": "ok",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "59a10c0ecdbc410a",
+          "parent": "6baada3d11d951bf",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:32:25.116000+00:00",
+          "duration_ms": 128.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 127.082,
+            "status": "ok",
+            "tool": "duckdb_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "b5ec68304358d500",
+          "parent": "fc47eadfd2bd6965",
+          "name": "agro.orchestration.prepare",
+          "start": "2026-10-17T12:32:24.484000+00:00",
+          "duration_ms": 9080.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 9079.628,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "fc47eadfd2bd6965",
+          "parent": null,
+          "name": "agro.chat.request",
+          "start": "2026-10-17T12:32:24.483000+00:00",
+          "duration_ms": 15898.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 15897.468,
+            "status": "ok",
+            "output_characters": 1511,
+            "history_messages": 0,
+            "input_characters": 65
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "5a5b7579acac39fc",
+          "parent": "fc47eadfd2bd6965",
+          "name": "agro.chat.question",
+          "start": "2026-10-17T12:32:24.483000+00:00",
+          "duration_ms": 1.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.139,
+            "status": "ok",
+            "input_characters": 65
+          },
+          "usage": {},
+          "cost_reported": false
+        }
+      ]
+    },
+    {
+      "trace_id": "d266da08849f0b3d9444b89bb9d816e2",
+      "question_number": 2,
+      "linked": true,
+      "spans": [
+        {
+          "id": "714a0a90e67e13df",
+          "parent": "6f95712e0555e31b",
+          "name": "agro.chat.response",
+          "start": "2026-10-17T12:33:04.931000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.17,
+            "status": "ok",
+            "output_characters": 1773
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "aeb4e59a06dff014",
+          "parent": "f3904508a0f418fd",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:32:54.964000+00:00",
+          "duration_ms": 9966.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 9966.779,
+            "status": "ok",
+            "first_token_ms": 7219.227,
+            "attempt": 2,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 2832,
+            "output": 713,
+            "total": 5004,
+            "reasoning": 1459
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "b65613c34ef2179c",
+          "parent": "f3904508a0f418fd",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:32:47.606000+00:00",
+          "duration_ms": 6356.0,
+          "level": "ERROR",
+          "metadata": {
+            "latency_ms": 6357.314,
+            "status": "failed",
+            "http_code": 503,
+            "error_category": "api",
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "f3904508a0f418fd",
+          "parent": "6f95712e0555e31b",
+          "name": "agro.orchestration.response",
+          "start": "2026-10-17T12:32:47.605000+00:00",
+          "duration_ms": 17326.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 17325.478,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "d15ab8201f85ad76",
+          "parent": "578892db3a9fd59d",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:32:40.984000+00:00",
+          "duration_ms": 6620.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 6619.552,
+            "status": "ok",
+            "tool": "gemini_analise",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "099030f9f518af07",
+          "parent": "d15ab8201f85ad76",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:32:40.984000+00:00",
+          "duration_ms": 6620.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 6618.98,
+            "status": "ok",
+            "first_token_ms": 5251.623,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 2454,
+            "output": 356,
+            "total": 3710,
+            "reasoning": 900
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "c924d60ea35bab4e",
+          "parent": "0216f962d2cc05a8",
+          "name": "agro.duckdb.stock_and_orders",
+          "start": "2026-10-17T12:32:40.937000+00:00",
+          "duration_ms": 46.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 46.077,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "578892db3a9fd59d",
+          "parent": "ef3802b7f1fbba89",
+          "name": "agro.agent.estoque",
+          "start": "2026-10-17T12:32:40.937000+00:00",
+          "duration_ms": 6667.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 6666.481,
+            "status": "ok",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "0216f962d2cc05a8",
+          "parent": "578892db3a9fd59d",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:32:40.937000+00:00",
+          "duration_ms": 47.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 46.494,
+            "status": "ok",
+            "tool": "duckdb_estoque_pedidos",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "ef3802b7f1fbba89",
+          "parent": "6f95712e0555e31b",
+          "name": "agro.orchestration.prepare",
+          "start": "2026-10-17T12:32:40.384000+00:00",
+          "duration_ms": 7220.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 7219.671,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "6f95712e0555e31b",
+          "parent": null,
+          "name": "agro.chat.request",
+          "start": "2026-10-17T12:32:40.384000+00:00",
+          "duration_ms": 24547.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 24547.461,
+            "status": "ok",
+            "output_characters": 1773,
+            "history_messages": 0,
+            "input_characters": 43
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "090f2086d0fba3b9",
+          "parent": "6f95712e0555e31b",
+          "name": "agro.chat.question",
+          "start": "2026-10-17T12:32:40.384000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.105,
+            "status": "ok",
+            "input_characters": 43
+          },
+          "usage": {},
+          "cost_reported": false
+        }
+      ]
+    },
+    {
+      "trace_id": "35033a7f2aec215060ef4e398f72609f",
+      "question_number": 3,
+      "linked": true,
+      "spans": [
+        {
+          "id": "9ea01c3c8461ad69",
+          "parent": "5eb39ae13c39113c",
+          "name": "agro.chat.response",
+          "start": "2026-10-17T12:33:10.356000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.168,
+            "status": "ok",
+            "output_characters": 2606
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "60e40e32b0fa8a38",
+          "parent": "ce5e3791e60abcf1",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:10.054000+00:00",
+          "duration_ms": 301.0,
+          "level": "ERROR",
+          "metadata": {
+            "latency_ms": 301.691,
+            "status": "failed",
+            "http_code": 429,
+            "error_category": "api",
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "ce5e3791e60abcf1",
+          "parent": "5eb39ae13c39113c",
+          "name": "agro.orchestration.response",
+          "start": "2026-10-17T12:33:10.053000+00:00",
+          "duration_ms": 303.0,
+          "level": "WARNING",
+          "metadata": {
+            "latency_ms": 302.373,
+            "status": "fallback",
+            "answer_mode": "factual"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "e344e2c21b404f02",
+          "parent": "7dafd452a959f0b0",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:06.113000+00:00",
+          "duration_ms": 3938.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 3938.447,
+            "status": "ok",
+            "first_token_ms": 3210.153,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 2437,
+            "output": 143,
+            "total": 3089,
+            "reasoning": 509
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "7dafd452a959f0b0",
+          "parent": "d861e1f7e0fae621",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:06.113000+00:00",
+          "duration_ms": 3939.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 3939.014,
+            "status": "ok",
+            "tool": "gemini_analise",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "cbae170907e13707",
+          "parent": "c4743bc5c8055786",
+          "name": "agro.gemini.embeddings",
+          "start": "2026-10-17T12:33:05.685000+00:00",
+          "duration_ms": 425.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 425.942,
+            "status": "ok",
+            "input_characters": 31,
+            "model_name": "gemini-embedding-001"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "c4743bc5c8055786",
+          "parent": "f18466f5a248c018",
+          "name": "agro.chroma.retrieve",
+          "start": "2026-10-17T12:33:05.684000+00:00",
+          "duration_ms": 428.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 428.972,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "f18466f5a248c018",
+          "parent": "d861e1f7e0fae621",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:05.682000+00:00",
+          "duration_ms": 431.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 430.834,
+            "status": "ok",
+            "tool": "chroma_rag_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "e2c7eb748eba4058",
+          "parent": "f18466f5a248c018",
+          "name": "agro.chroma.synchronize",
+          "start": "2026-10-17T12:33:05.682000+00:00",
+          "duration_ms": 2.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 1.322,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "fe1a192997f29b9f",
+          "parent": "2968dd76cc0a061b",
+          "name": "agro.duckdb.commercial_snapshot",
+          "start": "2026-10-17T12:33:05.566000+00:00",
+          "duration_ms": 116.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 115.497,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "d861e1f7e0fae621",
+          "parent": "786c99095a97e643",
+          "name": "agro.agent.comercial",
+          "start": "2026-10-17T12:33:05.566000+00:00",
+          "duration_ms": 4486.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 4486.36,
+            "status": "ok",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "2968dd76cc0a061b",
+          "parent": "d861e1f7e0fae621",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:05.566000+00:00",
+          "duration_ms": 116.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 116.017,
+            "status": "ok",
+            "tool": "duckdb_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "786c99095a97e643",
+          "parent": "5eb39ae13c39113c",
+          "name": "agro.orchestration.prepare",
+          "start": "2026-10-17T12:33:04.934000+00:00",
+          "duration_ms": 5118.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 5117.911,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "5eb39ae13c39113c",
+          "parent": null,
+          "name": "agro.chat.request",
+          "start": "2026-10-17T12:33:04.934000+00:00",
+          "duration_ms": 5422.0,
+          "level": "WARNING",
+          "metadata": {
+            "latency_ms": 5422.654,
+            "status": "fallback",
+            "output_characters": 2606,
+            "history_messages": 0,
+            "input_characters": 31
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "3e857cb32dc10afa",
+          "parent": "5eb39ae13c39113c",
+          "name": "agro.chat.question",
+          "start": "2026-10-17T12:33:04.934000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.105,
+            "status": "ok",
+            "input_characters": 31
+          },
+          "usage": {},
+          "cost_reported": false
+        }
+      ]
+    },
+    {
+      "trace_id": "56808ce669396cc15a463959bed3cd3a",
+      "question_number": 4,
+      "linked": true,
+      "spans": [
+        {
+          "id": "4aad1d0d0bf0191f",
+          "parent": "29fbe07a34b14590",
+          "name": "agro.chat.response",
+          "start": "2026-10-17T12:33:29.283000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.152,
+            "status": "ok",
+            "output_characters": 3271
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "57da4cc5ad935b16",
+          "parent": "d7190695ef88af63",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:28.980000+00:00",
+          "duration_ms": 303.0,
+          "level": "ERROR",
+          "metadata": {
+            "latency_ms": 302.939,
+            "status": "failed",
+            "http_code": 429,
+            "error_category": "api",
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "d7190695ef88af63",
+          "parent": "29fbe07a34b14590",
+          "name": "agro.orchestration.response",
+          "start": "2026-10-17T12:33:28.979000+00:00",
+          "duration_ms": 304.0,
+          "level": "WARNING",
+          "metadata": {
+            "latency_ms": 303.849,
+            "status": "fallback",
+            "answer_mode": "factual"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "480d769971876bb4",
+          "parent": "24df14484ceb1c28",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:21.232000+00:00",
+          "duration_ms": 7743.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 7743.561,
+            "status": "ok",
+            "first_token_ms": 6563.534,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 5107,
+            "output": 290,
+            "total": 6639,
+            "reasoning": 1242
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "24df14484ceb1c28",
+          "parent": "a1ce79d3e74edf29",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:21.231000+00:00",
+          "duration_ms": 7744.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 7744.325,
+            "status": "ok",
+            "tool": "gemini_analise",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "7d1bc535b57ca8c2",
+          "parent": "264bf720afdb1166",
+          "name": "agro.gemini.embeddings",
+          "start": "2026-10-17T12:33:20.868000+00:00",
+          "duration_ms": 361.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 361.239,
+            "status": "ok",
+            "input_characters": 90,
+            "model_name": "gemini-embedding-001"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "264bf720afdb1166",
+          "parent": "44e9a5cd8807261c",
+          "name": "agro.chroma.retrieve",
+          "start": "2026-10-17T12:33:20.867000+00:00",
+          "duration_ms": 364.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 363.84,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "44e9a5cd8807261c",
+          "parent": "a1ce79d3e74edf29",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:20.866000+00:00",
+          "duration_ms": 365.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 365.786,
+            "status": "ok",
+            "tool": "chroma_rag_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "0bbf10b660edac40",
+          "parent": "44e9a5cd8807261c",
+          "name": "agro.chroma.synchronize",
+          "start": "2026-10-17T12:33:20.866000+00:00",
+          "duration_ms": 1.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 1.403,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "b729bdd28cab08ea",
+          "parent": "a1ce79d3e74edf29",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:20.843000+00:00",
+          "duration_ms": 23.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 22.966,
+            "status": "ok",
+            "tool": "duckdb_impacto_rupturas_total",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "590f8f1e751bea48",
+          "parent": "b729bdd28cab08ea",
+          "name": "agro.duckdb.rupture_impact",
+          "start": "2026-10-17T12:33:20.843000+00:00",
+          "duration_ms": 22.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 22.51,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "3ce7875b5e2a4e89",
+          "parent": "ba56a9494e8f2e35",
+          "name": "agro.duckdb.commercial_impact",
+          "start": "2026-10-17T12:33:20.815000+00:00",
+          "duration_ms": 27.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 27.616,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "ba56a9494e8f2e35",
+          "parent": "a1ce79d3e74edf29",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:20.814000+00:00",
+          "duration_ms": 29.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 28.083,
+            "status": "ok",
+            "tool": "duckdb_impacto_pares",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "b60e26a46cf55b0d",
+          "parent": "a1ce79d3e74edf29",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:20.723000+00:00",
+          "duration_ms": 91.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 91.589,
+            "status": "ok",
+            "tool": "duckdb_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "a1ce79d3e74edf29",
+          "parent": "e27ec36e82a19e1f",
+          "name": "agro.agent.comercial",
+          "start": "2026-10-17T12:33:20.723000+00:00",
+          "duration_ms": 8252.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 8253.285,
+            "status": "ok",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "9ef78da4083253c9",
+          "parent": "b60e26a46cf55b0d",
+          "name": "agro.duckdb.commercial_snapshot",
+          "start": "2026-10-17T12:33:20.723000+00:00",
+          "duration_ms": 91.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 91.084,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "d664c12f2005e6ea",
+          "parent": "d753ac34cb904db6",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:10.985000+00:00",
+          "duration_ms": 9737.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 9737.099,
+            "status": "ok",
+            "first_token_ms": 8404.684,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 2464,
+            "output": 302,
+            "total": 4303,
+            "reasoning": 1537
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "d753ac34cb904db6",
+          "parent": "013dd1b3fc978bcc",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:10.984000+00:00",
+          "duration_ms": 9738.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 9737.68,
+            "status": "ok",
+            "tool": "gemini_analise",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "a5300d62ded0c9bf",
+          "parent": "15ae16da9d36ccff",
+          "name": "agro.duckdb.stock_and_orders",
+          "start": "2026-10-17T12:33:10.939000+00:00",
+          "duration_ms": 45.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 44.762,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "15ae16da9d36ccff",
+          "parent": "013dd1b3fc978bcc",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:10.939000+00:00",
+          "duration_ms": 45.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 45.165,
+            "status": "ok",
+            "tool": "duckdb_estoque_pedidos",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "013dd1b3fc978bcc",
+          "parent": "e27ec36e82a19e1f",
+          "name": "agro.agent.estoque",
+          "start": "2026-10-17T12:33:10.939000+00:00",
+          "duration_ms": 9784.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 9783.232,
+            "status": "ok",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "fc5be34f115114b3",
+          "parent": "29fbe07a34b14590",
+          "name": "agro.chat.question",
+          "start": "2026-10-17T12:33:10.360000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.14,
+            "status": "ok",
+            "input_characters": 90
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "e27ec36e82a19e1f",
+          "parent": "29fbe07a34b14590",
+          "name": "agro.orchestration.prepare",
+          "start": "2026-10-17T12:33:10.360000+00:00",
+          "duration_ms": 18615.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 18614.884,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "29fbe07a34b14590",
+          "parent": null,
+          "name": "agro.chat.request",
+          "start": "2026-10-17T12:33:10.360000+00:00",
+          "duration_ms": 18923.0,
+          "level": "WARNING",
+          "metadata": {
+            "latency_ms": 18923.492,
+            "status": "fallback",
+            "output_characters": 3271,
+            "history_messages": 0,
+            "input_characters": 90
+          },
+          "usage": {},
+          "cost_reported": false
+        }
+      ]
+    },
+    {
+      "trace_id": "05d850d53c649d6b63c95cf8349e33fd",
+      "question_number": 5,
+      "linked": true,
+      "spans": [
+        {
+          "id": "90958087a4d2b202",
+          "parent": "4b8f4c70f9390f4a",
+          "name": "agro.chat.response",
+          "start": "2026-10-17T12:34:01.857000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.167,
+            "status": "ok",
+            "output_characters": 2075
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "fcdce15a9c928cb8",
+          "parent": "4b8f4c70f9390f4a",
+          "name": "agro.orchestration.response",
+          "start": "2026-10-17T12:33:48.615000+00:00",
+          "duration_ms": 13242.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 13242.369,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "f2ac9355efff547f",
+          "parent": "fcdce15a9c928cb8",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:48.615000+00:00",
+          "duration_ms": 13241.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 13241.087,
+            "status": "ok",
+            "first_token_ms": 10366.079,
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 6418,
+            "output": 739,
+            "total": 9042,
+            "reasoning": 1885
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "ddc914bc1e99921e",
+          "parent": "27adad5c2fbd2054",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:48.076000+00:00",
+          "duration_ms": 535.0,
+          "level": "ERROR",
+          "metadata": {
+            "latency_ms": 535.363,
+            "status": "failed",
+            "http_code": 429,
+            "error_category": "api",
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "27adad5c2fbd2054",
+          "parent": "8e57634be34fb6f7",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:48.076000+00:00",
+          "duration_ms": 536.0,
+          "level": "ERROR",
+          "metadata": {
+            "latency_ms": 536.504,
+            "status": "failed",
+            "http_code": 429,
+            "error_category": "api",
+            "tool": "gemini_analise",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "6d55065773bd5cb0",
+          "parent": "e000457a9676b71d",
+          "name": "agro.gemini.embeddings",
+          "start": "2026-10-17T12:33:47.728000+00:00",
+          "duration_ms": 346.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 345.544,
+            "status": "ok",
+            "input_characters": 174,
+            "model_name": "gemini-embedding-001"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "e000457a9676b71d",
+          "parent": "912a035ea9b14d07",
+          "name": "agro.chroma.retrieve",
+          "start": "2026-10-17T12:33:47.727000+00:00",
+          "duration_ms": 348.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 347.851,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "912a035ea9b14d07",
+          "parent": "8e57634be34fb6f7",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:47.726000+00:00",
+          "duration_ms": 350.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 349.436,
+            "status": "ok",
+            "tool": "chroma_rag_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "85d1dd6488758481",
+          "parent": "912a035ea9b14d07",
+          "name": "agro.chroma.synchronize",
+          "start": "2026-10-17T12:33:47.726000+00:00",
+          "duration_ms": 1.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 1.134,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "5d0c4fc427e4dad3",
+          "parent": "383c06aa879345c0",
+          "name": "agro.duckdb.commercial_impact",
+          "start": "2026-10-17T12:33:47.698000+00:00",
+          "duration_ms": 27.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 26.853,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "383c06aa879345c0",
+          "parent": "8e57634be34fb6f7",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:47.698000+00:00",
+          "duration_ms": 28.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 27.354,
+            "status": "ok",
+            "tool": "duckdb_impacto_pares",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "6a0ea92d5582ab22",
+          "parent": "7f767ddcce655586",
+          "name": "agro.duckdb.commercial_snapshot",
+          "start": "2026-10-17T12:33:47.612000+00:00",
+          "duration_ms": 86.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 86.202,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "8e57634be34fb6f7",
+          "parent": "ce9846814f7cdd86",
+          "name": "agro.agent.comercial",
+          "start": "2026-10-17T12:33:47.611000+00:00",
+          "duration_ms": 1001.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 1000.599,
+            "status": "ok",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "7f767ddcce655586",
+          "parent": "8e57634be34fb6f7",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:47.611000+00:00",
+          "duration_ms": 87.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 86.766,
+            "status": "ok",
+            "tool": "duckdb_comercial",
+            "agent": "comercial"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "5f4427c87f3b05f8",
+          "parent": "fd2c8c2c6c55dedc",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:37.616000+00:00",
+          "duration_ms": 9995.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 9995.055,
+            "status": "ok",
+            "first_token_ms": 8687.991,
+            "attempt": 2,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {
+            "input": 2906,
+            "output": 273,
+            "total": 4521,
+            "reasoning": 1342
+          },
+          "cost_reported": false
+        },
+        {
+          "id": "c693dacc06634fc5",
+          "parent": "fd2c8c2c6c55dedc",
+          "name": "agro.gemini.generate",
+          "start": "2026-10-17T12:33:31.293000+00:00",
+          "duration_ms": 5322.0,
+          "level": "ERROR",
+          "metadata": {
+            "latency_ms": 5322.193,
+            "status": "failed",
+            "http_code": 503,
+            "error_category": "api",
+            "attempt": 1,
+            "model_name": "gemini-3.5-flash"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "fd2c8c2c6c55dedc",
+          "parent": "446cae07a3b8f39e",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:31.292000+00:00",
+          "duration_ms": 16319.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 16318.574,
+            "status": "ok",
+            "tool": "gemini_analise",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "bf173802b185b42f",
+          "parent": "446cae07a3b8f39e",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:29.897000+00:00",
+          "duration_ms": 1395.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 1395.996,
+            "status": "ok",
+            "tool": "scikit_learn_backorder",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "8f8f8bda1f8290f9",
+          "parent": "bf173802b185b42f",
+          "name": "agro.ml.predict_backorder",
+          "start": "2026-10-17T12:33:29.897000+00:00",
+          "duration_ms": 1395.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 1395.342,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "c3fc04477492d99e",
+          "parent": "446cae07a3b8f39e",
+          "name": "agro.agent.tool",
+          "start": "2026-10-17T12:33:29.855000+00:00",
+          "duration_ms": 42.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 40.812,
+            "status": "ok",
+            "tool": "duckdb_estoque_pedidos",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "76e5a9a2ed2f46d1",
+          "parent": "c3fc04477492d99e",
+          "name": "agro.duckdb.stock_and_orders",
+          "start": "2026-10-17T12:33:29.855000+00:00",
+          "duration_ms": 41.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 40.395,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "446cae07a3b8f39e",
+          "parent": "ce9846814f7cdd86",
+          "name": "agro.agent.estoque",
+          "start": "2026-10-17T12:33:29.855000+00:00",
+          "duration_ms": 17756.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 17755.89,
+            "status": "ok",
+            "agent": "estoque"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "ce9846814f7cdd86",
+          "parent": "4b8f4c70f9390f4a",
+          "name": "agro.orchestration.prepare",
+          "start": "2026-10-17T12:33:29.286000+00:00",
+          "duration_ms": 19326.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 19325.349,
+            "status": "ok"
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "b42872a454c95da5",
+          "parent": "4b8f4c70f9390f4a",
+          "name": "agro.chat.question",
+          "start": "2026-10-17T12:33:29.286000+00:00",
+          "duration_ms": 0.0,
+          "level": "DEFAULT",
+          "metadata": {
+            "latency_ms": 0.106,
+            "status": "ok",
+            "input_characters": 174
+          },
+          "usage": {},
+          "cost_reported": false
+        },
+        {
+          "id": "4b8f4c70f9390f4a",
+          "parent": null,
+          "name": "agro.chat.request",
+          "start": "2026-10-17T12:33:29.286000+00:00",
+          "duration_ms": 32571.0,
+          "level": "WARNING",
+          "metadata": {
+            "latency_ms": 32570.816,
+            "status": "fallback",
+            "output_characters": 2075,
+            "history_messages": 0,
+            "input_characters": 174
+          },
+          "usage": {},
+          "cost_reported": false
+        }
+      ]
+    }
+  ]
+}

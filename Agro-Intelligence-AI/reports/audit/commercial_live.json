@@ -1,0 +1,1088 @@
+{
+  "mode": "live",
+  "stock": {
+    "totais": {
+      "data_estoque": "2026-09-30",
+      "posicoes": 3000,
+      "rupturas_observadas": 60,
+      "excessos": 60,
+      "pares_sinalizados": 755,
+      "rupturas_com_carteira": 41,
+      "carteira_em_ruptura": "4399084.73",
+      "insuficiencias_com_saldo": 695,
+      "carteira_em_insuficiencia_com_saldo": "69752075.66",
+      "carteira_nos_pares_sinalizados": "74151160.39"
+    },
+    "prioridades_amostra": [
+      {
+        "produto_id": 12,
+        "centro_id": 4,
+        "produto": "PRD-00012",
+        "centro": "CTR-004",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 97,
+        "carteira_valor": "378888.68"
+      },
+      {
+        "produto_id": 16,
+        "centro_id": 2,
+        "produto": "PRD-00016",
+        "centro": "CTR-002",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 96,
+        "carteira_valor": "339247.27"
+      },
+      {
+        "produto_id": 2,
+        "centro_id": 6,
+        "produto": "PRD-00002",
+        "centro": "CTR-006",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 70,
+        "carteira_valor": "275189.64"
+      },
+      {
+        "produto_id": 6,
+        "centro_id": 3,
+        "produto": "PRD-00006",
+        "centro": "CTR-003",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 94,
+        "carteira_valor": "262012.62"
+      },
+      {
+        "produto_id": 2,
+        "centro_id": 5,
+        "produto": "PRD-00002",
+        "centro": "CTR-005",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 57,
+        "carteira_valor": "231883.34"
+      },
+      {
+        "produto_id": 14,
+        "centro_id": 12,
+        "produto": "PRD-00014",
+        "centro": "CTR-012",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 41,
+        "carteira_valor": "201914.05"
+      },
+      {
+        "produto_id": 10,
+        "centro_id": 15,
+        "produto": "PRD-00010",
+        "centro": "CTR-015",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 43,
+        "carteira_valor": "180987.80"
+      },
+      {
+        "produto_id": 17,
+        "centro_id": 6,
+        "produto": "PRD-00017",
+        "centro": "CTR-006",
+        "unidade": "KG",
+        "disponivel": 0,
+        "carteira_quantidade": 38360,
+        "carteira_valor": "166603.01"
+      },
+      {
+        "produto_id": 8,
+        "centro_id": 8,
+        "produto": "PRD-00008",
+        "centro": "CTR-008",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 31,
+        "carteira_valor": "150070.70"
+      },
+      {
+        "produto_id": 18,
+        "centro_id": 8,
+        "produto": "PRD-00018",
+        "centro": "CTR-008",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 53,
+        "carteira_valor": "146376.94"
+      },
+      {
+        "produto_id": 11,
+        "centro_id": 1,
+        "produto": "PRD-00011",
+        "centro": "CTR-001",
+        "unidade": "KG",
+        "disponivel": 0,
+        "carteira_quantidade": 31816,
+        "carteira_valor": "146315.83"
+      },
+      {
+        "produto_id": 16,
+        "centro_id": 1,
+        "produto": "PRD-00016",
+        "centro": "CTR-001",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 41,
+        "carteira_valor": "144517.20"
+      },
+      {
+        "produto_id": 16,
+        "centro_id": 3,
+        "produto": "PRD-00016",
+        "centro": "CTR-003",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 38,
+        "carteira_valor": "136034.11"
+      },
+      {
+        "produto_id": 1,
+        "centro_id": 1,
+        "produto": "PRD-00001",
+        "centro": "CTR-001",
+        "unidade": "KG",
+        "disponivel": 0,
+        "carteira_quantidade": 25560,
+        "carteira_valor": "125904.66"
+      },
+      {
+        "produto_id": 10,
+        "centro_id": 14,
+        "produto": "PRD-00010",
+        "centro": "CTR-014",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 30,
+        "carteira_valor": "120044.40"
+      },
+      {
+        "produto_id": 14,
+        "centro_id": 10,
+        "produto": "PRD-00014",
+        "centro": "CTR-010",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 24,
+        "carteira_valor": "115767.38"
+      },
+      {
+        "produto_id": 4,
+        "centro_id": 11,
+        "produto": "PRD-00004",
+        "centro": "CTR-011",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 54,
+        "carteira_valor": "115522.44"
+      },
+      {
+        "produto_id": 4,
+        "centro_id": 12,
+        "produto": "PRD-00004",
+        "centro": "CTR-012",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 50,
+        "carteira_valor": "104552.45"
+      },
+      {
+        "produto_id": 6,
+        "centro_id": 2,
+        "produto": "PRD-00006",
+        "centro": "CTR-002",
+        "unidade": "tonelada",
+        "disponivel": 0,
+        "carteira_quantidade": 35,
+        "carteira_valor": "102186.49"
+      },
+      {
+        "produto_id": 11,
+        "centro_id": 3,
+        "produto": "PRD-00011",
+        "centro": "CTR-003",
+        "unidade": "KG",
+        "disponivel": 0,
+        "carteira_quantidade": 21388,
+        "carteira_valor": "101511.89"
+      }
+    ],
+    "escopo_prioridades": "ruptura",
+    "natureza": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+  },
+  "strict_impact": {
+    "escopo": "todos os pares com disponível zero; não apenas os 20 prioritários",
+    "totais": {
+      "linhas_pendentes": 103,
+      "pedidos_distintos": 101,
+      "carteira_pendente": "4399084.73",
+      "custo_carteira": "3506069.23",
+      "margem_carteira": "893015.50",
+      "margem_pct": 20.3
+    },
+    "natureza": "Valores da carteira, não faturamento, perda comprovada ou previsão ML."
+  },
+  "regions": [
+    {
+      "codigo": "REG-01",
+      "regiao": "Oeste Simulado",
+      "linhas": 6564,
+      "receita_faturada": "225379335.16",
+      "custo_faturado": "179815924.23",
+      "margem_faturada": "45563410.93",
+      "margem_pct": 20.2163
+    },
+    {
+      "codigo": "REG-02",
+      "regiao": "Centro Simulado",
+      "linhas": 3666,
+      "receita_faturada": "125389865.57",
+      "custo_faturado": "99466638.84",
+      "margem_faturada": "25923226.73",
+      "margem_pct": 20.6741
+    },
+    {
+      "codigo": "REG-03",
+      "regiao": "Vale Simulado",
+      "linhas": 2149,
+      "receita_faturada": "74180338.74",
+      "custo_faturado": "59177051.11",
+      "margem_faturada": "15003287.63",
+      "margem_pct": 20.2254
+    },
+    {
+      "codigo": "REG-04",
+      "regiao": "Sul Simulado",
+      "linhas": 1325,
+      "receita_faturada": "43933226.58",
+      "custo_faturado": "35311685.69",
+      "margem_faturada": "8621540.89",
+      "margem_pct": 19.6242
+    },
+    {
+      "codigo": "REG-05",
+      "regiao": "Cerrado Simulado",
+      "linhas": 727,
+      "receita_faturada": "24243750.97",
+      "custo_faturado": "19332160.94",
+      "margem_faturada": "4911590.03",
+      "margem_pct": 20.2592
+    }
+  ],
+  "stock_pairs_unique": true,
+  "invalid_financial_rows": 0,
+  "independent_strict_reconciliation": "4399084.73",
+  "ml_contract": {
+    "no_inputs": "needs_input",
+    "six_inputs": "needs_input",
+    "seven_inputs": {
+      "status": "predicted",
+      "class": 1,
+      "score": 0.9266898444319546,
+      "threshold": 0.9099999999999999,
+      "features": {
+        "national_inv": 10.0,
+        "lead_time": 8.0,
+        "in_transit_qty": 0.0,
+        "forecast_3_month": 100.0,
+        "sales_1_month": 20.0,
+        "sales_3_month": 60.0,
+        "min_bank": 15.0
+      },
+      "source": "https://github.com/akhiilkasare/Back-Order-Prediction-iNeuron/tree/3bf0817ebb1a20e675ff02244660507e59f180f2",
+      "calibrated": false,
+      "outside_training_range": [],
+      "natureza": "Modelo scikit-learn público externo; score não calibrado, não validado no agro local."
+    }
+  },
+  "tasks": [
+    {
+      "question": "Quais rupturas de estoque afetam pedidos pendentes e qual o impacto comercial nas margens?",
+      "agents": [
+        "estoque",
+        "comercial"
+      ],
+      "tools": [
+        {
+          "agent": "estoque",
+          "tool": "duckdb_estoque_pedidos",
+          "status": "ok"
+        },
+        {
+          "agent": "estoque",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_pares",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_rupturas_total",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "results": {
+        "estoque": {
+          "abastecimento": {
+            "totais": {
+              "data_estoque": "2026-09-30",
+              "posicoes": 3000,
+              "rupturas_observadas": 60,
+              "excessos": 60,
+              "pares_sinalizados": 755,
+              "rupturas_com_carteira": 41,
+              "carteira_em_ruptura": "4399084.73",
+              "insuficiencias_com_saldo": 695,
+              "carteira_em_insuficiencia_com_saldo": "69752075.66",
+              "carteira_nos_pares_sinalizados": "74151160.39"
+            },
+            "prioridades_amostra": [
+              {
+                "produto_id": 12,
+                "centro_id": 4,
+                "produto": "PRD-00012",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 97,
+                "carteira_valor": "378888.68"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 2,
+                "produto": "PRD-00016",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 96,
+                "carteira_valor": "339247.27"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 6,
+                "produto": "PRD-00002",
+                "centro": "CTR-006",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 70,
+                "carteira_valor": "275189.64"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 3,
+                "produto": "PRD-00006",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 94,
+                "carteira_valor": "262012.62"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 5,
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 57,
+                "carteira_valor": "231883.34"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 12,
+                "produto": "PRD-00014",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "201914.05"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 15,
+                "produto": "PRD-00010",
+                "centro": "CTR-015",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 43,
+                "carteira_valor": "180987.80"
+              },
+              {
+                "produto_id": 17,
+                "centro_id": 6,
+                "produto": "PRD-00017",
+                "centro": "CTR-006",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 38360,
+                "carteira_valor": "166603.01"
+              },
+              {
+                "produto_id": 8,
+                "centro_id": 8,
+                "produto": "PRD-00008",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 31,
+                "carteira_valor": "150070.70"
+              },
+              {
+                "produto_id": 18,
+                "centro_id": 8,
+                "produto": "PRD-00018",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 53,
+                "carteira_valor": "146376.94"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 1,
+                "produto": "PRD-00011",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 31816,
+                "carteira_valor": "146315.83"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 1,
+                "produto": "PRD-00016",
+                "centro": "CTR-001",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "144517.20"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 3,
+                "produto": "PRD-00016",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 38,
+                "carteira_valor": "136034.11"
+              },
+              {
+                "produto_id": 1,
+                "centro_id": 1,
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 25560,
+                "carteira_valor": "125904.66"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 14,
+                "produto": "PRD-00010",
+                "centro": "CTR-014",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 30,
+                "carteira_valor": "120044.40"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 10,
+                "produto": "PRD-00014",
+                "centro": "CTR-010",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 24,
+                "carteira_valor": "115767.38"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 11,
+                "produto": "PRD-00004",
+                "centro": "CTR-011",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 54,
+                "carteira_valor": "115522.44"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 12,
+                "produto": "PRD-00004",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 50,
+                "carteira_valor": "104552.45"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 2,
+                "produto": "PRD-00006",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 35,
+                "carteira_valor": "102186.49"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 3,
+                "produto": "PRD-00011",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 21388,
+                "carteira_valor": "101511.89"
+              }
+            ],
+            "escopo_prioridades": "ruptura",
+            "natureza": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+          }
+        },
+        "comercial": {
+          "indicadores": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "estoque_resumo": [
+              {
+                "unidade": "KG",
+                "pares_produto_centro": 300,
+                "disponivel": 233446,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "888117.83"
+              },
+              {
+                "unidade": "L",
+                "pares_produto_centro": 1200,
+                "disponivel": 425332,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "41312128.07"
+              },
+              {
+                "unidade": "saca_20KG",
+                "pares_produto_centro": 600,
+                "disponivel": 208296,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "141845310.52"
+              },
+              {
+                "unidade": "saca_40KG",
+                "pares_produto_centro": 600,
+                "disponivel": 218247,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "69955289.47"
+              },
+              {
+                "unidade": "tonelada",
+                "pares_produto_centro": 300,
+                "disponivel": 233878,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "834991667.58"
+              }
+            ],
+            "alertas_estoque": [
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              }
+            ]
+          },
+          "impacto_compartilhado": {
+            "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+            "pares_consultados": 20,
+            "por_familia": [
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "tonelada",
+                "linhas_pendentes": 46,
+                "pedidos": 46,
+                "carteira_pendente": "3005195.51",
+                "margem_carteira": "650582.93"
+              },
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "KG",
+                "linhas_pendentes": 23,
+                "pedidos": 23,
+                "carteira_pendente": "540335.39",
+                "margem_carteira": "85460.74"
+              }
+            ]
+          },
+          "impacto_rupturas_total": {
+            "escopo": "todos os pares com disponível zero; não apenas os 20 prioritários",
+            "totais": {
+              "linhas_pendentes": 103,
+              "pedidos_distintos": 101,
+              "carteira_pendente": "4399084.73",
+              "custo_carteira": "3506069.23",
+              "margem_carteira": "893015.50",
+              "margem_pct": 20.3
+            },
+            "natureza": "Valores da carteira, não faturamento, perda comprovada ou previsão ML."
+          },
+          "documentos": [
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.39268213510513306
+            },
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.3985379934310913
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.42690926790237427
+            }
+          ]
+        }
+      },
+      "analyses": {
+        "estoque": "Em **30/09/2026**, registraram-se **60 rupturas observadas** (disponível zero), das quais 41 possuem pedidos pendentes, somando **R$ 4.399.084,73** em carteira. As principais prioridades incluem PRD-00012 no CTR-004 (R$ 378.888,68) e PRD-00016 no CTR-002 (R$ 339.247,27).\n\nRuptura (disponível zero) difere de insuficiência com saldo positivo (695 posições, R$ 69.752.075,66 em carteira). O total de pares sinalizados é 755 (R$ 74.151.160,39).\n\n**Impacto nas margens e limites:**\nA fotografia de estoque é estática e descritiva; não calcula margens nem perdas estimadas. A receita e a margem comercial são consolidadas exclusivamente sobre vendas faturadas, enquanto a carteira pendente não compõe faturamento realizado. Regras descritivas de estoque não fornecem cálculo direto de impacto em margem nem substituem previsões executadas via rotas de Machine Learning.",
+        "comercial": "Em 30/09/2026, identificaram-se 60 posições em ruptura (estoque zero), sendo 41 com carteira associada. No total, a ruptura afeta **101 pedidos distintos** (103 linhas pendentes), somando **R$ 4.399.084,73** em carteira represada.\n\n**Impacto Comercial nas Margens:**\nO custo dessa carteira pendente em ruptura é de R$ 3.506.069,23, resultando em uma **margem pendente de R$ 893.015,50** (margem de 20,3%).\n\nNa amostra de pares prioritários da família de Fertilizantes, a margem pendente afetada distribui-se em:\n* **Toneladas:** R$ 650.582,93 (46 pedidos; R$ 3.005.195,51 em carteira);\n* **KG:** R$ 85.460,74 (23 pedidos; R$ 540.335,39 em carteira).\n\nRessalta-se que a carteira pendente reflete apenas oportunidades represadas por falta de estoque e não constitui receita realizada nem perda definitiva [politica_comercial.md, trecho 1]."
+      },
+      "answer": "Em **30/09/2026**, registraram-se **60 posições em ruptura observada** (estoque disponível zero). Dessas, **41 posições possuem carteira de pedidos pendentes**, totalizando R$ 4.399.084,73 em valor represado. \n\nRupturas (estoque zero) diferem das insuficiências com saldo positivo (695 posições, com R$ 69.752.075,66 em carteira). O grupo amplo de 755 pares sinalizados consolida ambas as situações.\n\n### Principais Rupturas com Carteira (Amostra Prioritária)\nEntre os casos mais críticos de estoque zero com pedidos represados, destacam-se:\n* **PRD-00012 no CTR-004:** 97 toneladas (R$ 378.888,68 em carteira);\n* **PRD-00016 no CTR-002:** 96 toneladas (R$ 339.247,27 em carteira);\n* **PRD-00002 no CTR-006:** 70 toneladas (R$ 275.189,64 em carteira);\n* **PRD-00006 no CTR-003:** 94 toneladas (R$ 262.012,62 em carteira);\n* **PRD-00017 no CTR-006:** 38.360 KG (R$ 166.603,01 em carteira).\n\n*Nota: Toneladas e quilogramas (KG) são unidades distintas e não devem ser somadas quantitativamente.*\n\n---\n\n### Impacto Comercial nas Margens\nConsiderando a totalidade dos pares em ruptura com estoque disponível zero:\n* **Pedidos afetados:** 101 pedidos distintos (103 linhas pendentes);\n* **Valor em carteira pendente:** R$ 4.399.084,73;\n* **Custo da carteira pendente:** R$ 3.506.069,23;\n* **Margem pendente represada:** **R$ 893.015,50** (margem bruta de **20,3%**).\n\nNa amostra de prioridades da categoria de Fertilizantes, a margem pendente afetada distribui-se em:\n* **Toneladas:** R$ 650.582,93 de margem pendente (46 pedidos; R$ 3.005.195,51 em carteira);\n* **KG:** R$ 85.460,74 de margem pendente (23 pedidos; R$ 540.335,39 em carteira).\n\n---\n\n### Considerações de Política Comercial\nA carteira pendente reflete uma margem potencial temporariamente represada por restrição física de abastecimento. Conforme as regras vigentes, pedidos pendentes não constituem receita faturada nem devem ser somados ao faturamento realizado [politica_comercial.md, trecho 1]. Todos os dados apresentados são simulações acadêmicas."
+    },
+    {
+      "question": "Quais regiões possuem maior faturamento e qual é a margem média de cada uma?",
+      "agents": [
+        "comercial"
+      ],
+      "tools": [
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "results": {
+        "comercial": {
+          "indicadores": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "por_regiao": [
+              {
+                "codigo": "REG-01",
+                "regiao": "Oeste Simulado",
+                "linhas": 6564,
+                "receita_faturada": "225379335.16",
+                "custo_faturado": "179815924.23",
+                "margem_faturada": "45563410.93",
+                "margem_pct": 20.2163
+              },
+              {
+                "codigo": "REG-02",
+                "regiao": "Centro Simulado",
+                "linhas": 3666,
+                "receita_faturada": "125389865.57",
+                "custo_faturado": "99466638.84",
+                "margem_faturada": "25923226.73",
+                "margem_pct": 20.6741
+              },
+              {
+                "codigo": "REG-03",
+                "regiao": "Vale Simulado",
+                "linhas": 2149,
+                "receita_faturada": "74180338.74",
+                "custo_faturado": "59177051.11",
+                "margem_faturada": "15003287.63",
+                "margem_pct": 20.2254
+              },
+              {
+                "codigo": "REG-04",
+                "regiao": "Sul Simulado",
+                "linhas": 1325,
+                "receita_faturada": "43933226.58",
+                "custo_faturado": "35311685.69",
+                "margem_faturada": "8621540.89",
+                "margem_pct": 19.6242
+              },
+              {
+                "codigo": "REG-05",
+                "regiao": "Cerrado Simulado",
+                "linhas": 727,
+                "receita_faturada": "24243750.97",
+                "custo_faturado": "19332160.94",
+                "margem_faturada": "4911590.03",
+                "margem_pct": 20.2592
+              }
+            ],
+            "por_familia": [
+              {
+                "categoria": "Sementes de milho",
+                "receita_faturada": "162506834.49",
+                "margem": "32908359.10",
+                "margem_pct": 20.2504,
+                "desconto_valor": "5408230.72"
+              },
+              {
+                "categoria": "Sementes de soja",
+                "receita_faturada": "144043729.09",
+                "margem": "29126600.06",
+                "margem_pct": 20.2207,
+                "desconto_valor": "4854286.92"
+              },
+              {
+                "categoria": "Fertilizantes",
+                "receita_faturada": "125656163.18",
+                "margem": "25941450.42",
+                "margem_pct": 20.6448,
+                "desconto_valor": "4184920.11"
+              },
+              {
+                "categoria": "Nutrição foliar",
+                "receita_faturada": "32205850.67",
+                "margem": "6401909.72",
+                "margem_pct": 19.8781,
+                "desconto_valor": "1101195.26"
+              },
+              {
+                "categoria": "Agroquímicos",
+                "receita_faturada": "28713939.59",
+                "margem": "5644736.91",
+                "margem_pct": 19.6585,
+                "desconto_valor": "942438.47"
+              }
+            ],
+            "cenarios_comerciais": [
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "cancelada",
+                "linhas": 7,
+                "receita_liquida": "248264.37",
+                "margem": "-30229.40"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "faturada",
+                "linhas": 62,
+                "receita_liquida": "1707369.32",
+                "margem": "-208264.67"
+              },
+              {
+                "cenario": "desconto_elevado_margem_negativa",
+                "status": "pendente",
+                "linhas": 31,
+                "receita_liquida": "864747.90",
+                "margem": "-105537.22"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "cancelada",
+                "linhas": 4,
+                "receita_liquida": "202050.10",
+                "margem": "80815.81"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "faturada",
+                "linhas": 75,
+                "receita_liquida": "3308758.84",
+                "margem": "1323473.44"
+              },
+              {
+                "cenario": "margem_alta",
+                "status": "pendente",
+                "linhas": 21,
+                "receita_liquida": "529808.37",
+                "margem": "211929.79"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "cancelada",
+                "linhas": 8,
+                "receita_liquida": "255015.36",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "faturada",
+                "linhas": 70,
+                "receita_liquida": "1946446.37",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "margem_comprimida",
+                "status": "pendente",
+                "linhas": 22,
+                "receita_liquida": "834481.78",
+                "margem": "0.00"
+              },
+              {
+                "cenario": "normal",
+                "status": "cancelada",
+                "linhas": 989,
+                "receita_liquida": "34079265.34",
+                "margem": "7025912.59"
+              },
+              {
+                "cenario": "normal",
+                "status": "faturada",
+                "linhas": 14224,
+                "receita_liquida": "486163942.49",
+                "margem": "98907847.44"
+              },
+              {
+                "cenario": "normal",
+                "status": "pendente",
+                "linhas": 4487,
+                "receita_liquida": "152917325.49",
+                "margem": "31130185.42"
+              }
+            ]
+          },
+          "documentos": [
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.41394752264022827
+            },
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.429984450340271
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.43684959411621094
+            }
+          ]
+        }
+      },
+      "analyses": {
+        "comercial": "No período consultado de **01/10/2025 a 30/09/2026**, as regiões com maior faturamento (considerando apenas vendas faturadas [politica_comercial.md, trecho 1]) e suas respectivas margens regionais consolidadas são:\n\n1. **Oeste Simulado (REG-01)**: R$ 225.379.335,16 (Margem: 20,22%)\n2. **Centro Simulado (REG-02)**: R$ 125.389.865,57 (Margem: 20,67%)\n3. **Vale Simulado (REG-03)**: R$ 74.180.338,74 (Margem: 20,23%)\n4. **Sul Simulado (REG-04)**: R$ 43.933.226,58 (Margem: 19,62%)\n5. **Cerrado Simulado (REG-05)**: R$ 24.243.750,97 (Margem: 20,26%)\n\nAs regiões **Oeste Simulado** e **Centro Simulado** lideram o faturamento total. As margens representam o cálculo consolidado do lucro bruto faturado sobre a receita líquida faturada de cada região. Pedidos pendentes e cancelados não foram somados à receita."
+      },
+      "answer": "No período consultado de **01/10/2025 a 30/09/2026**, considerando estritamente vendas com status **faturada** (excluindo carteira pendente e pedidos cancelados, conforme a regra de faturamento em [politica_comercial.md, trecho 1]), o ranking de faturamento por região e suas respetivas margens regionais consolidadas `((Receita Líquida - Custo Faturado) / Receita Líquida * 100)` são:\n\n1. **Oeste Simulado (REG-01)**\n   * **Faturamento Faturado:** R$ 225.379.335,16\n   * **Margem Regional Consolidada:** 20,22% (R$ 45.563.410,93)\n\n2. **Centro Simulado (REG-02)**\n   * **Faturamento Faturado:** R$ 125.389.865,57\n   * **Margem Regional Consolidada:** 20,67% (R$ 25.923.226,73)\n\n3. **Vale Simulado (REG-03)**\n   * **Faturamento Faturado:** R$ 74.180.338,74\n   * **Margem Regional Consolidada:** 20,23% (R$ 15.003.287,63)\n\n4. **Sul Simulado (REG-04)**\n   * **Faturamento Faturado:** R$ 43.933.226,58\n   * **Margem Regional Consolidada:** 19,62% (R$ 8.621.540,89)\n\n5. **Cerrado Simulado (REG-05)**\n   * **Faturamento Faturado:** R$ 24.243.750,97\n   * **Margem Regional Consolidada:** 20,26% (R$ 4.911.590,03)\n\nAs regiões **Oeste Simulado** e **Centro Simulado** lideram o volume faturado total. As margens representam a consolidação exata das operações faturadas de cada região, e não uma média simples de percentuais isolados. Todos os dados apresentados são simulações fictícias de caráter acadêmico."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "gemini-3.5-flash": {"rpm": 4, "tpm": 100000, "rpd": 20},
+  "gemini-3.1-flash-lite": {"rpm": 4, "tpm": 100000, "rpd": 20},
+  "gemini-embedding-001": {"rpm": 4, "tpm": 100000, "rpd": 20}
+}

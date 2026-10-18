@@ -1,0 +1,15 @@
+{
+  "features": {
+    "national_inv": 7.0,
+    "lead_time": 9.0,
+    "in_transit_qty": 0.0,
+    "forecast_3_month": 0.0,
+    "sales_1_month": 0.0,
+    "sales_3_month": 0.0,
+    "min_bank": 0.0
+  },
+  "score": 0.01701388601367735,
+  "prediction": 0,
+  "partition": "test",
+  "note": "Exemplo de inferência, não avaliação adicional."
+}

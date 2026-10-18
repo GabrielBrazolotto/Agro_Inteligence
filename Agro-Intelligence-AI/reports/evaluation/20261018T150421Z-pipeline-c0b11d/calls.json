@@ -1,0 +1,196 @@
+[
+  {
+    "case_id": "G15",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 26077,
+      "output": 1688,
+      "total": 27765
+    },
+    "budget_admission": {
+      "id": "1e8c52a361964faeac384b2902502a8e",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 85193,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0183",
+            "s0184",
+            "s0001"
+          ],
+          "reason": "O período de 01/10/2025 a 30/09/2026 está confirmado pelos indicadores comerciais e a posição de estoque em 30/09/2026 é validada pelos dados de abastecimento."
+        },
+        {
+          "claim_id": "c002",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Trata-se de um título de seção, não contendo uma afirmação factual."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0197"
+          ],
+          "reason": "O valor de R$ 493.126.517,02 corresponde exatamente à receita faturada informada nos indicadores comerciais."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0004",
+            "s0232",
+            "s0235",
+            "s0237",
+            "s0253",
+            "s0256",
+            "s0258"
+          ],
+          "reason": "Os dados de excesso de estoque (60 posições) e os exemplos dos produtos PRD-00021 e PRD-00022 com volumes de 5.000 unidades contra o limite de 1.000 estão sustentados pelos alertas de estoque."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0309",
+            "s0310",
+            "s0311"
+          ],
+          "reason": "Os valores de R$ 1.707.369,32 em receita faturada, 62 linhas e prejuízo de R$ -208.264,67 coincidem com os dados de cenários comerciais para desconto elevado."
+        },
+        {
+          "claim_id": "c006",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Trata-se de um título de seção, não contendo uma afirmação factual."
+        },
+        {
+          "claim_id": "c007",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A política comercial está documentada no arquivo indicado."
+        },
+        {
+          "claim_id": "c008",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A regra de até 5% de desconto para pedidos a partir de R$ 15.000,00 está descrita na política comercial."
+        },
+        {
+          "claim_id": "c009",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A regra de 5% a 8% de desconto com aprovação gerencial está descrita na política comercial."
+        },
+        {
+          "claim_id": "c010",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A proibição de descontos acima de 8% está descrita na política comercial."
+        },
+        {
+          "claim_id": "c011",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A regra de 2% de desconto para pagamento à vista, não cumulativo, está descrita na política comercial."
+        },
+        {
+          "claim_id": "c012",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A política comercial declara explicitamente que os valores e condições são fictícios para fins didáticos."
+        },
+        {
+          "claim_id": "c013",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Trata-se de um título de seção, não contendo uma afirmação factual."
+        },
+        {
+          "claim_id": "c014",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Trata-se de uma introdução para recomendações, não contendo uma afirmação factual."
+        },
+        {
+          "claim_id": "c015",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A recomendação de desconto de até 5% para pedidos acima de R$ 15.000,00 está alinhada com a política comercial."
+        },
+        {
+          "claim_id": "c016",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A recomendação de submeter descontos de até 8% à gerência está alinhada com a política comercial."
+        },
+        {
+          "claim_id": "c017",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A recomendação de 2% de desconto para pagamento à vista, sem acumular, está alinhada com a política comercial."
+        },
+        {
+          "claim_id": "c018",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0382"
+          ],
+          "reason": "A proibição de descontos acima de 8% está alinhada com a política comercial."
+        },
+        {
+          "claim_id": "c019",
+          "factual": true,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Não há evidência nos trechos fornecidos sobre a disponibilidade ou falha de agentes de análise específicos."
+        }
+      ],
+      "explanation": "A análise baseou-se nos indicadores comerciais e na política comercial fornecida. Os dados de faturamento, excesso de estoque e cenários de desconto foram validados pelos snippets de indicadores. A política comercial foi utilizada para verificar a conformidade das ações recomendadas. A unidade c019 não possui suporte, pois não há logs ou registros sobre o funcionamento de agentes de análise nos documentos fornecidos."
+    },
+    "latency_ms": 8749.828
+  }
+]

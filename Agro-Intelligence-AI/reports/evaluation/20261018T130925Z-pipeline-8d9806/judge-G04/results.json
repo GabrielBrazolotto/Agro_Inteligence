@@ -1,0 +1,3421 @@
+{
+  "run_id": "20261018T130925Z-batch-679dfc",
+  "selected_cases": [
+    "G04"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G04",
+      "category": "faturamento",
+      "question": "Como evoluiu o faturamento por mês nos 12 meses disponíveis? Liste uma linha por mês no formato YYYY-MM com o valor exato.",
+      "expected_behavior": "Usar faturadas agrupadas por mês, sem incluir pendentes/canceladas.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:monthly"
+      ],
+      "checks": [
+        "monthly"
+      ]
+    }
+  ],
+  "phase": "judge",
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 6,
+  "calls": [
+    {
+      "case_id": "G04",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 10618,
+        "output": 5279,
+        "total": 15897
+      },
+      "budget_admission": {
+        "id": "eb60522145894985994fe63083885b55",
+        "model": "gemini-3.1-flash-lite",
+        "estimated_budget_tokens": 39281,
+        "debited_before_dispatch": true
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Trata-se de um título ou aviso introdutório sem afirmação factual."
+          },
+          {
+            "claim_id": "c002",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001"
+            ],
+            "reason": "A afirmação de que o faturamento se refere apenas a itens faturados é sustentada pelo snippet s0001."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0030",
+              "s0031"
+            ],
+            "reason": "O valor de R$ 69.100.257,04 para 2025-10 está correto conforme s0030 e s0031."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0033",
+              "s0034"
+            ],
+            "reason": "O valor de R$ 47.569.449,23 para 2025-11 está correto conforme s0033 e s0034."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0036",
+              "s0037"
+            ],
+            "reason": "O valor de R$ 22.958.227,98 para 2025-12 está correto conforme s0036 e s0037."
+          },
+          {
+            "claim_id": "c006",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0039",
+              "s0040"
+            ],
+            "reason": "O valor de R$ 20.195.392,48 para 2026-01 está correto conforme s0039 e s0040."
+          },
+          {
+            "claim_id": "c007",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0042",
+              "s0043"
+            ],
+            "reason": "O valor de R$ 24.733.899,94 para 2026-02 está correto conforme s0042 e s0043."
+          },
+          {
+            "claim_id": "c008",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0045",
+              "s0046"
+            ],
+            "reason": "O valor de R$ 21.990.732,75 para 2026-03 está correto conforme s0045 e s0046."
+          },
+          {
+            "claim_id": "c009",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0048",
+              "s0049"
+            ],
+            "reason": "O valor de R$ 19.900.242,28 para 2026-04 está correto conforme s0048 e s0049."
+          },
+          {
+            "claim_id": "c010",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0051",
+              "s0052"
+            ],
+            "reason": "O valor de R$ 18.898.851,47 para 2026-05 está correto conforme s0051 e s0052."
+          },
+          {
+            "claim_id": "c011",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0054",
+              "s0055"
+            ],
+            "reason": "O valor de R$ 31.224.307,20 para 2026-06 está correto conforme s0054 e s0055."
+          },
+          {
+            "claim_id": "c012",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0057",
+              "s0058"
+            ],
+            "reason": "O valor de R$ 49.589.766,87 para 2026-07 está correto conforme s0057 e s0058."
+          },
+          {
+            "claim_id": "c013",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0060",
+              "s0061"
+            ],
+            "reason": "O valor de R$ 84.051.605,74 para 2026-08 está correto conforme s0060 e s0061."
+          },
+          {
+            "claim_id": "c014",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0063",
+              "s0064"
+            ],
+            "reason": "O valor de R$ 82.913.784,04 para 2026-09 está correto conforme s0063 e s0064."
+          },
+          {
+            "claim_id": "c015",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0013",
+              "s0015",
+              "s0016"
+            ],
+            "reason": "Os totais de faturamento, margem e carteira pendente estão corretos conforme os snippets citados."
+          },
+          {
+            "claim_id": "c016",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Aviso de consulta de documento, não é uma afirmação factual."
+          },
+          {
+            "claim_id": "c017",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "Título do documento citado em s0066."
+          },
+          {
+            "claim_id": "c018",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "Informação de vigência didática contida em s0066."
+          },
+          {
+            "claim_id": "c019",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c020",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "Regras de desconto descritas em s0066."
+          },
+          {
+            "claim_id": "c021",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c022",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "Regras de pagamento e exclusão de pedidos cancelados descritas em s0066."
+          },
+          {
+            "claim_id": "c023",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c024",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0066"
+            ],
+            "reason": "Aviso de natureza fictícia dos dados em s0066."
+          },
+          {
+            "claim_id": "c025",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c026",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Aviso de consulta de documento, não é uma afirmação factual."
+          },
+          {
+            "claim_id": "c027",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "Título do documento citado em s0070."
+          },
+          {
+            "claim_id": "c028",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "Informação de vigência didática contida em s0070."
+          },
+          {
+            "claim_id": "c029",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c030",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "Horário de atendimento e prazos de entrega descritos em s0070."
+          },
+          {
+            "claim_id": "c031",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c032",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "Regras de frete e devolução descritas em s0070."
+          },
+          {
+            "claim_id": "c033",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c034",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0070"
+            ],
+            "reason": "Aviso de natureza fictícia dos dados em s0070."
+          },
+          {
+            "claim_id": "c035",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c036",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Aviso de consulta de documento, não é uma afirmação factual."
+          },
+          {
+            "claim_id": "c037",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "Título do documento citado em s0074."
+          },
+          {
+            "claim_id": "c038",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "Informação de vigência didática contida em s0074."
+          },
+          {
+            "claim_id": "c039",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c040",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "Preços de lista dos produtos descritos em s0074."
+          },
+          {
+            "claim_id": "c041",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c042",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0074"
+            ],
+            "reason": "Aviso sobre a natureza fictícia dos produtos e ausência de recomendação agronômica em s0074."
+          },
+          {
+            "claim_id": "c043",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Espaçamento/formatação, sem conteúdo factual."
+          },
+          {
+            "claim_id": "c044",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001"
+            ],
+            "reason": "Confirmação de que os dados são sintéticos conforme s0001."
+          }
+        ],
+        "explanation": "A resposta forneceu corretamente a evolução do faturamento mensal solicitada, utilizando os dados sintéticos disponíveis nos snippets. Todos os valores numéricos foram verificados e estão em conformidade com as evidências fornecidas. As demais unidades de texto (avisos, títulos e documentos) foram classificadas como factuais quando continham informações presentes nos documentos de referência ou como não factuais quando eram apenas formatação ou avisos de sistema.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": false,
+            "reason": "Digressão: aviso de sistema sobre a natureza da resposta."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Esclarece o escopo dos dados apresentados."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u007",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u008",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u009",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u010",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u011",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u012",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u013",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u014",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de faturamento mensal."
+          },
+          {
+            "unit_id": "u015",
+            "relevant": true,
+            "reason": "Fornece contexto adicional relevante sobre o período total."
+          },
+          {
+            "unit_id": "u016",
+            "relevant": false,
+            "reason": "Digressão: metadados sobre a consulta de documentos."
+          },
+          {
+            "unit_id": "u017",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u018",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u019",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u020",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u021",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u022",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u023",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u024",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u025",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u026",
+            "relevant": false,
+            "reason": "Digressão: metadados sobre a consulta de documentos."
+          },
+          {
+            "unit_id": "u027",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u028",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u029",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u030",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u031",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u032",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u033",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u034",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u035",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u036",
+            "relevant": false,
+            "reason": "Digressão: metadados sobre a consulta de documentos."
+          },
+          {
+            "unit_id": "u037",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u038",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u039",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u040",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u041",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u042",
+            "relevant": false,
+            "reason": "Digressão: conteúdo de documento não solicitado."
+          },
+          {
+            "unit_id": "u043",
+            "relevant": false,
+            "reason": "Digressão: formatação."
+          },
+          {
+            "unit_id": "u044",
+            "relevant": false,
+            "reason": "Digressão: nota sobre a natureza dos dados."
+          }
+        ]
+      },
+      "latency_ms": 9622.693
+    }
+  ],
+  "results": [
+    {
+      "id": "G04",
+      "category": "faturamento",
+      "question": "Como evoluiu o faturamento por mês nos 12 meses disponíveis? Liste uma linha por mês no formato YYYY-MM com o valor exato.",
+      "expected_behavior": "Usar faturadas agrupadas por mês, sem incluir pendentes/canceladas.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:monthly"
+      ],
+      "checks": [
+        "monthly"
+      ],
+      "generation_status": "reused",
+      "answer": "**Resumo factual das ferramentas — sem síntese do Gemini.**\n\nFaturamento mensal realizado (somente itens faturados):\n\n2025-10: R$ 69.100.257,04\n2025-11: R$ 47.569.449,23\n2025-12: R$ 22.958.227,98\n2026-01: R$ 20.195.392,48\n2026-02: R$ 24.733.899,94\n2026-03: R$ 21.990.732,75\n2026-04: R$ 19.900.242,28\n2026-05: R$ 18.898.851,47\n2026-06: R$ 31.224.307,20\n2026-07: R$ 49.589.766,87\n2026-08: R$ 84.051.605,74\n2026-09: R$ 82.913.784,04\n\nPeríodo 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.\n\nTrecho consultado [politica_comercial.md, trecho 1]:\n\n> # Política comercial fictícia — Agro Intelligence AI\n> Documento PC-001. Vigência didática: setembro a dezembro de 2026.\n> \n> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n> \n> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n> \n> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n> \n\nTrecho consultado [logistica_atendimento.md, trecho 1]:\n\n> # Entrega e atendimento fictícios\n> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.\n> \n> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n> \n> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n> \n> Todas as condições são simulações acadêmicas e não representam uma empresa real.\n> \n\nTrecho consultado [catalogo_comercial.md, trecho 1]:\n\n> # Catálogo comercial fictício\n> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.\n> \n> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n> \n> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n> \n\nDados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "mensal": [
+              {
+                "mes": "2025-10",
+                "receita_faturada": "69100257.04",
+                "carteira_pendente": "19312146.84"
+              },
+              {
+                "mes": "2025-11",
+                "receita_faturada": "47569449.23",
+                "carteira_pendente": "14718965.52"
+              },
+              {
+                "mes": "2025-12",
+                "receita_faturada": "22958227.98",
+                "carteira_pendente": "6899802.23"
+              },
+              {
+                "mes": "2026-01",
+                "receita_faturada": "20195392.48",
+                "carteira_pendente": "6190956.60"
+              },
+              {
+                "mes": "2026-02",
+                "receita_faturada": "24733899.94",
+                "carteira_pendente": "7341237.46"
+              },
+              {
+                "mes": "2026-03",
+                "receita_faturada": "21990732.75",
+                "carteira_pendente": "9406211.94"
+              },
+              {
+                "mes": "2026-04",
+                "receita_faturada": "19900242.28",
+                "carteira_pendente": "7607415.97"
+              },
+              {
+                "mes": "2026-05",
+                "receita_faturada": "18898851.47",
+                "carteira_pendente": "5836759.65"
+              },
+              {
+                "mes": "2026-06",
+                "receita_faturada": "31224307.20",
+                "carteira_pendente": "11496612.31"
+              },
+              {
+                "mes": "2026-07",
+                "receita_faturada": "49589766.87",
+                "carteira_pendente": "12604227.39"
+              },
+              {
+                "mes": "2026-08",
+                "receita_faturada": "84051605.74",
+                "carteira_pendente": "25960661.80"
+              },
+              {
+                "mes": "2026-09",
+                "receita_faturada": "82913784.04",
+                "carteira_pendente": "27771365.83"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.3896902799606323
+            },
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.40149396657943726
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.40946877002716064
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "rejected",
+          "reason": "incomplete_monthly_response"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 29,
+          "claims": 29,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.3181818181818182,
+          "relevant": 14,
+          "units": 44,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "generation_attempted": false,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "rejected_cached_responses": [
+        {
+          "response_key": "4a0d375b7c0d5474494c880425788b79eddb5832d6f7d34ada0950445d6343ed",
+          "origin": {
+            "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T143301Z-batch-32dd30\\results.json",
+            "fresh_generation": true
+          },
+          "completeness": {
+            "status": "failed",
+            "reason": "missing_duplicate_or_inaccurate_monthly_lines",
+            "expected_periods": [
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07",
+              "2026-08",
+              "2026-09"
+            ],
+            "missing_or_invalid_periods": [
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07",
+              "2026-08",
+              "2026-09"
+            ]
+          },
+          "historical_metrics": {
+            "faithfulness": {
+              "status": "evaluated",
+              "score": 1.0,
+              "supported": 14,
+              "claims": 14,
+              "protocol": "indexed_claim_evidence_v2"
+            },
+            "answer_relevancy": {
+              "status": "evaluated",
+              "score": 0.0,
+              "relevant": 0,
+              "units": 33,
+              "protocol": "indexed_answer_lines_v2"
+            }
+          }
+        }
+      ],
+      "response_key": "94c8de2929feb3295e86bc640d5f8983618ef35ac8600646f6004d51b737a61f",
+      "response_origin": {
+        "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T125121Z-pipeline-6b67fd\\generate-G04\\results.json",
+        "fresh_generation": true
+      },
+      "historical_api_failures": [],
+      "generation_latency_ms": null,
+      "deterministic": [
+        {
+          "check": "monthly",
+          "status": "passed",
+          "reference_rows": [
+            {
+              "mes": "2025-10",
+              "valor": "69100257.04"
+            },
+            {
+              "mes": "2025-11",
+              "valor": "47569449.23"
+            },
+            {
+              "mes": "2025-12",
+              "valor": "22958227.98"
+            },
+            {
+              "mes": "2026-01",
+              "valor": "20195392.48"
+            },
+            {
+              "mes": "2026-02",
+              "valor": "24733899.94"
+            },
+            {
+              "mes": "2026-03",
+              "valor": "21990732.75"
+            },
+            {
+              "mes": "2026-04",
+              "valor": "19900242.28"
+            },
+            {
+              "mes": "2026-05",
+              "valor": "18898851.47"
+            },
+            {
+              "mes": "2026-06",
+              "valor": "31224307.20"
+            },
+            {
+              "mes": "2026-07",
+              "valor": "49589766.87"
+            },
+            {
+              "mes": "2026-08",
+              "valor": "84051605.74"
+            },
+            {
+              "mes": "2026-09",
+              "valor": "82913784.04"
+            }
+          ],
+          "missing_or_inaccurate_values": []
+        }
+      ],
+      "completeness": {
+        "status": "passed",
+        "reason": "complete_monthly_lines",
+        "expected_periods": [
+          "2025-10",
+          "2025-11",
+          "2025-12",
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05",
+          "2026-06",
+          "2026-07",
+          "2026-08",
+          "2026-09"
+        ],
+        "missing_or_invalid_periods": []
+      },
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "current_assessment": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 29,
+          "claims": 29,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "faithfulness_judgment": {
+          "claims": [
+            {
+              "claim_id": "c001",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Trata-se de um título ou aviso introdutório sem afirmação factual.",
+              "quote": "**Resumo factual das ferramentas — sem síntese do Gemini.**",
+              "start": 0,
+              "end": 59,
+              "evidence": []
+            },
+            {
+              "claim_id": "c002",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0001"
+              ],
+              "reason": "A afirmação de que o faturamento se refere apenas a itens faturados é sustentada pelo snippet s0001.",
+              "quote": "Faturamento mensal realizado (somente itens faturados):",
+              "start": 61,
+              "end": 116,
+              "evidence": [
+                {
+                  "snippet_id": "s0001",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/regra",
+                  "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+                }
+              ]
+            },
+            {
+              "claim_id": "c003",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0030",
+                "s0031"
+              ],
+              "reason": "O valor de R$ 69.100.257,04 para 2025-10 está correto conforme s0030 e s0031.",
+              "quote": "2025-10: R$ 69.100.257,04",
+              "start": 118,
+              "end": 143,
+              "evidence": [
+                {
+                  "snippet_id": "s0030",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/0/mes",
+                  "value": "2025-10"
+                },
+                {
+                  "snippet_id": "s0031",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/0/receita_faturada",
+                  "value": "69100257.04"
+                }
+              ]
+            },
+            {
+              "claim_id": "c004",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0033",
+                "s0034"
+              ],
+              "reason": "O valor de R$ 47.569.449,23 para 2025-11 está correto conforme s0033 e s0034.",
+              "quote": "2025-11: R$ 47.569.449,23",
+              "start": 144,
+              "end": 169,
+              "evidence": [
+                {
+                  "snippet_id": "s0033",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/1/mes",
+                  "value": "2025-11"
+                },
+                {
+                  "snippet_id": "s0034",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/1/receita_faturada",
+                  "value": "47569449.23"
+                }
+              ]
+            },
+            {
+              "claim_id": "c005",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0036",
+                "s0037"
+              ],
+              "reason": "O valor de R$ 22.958.227,98 para 2025-12 está correto conforme s0036 e s0037.",
+              "quote": "2025-12: R$ 22.958.227,98",
+              "start": 170,
+              "end": 195,
+              "evidence": [
+                {
+                  "snippet_id": "s0036",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/2/mes",
+                  "value": "2025-12"
+                },
+                {
+                  "snippet_id": "s0037",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/2/receita_faturada",
+                  "value": "22958227.98"
+                }
+              ]
+            },
+            {
+              "claim_id": "c006",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0039",
+                "s0040"
+              ],
+              "reason": "O valor de R$ 20.195.392,48 para 2026-01 está correto conforme s0039 e s0040.",
+              "quote": "2026-01: R$ 20.195.392,48",
+              "start": 196,
+              "end": 221,
+              "evidence": [
+                {
+                  "snippet_id": "s0039",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/3/mes",
+                  "value": "2026-01"
+                },
+                {
+                  "snippet_id": "s0040",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/3/receita_faturada",
+                  "value": "20195392.48"
+                }
+              ]
+            },
+            {
+              "claim_id": "c007",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0042",
+                "s0043"
+              ],
+              "reason": "O valor de R$ 24.733.899,94 para 2026-02 está correto conforme s0042 e s0043.",
+              "quote": "2026-02: R$ 24.733.899,94",
+              "start": 222,
+              "end": 247,
+              "evidence": [
+                {
+                  "snippet_id": "s0042",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/4/mes",
+                  "value": "2026-02"
+                },
+                {
+                  "snippet_id": "s0043",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/4/receita_faturada",
+                  "value": "24733899.94"
+                }
+              ]
+            },
+            {
+              "claim_id": "c008",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0045",
+                "s0046"
+              ],
+              "reason": "O valor de R$ 21.990.732,75 para 2026-03 está correto conforme s0045 e s0046.",
+              "quote": "2026-03: R$ 21.990.732,75",
+              "start": 248,
+              "end": 273,
+              "evidence": [
+                {
+                  "snippet_id": "s0045",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/5/mes",
+                  "value": "2026-03"
+                },
+                {
+                  "snippet_id": "s0046",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/5/receita_faturada",
+                  "value": "21990732.75"
+                }
+              ]
+            },
+            {
+              "claim_id": "c009",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0048",
+                "s0049"
+              ],
+              "reason": "O valor de R$ 19.900.242,28 para 2026-04 está correto conforme s0048 e s0049.",
+              "quote": "2026-04: R$ 19.900.242,28",
+              "start": 274,
+              "end": 299,
+              "evidence": [
+                {
+                  "snippet_id": "s0048",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/6/mes",
+                  "value": "2026-04"
+                },
+                {
+                  "snippet_id": "s0049",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/6/receita_faturada",
+                  "value": "19900242.28"
+                }
+              ]
+            },
+            {
+              "claim_id": "c010",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0051",
+                "s0052"
+              ],
+              "reason": "O valor de R$ 18.898.851,47 para 2026-05 está correto conforme s0051 e s0052.",
+              "quote": "2026-05: R$ 18.898.851,47",
+              "start": 300,
+              "end": 325,
+              "evidence": [
+                {
+                  "snippet_id": "s0051",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/7/mes",
+                  "value": "2026-05"
+                },
+                {
+                  "snippet_id": "s0052",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/7/receita_faturada",
+                  "value": "18898851.47"
+                }
+              ]
+            },
+            {
+              "claim_id": "c011",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0054",
+                "s0055"
+              ],
+              "reason": "O valor de R$ 31.224.307,20 para 2026-06 está correto conforme s0054 e s0055.",
+              "quote": "2026-06: R$ 31.224.307,20",
+              "start": 326,
+              "end": 351,
+              "evidence": [
+                {
+                  "snippet_id": "s0054",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/8/mes",
+                  "value": "2026-06"
+                },
+                {
+                  "snippet_id": "s0055",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/8/receita_faturada",
+                  "value": "31224307.20"
+                }
+              ]
+            },
+            {
+              "claim_id": "c012",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0057",
+                "s0058"
+              ],
+              "reason": "O valor de R$ 49.589.766,87 para 2026-07 está correto conforme s0057 e s0058.",
+              "quote": "2026-07: R$ 49.589.766,87",
+              "start": 352,
+              "end": 377,
+              "evidence": [
+                {
+                  "snippet_id": "s0057",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/9/mes",
+                  "value": "2026-07"
+                },
+                {
+                  "snippet_id": "s0058",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/9/receita_faturada",
+                  "value": "49589766.87"
+                }
+              ]
+            },
+            {
+              "claim_id": "c013",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0060",
+                "s0061"
+              ],
+              "reason": "O valor de R$ 84.051.605,74 para 2026-08 está correto conforme s0060 e s0061.",
+              "quote": "2026-08: R$ 84.051.605,74",
+              "start": 378,
+              "end": 403,
+              "evidence": [
+                {
+                  "snippet_id": "s0060",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/10/mes",
+                  "value": "2026-08"
+                },
+                {
+                  "snippet_id": "s0061",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/10/receita_faturada",
+                  "value": "84051605.74"
+                }
+              ]
+            },
+            {
+              "claim_id": "c014",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0063",
+                "s0064"
+              ],
+              "reason": "O valor de R$ 82.913.784,04 para 2026-09 está correto conforme s0063 e s0064.",
+              "quote": "2026-09: R$ 82.913.784,04",
+              "start": 404,
+              "end": 429,
+              "evidence": [
+                {
+                  "snippet_id": "s0063",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/11/mes",
+                  "value": "2026-09"
+                },
+                {
+                  "snippet_id": "s0064",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/mensal/11/receita_faturada",
+                  "value": "82913784.04"
+                }
+              ]
+            },
+            {
+              "claim_id": "c015",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0013",
+                "s0015",
+                "s0016"
+              ],
+              "reason": "Os totais de faturamento, margem e carteira pendente estão corretos conforme os snippets citados.",
+              "quote": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.",
+              "start": 431,
+              "end": 566,
+              "evidence": [
+                {
+                  "snippet_id": "s0013",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/receita_faturada",
+                  "value": "493126517.02"
+                },
+                {
+                  "snippet_id": "s0015",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/margem_faturada",
+                  "value": "100023056.21"
+                },
+                {
+                  "snippet_id": "s0016",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/carteira_pendente",
+                  "value": "155146363.54"
+                }
+              ]
+            },
+            {
+              "claim_id": "c016",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Aviso de consulta de documento, não é uma afirmação factual.",
+              "quote": "Trecho consultado [politica_comercial.md, trecho 1]:",
+              "start": 568,
+              "end": 620,
+              "evidence": []
+            },
+            {
+              "claim_id": "c017",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "Título do documento citado em s0066.",
+              "quote": "> # Política comercial fictícia — Agro Intelligence AI",
+              "start": 622,
+              "end": 676,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c018",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "Informação de vigência didática contida em s0066.",
+              "quote": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 677,
+              "end": 744,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c019",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 745,
+              "end": 747,
+              "evidence": []
+            },
+            {
+              "claim_id": "c020",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "Regras de desconto descritas em s0066.",
+              "quote": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.",
+              "start": 748,
+              "end": 974,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c021",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 975,
+              "end": 977,
+              "evidence": []
+            },
+            {
+              "claim_id": "c022",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "Regras de pagamento e exclusão de pedidos cancelados descritas em s0066.",
+              "quote": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.",
+              "start": 978,
+              "end": 1260,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c023",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 1261,
+              "end": 1263,
+              "evidence": []
+            },
+            {
+              "claim_id": "c024",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0066"
+              ],
+              "reason": "Aviso de natureza fictícia dos dados em s0066.",
+              "quote": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.",
+              "start": 1264,
+              "end": 1354,
+              "evidence": [
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/0/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c025",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 1355,
+              "end": 1357,
+              "evidence": []
+            },
+            {
+              "claim_id": "c026",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Aviso de consulta de documento, não é uma afirmação factual.",
+              "quote": "Trecho consultado [logistica_atendimento.md, trecho 1]:",
+              "start": 1359,
+              "end": 1414,
+              "evidence": []
+            },
+            {
+              "claim_id": "c027",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "Título do documento citado em s0070.",
+              "quote": "> # Entrega e atendimento fictícios",
+              "start": 1416,
+              "end": 1451,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c028",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "Informação de vigência didática contida em s0070.",
+              "quote": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 1452,
+              "end": 1520,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c029",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 1521,
+              "end": 1523,
+              "evidence": []
+            },
+            {
+              "claim_id": "c030",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "Horário de atendimento e prazos de entrega descritos em s0070.",
+              "quote": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.",
+              "start": 1524,
+              "end": 1759,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c031",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 1760,
+              "end": 1762,
+              "evidence": []
+            },
+            {
+              "claim_id": "c032",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "Regras de frete e devolução descritas em s0070.",
+              "quote": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.",
+              "start": 1763,
+              "end": 2050,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c033",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 2051,
+              "end": 2053,
+              "evidence": []
+            },
+            {
+              "claim_id": "c034",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0070"
+              ],
+              "reason": "Aviso de natureza fictícia dos dados em s0070.",
+              "quote": "> Todas as condições são simulações acadêmicas e não representam uma empresa real.",
+              "start": 2054,
+              "end": 2136,
+              "evidence": [
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c035",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 2137,
+              "end": 2139,
+              "evidence": []
+            },
+            {
+              "claim_id": "c036",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Aviso de consulta de documento, não é uma afirmação factual.",
+              "quote": "Trecho consultado [catalogo_comercial.md, trecho 1]:",
+              "start": 2141,
+              "end": 2193,
+              "evidence": []
+            },
+            {
+              "claim_id": "c037",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "Título do documento citado em s0074.",
+              "quote": "> # Catálogo comercial fictício",
+              "start": 2195,
+              "end": 2226,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c038",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "Informação de vigência didática contida em s0074.",
+              "quote": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 2227,
+              "end": 2295,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c039",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 2296,
+              "end": 2298,
+              "evidence": []
+            },
+            {
+              "claim_id": "c040",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "Preços de lista dos produtos descritos em s0074.",
+              "quote": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.",
+              "start": 2299,
+              "end": 2508,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c041",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 2509,
+              "end": 2511,
+              "evidence": []
+            },
+            {
+              "claim_id": "c042",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0074"
+              ],
+              "reason": "Aviso sobre a natureza fictícia dos produtos e ausência de recomendação agronômica em s0074.",
+              "quote": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.",
+              "start": 2512,
+              "end": 2760,
+              "evidence": [
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e2",
+                  "origin": "comercial.documentos",
+                  "path": "/content/2/text",
+                  "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c043",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Espaçamento/formatação, sem conteúdo factual.",
+              "quote": "> ",
+              "start": 2761,
+              "end": 2763,
+              "evidence": []
+            },
+            {
+              "claim_id": "c044",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0001"
+              ],
+              "reason": "Confirmação de que os dados são sintéticos conforme s0001.",
+              "quote": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+              "start": 2765,
+              "end": 2876,
+              "evidence": [
+                {
+                  "snippet_id": "s0001",
+                  "evidence_id": "e1",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/regra",
+                  "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+                }
+              ]
+            }
+          ],
+          "explanation": "A resposta forneceu corretamente a evolução do faturamento mensal solicitada, utilizando os dados sintéticos disponíveis nos snippets. Todos os valores numéricos foram verificados e estão em conformidade com as evidências fornecidas. As demais unidades de texto (avisos, títulos e documentos) foram classificadas como factuais quando continham informações presentes nos documentos de referência ou como não factuais quando eram apenas formatação ou avisos de sistema."
+        },
+        "claim_units": [
+          {
+            "claim_id": "c001",
+            "text": "**Resumo factual das ferramentas — sem síntese do Gemini.**",
+            "start": 0,
+            "end": 59
+          },
+          {
+            "claim_id": "c002",
+            "text": "Faturamento mensal realizado (somente itens faturados):",
+            "start": 61,
+            "end": 116
+          },
+          {
+            "claim_id": "c003",
+            "text": "2025-10: R$ 69.100.257,04",
+            "start": 118,
+            "end": 143
+          },
+          {
+            "claim_id": "c004",
+            "text": "2025-11: R$ 47.569.449,23",
+            "start": 144,
+            "end": 169
+          },
+          {
+            "claim_id": "c005",
+            "text": "2025-12: R$ 22.958.227,98",
+            "start": 170,
+            "end": 195
+          },
+          {
+            "claim_id": "c006",
+            "text": "2026-01: R$ 20.195.392,48",
+            "start": 196,
+            "end": 221
+          },
+          {
+            "claim_id": "c007",
+            "text": "2026-02: R$ 24.733.899,94",
+            "start": 222,
+            "end": 247
+          },
+          {
+            "claim_id": "c008",
+            "text": "2026-03: R$ 21.990.732,75",
+            "start": 248,
+            "end": 273
+          },
+          {
+            "claim_id": "c009",
+            "text": "2026-04: R$ 19.900.242,28",
+            "start": 274,
+            "end": 299
+          },
+          {
+            "claim_id": "c010",
+            "text": "2026-05: R$ 18.898.851,47",
+            "start": 300,
+            "end": 325
+          },
+          {
+            "claim_id": "c011",
+            "text": "2026-06: R$ 31.224.307,20",
+            "start": 326,
+            "end": 351
+          },
+          {
+            "claim_id": "c012",
+            "text": "2026-07: R$ 49.589.766,87",
+            "start": 352,
+            "end": 377
+          },
+          {
+            "claim_id": "c013",
+            "text": "2026-08: R$ 84.051.605,74",
+            "start": 378,
+            "end": 403
+          },
+          {
+            "claim_id": "c014",
+            "text": "2026-09: R$ 82.913.784,04",
+            "start": 404,
+            "end": 429
+          },
+          {
+            "claim_id": "c015",
+            "text": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.",
+            "start": 431,
+            "end": 566
+          },
+          {
+            "claim_id": "c016",
+            "text": "Trecho consultado [politica_comercial.md, trecho 1]:",
+            "start": 568,
+            "end": 620
+          },
+          {
+            "claim_id": "c017",
+            "text": "> # Política comercial fictícia — Agro Intelligence AI",
+            "start": 622,
+            "end": 676
+          },
+          {
+            "claim_id": "c018",
+            "text": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026.",
+            "start": 677,
+            "end": 744
+          },
+          {
+            "claim_id": "c019",
+            "text": "> ",
+            "start": 745,
+            "end": 747
+          },
+          {
+            "claim_id": "c020",
+            "text": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.",
+            "start": 748,
+            "end": 974
+          },
+          {
+            "claim_id": "c021",
+            "text": "> ",
+            "start": 975,
+            "end": 977
+          },
+          {
+            "claim_id": "c022",
+            "text": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.",
+            "start": 978,
+            "end": 1260
+          },
+          {
+            "claim_id": "c023",
+            "text": "> ",
+            "start": 1261,
+            "end": 1263
+          },
+          {
+            "claim_id": "c024",
+            "text": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.",
+            "start": 1264,
+            "end": 1354
+          },
+          {
+            "claim_id": "c025",
+            "text": "> ",
+            "start": 1355,
+            "end": 1357
+          },
+          {
+            "claim_id": "c026",
+            "text": "Trecho consultado [logistica_atendimento.md, trecho 1]:",
+            "start": 1359,
+            "end": 1414
+          },
+          {
+            "claim_id": "c027",
+            "text": "> # Entrega e atendimento fictícios",
+            "start": 1416,
+            "end": 1451
+          },
+          {
+            "claim_id": "c028",
+            "text": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.",
+            "start": 1452,
+            "end": 1520
+          },
+          {
+            "claim_id": "c029",
+            "text": "> ",
+            "start": 1521,
+            "end": 1523
+          },
+          {
+            "claim_id": "c030",
+            "text": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.",
+            "start": 1524,
+            "end": 1759
+          },
+          {
+            "claim_id": "c031",
+            "text": "> ",
+            "start": 1760,
+            "end": 1762
+          },
+          {
+            "claim_id": "c032",
+            "text": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.",
+            "start": 1763,
+            "end": 2050
+          },
+          {
+            "claim_id": "c033",
+            "text": "> ",
+            "start": 2051,
+            "end": 2053
+          },
+          {
+            "claim_id": "c034",
+            "text": "> Todas as condições são simulações acadêmicas e não representam uma empresa real.",
+            "start": 2054,
+            "end": 2136
+          },
+          {
+            "claim_id": "c035",
+            "text": "> ",
+            "start": 2137,
+            "end": 2139
+          },
+          {
+            "claim_id": "c036",
+            "text": "Trecho consultado [catalogo_comercial.md, trecho 1]:",
+            "start": 2141,
+            "end": 2193
+          },
+          {
+            "claim_id": "c037",
+            "text": "> # Catálogo comercial fictício",
+            "start": 2195,
+            "end": 2226
+          },
+          {
+            "claim_id": "c038",
+            "text": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.",
+            "start": 2227,
+            "end": 2295
+          },
+          {
+            "claim_id": "c039",
+            "text": "> ",
+            "start": 2296,
+            "end": 2298
+          },
+          {
+            "claim_id": "c040",
+            "text": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.",
+            "start": 2299,
+            "end": 2508
+          },
+          {
+            "claim_id": "c041",
+            "text": "> ",
+            "start": 2509,
+            "end": 2511
+          },
+          {
+            "claim_id": "c042",
+            "text": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.",
+            "start": 2512,
+            "end": 2760
+          },
+          {
+            "claim_id": "c043",
+            "text": "> ",
+            "start": 2761,
+            "end": 2763
+          },
+          {
+            "claim_id": "c044",
+            "text": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+            "start": 2765,
+            "end": 2876
+          }
+        ],
+        "evidence_snippets": [
+          {
+            "snippet_id": "s0001",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/regra",
+            "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+          },
+          {
+            "snippet_id": "s0002",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/limite_por_consulta",
+            "value": 20
+          },
+          {
+            "snippet_id": "s0003",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/regioes",
+            "value": 5
+          },
+          {
+            "snippet_id": "s0004",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/centros",
+            "value": 15
+          },
+          {
+            "snippet_id": "s0005",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/clientes",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0006",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/produtos",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0007",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/historico_precos",
+            "value": 12000
+          },
+          {
+            "snippet_id": "s0008",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/pedidos",
+            "value": 8000
+          },
+          {
+            "snippet_id": "s0009",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/vendas",
+            "value": 20000
+          },
+          {
+            "snippet_id": "s0010",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/estoque",
+            "value": 3000
+          },
+          {
+            "snippet_id": "s0011",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/inicio",
+            "value": "2025-10-01"
+          },
+          {
+            "snippet_id": "s0012",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/fim",
+            "value": "2026-09-30"
+          },
+          {
+            "snippet_id": "s0013",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/receita_faturada",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0014",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/custo_faturado",
+            "value": "393103460.81"
+          },
+          {
+            "snippet_id": "s0015",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/margem_faturada",
+            "value": "100023056.21"
+          },
+          {
+            "snippet_id": "s0016",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/carteira_pendente",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0017",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/valor_cancelado",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0018",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0019",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/linhas",
+            "value": 1008
+          },
+          {
+            "snippet_id": "s0020",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/pedidos",
+            "value": 396
+          },
+          {
+            "snippet_id": "s0021",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/valor",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0022",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0023",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/linhas",
+            "value": 14431
+          },
+          {
+            "snippet_id": "s0024",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/pedidos",
+            "value": 5772
+          },
+          {
+            "snippet_id": "s0025",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/valor",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0026",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0027",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/linhas",
+            "value": 4561
+          },
+          {
+            "snippet_id": "s0028",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/pedidos",
+            "value": 1832
+          },
+          {
+            "snippet_id": "s0029",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/valor",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0030",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/0/mes",
+            "value": "2025-10"
+          },
+          {
+            "snippet_id": "s0031",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/0/receita_faturada",
+            "value": "69100257.04"
+          },
+          {
+            "snippet_id": "s0032",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/0/carteira_pendente",
+            "value": "19312146.84"
+          },
+          {
+            "snippet_id": "s0033",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/1/mes",
+            "value": "2025-11"
+          },
+          {
+            "snippet_id": "s0034",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/1/receita_faturada",
+            "value": "47569449.23"
+          },
+          {
+            "snippet_id": "s0035",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/1/carteira_pendente",
+            "value": "14718965.52"
+          },
+          {
+            "snippet_id": "s0036",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/2/mes",
+            "value": "2025-12"
+          },
+          {
+            "snippet_id": "s0037",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/2/receita_faturada",
+            "value": "22958227.98"
+          },
+          {
+            "snippet_id": "s0038",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/2/carteira_pendente",
+            "value": "6899802.23"
+          },
+          {
+            "snippet_id": "s0039",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/3/mes",
+            "value": "2026-01"
+          },
+          {
+            "snippet_id": "s0040",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/3/receita_faturada",
+            "value": "20195392.48"
+          },
+          {
+            "snippet_id": "s0041",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/3/carteira_pendente",
+            "value": "6190956.60"
+          },
+          {
+            "snippet_id": "s0042",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/4/mes",
+            "value": "2026-02"
+          },
+          {
+            "snippet_id": "s0043",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/4/receita_faturada",
+            "value": "24733899.94"
+          },
+          {
+            "snippet_id": "s0044",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/4/carteira_pendente",
+            "value": "7341237.46"
+          },
+          {
+            "snippet_id": "s0045",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/5/mes",
+            "value": "2026-03"
+          },
+          {
+            "snippet_id": "s0046",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/5/receita_faturada",
+            "value": "21990732.75"
+          },
+          {
+            "snippet_id": "s0047",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/5/carteira_pendente",
+            "value": "9406211.94"
+          },
+          {
+            "snippet_id": "s0048",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/6/mes",
+            "value": "2026-04"
+          },
+          {
+            "snippet_id": "s0049",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/6/receita_faturada",
+            "value": "19900242.28"
+          },
+          {
+            "snippet_id": "s0050",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/6/carteira_pendente",
+            "value": "7607415.97"
+          },
+          {
+            "snippet_id": "s0051",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/7/mes",
+            "value": "2026-05"
+          },
+          {
+            "snippet_id": "s0052",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/7/receita_faturada",
+            "value": "18898851.47"
+          },
+          {
+            "snippet_id": "s0053",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/7/carteira_pendente",
+            "value": "5836759.65"
+          },
+          {
+            "snippet_id": "s0054",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/8/mes",
+            "value": "2026-06"
+          },
+          {
+            "snippet_id": "s0055",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/8/receita_faturada",
+            "value": "31224307.20"
+          },
+          {
+            "snippet_id": "s0056",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/8/carteira_pendente",
+            "value": "11496612.31"
+          },
+          {
+            "snippet_id": "s0057",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/9/mes",
+            "value": "2026-07"
+          },
+          {
+            "snippet_id": "s0058",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/9/receita_faturada",
+            "value": "49589766.87"
+          },
+          {
+            "snippet_id": "s0059",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/9/carteira_pendente",
+            "value": "12604227.39"
+          },
+          {
+            "snippet_id": "s0060",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/10/mes",
+            "value": "2026-08"
+          },
+          {
+            "snippet_id": "s0061",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/10/receita_faturada",
+            "value": "84051605.74"
+          },
+          {
+            "snippet_id": "s0062",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/10/carteira_pendente",
+            "value": "25960661.80"
+          },
+          {
+            "snippet_id": "s0063",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/11/mes",
+            "value": "2026-09"
+          },
+          {
+            "snippet_id": "s0064",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/11/receita_faturada",
+            "value": "82913784.04"
+          },
+          {
+            "snippet_id": "s0065",
+            "evidence_id": "e1",
+            "origin": "comercial.indicadores",
+            "path": "/content/mensal/11/carteira_pendente",
+            "value": "27771365.83"
+          },
+          {
+            "snippet_id": "s0066",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/text",
+            "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+          },
+          {
+            "snippet_id": "s0067",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/source",
+            "value": "politica_comercial.md"
+          },
+          {
+            "snippet_id": "s0068",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0069",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/0/distance",
+            "value": 0.3896902799606323
+          },
+          {
+            "snippet_id": "s0070",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/text",
+            "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+          },
+          {
+            "snippet_id": "s0071",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/source",
+            "value": "logistica_atendimento.md"
+          },
+          {
+            "snippet_id": "s0072",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0073",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/1/distance",
+            "value": 0.40149396657943726
+          },
+          {
+            "snippet_id": "s0074",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/text",
+            "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+          },
+          {
+            "snippet_id": "s0075",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/source",
+            "value": "catalogo_comercial.md"
+          },
+          {
+            "snippet_id": "s0076",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0077",
+            "evidence_id": "e2",
+            "origin": "comercial.documentos",
+            "path": "/content/2/distance",
+            "value": 0.40946877002716064
+          }
+        ],
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.3181818181818182,
+          "relevant": 14,
+          "units": 44,
+          "protocol": "indexed_answer_lines_v2"
+        },
+        "relevancy_judgment": {
+          "verdicts": [
+            {
+              "unit_id": "u001",
+              "relevant": false,
+              "reason": "Digressão: aviso de sistema sobre a natureza da resposta.",
+              "quote": "**Resumo factual das ferramentas — sem síntese do Gemini.**",
+              "start": 0,
+              "end": 59
+            },
+            {
+              "unit_id": "u002",
+              "relevant": true,
+              "reason": "Esclarece o escopo dos dados apresentados.",
+              "quote": "Faturamento mensal realizado (somente itens faturados):",
+              "start": 61,
+              "end": 116
+            },
+            {
+              "unit_id": "u003",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2025-10: R$ 69.100.257,04",
+              "start": 118,
+              "end": 143
+            },
+            {
+              "unit_id": "u004",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2025-11: R$ 47.569.449,23",
+              "start": 144,
+              "end": 169
+            },
+            {
+              "unit_id": "u005",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2025-12: R$ 22.958.227,98",
+              "start": 170,
+              "end": 195
+            },
+            {
+              "unit_id": "u006",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-01: R$ 20.195.392,48",
+              "start": 196,
+              "end": 221
+            },
+            {
+              "unit_id": "u007",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-02: R$ 24.733.899,94",
+              "start": 222,
+              "end": 247
+            },
+            {
+              "unit_id": "u008",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-03: R$ 21.990.732,75",
+              "start": 248,
+              "end": 273
+            },
+            {
+              "unit_id": "u009",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-04: R$ 19.900.242,28",
+              "start": 274,
+              "end": 299
+            },
+            {
+              "unit_id": "u010",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-05: R$ 18.898.851,47",
+              "start": 300,
+              "end": 325
+            },
+            {
+              "unit_id": "u011",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-06: R$ 31.224.307,20",
+              "start": 326,
+              "end": 351
+            },
+            {
+              "unit_id": "u012",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-07: R$ 49.589.766,87",
+              "start": 352,
+              "end": 377
+            },
+            {
+              "unit_id": "u013",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-08: R$ 84.051.605,74",
+              "start": 378,
+              "end": 403
+            },
+            {
+              "unit_id": "u014",
+              "relevant": true,
+              "reason": "Responde diretamente à solicitação de faturamento mensal.",
+              "quote": "2026-09: R$ 82.913.784,04",
+              "start": 404,
+              "end": 429
+            },
+            {
+              "unit_id": "u015",
+              "relevant": true,
+              "reason": "Fornece contexto adicional relevante sobre o período total.",
+              "quote": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.",
+              "start": 431,
+              "end": 566
+            },
+            {
+              "unit_id": "u016",
+              "relevant": false,
+              "reason": "Digressão: metadados sobre a consulta de documentos.",
+              "quote": "Trecho consultado [politica_comercial.md, trecho 1]:",
+              "start": 568,
+              "end": 620
+            },
+            {
+              "unit_id": "u017",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> # Política comercial fictícia — Agro Intelligence AI",
+              "start": 622,
+              "end": 676
+            },
+            {
+              "unit_id": "u018",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 677,
+              "end": 744
+            },
+            {
+              "unit_id": "u019",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 745,
+              "end": 747
+            },
+            {
+              "unit_id": "u020",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.",
+              "start": 748,
+              "end": 974
+            },
+            {
+              "unit_id": "u021",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 975,
+              "end": 977
+            },
+            {
+              "unit_id": "u022",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.",
+              "start": 978,
+              "end": 1260
+            },
+            {
+              "unit_id": "u023",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 1261,
+              "end": 1263
+            },
+            {
+              "unit_id": "u024",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.",
+              "start": 1264,
+              "end": 1354
+            },
+            {
+              "unit_id": "u025",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 1355,
+              "end": 1357
+            },
+            {
+              "unit_id": "u026",
+              "relevant": false,
+              "reason": "Digressão: metadados sobre a consulta de documentos.",
+              "quote": "Trecho consultado [logistica_atendimento.md, trecho 1]:",
+              "start": 1359,
+              "end": 1414
+            },
+            {
+              "unit_id": "u027",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> # Entrega e atendimento fictícios",
+              "start": 1416,
+              "end": 1451
+            },
+            {
+              "unit_id": "u028",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 1452,
+              "end": 1520
+            },
+            {
+              "unit_id": "u029",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 1521,
+              "end": 1523
+            },
+            {
+              "unit_id": "u030",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.",
+              "start": 1524,
+              "end": 1759
+            },
+            {
+              "unit_id": "u031",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 1760,
+              "end": 1762
+            },
+            {
+              "unit_id": "u032",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.",
+              "start": 1763,
+              "end": 2050
+            },
+            {
+              "unit_id": "u033",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 2051,
+              "end": 2053
+            },
+            {
+              "unit_id": "u034",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Todas as condições são simulações acadêmicas e não representam uma empresa real.",
+              "start": 2054,
+              "end": 2136
+            },
+            {
+              "unit_id": "u035",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 2137,
+              "end": 2139
+            },
+            {
+              "unit_id": "u036",
+              "relevant": false,
+              "reason": "Digressão: metadados sobre a consulta de documentos.",
+              "quote": "Trecho consultado [catalogo_comercial.md, trecho 1]:",
+              "start": 2141,
+              "end": 2193
+            },
+            {
+              "unit_id": "u037",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> # Catálogo comercial fictício",
+              "start": 2195,
+              "end": 2226
+            },
+            {
+              "unit_id": "u038",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026.",
+              "start": 2227,
+              "end": 2295
+            },
+            {
+              "unit_id": "u039",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 2296,
+              "end": 2298
+            },
+            {
+              "unit_id": "u040",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.",
+              "start": 2299,
+              "end": 2508
+            },
+            {
+              "unit_id": "u041",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 2509,
+              "end": 2511
+            },
+            {
+              "unit_id": "u042",
+              "relevant": false,
+              "reason": "Digressão: conteúdo de documento não solicitado.",
+              "quote": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.",
+              "start": 2512,
+              "end": 2760
+            },
+            {
+              "unit_id": "u043",
+              "relevant": false,
+              "reason": "Digressão: formatação.",
+              "quote": "> ",
+              "start": 2761,
+              "end": 2763
+            },
+            {
+              "unit_id": "u044",
+              "relevant": false,
+              "reason": "Digressão: nota sobre a natureza dos dados.",
+              "quote": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+              "start": 2765,
+              "end": 2876
+            }
+          ],
+          "explanation": "A resposta forneceu corretamente a evolução do faturamento mensal solicitada, utilizando os dados sintéticos disponíveis nos snippets. Todos os valores numéricos foram verificados e estão em conformidade com as evidências fornecidas. As demais unidades de texto (avisos, títulos e documentos) foram classificadas como factuais quando continham informações presentes nos documentos de referência ou como não factuais quando eram apenas formatação ou avisos de sistema."
+        },
+        "answer_units": [
+          {
+            "unit_id": "u001",
+            "start": 0,
+            "end": 59,
+            "text": "**Resumo factual das ferramentas — sem síntese do Gemini.**"
+          },
+          {
+            "unit_id": "u002",
+            "start": 61,
+            "end": 116,
+            "text": "Faturamento mensal realizado (somente itens faturados):"
+          },
+          {
+            "unit_id": "u003",
+            "start": 118,
+            "end": 143,
+            "text": "2025-10: R$ 69.100.257,04"
+          },
+          {
+            "unit_id": "u004",
+            "start": 144,
+            "end": 169,
+            "text": "2025-11: R$ 47.569.449,23"
+          },
+          {
+            "unit_id": "u005",
+            "start": 170,
+            "end": 195,
+            "text": "2025-12: R$ 22.958.227,98"
+          },
+          {
+            "unit_id": "u006",
+            "start": 196,
+            "end": 221,
+            "text": "2026-01: R$ 20.195.392,48"
+          },
+          {
+            "unit_id": "u007",
+            "start": 222,
+            "end": 247,
+            "text": "2026-02: R$ 24.733.899,94"
+          },
+          {
+            "unit_id": "u008",
+            "start": 248,
+            "end": 273,
+            "text": "2026-03: R$ 21.990.732,75"
+          },
+          {
+            "unit_id": "u009",
+            "start": 274,
+            "end": 299,
+            "text": "2026-04: R$ 19.900.242,28"
+          },
+          {
+            "unit_id": "u010",
+            "start": 300,
+            "end": 325,
+            "text": "2026-05: R$ 18.898.851,47"
+          },
+          {
+            "unit_id": "u011",
+            "start": 326,
+            "end": 351,
+            "text": "2026-06: R$ 31.224.307,20"
+          },
+          {
+            "unit_id": "u012",
+            "start": 352,
+            "end": 377,
+            "text": "2026-07: R$ 49.589.766,87"
+          },
+          {
+            "unit_id": "u013",
+            "start": 378,
+            "end": 403,
+            "text": "2026-08: R$ 84.051.605,74"
+          },
+          {
+            "unit_id": "u014",
+            "start": 404,
+            "end": 429,
+            "text": "2026-09: R$ 82.913.784,04"
+          },
+          {
+            "unit_id": "u015",
+            "start": 431,
+            "end": 566,
+            "text": "Período 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21."
+          },
+          {
+            "unit_id": "u016",
+            "start": 568,
+            "end": 620,
+            "text": "Trecho consultado [politica_comercial.md, trecho 1]:"
+          },
+          {
+            "unit_id": "u017",
+            "start": 622,
+            "end": 676,
+            "text": "> # Política comercial fictícia — Agro Intelligence AI"
+          },
+          {
+            "unit_id": "u018",
+            "start": 677,
+            "end": 744,
+            "text": "> Documento PC-001. Vigência didática: setembro a dezembro de 2026."
+          },
+          {
+            "unit_id": "u019",
+            "start": 745,
+            "end": 747,
+            "text": "> "
+          },
+          {
+            "unit_id": "u020",
+            "start": 748,
+            "end": 974,
+            "text": "> Desconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política."
+          },
+          {
+            "unit_id": "u021",
+            "start": 975,
+            "end": 977,
+            "text": "> "
+          },
+          {
+            "unit_id": "u022",
+            "start": 978,
+            "end": 1260,
+            "text": "> Pagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas."
+          },
+          {
+            "unit_id": "u023",
+            "start": 1261,
+            "end": 1263,
+            "text": "> "
+          },
+          {
+            "unit_id": "u024",
+            "start": 1264,
+            "end": 1354,
+            "text": "> Todos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR."
+          },
+          {
+            "unit_id": "u025",
+            "start": 1355,
+            "end": 1357,
+            "text": "> "
+          },
+          {
+            "unit_id": "u026",
+            "start": 1359,
+            "end": 1414,
+            "text": "Trecho consultado [logistica_atendimento.md, trecho 1]:"
+          },
+          {
+            "unit_id": "u027",
+            "start": 1416,
+            "end": 1451,
+            "text": "> # Entrega e atendimento fictícios"
+          },
+          {
+            "unit_id": "u028",
+            "start": 1452,
+            "end": 1520,
+            "text": "> Documento LOG-001. Vigência didática: setembro a dezembro de 2026."
+          },
+          {
+            "unit_id": "u029",
+            "start": 1521,
+            "end": 1523,
+            "text": "> "
+          },
+          {
+            "unit_id": "u030",
+            "start": 1524,
+            "end": 1759,
+            "text": "> Atendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido."
+          },
+          {
+            "unit_id": "u031",
+            "start": 1760,
+            "end": 1762,
+            "text": "> "
+          },
+          {
+            "unit_id": "u032",
+            "start": 1763,
+            "end": 2050,
+            "text": "> Frete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe."
+          },
+          {
+            "unit_id": "u033",
+            "start": 2051,
+            "end": 2053,
+            "text": "> "
+          },
+          {
+            "unit_id": "u034",
+            "start": 2054,
+            "end": 2136,
+            "text": "> Todas as condições são simulações acadêmicas e não representam uma empresa real."
+          },
+          {
+            "unit_id": "u035",
+            "start": 2137,
+            "end": 2139,
+            "text": "> "
+          },
+          {
+            "unit_id": "u036",
+            "start": 2141,
+            "end": 2193,
+            "text": "Trecho consultado [catalogo_comercial.md, trecho 1]:"
+          },
+          {
+            "unit_id": "u037",
+            "start": 2195,
+            "end": 2226,
+            "text": "> # Catálogo comercial fictício"
+          },
+          {
+            "unit_id": "u038",
+            "start": 2227,
+            "end": 2295,
+            "text": "> Documento CAT-001. Vigência didática: setembro a dezembro de 2026."
+          },
+          {
+            "unit_id": "u039",
+            "start": 2296,
+            "end": 2298,
+            "text": "> "
+          },
+          {
+            "unit_id": "u040",
+            "start": 2299,
+            "end": 2508,
+            "text": "> Fertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00."
+          },
+          {
+            "unit_id": "u041",
+            "start": 2509,
+            "end": 2511,
+            "text": "> "
+          },
+          {
+            "unit_id": "u042",
+            "start": 2512,
+            "end": 2760,
+            "text": "> Os produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade."
+          },
+          {
+            "unit_id": "u043",
+            "start": 2761,
+            "end": 2763,
+            "text": "> "
+          },
+          {
+            "unit_id": "u044",
+            "start": 2765,
+            "end": 2876,
+            "text": "Dados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas."
+          }
+        ],
+        "usage": {
+          "input": 10618,
+          "output": 5279,
+          "total": 15897
+        },
+        "judge_model": "gemini-3.1-flash-lite",
+        "cost": null,
+        "protocols": {
+          "answer_relevancy": "indexed_answer_lines_v2",
+          "faithfulness": "indexed_claim_evidence_v2"
+        },
+        "response_model_version": "gemini-3.1-flash-lite"
+      },
+      "evaluation_latency_ms": 10242.621,
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T130925Z-pipeline-8d9806\\judge-G04\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T130925Z-pipeline-8d9806\\judge-G04\\results.json"
+        }
+      },
+      "total_latency_ms": 10309.667
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 1,
+  "stop_reason": null,
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 1,
+    "api_failed_questions": 0,
+    "cost": null,
+    "questions_with_any_metric": 1,
+    "questions_fully_evaluated": 1,
+    "questions_partially_evaluated": 0,
+    "faithfulness": {
+      "evaluated": 1,
+      "mean": 1.0,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 1,
+      "mean": 0.3181818181818182,
+      "below_threshold": 1,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "review_verdicts_and_deterministic_checks",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 1,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

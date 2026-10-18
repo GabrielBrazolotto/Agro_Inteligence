@@ -1,0 +1,1590 @@
+[
+  {
+    "task": 1,
+    "question": "Quais rupturas de estoque afetam pedidos pendentes e qual o impacto comercial nas margens?",
+    "agents": [
+      "estoque",
+      "comercial"
+    ],
+    "tools": [
+      {
+        "agent": "estoque",
+        "tool": "duckdb_estoque_pedidos",
+        "status": "ok"
+      },
+      {
+        "agent": "comercial",
+        "tool": "duckdb_comercial",
+        "status": "ok"
+      },
+      {
+        "agent": "comercial",
+        "tool": "duckdb_impacto_pares",
+        "status": "ok",
+        "depends_on": "estoque.duckdb_estoque_pedidos"
+      },
+      {
+        "agent": "comercial",
+        "tool": "chroma_rag_comercial",
+        "status": "failed",
+        "category": "local",
+        "http": null,
+        "reference": "5e6619db03d0"
+      }
+    ],
+    "answer": "**Resumo factual das ferramentas — sem síntese do Gemini.**\n\nEstoque em 2026-09-30: 60 posições com disponível zero; 60 em excesso; 755 pares sinalizados por regra. Carteira associada: R$ 74.151.160,39. Isso não é perda estimada nem previsão ML.\n\nPeríodo 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.\n\nO agente comercial recebeu 20 pares do agente de estoque: carteira de R$ 9.339.600,56 nesses pares. É uma amostra, não valor global nem perda prevista.\n\nHá consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.\n\nDados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+    "results": {
+      "estoque": {
+        "abastecimento": {
+          "totais": {
+            "data_estoque": "2026-09-30",
+            "posicoes": 3000,
+            "rupturas_observadas": 60,
+            "excessos": 60,
+            "pares_sinalizados": 755,
+            "carteira_nos_pares_sinalizados": "74151160.39"
+          },
+          "prioridades_amostra": [
+            {
+              "produto_id": 736,
+              "centro_id": 2,
+              "produto": "PRD-00736",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 371,
+              "carteira_quantidade": 667,
+              "carteira_valor": "574218.03"
+            },
+            {
+              "produto_id": 626,
+              "centro_id": 3,
+              "produto": "PRD-00626",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 349,
+              "carteira_quantidade": 655,
+              "carteira_valor": "543491.95"
+            },
+            {
+              "produto_id": 616,
+              "centro_id": 3,
+              "produto": "PRD-00616",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 418,
+              "carteira_quantidade": 561,
+              "carteira_valor": "523019.51"
+            },
+            {
+              "produto_id": 416,
+              "centro_id": 1,
+              "produto": "PRD-00416",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 288,
+              "carteira_quantidade": 1465,
+              "carteira_valor": "507889.78"
+            },
+            {
+              "produto_id": 471,
+              "centro_id": 2,
+              "produto": "PRD-00471",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 430,
+              "carteira_quantidade": 1468,
+              "carteira_valor": "505322.91"
+            },
+            {
+              "produto_id": 616,
+              "centro_id": 2,
+              "produto": "PRD-00616",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 426,
+              "carteira_quantidade": 550,
+              "carteira_valor": "501756.66"
+            },
+            {
+              "produto_id": 601,
+              "centro_id": 3,
+              "produto": "PRD-00601",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 241,
+              "carteira_quantidade": 602,
+              "carteira_valor": "489628.59"
+            },
+            {
+              "produto_id": 487,
+              "centro_id": 5,
+              "produto": "PRD-00487",
+              "centro": "CTR-005",
+              "unidade": "saca_40KG",
+              "disponivel": 415,
+              "carteira_quantidade": 1126,
+              "carteira_valor": "478818.77"
+            },
+            {
+              "produto_id": 156,
+              "centro_id": 2,
+              "produto": "PRD-00156",
+              "centro": "CTR-002",
+              "unidade": "tonelada",
+              "disponivel": 53,
+              "carteira_quantidade": 84,
+              "carteira_valor": "478081.98"
+            },
+            {
+              "produto_id": 591,
+              "centro_id": 1,
+              "produto": "PRD-00591",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 92,
+              "carteira_quantidade": 1156,
+              "carteira_valor": "472648.06"
+            },
+            {
+              "produto_id": 676,
+              "centro_id": 3,
+              "produto": "PRD-00676",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 224,
+              "carteira_quantidade": 540,
+              "carteira_valor": "465934.58"
+            },
+            {
+              "produto_id": 496,
+              "centro_id": 1,
+              "produto": "PRD-00496",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 143,
+              "carteira_quantidade": 1245,
+              "carteira_valor": "451552.29"
+            },
+            {
+              "produto_id": 546,
+              "centro_id": 1,
+              "produto": "PRD-00546",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 169,
+              "carteira_quantidade": 1163,
+              "carteira_valor": "441474.93"
+            },
+            {
+              "produto_id": 631,
+              "centro_id": 3,
+              "produto": "PRD-00631",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 58,
+              "carteira_quantidade": 495,
+              "carteira_valor": "434385.76"
+            },
+            {
+              "produto_id": 421,
+              "centro_id": 2,
+              "produto": "PRD-00421",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 253,
+              "carteira_quantidade": 1173,
+              "carteira_valor": "423499.08"
+            },
+            {
+              "produto_id": 662,
+              "centro_id": 4,
+              "produto": "PRD-00662",
+              "centro": "CTR-004",
+              "unidade": "saca_20KG",
+              "disponivel": 380,
+              "carteira_quantidade": 543,
+              "carteira_valor": "423308.60"
+            },
+            {
+              "produto_id": 546,
+              "centro_id": 2,
+              "produto": "PRD-00546",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 562,
+              "carteira_quantidade": 1103,
+              "carteira_valor": "421735.91"
+            },
+            {
+              "produto_id": 486,
+              "centro_id": 1,
+              "produto": "PRD-00486",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 142,
+              "carteira_quantidade": 985,
+              "carteira_valor": "406255.32"
+            },
+            {
+              "produto_id": 781,
+              "centro_id": 2,
+              "produto": "PRD-00781",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 112,
+              "carteira_quantidade": 484,
+              "carteira_valor": "401980.29"
+            },
+            {
+              "produto_id": 552,
+              "centro_id": 5,
+              "produto": "PRD-00552",
+              "centro": "CTR-005",
+              "unidade": "saca_40KG",
+              "disponivel": 372,
+              "carteira_quantidade": 1032,
+              "carteira_valor": "394597.56"
+            }
+          ],
+          "natureza": "Regra descritiva: disponível zero OU carteira em quantidade maior que disponível, por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+        }
+      },
+      "comercial": {
+        "indicadores": {
+          "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+          "limite_por_consulta": 20,
+          "contagens": {
+            "regioes": 5,
+            "centros": 15,
+            "clientes": 5000,
+            "produtos": 1000,
+            "historico_precos": 12000,
+            "pedidos": 8000,
+            "vendas": 20000,
+            "estoque": 3000
+          },
+          "totais": {
+            "inicio": "2025-10-01",
+            "fim": "2026-09-30",
+            "receita_faturada": "493126517.02",
+            "custo_faturado": "393103460.81",
+            "margem_faturada": "100023056.21",
+            "carteira_pendente": "155146363.54",
+            "valor_cancelado": "34784595.17"
+          },
+          "resumo": [
+            {
+              "status": "cancelada",
+              "linhas": 1008,
+              "pedidos": 396,
+              "valor": "34784595.17"
+            },
+            {
+              "status": "faturada",
+              "linhas": 14431,
+              "pedidos": 5772,
+              "valor": "493126517.02"
+            },
+            {
+              "status": "pendente",
+              "linhas": 4561,
+              "pedidos": 1832,
+              "valor": "155146363.54"
+            }
+          ],
+          "estoque_resumo": [
+            {
+              "unidade": "KG",
+              "pares_produto_centro": 300,
+              "disponivel": 233446,
+              "rupturas": 30,
+              "excessos": 30,
+              "valor_estoque": "888117.83"
+            },
+            {
+              "unidade": "L",
+              "pares_produto_centro": 1200,
+              "disponivel": 425332,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "41312128.07"
+            },
+            {
+              "unidade": "saca_20KG",
+              "pares_produto_centro": 600,
+              "disponivel": 208296,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "141845310.52"
+            },
+            {
+              "unidade": "saca_40KG",
+              "pares_produto_centro": 600,
+              "disponivel": 218247,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "69955289.47"
+            },
+            {
+              "unidade": "tonelada",
+              "pares_produto_centro": 300,
+              "disponivel": 233878,
+              "rupturas": 30,
+              "excessos": 30,
+              "valor_estoque": "834991667.58"
+            }
+          ],
+          "alertas_estoque": [
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-001",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-002",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-003",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00022",
+              "centro": "CTR-004",
+              "unidade": "tonelada",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00022",
+              "centro": "CTR-005",
+              "unidade": "tonelada",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-001",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-002",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-003",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00002",
+              "centro": "CTR-004",
+              "unidade": "tonelada",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00002",
+              "centro": "CTR-005",
+              "unidade": "tonelada",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            }
+          ]
+        },
+        "impacto_compartilhado": {
+          "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+          "pares_consultados": 20,
+          "por_familia": [
+            {
+              "categoria": "Sementes de soja",
+              "unidade": "saca_40KG",
+              "linhas_pendentes": 59,
+              "pedidos": 55,
+              "carteira_pendente": "4503794.61",
+              "margem_carteira": "936377.43"
+            },
+            {
+              "categoria": "Sementes de milho",
+              "unidade": "saca_20KG",
+              "linhas_pendentes": 50,
+              "pedidos": 48,
+              "carteira_pendente": "4357723.97",
+              "margem_carteira": "823949.80"
+            },
+            {
+              "categoria": "Fertilizantes",
+              "unidade": "tonelada",
+              "linhas_pendentes": 5,
+              "pedidos": 5,
+              "carteira_pendente": "478081.98",
+              "margem_carteira": "104204.18"
+            }
+          ]
+        },
+        "documentos": {
+          "unavailable": true,
+          "reference": "5e6619db03d0"
+        }
+      }
+    },
+    "analyses": {},
+    "mode": "local_no_llm"
+  },
+  {
+    "task": 2,
+    "question": "Compare excesso de estoque, faturamento e descontos; consulte a política comercial.",
+    "agents": [
+      "estoque",
+      "comercial"
+    ],
+    "tools": [
+      {
+        "agent": "estoque",
+        "tool": "duckdb_estoque_pedidos",
+        "status": "ok"
+      },
+      {
+        "agent": "comercial",
+        "tool": "duckdb_comercial",
+        "status": "ok"
+      },
+      {
+        "agent": "comercial",
+        "tool": "duckdb_impacto_pares",
+        "status": "ok",
+        "depends_on": "estoque.duckdb_estoque_pedidos"
+      },
+      {
+        "agent": "comercial",
+        "tool": "chroma_rag_comercial",
+        "status": "failed",
+        "category": "local",
+        "http": null,
+        "reference": "b4a114986707"
+      }
+    ],
+    "answer": "**Resumo factual das ferramentas — sem síntese do Gemini.**\n\nEstoque em 2026-09-30: 60 posições com disponível zero; 60 em excesso; 755 pares sinalizados por regra. Carteira associada: R$ 74.151.160,39. Isso não é perda estimada nem previsão ML.\n\nPeríodo 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.\n\nO agente comercial recebeu 20 pares do agente de estoque: carteira de R$ 9.339.600,56 nesses pares. É uma amostra, não valor global nem perda prevista.\n\nHá consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.\n\nDados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+    "results": {
+      "estoque": {
+        "abastecimento": {
+          "totais": {
+            "data_estoque": "2026-09-30",
+            "posicoes": 3000,
+            "rupturas_observadas": 60,
+            "excessos": 60,
+            "pares_sinalizados": 755,
+            "carteira_nos_pares_sinalizados": "74151160.39"
+          },
+          "prioridades_amostra": [
+            {
+              "produto_id": 736,
+              "centro_id": 2,
+              "produto": "PRD-00736",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 371,
+              "carteira_quantidade": 667,
+              "carteira_valor": "574218.03"
+            },
+            {
+              "produto_id": 626,
+              "centro_id": 3,
+              "produto": "PRD-00626",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 349,
+              "carteira_quantidade": 655,
+              "carteira_valor": "543491.95"
+            },
+            {
+              "produto_id": 616,
+              "centro_id": 3,
+              "produto": "PRD-00616",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 418,
+              "carteira_quantidade": 561,
+              "carteira_valor": "523019.51"
+            },
+            {
+              "produto_id": 416,
+              "centro_id": 1,
+              "produto": "PRD-00416",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 288,
+              "carteira_quantidade": 1465,
+              "carteira_valor": "507889.78"
+            },
+            {
+              "produto_id": 471,
+              "centro_id": 2,
+              "produto": "PRD-00471",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 430,
+              "carteira_quantidade": 1468,
+              "carteira_valor": "505322.91"
+            },
+            {
+              "produto_id": 616,
+              "centro_id": 2,
+              "produto": "PRD-00616",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 426,
+              "carteira_quantidade": 550,
+              "carteira_valor": "501756.66"
+            },
+            {
+              "produto_id": 601,
+              "centro_id": 3,
+              "produto": "PRD-00601",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 241,
+              "carteira_quantidade": 602,
+              "carteira_valor": "489628.59"
+            },
+            {
+              "produto_id": 487,
+              "centro_id": 5,
+              "produto": "PRD-00487",
+              "centro": "CTR-005",
+              "unidade": "saca_40KG",
+              "disponivel": 415,
+              "carteira_quantidade": 1126,
+              "carteira_valor": "478818.77"
+            },
+            {
+              "produto_id": 156,
+              "centro_id": 2,
+              "produto": "PRD-00156",
+              "centro": "CTR-002",
+              "unidade": "tonelada",
+              "disponivel": 53,
+              "carteira_quantidade": 84,
+              "carteira_valor": "478081.98"
+            },
+            {
+              "produto_id": 591,
+              "centro_id": 1,
+              "produto": "PRD-00591",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 92,
+              "carteira_quantidade": 1156,
+              "carteira_valor": "472648.06"
+            },
+            {
+              "produto_id": 676,
+              "centro_id": 3,
+              "produto": "PRD-00676",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 224,
+              "carteira_quantidade": 540,
+              "carteira_valor": "465934.58"
+            },
+            {
+              "produto_id": 496,
+              "centro_id": 1,
+              "produto": "PRD-00496",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 143,
+              "carteira_quantidade": 1245,
+              "carteira_valor": "451552.29"
+            },
+            {
+              "produto_id": 546,
+              "centro_id": 1,
+              "produto": "PRD-00546",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 169,
+              "carteira_quantidade": 1163,
+              "carteira_valor": "441474.93"
+            },
+            {
+              "produto_id": 631,
+              "centro_id": 3,
+              "produto": "PRD-00631",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 58,
+              "carteira_quantidade": 495,
+              "carteira_valor": "434385.76"
+            },
+            {
+              "produto_id": 421,
+              "centro_id": 2,
+              "produto": "PRD-00421",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 253,
+              "carteira_quantidade": 1173,
+              "carteira_valor": "423499.08"
+            },
+            {
+              "produto_id": 662,
+              "centro_id": 4,
+              "produto": "PRD-00662",
+              "centro": "CTR-004",
+              "unidade": "saca_20KG",
+              "disponivel": 380,
+              "carteira_quantidade": 543,
+              "carteira_valor": "423308.60"
+            },
+            {
+              "produto_id": 546,
+              "centro_id": 2,
+              "produto": "PRD-00546",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 562,
+              "carteira_quantidade": 1103,
+              "carteira_valor": "421735.91"
+            },
+            {
+              "produto_id": 486,
+              "centro_id": 1,
+              "produto": "PRD-00486",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 142,
+              "carteira_quantidade": 985,
+              "carteira_valor": "406255.32"
+            },
+            {
+              "produto_id": 781,
+              "centro_id": 2,
+              "produto": "PRD-00781",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 112,
+              "carteira_quantidade": 484,
+              "carteira_valor": "401980.29"
+            },
+            {
+              "produto_id": 552,
+              "centro_id": 5,
+              "produto": "PRD-00552",
+              "centro": "CTR-005",
+              "unidade": "saca_40KG",
+              "disponivel": 372,
+              "carteira_quantidade": 1032,
+              "carteira_valor": "394597.56"
+            }
+          ],
+          "natureza": "Regra descritiva: disponível zero OU carteira em quantidade maior que disponível, por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+        }
+      },
+      "comercial": {
+        "indicadores": {
+          "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+          "limite_por_consulta": 20,
+          "contagens": {
+            "regioes": 5,
+            "centros": 15,
+            "clientes": 5000,
+            "produtos": 1000,
+            "historico_precos": 12000,
+            "pedidos": 8000,
+            "vendas": 20000,
+            "estoque": 3000
+          },
+          "totais": {
+            "inicio": "2025-10-01",
+            "fim": "2026-09-30",
+            "receita_faturada": "493126517.02",
+            "custo_faturado": "393103460.81",
+            "margem_faturada": "100023056.21",
+            "carteira_pendente": "155146363.54",
+            "valor_cancelado": "34784595.17"
+          },
+          "resumo": [
+            {
+              "status": "cancelada",
+              "linhas": 1008,
+              "pedidos": 396,
+              "valor": "34784595.17"
+            },
+            {
+              "status": "faturada",
+              "linhas": 14431,
+              "pedidos": 5772,
+              "valor": "493126517.02"
+            },
+            {
+              "status": "pendente",
+              "linhas": 4561,
+              "pedidos": 1832,
+              "valor": "155146363.54"
+            }
+          ],
+          "estoque_resumo": [
+            {
+              "unidade": "KG",
+              "pares_produto_centro": 300,
+              "disponivel": 233446,
+              "rupturas": 30,
+              "excessos": 30,
+              "valor_estoque": "888117.83"
+            },
+            {
+              "unidade": "L",
+              "pares_produto_centro": 1200,
+              "disponivel": 425332,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "41312128.07"
+            },
+            {
+              "unidade": "saca_20KG",
+              "pares_produto_centro": 600,
+              "disponivel": 208296,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "141845310.52"
+            },
+            {
+              "unidade": "saca_40KG",
+              "pares_produto_centro": 600,
+              "disponivel": 218247,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "69955289.47"
+            },
+            {
+              "unidade": "tonelada",
+              "pares_produto_centro": 300,
+              "disponivel": 233878,
+              "rupturas": 30,
+              "excessos": 30,
+              "valor_estoque": "834991667.58"
+            }
+          ],
+          "alertas_estoque": [
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-001",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-002",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-003",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00022",
+              "centro": "CTR-004",
+              "unidade": "tonelada",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00022",
+              "centro": "CTR-005",
+              "unidade": "tonelada",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-001",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-002",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-003",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00002",
+              "centro": "CTR-004",
+              "unidade": "tonelada",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00002",
+              "centro": "CTR-005",
+              "unidade": "tonelada",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            }
+          ],
+          "cenarios_comerciais": [
+            {
+              "cenario": "desconto_elevado_margem_negativa",
+              "status": "cancelada",
+              "linhas": 7,
+              "receita_liquida": "248264.37",
+              "margem": "-30229.40"
+            },
+            {
+              "cenario": "desconto_elevado_margem_negativa",
+              "status": "faturada",
+              "linhas": 62,
+              "receita_liquida": "1707369.32",
+              "margem": "-208264.67"
+            },
+            {
+              "cenario": "desconto_elevado_margem_negativa",
+              "status": "pendente",
+              "linhas": 31,
+              "receita_liquida": "864747.90",
+              "margem": "-105537.22"
+            },
+            {
+              "cenario": "margem_alta",
+              "status": "cancelada",
+              "linhas": 4,
+              "receita_liquida": "202050.10",
+              "margem": "80815.81"
+            },
+            {
+              "cenario": "margem_alta",
+              "status": "faturada",
+              "linhas": 75,
+              "receita_liquida": "3308758.84",
+              "margem": "1323473.44"
+            },
+            {
+              "cenario": "margem_alta",
+              "status": "pendente",
+              "linhas": 21,
+              "receita_liquida": "529808.37",
+              "margem": "211929.79"
+            },
+            {
+              "cenario": "margem_comprimida",
+              "status": "cancelada",
+              "linhas": 8,
+              "receita_liquida": "255015.36",
+              "margem": "0.00"
+            },
+            {
+              "cenario": "margem_comprimida",
+              "status": "faturada",
+              "linhas": 70,
+              "receita_liquida": "1946446.37",
+              "margem": "0.00"
+            },
+            {
+              "cenario": "margem_comprimida",
+              "status": "pendente",
+              "linhas": 22,
+              "receita_liquida": "834481.78",
+              "margem": "0.00"
+            },
+            {
+              "cenario": "normal",
+              "status": "cancelada",
+              "linhas": 989,
+              "receita_liquida": "34079265.34",
+              "margem": "7025912.59"
+            },
+            {
+              "cenario": "normal",
+              "status": "faturada",
+              "linhas": 14224,
+              "receita_liquida": "486163942.49",
+              "margem": "98907847.44"
+            },
+            {
+              "cenario": "normal",
+              "status": "pendente",
+              "linhas": 4487,
+              "receita_liquida": "152917325.49",
+              "margem": "31130185.42"
+            }
+          ]
+        },
+        "impacto_compartilhado": {
+          "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+          "pares_consultados": 20,
+          "por_familia": [
+            {
+              "categoria": "Sementes de soja",
+              "unidade": "saca_40KG",
+              "linhas_pendentes": 59,
+              "pedidos": 55,
+              "carteira_pendente": "4503794.61",
+              "margem_carteira": "936377.43"
+            },
+            {
+              "categoria": "Sementes de milho",
+              "unidade": "saca_20KG",
+              "linhas_pendentes": 50,
+              "pedidos": 48,
+              "carteira_pendente": "4357723.97",
+              "margem_carteira": "823949.80"
+            },
+            {
+              "categoria": "Fertilizantes",
+              "unidade": "tonelada",
+              "linhas_pendentes": 5,
+              "pedidos": 5,
+              "carteira_pendente": "478081.98",
+              "margem_carteira": "104204.18"
+            }
+          ]
+        },
+        "documentos": {
+          "unavailable": true,
+          "reference": "b4a114986707"
+        }
+      }
+    },
+    "analyses": {},
+    "mode": "local_no_llm"
+  },
+  {
+    "task": 3,
+    "question": "Preveja o risco de backorder com estoque=10; prazo=8; transito=0; previsao_3m=100; vendas_1m=20; vendas_3m=60; estoque_minimo=15 e avalie o impacto na carteira e nas margens.",
+    "agents": [
+      "estoque",
+      "comercial"
+    ],
+    "tools": [
+      {
+        "agent": "estoque",
+        "tool": "duckdb_estoque_pedidos",
+        "status": "ok"
+      },
+      {
+        "agent": "estoque",
+        "tool": "scikit_learn_backorder",
+        "status": "ok"
+      },
+      {
+        "agent": "comercial",
+        "tool": "duckdb_comercial",
+        "status": "ok"
+      },
+      {
+        "agent": "comercial",
+        "tool": "duckdb_impacto_pares",
+        "status": "ok",
+        "depends_on": "estoque.duckdb_estoque_pedidos"
+      },
+      {
+        "agent": "comercial",
+        "tool": "chroma_rag_comercial",
+        "status": "failed",
+        "category": "local",
+        "http": null,
+        "reference": "4e72919ca2b2"
+      }
+    ],
+    "answer": "**Resumo factual das ferramentas — sem síntese do Gemini.**\n\nEstoque em 2026-09-30: 60 posições com disponível zero; 60 em excesso; 755 pares sinalizados por regra. Carteira associada: R$ 74.151.160,39. Isso não é perda estimada nem previsão ML.\n\nModelo scikit-learn: classe 1, score 0.9267, limiar 0.91. Score não calibrado e não validado no agro local. Entrada explícita fornecida pelo usuário, sem associação automática a um SKU.\n\nPeríodo 2025-10-01 a 2026-09-30: faturamento R$ 493.126.517,02; carteira pendente R$ 155.146.363,54; margem faturada R$ 100.023.056,21.\n\nO agente comercial recebeu 20 pares do agente de estoque: carteira de R$ 9.339.600,56 nesses pares. É uma amostra, não valor global nem perda prevista.\n\nHá consultas indisponíveis; veja o registro de ferramentas. Não foi inventado resultado para elas.\n\nDados comerciais sintéticos. Regras de disponibilidade, políticas e score estatístico são evidências distintas.",
+    "results": {
+      "estoque": {
+        "abastecimento": {
+          "totais": {
+            "data_estoque": "2026-09-30",
+            "posicoes": 3000,
+            "rupturas_observadas": 60,
+            "excessos": 60,
+            "pares_sinalizados": 755,
+            "carteira_nos_pares_sinalizados": "74151160.39"
+          },
+          "prioridades_amostra": [
+            {
+              "produto_id": 736,
+              "centro_id": 2,
+              "produto": "PRD-00736",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 371,
+              "carteira_quantidade": 667,
+              "carteira_valor": "574218.03"
+            },
+            {
+              "produto_id": 626,
+              "centro_id": 3,
+              "produto": "PRD-00626",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 349,
+              "carteira_quantidade": 655,
+              "carteira_valor": "543491.95"
+            },
+            {
+              "produto_id": 616,
+              "centro_id": 3,
+              "produto": "PRD-00616",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 418,
+              "carteira_quantidade": 561,
+              "carteira_valor": "523019.51"
+            },
+            {
+              "produto_id": 416,
+              "centro_id": 1,
+              "produto": "PRD-00416",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 288,
+              "carteira_quantidade": 1465,
+              "carteira_valor": "507889.78"
+            },
+            {
+              "produto_id": 471,
+              "centro_id": 2,
+              "produto": "PRD-00471",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 430,
+              "carteira_quantidade": 1468,
+              "carteira_valor": "505322.91"
+            },
+            {
+              "produto_id": 616,
+              "centro_id": 2,
+              "produto": "PRD-00616",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 426,
+              "carteira_quantidade": 550,
+              "carteira_valor": "501756.66"
+            },
+            {
+              "produto_id": 601,
+              "centro_id": 3,
+              "produto": "PRD-00601",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 241,
+              "carteira_quantidade": 602,
+              "carteira_valor": "489628.59"
+            },
+            {
+              "produto_id": 487,
+              "centro_id": 5,
+              "produto": "PRD-00487",
+              "centro": "CTR-005",
+              "unidade": "saca_40KG",
+              "disponivel": 415,
+              "carteira_quantidade": 1126,
+              "carteira_valor": "478818.77"
+            },
+            {
+              "produto_id": 156,
+              "centro_id": 2,
+              "produto": "PRD-00156",
+              "centro": "CTR-002",
+              "unidade": "tonelada",
+              "disponivel": 53,
+              "carteira_quantidade": 84,
+              "carteira_valor": "478081.98"
+            },
+            {
+              "produto_id": 591,
+              "centro_id": 1,
+              "produto": "PRD-00591",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 92,
+              "carteira_quantidade": 1156,
+              "carteira_valor": "472648.06"
+            },
+            {
+              "produto_id": 676,
+              "centro_id": 3,
+              "produto": "PRD-00676",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 224,
+              "carteira_quantidade": 540,
+              "carteira_valor": "465934.58"
+            },
+            {
+              "produto_id": 496,
+              "centro_id": 1,
+              "produto": "PRD-00496",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 143,
+              "carteira_quantidade": 1245,
+              "carteira_valor": "451552.29"
+            },
+            {
+              "produto_id": 546,
+              "centro_id": 1,
+              "produto": "PRD-00546",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 169,
+              "carteira_quantidade": 1163,
+              "carteira_valor": "441474.93"
+            },
+            {
+              "produto_id": 631,
+              "centro_id": 3,
+              "produto": "PRD-00631",
+              "centro": "CTR-003",
+              "unidade": "saca_20KG",
+              "disponivel": 58,
+              "carteira_quantidade": 495,
+              "carteira_valor": "434385.76"
+            },
+            {
+              "produto_id": 421,
+              "centro_id": 2,
+              "produto": "PRD-00421",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 253,
+              "carteira_quantidade": 1173,
+              "carteira_valor": "423499.08"
+            },
+            {
+              "produto_id": 662,
+              "centro_id": 4,
+              "produto": "PRD-00662",
+              "centro": "CTR-004",
+              "unidade": "saca_20KG",
+              "disponivel": 380,
+              "carteira_quantidade": 543,
+              "carteira_valor": "423308.60"
+            },
+            {
+              "produto_id": 546,
+              "centro_id": 2,
+              "produto": "PRD-00546",
+              "centro": "CTR-002",
+              "unidade": "saca_40KG",
+              "disponivel": 562,
+              "carteira_quantidade": 1103,
+              "carteira_valor": "421735.91"
+            },
+            {
+              "produto_id": 486,
+              "centro_id": 1,
+              "produto": "PRD-00486",
+              "centro": "CTR-001",
+              "unidade": "saca_40KG",
+              "disponivel": 142,
+              "carteira_quantidade": 985,
+              "carteira_valor": "406255.32"
+            },
+            {
+              "produto_id": 781,
+              "centro_id": 2,
+              "produto": "PRD-00781",
+              "centro": "CTR-002",
+              "unidade": "saca_20KG",
+              "disponivel": 112,
+              "carteira_quantidade": 484,
+              "carteira_valor": "401980.29"
+            },
+            {
+              "produto_id": 552,
+              "centro_id": 5,
+              "produto": "PRD-00552",
+              "centro": "CTR-005",
+              "unidade": "saca_40KG",
+              "disponivel": 372,
+              "carteira_quantidade": 1032,
+              "carteira_valor": "394597.56"
+            }
+          ],
+          "natureza": "Regra descritiva: disponível zero OU carteira em quantidade maior que disponível, por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+        },
+        "ml": {
+          "status": "predicted",
+          "class": 1,
+          "score": 0.9266898444319546,
+          "threshold": 0.9099999999999999,
+          "features": {
+            "national_inv": 10.0,
+            "lead_time": 8.0,
+            "in_transit_qty": 0.0,
+            "forecast_3_month": 100.0,
+            "sales_1_month": 20.0,
+            "sales_3_month": 60.0,
+            "min_bank": 15.0
+          },
+          "source": "https://github.com/akhiilkasare/Back-Order-Prediction-iNeuron/tree/3bf0817ebb1a20e675ff02244660507e59f180f2",
+          "calibrated": false,
+          "outside_training_range": [],
+          "natureza": "Modelo scikit-learn público externo; score não calibrado, não validado no agro local."
+        }
+      },
+      "comercial": {
+        "indicadores": {
+          "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+          "limite_por_consulta": 20,
+          "contagens": {
+            "regioes": 5,
+            "centros": 15,
+            "clientes": 5000,
+            "produtos": 1000,
+            "historico_precos": 12000,
+            "pedidos": 8000,
+            "vendas": 20000,
+            "estoque": 3000
+          },
+          "totais": {
+            "inicio": "2025-10-01",
+            "fim": "2026-09-30",
+            "receita_faturada": "493126517.02",
+            "custo_faturado": "393103460.81",
+            "margem_faturada": "100023056.21",
+            "carteira_pendente": "155146363.54",
+            "valor_cancelado": "34784595.17"
+          },
+          "resumo": [
+            {
+              "status": "cancelada",
+              "linhas": 1008,
+              "pedidos": 396,
+              "valor": "34784595.17"
+            },
+            {
+              "status": "faturada",
+              "linhas": 14431,
+              "pedidos": 5772,
+              "valor": "493126517.02"
+            },
+            {
+              "status": "pendente",
+              "linhas": 4561,
+              "pedidos": 1832,
+              "valor": "155146363.54"
+            }
+          ],
+          "estoque_resumo": [
+            {
+              "unidade": "KG",
+              "pares_produto_centro": 300,
+              "disponivel": 233446,
+              "rupturas": 30,
+              "excessos": 30,
+              "valor_estoque": "888117.83"
+            },
+            {
+              "unidade": "L",
+              "pares_produto_centro": 1200,
+              "disponivel": 425332,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "41312128.07"
+            },
+            {
+              "unidade": "saca_20KG",
+              "pares_produto_centro": 600,
+              "disponivel": 208296,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "141845310.52"
+            },
+            {
+              "unidade": "saca_40KG",
+              "pares_produto_centro": 600,
+              "disponivel": 218247,
+              "rupturas": 0,
+              "excessos": 0,
+              "valor_estoque": "69955289.47"
+            },
+            {
+              "unidade": "tonelada",
+              "pares_produto_centro": 300,
+              "disponivel": 233878,
+              "rupturas": 30,
+              "excessos": 30,
+              "valor_estoque": "834991667.58"
+            }
+          ],
+          "alertas_estoque": [
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-001",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-002",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00021",
+              "centro": "CTR-003",
+              "unidade": "KG",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00022",
+              "centro": "CTR-004",
+              "unidade": "tonelada",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00022",
+              "centro": "CTR-005",
+              "unidade": "tonelada",
+              "disponivel": 5000,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "excesso"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-001",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-002",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00001",
+              "centro": "CTR-003",
+              "unidade": "KG",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00002",
+              "centro": "CTR-004",
+              "unidade": "tonelada",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            },
+            {
+              "produto": "PRD-00002",
+              "centro": "CTR-005",
+              "unidade": "tonelada",
+              "disponivel": 0,
+              "estoque_minimo": 40,
+              "estoque_maximo": 1000,
+              "cenario": "ruptura"
+            }
+          ],
+          "carteira_por_vencimento": [
+            {
+              "mes_vencimento": "2025-10",
+              "pedidos": 3,
+              "valor_pendente": "355618.39"
+            },
+            {
+              "mes_vencimento": "2025-11",
+              "pedidos": 79,
+              "valor_pendente": "6197664.84"
+            },
+            {
+              "mes_vencimento": "2025-12",
+              "pedidos": 138,
+              "valor_pendente": "11541416.05"
+            },
+            {
+              "mes_vencimento": "2026-01",
+              "pedidos": 181,
+              "valor_pendente": "13042189.79"
+            },
+            {
+              "mes_vencimento": "2026-02",
+              "pedidos": 116,
+              "valor_pendente": "9408354.34"
+            },
+            {
+              "mes_vencimento": "2026-03",
+              "pedidos": 75,
+              "valor_pendente": "6321954.41"
+            },
+            {
+              "mes_vencimento": "2026-04",
+              "pedidos": 86,
+              "valor_pendente": "7846921.01"
+            },
+            {
+              "mes_vencimento": "2026-05",
+              "pedidos": 86,
+              "valor_pendente": "8724113.42"
+            },
+            {
+              "mes_vencimento": "2026-06",
+              "pedidos": 88,
+              "valor_pendente": "7943327.79"
+            },
+            {
+              "mes_vencimento": "2026-07",
+              "pedidos": 99,
+              "valor_pendente": "9360460.00"
+            },
+            {
+              "mes_vencimento": "2026-08",
+              "pedidos": 135,
+              "valor_pendente": "11773447.39"
+            },
+            {
+              "mes_vencimento": "2026-09",
+              "pedidos": 168,
+              "valor_pendente": "15047823.53"
+            },
+            {
+              "mes_vencimento": "2026-10",
+              "pedidos": 262,
+              "valor_pendente": "19619103.47"
+            },
+            {
+              "mes_vencimento": "2026-11",
+              "pedidos": 217,
+              "valor_pendente": "19763707.29"
+            },
+            {
+              "mes_vencimento": "2026-12",
+              "pedidos": 99,
+              "valor_pendente": "8200261.82"
+            }
+          ]
+        },
+        "impacto_compartilhado": {
+          "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+          "pares_consultados": 20,
+          "por_familia": [
+            {
+              "categoria": "Sementes de soja",
+              "unidade": "saca_40KG",
+              "linhas_pendentes": 59,
+              "pedidos": 55,
+              "carteira_pendente": "4503794.61",
+              "margem_carteira": "936377.43"
+            },
+            {
+              "categoria": "Sementes de milho",
+              "unidade": "saca_20KG",
+              "linhas_pendentes": 50,
+              "pedidos": 48,
+              "carteira_pendente": "4357723.97",
+              "margem_carteira": "823949.80"
+            },
+            {
+              "categoria": "Fertilizantes",
+              "unidade": "tonelada",
+              "linhas_pendentes": 5,
+              "pedidos": 5,
+              "carteira_pendente": "478081.98",
+              "margem_carteira": "104204.18"
+            }
+          ]
+        },
+        "documentos": {
+          "unavailable": true,
+          "reference": "4e72919ca2b2"
+        }
+      }
+    },
+    "analyses": {},
+    "mode": "local_no_llm"
+  }
+]

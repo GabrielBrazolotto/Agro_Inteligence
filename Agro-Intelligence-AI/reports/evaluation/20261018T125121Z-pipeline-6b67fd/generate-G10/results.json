@@ -1,0 +1,1001 @@
+{
+  "run_id": "20261018T125518Z-batch-dcc63f",
+  "selected_cases": [
+    "G10"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G10",
+      "category": "pedidos_rupturas_composta",
+      "question": "Quais rupturas de estoque afetam pedidos pendentes e qual o impacto comercial nas margens? Informe a carteira em saldo zero com valor exato.",
+      "expected_behavior": "Dois agentes; distinguir saldo zero do grupo amplo; carteira não é perda nem receita realizada.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos",
+        "duckdb_comercial",
+        "duckdb_impacto_pares",
+        "duckdb_impacto_rupturas_total"
+      ],
+      "references": [
+        "sql:rupture_pending",
+        "sql:ruptures"
+      ],
+      "checks": [
+        "rupture_pending"
+      ]
+    }
+  ],
+  "phase": "generate",
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 100,
+  "calls": [
+    {
+      "case_id": "G04",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 547.719
+    },
+    {
+      "case_id": "G04",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2268,
+        "output": 434,
+        "total": 2702
+      },
+      "latency_ms": 1684.004
+    },
+    {
+      "case_id": "G04",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2724,
+        "output": 390,
+        "total": 4334,
+        "reasoning": 1220
+      },
+      "latency_ms": 6912.216
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 434.586
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2655,
+        "output": 206,
+        "total": 2861
+      },
+      "latency_ms": 19791.49
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 503
+      },
+      "latency_ms": 3179.381
+    },
+    {
+      "case_id": "G06",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2870,
+        "output": 400,
+        "total": 4613,
+        "reasoning": 1343
+      },
+      "latency_ms": 8631.146
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 444.22
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2292,
+        "output": 62,
+        "total": 2354
+      },
+      "latency_ms": 4376.386
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2360,
+        "output": 154,
+        "total": 3024,
+        "reasoning": 510
+      },
+      "latency_ms": 3748.69
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 463.615
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2290,
+        "output": 217,
+        "total": 2507
+      },
+      "latency_ms": 1811.605
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2516,
+        "output": 53,
+        "total": 2949,
+        "reasoning": 380
+      },
+      "latency_ms": 3008.307
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 432.796
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2287,
+        "output": 111,
+        "total": 2398
+      },
+      "latency_ms": 6375.67
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 2404,
+        "output": 175,
+        "total": 3185,
+        "reasoning": 606
+      },
+      "latency_ms": 4887.728
+    },
+    {
+      "case_id": "G10",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "timeout"
+      },
+      "latency_ms": 30131.989
+    },
+    {
+      "case_id": "G10",
+      "model": "gemini-embedding-001",
+      "kind": "embedding",
+      "status": "success",
+      "usage": null,
+      "latency_ms": 417.094
+    },
+    {
+      "case_id": "G10",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 3437,
+        "output": 298,
+        "total": 3735
+      },
+      "latency_ms": 2903.019
+    },
+    {
+      "case_id": "G10",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 503
+      },
+      "latency_ms": 27291.453
+    },
+    {
+      "case_id": "G10",
+      "model": "gemini-3.5-flash",
+      "kind": "generation",
+      "status": "success",
+      "usage": {
+        "input": 5357,
+        "output": 684,
+        "total": 8226,
+        "reasoning": 2185
+      },
+      "latency_ms": 13594.261
+    }
+  ],
+  "results": [
+    {
+      "id": "G10",
+      "category": "pedidos_rupturas_composta",
+      "question": "Quais rupturas de estoque afetam pedidos pendentes e qual o impacto comercial nas margens? Informe a carteira em saldo zero com valor exato.",
+      "expected_behavior": "Dois agentes; distinguir saldo zero do grupo amplo; carteira não é perda nem receita realizada.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos",
+        "duckdb_comercial",
+        "duckdb_impacto_pares",
+        "duckdb_impacto_rupturas_total"
+      ],
+      "references": [
+        "sql:rupture_pending",
+        "sql:ruptures"
+      ],
+      "checks": [
+        "rupture_pending"
+      ],
+      "generation_status": "degraded",
+      "answer": "No período de 01/10/2025 a 30/09/2026 (com fotografia de estoque em 30/09/2026), foram analisadas as rupturas observadas (itens com disponível zero) que afetam os pedidos pendentes. Todos os dados são fictícios.\n\n### Impacto Comercial e Carteira em Saldo Zero\n* **Valor Exato da Carteira em Ruptura:** **R$ 4.399.084,73** (abrangendo 103 linhas de pedidos e 101 pedidos distintos, distribuídos em 41 pares produto-centro em ruptura com carteira).\n* **Custo da Carteira:** R$ 3.506.069,23.\n* **Impacto Comercial na Margem Bruta:** **R$ 893.015,50**, o que representa uma margem percentual teórica de **20,3%** retida na carteira pendente.\n\n### Principais Rupturas que Afetam Pedidos Pendentes (Amostra de Prioridades)\nAs rupturas observadas (disponível zero) de maior valor na carteira pendente incluem:\n* **PRD-00012** (CTR-004, tonelada): R$ 378.888,68 em carteira pendente;\n* **PRD-00016** (CTR-002, tonelada): R$ 339.247,27;\n* **PRD-00002** (CTR-006, tonelada): R$ 275.189,64;\n* **PRD-00006** (CTR-003, tonelada): R$ 262.012,62;\n* **PRD-00002** (CTR-005, tonelada): R$ 231.883,34;\n* **PRD-00014** (CTR-012, tonelada): R$ 201.914,05;\n* **PRD-00010** (CTR-015, tonelada): R$ 180.987,80;\n* **PRD-00017** (CTR-006, KG): R$ 166.603,01;\n* **PRD-00011** (CTR-001, KG): R$ 146.315,83;\n* **PRD-00001** (CTR-001, KG): R$ 125.904,66.\n\nConforme estabelecido em nossa diretriz [politica_comercial.md, trecho 1], pedidos pendentes não constituem receita faturada e a carteira pendente não deve ser somada à receita realizada.\n\n**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "estoque.abastecimento",
+          "content": {
+            "totais": {
+              "data_estoque": "2026-09-30",
+              "posicoes": 3000,
+              "rupturas_observadas": 60,
+              "excessos": 60,
+              "pares_sinalizados": 755,
+              "rupturas_com_carteira": 41,
+              "carteira_em_ruptura": "4399084.73",
+              "insuficiencias_com_saldo": 695,
+              "carteira_em_insuficiencia_com_saldo": "69752075.66",
+              "carteira_nos_pares_sinalizados": "74151160.39"
+            },
+            "prioridades_amostra": [
+              {
+                "produto_id": 12,
+                "centro_id": 4,
+                "produto": "PRD-00012",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 97,
+                "carteira_valor": "378888.68"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 2,
+                "produto": "PRD-00016",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 96,
+                "carteira_valor": "339247.27"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 6,
+                "produto": "PRD-00002",
+                "centro": "CTR-006",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 70,
+                "carteira_valor": "275189.64"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 3,
+                "produto": "PRD-00006",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 94,
+                "carteira_valor": "262012.62"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 5,
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 57,
+                "carteira_valor": "231883.34"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 12,
+                "produto": "PRD-00014",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "201914.05"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 15,
+                "produto": "PRD-00010",
+                "centro": "CTR-015",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 43,
+                "carteira_valor": "180987.80"
+              },
+              {
+                "produto_id": 17,
+                "centro_id": 6,
+                "produto": "PRD-00017",
+                "centro": "CTR-006",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 38360,
+                "carteira_valor": "166603.01"
+              },
+              {
+                "produto_id": 8,
+                "centro_id": 8,
+                "produto": "PRD-00008",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 31,
+                "carteira_valor": "150070.70"
+              },
+              {
+                "produto_id": 18,
+                "centro_id": 8,
+                "produto": "PRD-00018",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 53,
+                "carteira_valor": "146376.94"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 1,
+                "produto": "PRD-00011",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 31816,
+                "carteira_valor": "146315.83"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 1,
+                "produto": "PRD-00016",
+                "centro": "CTR-001",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "144517.20"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 3,
+                "produto": "PRD-00016",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 38,
+                "carteira_valor": "136034.11"
+              },
+              {
+                "produto_id": 1,
+                "centro_id": 1,
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 25560,
+                "carteira_valor": "125904.66"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 14,
+                "produto": "PRD-00010",
+                "centro": "CTR-014",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 30,
+                "carteira_valor": "120044.40"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 10,
+                "produto": "PRD-00014",
+                "centro": "CTR-010",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 24,
+                "carteira_valor": "115767.38"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 11,
+                "produto": "PRD-00004",
+                "centro": "CTR-011",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 54,
+                "carteira_valor": "115522.44"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 12,
+                "produto": "PRD-00004",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 50,
+                "carteira_valor": "104552.45"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 2,
+                "produto": "PRD-00006",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 35,
+                "carteira_valor": "102186.49"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 3,
+                "produto": "PRD-00011",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 21388,
+                "carteira_valor": "101511.89"
+              }
+            ],
+            "escopo_prioridades": "ruptura",
+            "natureza": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "estoque_resumo": [
+              {
+                "unidade": "KG",
+                "pares_produto_centro": 300,
+                "disponivel": 233446,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "888117.83"
+              },
+              {
+                "unidade": "L",
+                "pares_produto_centro": 1200,
+                "disponivel": 425332,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "41312128.07"
+              },
+              {
+                "unidade": "saca_20KG",
+                "pares_produto_centro": 600,
+                "disponivel": 208296,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "141845310.52"
+              },
+              {
+                "unidade": "saca_40KG",
+                "pares_produto_centro": 600,
+                "disponivel": 218247,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "69955289.47"
+              },
+              {
+                "unidade": "tonelada",
+                "pares_produto_centro": 300,
+                "disponivel": 233878,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "834991667.58"
+              }
+            ],
+            "alertas_estoque": [
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              }
+            ],
+            "carteira_por_vencimento": [
+              {
+                "mes_vencimento": "2025-10",
+                "pedidos": 3,
+                "valor_pendente": "355618.39"
+              },
+              {
+                "mes_vencimento": "2025-11",
+                "pedidos": 79,
+                "valor_pendente": "6197664.84"
+              },
+              {
+                "mes_vencimento": "2025-12",
+                "pedidos": 138,
+                "valor_pendente": "11541416.05"
+              },
+              {
+                "mes_vencimento": "2026-01",
+                "pedidos": 181,
+                "valor_pendente": "13042189.79"
+              },
+              {
+                "mes_vencimento": "2026-02",
+                "pedidos": 116,
+                "valor_pendente": "9408354.34"
+              },
+              {
+                "mes_vencimento": "2026-03",
+                "pedidos": 75,
+                "valor_pendente": "6321954.41"
+              },
+              {
+                "mes_vencimento": "2026-04",
+                "pedidos": 86,
+                "valor_pendente": "7846921.01"
+              },
+              {
+                "mes_vencimento": "2026-05",
+                "pedidos": 86,
+                "valor_pendente": "8724113.42"
+              },
+              {
+                "mes_vencimento": "2026-06",
+                "pedidos": 88,
+                "valor_pendente": "7943327.79"
+              },
+              {
+                "mes_vencimento": "2026-07",
+                "pedidos": 99,
+                "valor_pendente": "9360460.00"
+              },
+              {
+                "mes_vencimento": "2026-08",
+                "pedidos": 135,
+                "valor_pendente": "11773447.39"
+              },
+              {
+                "mes_vencimento": "2026-09",
+                "pedidos": 168,
+                "valor_pendente": "15047823.53"
+              },
+              {
+                "mes_vencimento": "2026-10",
+                "pedidos": 262,
+                "valor_pendente": "19619103.47"
+              },
+              {
+                "mes_vencimento": "2026-11",
+                "pedidos": 217,
+                "valor_pendente": "19763707.29"
+              },
+              {
+                "mes_vencimento": "2026-12",
+                "pedidos": 99,
+                "valor_pendente": "8200261.82"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e3",
+          "origin": "comercial.impacto_compartilhado",
+          "content": {
+            "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+            "pares_consultados": 20,
+            "por_familia": [
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "tonelada",
+                "linhas_pendentes": 46,
+                "pedidos": 46,
+                "carteira_pendente": "3005195.51",
+                "margem_carteira": "650582.93"
+              },
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "KG",
+                "linhas_pendentes": 23,
+                "pedidos": 23,
+                "carteira_pendente": "540335.39",
+                "margem_carteira": "85460.74"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e4",
+          "origin": "comercial.impacto_rupturas_total",
+          "content": {
+            "escopo": "todos os pares com disponível zero; não apenas os 20 prioritários",
+            "totais": {
+              "linhas_pendentes": 103,
+              "pedidos_distintos": 101,
+              "carteira_pendente": "4399084.73",
+              "custo_carteira": "3506069.23",
+              "margem_carteira": "893015.50",
+              "margem_pct": 20.3
+            },
+            "natureza": "Valores da carteira, não faturamento, perda comprovada ou previsão ML."
+          }
+        },
+        {
+          "id": "e5",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.39267706871032715
+            },
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.39659643173217773
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.41168808937072754
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "estoque",
+          "tool": "duckdb_estoque_pedidos",
+          "status": "ok"
+        },
+        {
+          "agent": "estoque",
+          "tool": "gemini_analise",
+          "status": "failed",
+          "category": "timeout",
+          "http": null,
+          "reference": "03a2191d3454"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_pares",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_rupturas_total",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [
+        {
+          "stage": "gemini_analise",
+          "category": "timeout",
+          "http_code": null
+        }
+      ],
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "pending"
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "pending"
+        }
+      },
+      "generation_attempted": true,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "rejected_cached_responses": [],
+      "trace_id": "52198f97eb0b75109e8826e6e6406cdb",
+      "response_key": "03bf15463ab1b62ef253afcbb5afddf5b1ecab0bc3d6d7e88787f71d48fd57ea",
+      "generation_latency_ms": 112146.541,
+      "deterministic": [
+        {
+          "check": "rupture_pending",
+          "status": "passed",
+          "reference_rows": [
+            {
+              "valor": "4399084.73"
+            }
+          ],
+          "missing_or_inaccurate_values": []
+        }
+      ],
+      "completeness": {
+        "status": "not_applicable"
+      },
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "metric_origins": {},
+      "total_latency_ms": 112170.623
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 21,
+  "stop_reason": "api_failure_or_limit",
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 0,
+    "api_failed_questions": 1,
+    "cost": null,
+    "questions_with_any_metric": 0,
+    "questions_fully_evaluated": 0,
+    "questions_partially_evaluated": 0,
+    "faithfulness": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "insufficient_judged_answers",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 1,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

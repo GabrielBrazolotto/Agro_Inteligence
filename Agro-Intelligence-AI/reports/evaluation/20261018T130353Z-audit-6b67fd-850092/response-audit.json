@@ -1,0 +1,158 @@
+[
+  {
+    "case": "G04",
+    "eligible_for_reuse": true,
+    "response_key": "94c8de2929feb3295e86bc640d5f8983618ef35ac8600646f6004d51b737a61f",
+    "generation_status": "fallback",
+    "reference_state_matches": true,
+    "evidence_count": 2,
+    "deterministic": [
+      {
+        "check": "monthly",
+        "status": "passed",
+        "reference_rows": [
+          {
+            "mes": "2025-10",
+            "valor": "69100257.04"
+          },
+          {
+            "mes": "2025-11",
+            "valor": "47569449.23"
+          },
+          {
+            "mes": "2025-12",
+            "valor": "22958227.98"
+          },
+          {
+            "mes": "2026-01",
+            "valor": "20195392.48"
+          },
+          {
+            "mes": "2026-02",
+            "valor": "24733899.94"
+          },
+          {
+            "mes": "2026-03",
+            "valor": "21990732.75"
+          },
+          {
+            "mes": "2026-04",
+            "valor": "19900242.28"
+          },
+          {
+            "mes": "2026-05",
+            "valor": "18898851.47"
+          },
+          {
+            "mes": "2026-06",
+            "valor": "31224307.20"
+          },
+          {
+            "mes": "2026-07",
+            "valor": "49589766.87"
+          },
+          {
+            "mes": "2026-08",
+            "valor": "84051605.74"
+          },
+          {
+            "mes": "2026-09",
+            "valor": "82913784.04"
+          }
+        ],
+        "missing_or_inaccurate_values": []
+      }
+    ],
+    "metrics_pending": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  },
+  {
+    "case": "G06",
+    "eligible_for_reuse": true,
+    "response_key": "ceb0192a42d31758806479a98ae72e1e5788e487d326dd4fc13eb5136d2eaa56",
+    "generation_status": "ok",
+    "reference_state_matches": true,
+    "evidence_count": 2,
+    "deterministic": [
+      {
+        "check": "margin",
+        "status": "passed",
+        "reference_rows": [
+          {
+            "valor": "100023056.21"
+          }
+        ],
+        "missing_or_inaccurate_values": []
+      }
+    ],
+    "metrics_pending": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  },
+  {
+    "case": "G07",
+    "eligible_for_reuse": true,
+    "response_key": "cf0e1a6e618aa8f14dfa11cf5a221b218b70720b9a74abec3c46dee756af081d",
+    "generation_status": "ok",
+    "reference_state_matches": true,
+    "evidence_count": 2,
+    "deterministic": [],
+    "metrics_pending": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  },
+  {
+    "case": "G08",
+    "eligible_for_reuse": true,
+    "response_key": "edea4af0eae112c83c78f9c74f59c03f4532409f5c9918697eda6b6582400530",
+    "generation_status": "ok",
+    "reference_state_matches": true,
+    "evidence_count": 2,
+    "deterministic": [],
+    "metrics_pending": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  },
+  {
+    "case": "G09",
+    "eligible_for_reuse": true,
+    "response_key": "dc74bc87bcfe62db34fe9487f19713fa62009d44bcf3cb491e5d0ef3db3e172a",
+    "generation_status": "ok",
+    "reference_state_matches": true,
+    "evidence_count": 2,
+    "deterministic": [],
+    "metrics_pending": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  },
+  {
+    "case": "G10",
+    "eligible_for_reuse": true,
+    "response_key": "03bf15463ab1b62ef253afcbb5afddf5b1ecab0bc3d6d7e88787f71d48fd57ea",
+    "generation_status": "degraded",
+    "reference_state_matches": true,
+    "evidence_count": 5,
+    "deterministic": [
+      {
+        "check": "rupture_pending",
+        "status": "passed",
+        "reference_rows": [
+          {
+            "valor": "4399084.73"
+          }
+        ],
+        "missing_or_inaccurate_values": []
+      }
+    ],
+    "metrics_pending": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  }
+]

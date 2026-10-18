@@ -1,0 +1,36 @@
+{
+  "case_count": 15,
+  "evaluated_metric_count": 30,
+  "summary": {
+    "faithfulness": {
+      "count": 15,
+      "mean": 0.9955555555555555,
+      "threshold": 0.8,
+      "below_threshold": [],
+      "below_threshold_count": 0
+    },
+    "answer_relevancy": {
+      "count": 15,
+      "mean": 0.8528548644338118,
+      "threshold": 0.8,
+      "below_threshold": [
+        "G01",
+        "G04",
+        "G11"
+      ],
+      "below_threshold_count": 3
+    }
+  },
+  "word_count": 1081,
+  "word_count_method": "non-whitespace tokens, including headings/captions and Markdown tokens",
+  "new_api_calls": 0,
+  "source_files_verified_unchanged": 61,
+  "missing_required_images": [
+    "imagens/langfuse-cinco-traces.png",
+    "imagens/langfuse-execucao-detalhada.png"
+  ],
+  "security_scan_findings_count": 0,
+  "delivery_tests_passed": 7,
+  "dependency_check": "No broken requirements found",
+  "ml_recalculation_from_saved_predictions": "passed; no new training or inference"
+}

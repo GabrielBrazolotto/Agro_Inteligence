@@ -1,0 +1,10 @@
+{
+  "mode": "offline_recalculation_from_saved_test_predictions",
+  "new_training": false,
+  "new_inference": false,
+  "new_api_calls": 0,
+  "test_rows": 40000,
+  "metrics_match_metadata": true,
+  "threshold_predictions_match": true,
+  "confusion_matrix_match": true
+}

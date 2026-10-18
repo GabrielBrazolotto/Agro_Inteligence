@@ -1,0 +1,733 @@
+[
+  {
+    "case_id": "G06",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 10021,
+      "output": 1280,
+      "total": 11301
+    },
+    "budget_admission": {
+      "id": "c446badc518c4f83885dde82d2affe9d",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 39551,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0011",
+            "s0012",
+            "s0015"
+          ],
+          "reason": "O período de 01/10/2025 a 30/09/2026 e o valor da margem bruta de R$ 100.023.056,21 estão confirmados pelos snippets."
+        },
+        {
+          "claim_id": "c002",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "O snippet s0001 define que a margem bruta comercial é calculada como receita líquida menos custo."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0013"
+          ],
+          "reason": "O valor da receita líquida faturada de R$ 493.126.517,02 está explicitamente no snippet s0013."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0014"
+          ],
+          "reason": "O valor do custo dos itens faturados de R$ 393.103.460,81 está explicitamente no snippet s0014."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0015"
+          ],
+          "reason": "O valor da margem comercial bruta de R$ 100.023.056,21 está explicitamente no snippet s0015."
+        },
+        {
+          "claim_id": "c006",
+          "factual": false,
+          "supported": true,
+          "snippet_ids": [],
+          "reason": "Título sem afirmação factual."
+        },
+        {
+          "claim_id": "c007",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "O snippet s0001 confirma que a margem bruta não é lucro líquido e não contempla impostos ou despesas operacionais."
+        },
+        {
+          "claim_id": "c008",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0016",
+            "s0017",
+            "s0115"
+          ],
+          "reason": "Os valores de pedidos pendentes e cancelados, bem como a regra de exclusão, estão sustentados pelos snippets."
+        },
+        {
+          "claim_id": "c009",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001",
+            "s0115"
+          ],
+          "reason": "A natureza sintética e acadêmica dos dados é confirmada pelos snippets s0001 e s0115."
+        }
+      ],
+      "explanation": "A resposta fornece os valores exatos da margem comercial bruta, receita líquida e custo, conforme os dados fornecidos nos snippets. As observações sobre a natureza dos dados e a distinção entre margem bruta e lucro líquido também estão alinhadas com as evidências.",
+      "verdicts": [
+        {
+          "unit_id": "u001",
+          "relevant": true,
+          "reason": "Responde diretamente à pergunta sobre a margem comercial bruta total."
+        },
+        {
+          "unit_id": "u002",
+          "relevant": true,
+          "reason": "Explica a metodologia de cálculo da margem."
+        },
+        {
+          "unit_id": "u003",
+          "relevant": true,
+          "reason": "Fornece o valor da receita líquida, componente do cálculo."
+        },
+        {
+          "unit_id": "u004",
+          "relevant": true,
+          "reason": "Fornece o valor do custo, componente do cálculo."
+        },
+        {
+          "unit_id": "u005",
+          "relevant": true,
+          "reason": "Reitera o valor da margem bruta."
+        },
+        {
+          "unit_id": "u006",
+          "relevant": true,
+          "reason": "Introduz observações contextuais relevantes."
+        },
+        {
+          "unit_id": "u007",
+          "relevant": true,
+          "reason": "Esclarece a diferença entre margem bruta e lucro líquido, conforme solicitado."
+        },
+        {
+          "unit_id": "u008",
+          "relevant": true,
+          "reason": "Explica as regras de exclusão de pedidos, garantindo a precisão do valor faturado."
+        },
+        {
+          "unit_id": "u009",
+          "relevant": true,
+          "reason": "Informa sobre a natureza sintética dos dados, o que é relevante para a interpretação dos valores."
+        }
+      ]
+    },
+    "latency_ms": 3438.936
+  },
+  {
+    "case_id": "G07",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 7701,
+      "output": 687,
+      "total": 8388
+    },
+    "budget_admission": {
+      "id": "178a7a604ab44749b64dd546818961a4",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 33197,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O documento PC-001 (politica_comercial.md) estabelece que descontos acima de 5% e até 8% exigem aprovação do gerente comercial, o que inclui o desconto de 7%."
+        },
+        {
+          "claim_id": "c002",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Esta unidade é apenas uma introdução estrutural e não contém uma afirmação factual."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O documento confirma que descontos de até 5% podem ser aprovados pelo vendedor para pedidos a partir de R$ 15.000."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O documento confirma que descontos acima de 5% e até 8% exigem aprovação da gerência comercial."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O documento confirma que descontos acima de 8% não são permitidos."
+        }
+      ],
+      "explanation": "A resposta fornece corretamente as regras de aprovação de descontos conforme o documento PC-001 (politica_comercial.md).",
+      "verdicts": [
+        {
+          "unit_id": "u001",
+          "relevant": true,
+          "reason": "Responde diretamente à pergunta sobre quem aprova o desconto de 7% e cita o documento."
+        },
+        {
+          "unit_id": "u002",
+          "relevant": true,
+          "reason": "Introduz a listagem das regras que fundamentam a resposta."
+        },
+        {
+          "unit_id": "u003",
+          "relevant": true,
+          "reason": "Fornece contexto adicional sobre a política de descontos."
+        },
+        {
+          "unit_id": "u004",
+          "relevant": true,
+          "reason": "Fornece contexto adicional sobre a política de descontos."
+        },
+        {
+          "unit_id": "u005",
+          "relevant": true,
+          "reason": "Fornece contexto adicional sobre a política de descontos."
+        }
+      ]
+    },
+    "latency_ms": 2622.653
+  },
+  {
+    "case_id": "G08",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 7316,
+      "output": 339,
+      "total": 7655
+    },
+    "budget_admission": {
+      "id": "99f28db0eae04f669905183e7bfb54d0",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 32188,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O trecho s0090 confirma explicitamente que o pagamento à vista permite um desconto de 2%."
+        },
+        {
+          "claim_id": "c002",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O trecho s0090 estabelece que o desconto de 2% para pagamento à vista não pode ser acumulado com outros descontos."
+        }
+      ],
+      "explanation": "As afirmações estão integralmente sustentadas pelo documento de política comercial fornecido (s0090), que define tanto o percentual de desconto quanto a regra de não cumulatividade.",
+      "verdicts": [
+        {
+          "unit_id": "u001",
+          "relevant": true,
+          "reason": "A unidade responde diretamente à pergunta sobre o percentual de desconto para pagamento à vista."
+        },
+        {
+          "unit_id": "u002",
+          "relevant": true,
+          "reason": "A unidade responde diretamente à pergunta sobre a possibilidade de acumular o desconto com outros benefícios."
+        }
+      ]
+    },
+    "latency_ms": 1698.148
+  },
+  {
+    "case_id": "G09",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 7794,
+      "output": 806,
+      "total": 8600
+    },
+    "budget_admission": {
+      "id": "79241657e78e432b91900a2b5762bf01",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 33607,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O trecho em s0090 afirma explicitamente que descontos acima de 8% não são permitidos na política."
+        },
+        {
+          "claim_id": "c002",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O documento citado em s0090 estabelece as regras para descontos."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O trecho em s0090 confirma a regra de até 5% com aprovação do vendedor para pedidos a partir de R$ 15.000,00."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O trecho em s0090 confirma que descontos acima de 5% até 8% exigem aprovação do gerente comercial."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "O trecho em s0090 afirma que descontos acima de 8% não são permitidos."
+        },
+        {
+          "claim_id": "c006",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0090"
+          ],
+          "reason": "A conclusão é uma dedução lógica direta das regras estabelecidas em s0090."
+        }
+      ],
+      "explanation": "A resposta responde diretamente à pergunta do usuário utilizando as informações contidas no documento de política comercial fornecido, confirmando que descontos de 9% não são permitidos sob nenhuma circunstância de aprovação gerencial.",
+      "verdicts": [
+        {
+          "unit_id": "u001",
+          "relevant": true,
+          "reason": "Responde diretamente à pergunta do usuário."
+        },
+        {
+          "unit_id": "u002",
+          "relevant": true,
+          "reason": "Contextualiza a fonte da informação."
+        },
+        {
+          "unit_id": "u003",
+          "relevant": true,
+          "reason": "Fornece detalhes da política para embasar a resposta."
+        },
+        {
+          "unit_id": "u004",
+          "relevant": true,
+          "reason": "Fornece detalhes da política para embasar a resposta."
+        },
+        {
+          "unit_id": "u005",
+          "relevant": true,
+          "reason": "Fornece a regra específica que veta o desconto de 9%."
+        },
+        {
+          "unit_id": "u006",
+          "relevant": true,
+          "reason": "Conclui a explicação sobre a alçada gerencial."
+        }
+      ]
+    },
+    "latency_ms": 2462.255
+  },
+  {
+    "case_id": "G10",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 26624,
+      "output": 2515,
+      "total": 29139
+    },
+    "budget_admission": {
+      "id": "e1d90375dcbf412eab880011e33141d8",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 85461,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001",
+            "s0183",
+            "s0184"
+          ],
+          "reason": "O período de análise e a data da fotografia de estoque estão alinhados com os metadados fornecidos."
+        },
+        {
+          "claim_id": "c002",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Título sem afirmação factual."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0006",
+            "s0007",
+            "s0362",
+            "s0363",
+            "s0364"
+          ],
+          "reason": "Os valores de carteira, número de linhas e pedidos coincidem com os dados de impacto de rupturas totais."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0365"
+          ],
+          "reason": "O custo da carteira em ruptura está sustentado pelo snippet s0365."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0366",
+            "s0367"
+          ],
+          "reason": "O impacto na margem bruta e a margem percentual estão sustentados pelos dados de impacto de rupturas totais."
+        },
+        {
+          "claim_id": "c006",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Título sem afirmação factual."
+        },
+        {
+          "claim_id": "c007",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0172"
+          ],
+          "reason": "A definição de ruptura observada como disponível zero está confirmada."
+        },
+        {
+          "claim_id": "c008",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0013",
+            "s0014",
+            "s0015",
+            "s0018"
+          ],
+          "reason": "Os dados do produto PRD-00012 estão corretos conforme o snippet s0018."
+        },
+        {
+          "claim_id": "c009",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0021",
+            "s0022",
+            "s0023",
+            "s0026"
+          ],
+          "reason": "Os dados do produto PRD-00016 estão corretos conforme o snippet s0026."
+        },
+        {
+          "claim_id": "c010",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0029",
+            "s0030",
+            "s0031",
+            "s0034"
+          ],
+          "reason": "Os dados do produto PRD-00002 estão corretos conforme o snippet s0034."
+        },
+        {
+          "claim_id": "c011",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0037",
+            "s0038",
+            "s0039",
+            "s0042"
+          ],
+          "reason": "Os dados do produto PRD-00006 estão corretos conforme o snippet s0042."
+        },
+        {
+          "claim_id": "c012",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0045",
+            "s0046",
+            "s0047",
+            "s0050"
+          ],
+          "reason": "Os dados do produto PRD-00002 estão corretos conforme o snippet s0050."
+        },
+        {
+          "claim_id": "c013",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0053",
+            "s0054",
+            "s0055",
+            "s0058"
+          ],
+          "reason": "Os dados do produto PRD-00014 estão corretos conforme o snippet s0058."
+        },
+        {
+          "claim_id": "c014",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0061",
+            "s0062",
+            "s0063",
+            "s0066"
+          ],
+          "reason": "Os dados do produto PRD-00010 estão corretos conforme o snippet s0066."
+        },
+        {
+          "claim_id": "c015",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0069",
+            "s0070",
+            "s0071",
+            "s0074"
+          ],
+          "reason": "Os dados do produto PRD-00017 estão corretos conforme o snippet s0074."
+        },
+        {
+          "claim_id": "c016",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0093",
+            "s0094",
+            "s0095",
+            "s0098"
+          ],
+          "reason": "Os dados do produto PRD-00011 estão corretos conforme o snippet s0098."
+        },
+        {
+          "claim_id": "c017",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0117",
+            "s0118",
+            "s0119",
+            "s0122"
+          ],
+          "reason": "Os dados do produto PRD-00001 estão corretos conforme o snippet s0122."
+        },
+        {
+          "claim_id": "c018",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0373"
+          ],
+          "reason": "A diretriz sobre pedidos pendentes está confirmada no documento de política comercial."
+        },
+        {
+          "claim_id": "c019",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Aviso sobre o processo de geração da resposta."
+        }
+      ],
+      "explanation": "A resposta fornece os dados solicitados sobre rupturas de estoque, impacto financeiro e carteira pendente, utilizando as evidências disponíveis. Os valores numéricos foram verificados contra os snippets de dados de estoque e indicadores comerciais. As exclusões de factualidade referem-se a títulos e avisos de sistema.",
+      "verdicts": [
+        {
+          "unit_id": "u001",
+          "relevant": true,
+          "reason": "Contextualiza o período e a natureza dos dados."
+        },
+        {
+          "unit_id": "u002",
+          "relevant": true,
+          "reason": "Título relevante para a seção de impacto comercial."
+        },
+        {
+          "unit_id": "u003",
+          "relevant": true,
+          "reason": "Responde diretamente ao valor exato da carteira em saldo zero."
+        },
+        {
+          "unit_id": "u004",
+          "relevant": true,
+          "reason": "Fornece o custo da carteira, parte do impacto comercial."
+        },
+        {
+          "unit_id": "u005",
+          "relevant": true,
+          "reason": "Informa o impacto na margem bruta, respondendo à pergunta."
+        },
+        {
+          "unit_id": "u006",
+          "relevant": true,
+          "reason": "Título relevante para a lista de rupturas."
+        },
+        {
+          "unit_id": "u007",
+          "relevant": true,
+          "reason": "Introduz a lista de rupturas de maior valor."
+        },
+        {
+          "unit_id": "u008",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u009",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u010",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u011",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u012",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u013",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u014",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u015",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u016",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u017",
+          "relevant": true,
+          "reason": "Detalha uma das principais rupturas."
+        },
+        {
+          "unit_id": "u018",
+          "relevant": true,
+          "reason": "Esclarece a natureza contábil dos pedidos pendentes."
+        },
+        {
+          "unit_id": "u019",
+          "relevant": false,
+          "reason": "Digressão sobre o processo de geração da resposta."
+        }
+      ]
+    },
+    "latency_ms": 6699.294
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "mode": "live",
+  "phase": "all",
+  "concurrency": 1,
+  "planned_cases": [
+    "G06",
+    "G11",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "G17",
+    "G18"
+  ],
+  "local_limits": {
+    "gemini-3.5-flash": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    },
+    "gemini-3.1-flash-lite": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    },
+    "gemini-embedding-001": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    }
+  },
+  "demo_reserve_per_model": 5,
+  "steps": [
+    {
+      "case": "G11",
+      "phase": "generate",
+      "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131436Z-pipeline-ef2c6e\\generate-G11\\results.json"
+    }
+  ],
+  "actual_api_calls": 4,
+  "stop_reason": "api_failure_or_limit",
+  "total_daily_limit": null,
+  "total_demo_reserve": 0,
+  "usage_by_model": {
+    "gemini-embedding-001": {
+      "requests": 1,
+      "failed": 0,
+      "known_total_tokens": 0,
+      "requests_without_total_usage": 1
+    },
+    "gemini-3.1-flash-lite": {
+      "requests": 1,
+      "failed": 0,
+      "known_total_tokens": 2541,
+      "requests_without_total_usage": 0
+    },
+    "gemini-3.5-flash": {
+      "requests": 2,
+      "failed": 2,
+      "known_total_tokens": 0,
+      "requests_without_total_usage": 2
+    }
+  },
+  "cost": null,
+  "current": {
+    "case": "G11",
+    "phase": "generate"
+  }
+}

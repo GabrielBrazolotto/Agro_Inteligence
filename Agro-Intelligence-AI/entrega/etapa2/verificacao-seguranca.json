@@ -1,0 +1,20 @@
+{
+  "text_files_scanned": 296,
+  "findings": [],
+  "env_example_nonempty_sensitive_names": [],
+  "local_env_present": true,
+  "git_history_available": false,
+  "scope_note": "Current text files up to 15 MB, excluding secrets/env, runtime, venv, raw data and backups. Binary images and unavailable Git history are not audited.",
+  "exclude_from_repository_or_zip": [
+    ".env",
+    ".env.* (except sanitized .env.example)",
+    ".venv/",
+    "data/runtime/",
+    "data/ml/raw/",
+    "data/backups/",
+    "*.log",
+    ".git/",
+    "reports/ml/split_assignments.csv"
+  ],
+  "archive_created": false
+}

@@ -1,0 +1,6 @@
+id,codigo,nome,estado,peso_comercial
+1,REG-01,Oeste Simulado,PR,0.4500
+2,REG-02,Centro Simulado,PR,0.2500
+3,REG-03,Vale Simulado,SC,0.1500
+4,REG-04,Sul Simulado,RS,0.1000
+5,REG-05,Cerrado Simulado,MS,0.0500

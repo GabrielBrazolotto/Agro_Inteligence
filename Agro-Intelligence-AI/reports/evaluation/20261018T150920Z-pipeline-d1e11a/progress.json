@@ -1,0 +1,43 @@
+{
+  "mode": "live",
+  "phase": "judge",
+  "concurrency": 1,
+  "planned_cases": [
+    "G06"
+  ],
+  "local_limits": {
+    "gemini-3.5-flash": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    },
+    "gemini-3.1-flash-lite": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    },
+    "gemini-embedding-001": {
+      "rpm": 4,
+      "tpm": 100000,
+      "rpd": 20
+    }
+  },
+  "demo_reserve_per_model": 3,
+  "steps": [
+    {
+      "case": "G06",
+      "phase": "judge",
+      "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T150920Z-pipeline-d1e11a\\judge-G06\\results.json"
+    }
+  ],
+  "actual_api_calls": 0,
+  "stop_reason": "daily_demo_reserve_reached",
+  "total_daily_limit": null,
+  "total_demo_reserve": 0,
+  "usage_by_model": {},
+  "cost": null,
+  "current": {
+    "case": "G06",
+    "phase": "judge"
+  }
+}

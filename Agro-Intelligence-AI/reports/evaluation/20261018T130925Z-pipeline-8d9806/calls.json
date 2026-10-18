@@ -1,0 +1,645 @@
+[
+  {
+    "case_id": "G04",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 10618,
+      "output": 5279,
+      "total": 15897
+    },
+    "budget_admission": {
+      "id": "eb60522145894985994fe63083885b55",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 39281,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Trata-se de um título ou aviso introdutório sem afirmação factual."
+        },
+        {
+          "claim_id": "c002",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "A afirmação de que o faturamento se refere apenas a itens faturados é sustentada pelo snippet s0001."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0030",
+            "s0031"
+          ],
+          "reason": "O valor de R$ 69.100.257,04 para 2025-10 está correto conforme s0030 e s0031."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0033",
+            "s0034"
+          ],
+          "reason": "O valor de R$ 47.569.449,23 para 2025-11 está correto conforme s0033 e s0034."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0036",
+            "s0037"
+          ],
+          "reason": "O valor de R$ 22.958.227,98 para 2025-12 está correto conforme s0036 e s0037."
+        },
+        {
+          "claim_id": "c006",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0039",
+            "s0040"
+          ],
+          "reason": "O valor de R$ 20.195.392,48 para 2026-01 está correto conforme s0039 e s0040."
+        },
+        {
+          "claim_id": "c007",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0042",
+            "s0043"
+          ],
+          "reason": "O valor de R$ 24.733.899,94 para 2026-02 está correto conforme s0042 e s0043."
+        },
+        {
+          "claim_id": "c008",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0045",
+            "s0046"
+          ],
+          "reason": "O valor de R$ 21.990.732,75 para 2026-03 está correto conforme s0045 e s0046."
+        },
+        {
+          "claim_id": "c009",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0048",
+            "s0049"
+          ],
+          "reason": "O valor de R$ 19.900.242,28 para 2026-04 está correto conforme s0048 e s0049."
+        },
+        {
+          "claim_id": "c010",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0051",
+            "s0052"
+          ],
+          "reason": "O valor de R$ 18.898.851,47 para 2026-05 está correto conforme s0051 e s0052."
+        },
+        {
+          "claim_id": "c011",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0054",
+            "s0055"
+          ],
+          "reason": "O valor de R$ 31.224.307,20 para 2026-06 está correto conforme s0054 e s0055."
+        },
+        {
+          "claim_id": "c012",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0057",
+            "s0058"
+          ],
+          "reason": "O valor de R$ 49.589.766,87 para 2026-07 está correto conforme s0057 e s0058."
+        },
+        {
+          "claim_id": "c013",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0060",
+            "s0061"
+          ],
+          "reason": "O valor de R$ 84.051.605,74 para 2026-08 está correto conforme s0060 e s0061."
+        },
+        {
+          "claim_id": "c014",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0063",
+            "s0064"
+          ],
+          "reason": "O valor de R$ 82.913.784,04 para 2026-09 está correto conforme s0063 e s0064."
+        },
+        {
+          "claim_id": "c015",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0013",
+            "s0015",
+            "s0016"
+          ],
+          "reason": "Os totais de faturamento, margem e carteira pendente estão corretos conforme os snippets citados."
+        },
+        {
+          "claim_id": "c016",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Aviso de consulta de documento, não é uma afirmação factual."
+        },
+        {
+          "claim_id": "c017",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0066"
+          ],
+          "reason": "Título do documento citado em s0066."
+        },
+        {
+          "claim_id": "c018",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0066"
+          ],
+          "reason": "Informação de vigência didática contida em s0066."
+        },
+        {
+          "claim_id": "c019",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c020",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0066"
+          ],
+          "reason": "Regras de desconto descritas em s0066."
+        },
+        {
+          "claim_id": "c021",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c022",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0066"
+          ],
+          "reason": "Regras de pagamento e exclusão de pedidos cancelados descritas em s0066."
+        },
+        {
+          "claim_id": "c023",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c024",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0066"
+          ],
+          "reason": "Aviso de natureza fictícia dos dados em s0066."
+        },
+        {
+          "claim_id": "c025",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c026",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Aviso de consulta de documento, não é uma afirmação factual."
+        },
+        {
+          "claim_id": "c027",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0070"
+          ],
+          "reason": "Título do documento citado em s0070."
+        },
+        {
+          "claim_id": "c028",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0070"
+          ],
+          "reason": "Informação de vigência didática contida em s0070."
+        },
+        {
+          "claim_id": "c029",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c030",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0070"
+          ],
+          "reason": "Horário de atendimento e prazos de entrega descritos em s0070."
+        },
+        {
+          "claim_id": "c031",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c032",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0070"
+          ],
+          "reason": "Regras de frete e devolução descritas em s0070."
+        },
+        {
+          "claim_id": "c033",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c034",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0070"
+          ],
+          "reason": "Aviso de natureza fictícia dos dados em s0070."
+        },
+        {
+          "claim_id": "c035",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c036",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Aviso de consulta de documento, não é uma afirmação factual."
+        },
+        {
+          "claim_id": "c037",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0074"
+          ],
+          "reason": "Título do documento citado em s0074."
+        },
+        {
+          "claim_id": "c038",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0074"
+          ],
+          "reason": "Informação de vigência didática contida em s0074."
+        },
+        {
+          "claim_id": "c039",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c040",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0074"
+          ],
+          "reason": "Preços de lista dos produtos descritos em s0074."
+        },
+        {
+          "claim_id": "c041",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c042",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0074"
+          ],
+          "reason": "Aviso sobre a natureza fictícia dos produtos e ausência de recomendação agronômica em s0074."
+        },
+        {
+          "claim_id": "c043",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Espaçamento/formatação, sem conteúdo factual."
+        },
+        {
+          "claim_id": "c044",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "Confirmação de que os dados são sintéticos conforme s0001."
+        }
+      ],
+      "explanation": "A resposta forneceu corretamente a evolução do faturamento mensal solicitada, utilizando os dados sintéticos disponíveis nos snippets. Todos os valores numéricos foram verificados e estão em conformidade com as evidências fornecidas. As demais unidades de texto (avisos, títulos e documentos) foram classificadas como factuais quando continham informações presentes nos documentos de referência ou como não factuais quando eram apenas formatação ou avisos de sistema.",
+      "verdicts": [
+        {
+          "unit_id": "u001",
+          "relevant": false,
+          "reason": "Digressão: aviso de sistema sobre a natureza da resposta."
+        },
+        {
+          "unit_id": "u002",
+          "relevant": true,
+          "reason": "Esclarece o escopo dos dados apresentados."
+        },
+        {
+          "unit_id": "u003",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u004",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u005",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u006",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u007",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u008",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u009",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u010",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u011",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u012",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u013",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u014",
+          "relevant": true,
+          "reason": "Responde diretamente à solicitação de faturamento mensal."
+        },
+        {
+          "unit_id": "u015",
+          "relevant": true,
+          "reason": "Fornece contexto adicional relevante sobre o período total."
+        },
+        {
+          "unit_id": "u016",
+          "relevant": false,
+          "reason": "Digressão: metadados sobre a consulta de documentos."
+        },
+        {
+          "unit_id": "u017",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u018",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u019",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u020",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u021",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u022",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u023",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u024",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u025",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u026",
+          "relevant": false,
+          "reason": "Digressão: metadados sobre a consulta de documentos."
+        },
+        {
+          "unit_id": "u027",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u028",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u029",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u030",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u031",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u032",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u033",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u034",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u035",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u036",
+          "relevant": false,
+          "reason": "Digressão: metadados sobre a consulta de documentos."
+        },
+        {
+          "unit_id": "u037",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u038",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u039",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u040",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u041",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u042",
+          "relevant": false,
+          "reason": "Digressão: conteúdo de documento não solicitado."
+        },
+        {
+          "unit_id": "u043",
+          "relevant": false,
+          "reason": "Digressão: formatação."
+        },
+        {
+          "unit_id": "u044",
+          "relevant": false,
+          "reason": "Digressão: nota sobre a natureza dos dados."
+        }
+      ]
+    },
+    "latency_ms": 9622.693
+  },
+  {
+    "case_id": "G06",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "failed",
+    "usage": null,
+    "budget_admission": {
+      "id": "10d8f80d29c3461991c3c3a93da6ef87",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 39551,
+      "debited_before_dispatch": true
+    },
+    "failure": {
+      "status": "api_error",
+      "error_category": "timeout"
+    },
+    "latency_ms": 30101.969
+  }
+]

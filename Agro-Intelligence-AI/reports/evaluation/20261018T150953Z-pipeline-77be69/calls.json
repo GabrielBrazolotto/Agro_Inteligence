@@ -1,0 +1,105 @@
+[
+  {
+    "case_id": "G06",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "success",
+    "usage": {
+      "input": 9302,
+      "output": 881,
+      "total": 10183
+    },
+    "budget_admission": {
+      "id": "efed4e0528cb4dbf9e2e4543a1e3ff71",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 37508,
+      "debited_before_dispatch": true
+    },
+    "raw_judgment": {
+      "claims": [
+        {
+          "claim_id": "c001",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0015"
+          ],
+          "reason": "O valor da margem comercial bruta total de R$ 100.023.056,21 para o período de 01/10/2025 a 30/09/2026 está explicitamente confirmado no trecho s0015."
+        },
+        {
+          "claim_id": "c002",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "O trecho s0001 define que a margem bruta comercial é calculada como receita líquida menos custo."
+        },
+        {
+          "claim_id": "c003",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0013"
+          ],
+          "reason": "O valor da receita líquida faturada de R$ 493.126.517,02 está confirmado no trecho s0013."
+        },
+        {
+          "claim_id": "c004",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0014"
+          ],
+          "reason": "O valor do custo dos itens faturados de R$ 393.103.460,81 está confirmado no trecho s0014."
+        },
+        {
+          "claim_id": "c005",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0015"
+          ],
+          "reason": "O valor da margem comercial bruta de R$ 100.023.056,21 está confirmado no trecho s0015."
+        },
+        {
+          "claim_id": "c006",
+          "factual": false,
+          "supported": false,
+          "snippet_ids": [],
+          "reason": "Trata-se de um título de seção, não contendo afirmação factual."
+        },
+        {
+          "claim_id": "c007",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "O trecho s0001 confirma que a margem bruta comercial não é lucro líquido e não contempla impostos ou despesas operacionais."
+        },
+        {
+          "claim_id": "c008",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0016",
+            "s0017"
+          ],
+          "reason": "Os valores de pedidos pendentes (R$ 155.146.363,54) e cancelados (R$ 34.784.595,17) estão confirmados nos trechos s0016 e s0017, respectivamente."
+        },
+        {
+          "claim_id": "c009",
+          "factual": true,
+          "supported": true,
+          "snippet_ids": [
+            "s0001"
+          ],
+          "reason": "O trecho s0001 confirma que os dados são sintéticos e fictícios."
+        }
+      ],
+      "explanation": "As afirmações foram validadas com base nos indicadores comerciais fornecidos, que confirmam os valores totais de receita, custo e margem, bem como a natureza sintética dos dados e a distinção entre margem bruta e lucro líquido."
+    },
+    "latency_ms": 8409.826
+  }
+]

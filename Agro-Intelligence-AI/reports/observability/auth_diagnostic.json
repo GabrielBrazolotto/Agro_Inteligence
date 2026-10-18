@@ -1,0 +1,9 @@
+{
+  "sdk_version": "5.0.2",
+  "enabled": true,
+  "configuration_complete": true,
+  "authentication": {
+    "ok": true,
+    "category": "ok"
+  }
+}

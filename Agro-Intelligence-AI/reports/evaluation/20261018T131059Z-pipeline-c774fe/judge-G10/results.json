@@ -1,0 +1,5261 @@
+{
+  "run_id": "20261018T131148Z-batch-51b705",
+  "selected_cases": [
+    "G10"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G10",
+      "category": "pedidos_rupturas_composta",
+      "question": "Quais rupturas de estoque afetam pedidos pendentes e qual o impacto comercial nas margens? Informe a carteira em saldo zero com valor exato.",
+      "expected_behavior": "Dois agentes; distinguir saldo zero do grupo amplo; carteira não é perda nem receita realizada.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos",
+        "duckdb_comercial",
+        "duckdb_impacto_pares",
+        "duckdb_impacto_rupturas_total"
+      ],
+      "references": [
+        "sql:rupture_pending",
+        "sql:ruptures"
+      ],
+      "checks": [
+        "rupture_pending"
+      ]
+    }
+  ],
+  "phase": "judge",
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 5,
+  "calls": [
+    {
+      "case_id": "G06",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 10021,
+        "output": 1280,
+        "total": 11301
+      },
+      "budget_admission": {
+        "id": "c446badc518c4f83885dde82d2affe9d",
+        "model": "gemini-3.1-flash-lite",
+        "estimated_budget_tokens": 39551,
+        "debited_before_dispatch": true
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0011",
+              "s0012",
+              "s0015"
+            ],
+            "reason": "O período de 01/10/2025 a 30/09/2026 e o valor da margem bruta de R$ 100.023.056,21 estão confirmados pelos snippets."
+          },
+          {
+            "claim_id": "c002",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001"
+            ],
+            "reason": "O snippet s0001 define que a margem bruta comercial é calculada como receita líquida menos custo."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0013"
+            ],
+            "reason": "O valor da receita líquida faturada de R$ 493.126.517,02 está explicitamente no snippet s0013."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0014"
+            ],
+            "reason": "O valor do custo dos itens faturados de R$ 393.103.460,81 está explicitamente no snippet s0014."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0015"
+            ],
+            "reason": "O valor da margem comercial bruta de R$ 100.023.056,21 está explicitamente no snippet s0015."
+          },
+          {
+            "claim_id": "c006",
+            "factual": false,
+            "supported": true,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c007",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001"
+            ],
+            "reason": "O snippet s0001 confirma que a margem bruta não é lucro líquido e não contempla impostos ou despesas operacionais."
+          },
+          {
+            "claim_id": "c008",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0016",
+              "s0017",
+              "s0115"
+            ],
+            "reason": "Os valores de pedidos pendentes e cancelados, bem como a regra de exclusão, estão sustentados pelos snippets."
+          },
+          {
+            "claim_id": "c009",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001",
+              "s0115"
+            ],
+            "reason": "A natureza sintética e acadêmica dos dados é confirmada pelos snippets s0001 e s0115."
+          }
+        ],
+        "explanation": "A resposta fornece os valores exatos da margem comercial bruta, receita líquida e custo, conforme os dados fornecidos nos snippets. As observações sobre a natureza dos dados e a distinção entre margem bruta e lucro líquido também estão alinhadas com as evidências.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "Responde diretamente à pergunta sobre a margem comercial bruta total."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Explica a metodologia de cálculo da margem."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Fornece o valor da receita líquida, componente do cálculo."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Fornece o valor do custo, componente do cálculo."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Reitera o valor da margem bruta."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": true,
+            "reason": "Introduz observações contextuais relevantes."
+          },
+          {
+            "unit_id": "u007",
+            "relevant": true,
+            "reason": "Esclarece a diferença entre margem bruta e lucro líquido, conforme solicitado."
+          },
+          {
+            "unit_id": "u008",
+            "relevant": true,
+            "reason": "Explica as regras de exclusão de pedidos, garantindo a precisão do valor faturado."
+          },
+          {
+            "unit_id": "u009",
+            "relevant": true,
+            "reason": "Informa sobre a natureza sintética dos dados, o que é relevante para a interpretação dos valores."
+          }
+        ]
+      },
+      "latency_ms": 3438.936
+    },
+    {
+      "case_id": "G07",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 7701,
+        "output": 687,
+        "total": 8388
+      },
+      "budget_admission": {
+        "id": "178a7a604ab44749b64dd546818961a4",
+        "model": "gemini-3.1-flash-lite",
+        "estimated_budget_tokens": 33197,
+        "debited_before_dispatch": true
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O documento PC-001 (politica_comercial.md) estabelece que descontos acima de 5% e até 8% exigem aprovação do gerente comercial, o que inclui o desconto de 7%."
+          },
+          {
+            "claim_id": "c002",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Esta unidade é apenas uma introdução estrutural e não contém uma afirmação factual."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O documento confirma que descontos de até 5% podem ser aprovados pelo vendedor para pedidos a partir de R$ 15.000."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O documento confirma que descontos acima de 5% e até 8% exigem aprovação da gerência comercial."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O documento confirma que descontos acima de 8% não são permitidos."
+          }
+        ],
+        "explanation": "A resposta fornece corretamente as regras de aprovação de descontos conforme o documento PC-001 (politica_comercial.md).",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "Responde diretamente à pergunta sobre quem aprova o desconto de 7% e cita o documento."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Introduz a listagem das regras que fundamentam a resposta."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Fornece contexto adicional sobre a política de descontos."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Fornece contexto adicional sobre a política de descontos."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Fornece contexto adicional sobre a política de descontos."
+          }
+        ]
+      },
+      "latency_ms": 2622.653
+    },
+    {
+      "case_id": "G08",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 7316,
+        "output": 339,
+        "total": 7655
+      },
+      "budget_admission": {
+        "id": "99f28db0eae04f669905183e7bfb54d0",
+        "model": "gemini-3.1-flash-lite",
+        "estimated_budget_tokens": 32188,
+        "debited_before_dispatch": true
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O trecho s0090 confirma explicitamente que o pagamento à vista permite um desconto de 2%."
+          },
+          {
+            "claim_id": "c002",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O trecho s0090 estabelece que o desconto de 2% para pagamento à vista não pode ser acumulado com outros descontos."
+          }
+        ],
+        "explanation": "As afirmações estão integralmente sustentadas pelo documento de política comercial fornecido (s0090), que define tanto o percentual de desconto quanto a regra de não cumulatividade.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "A unidade responde diretamente à pergunta sobre o percentual de desconto para pagamento à vista."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "A unidade responde diretamente à pergunta sobre a possibilidade de acumular o desconto com outros benefícios."
+          }
+        ]
+      },
+      "latency_ms": 1698.148
+    },
+    {
+      "case_id": "G09",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 7794,
+        "output": 806,
+        "total": 8600
+      },
+      "budget_admission": {
+        "id": "79241657e78e432b91900a2b5762bf01",
+        "model": "gemini-3.1-flash-lite",
+        "estimated_budget_tokens": 33607,
+        "debited_before_dispatch": true
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O trecho em s0090 afirma explicitamente que descontos acima de 8% não são permitidos na política."
+          },
+          {
+            "claim_id": "c002",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O documento citado em s0090 estabelece as regras para descontos."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O trecho em s0090 confirma a regra de até 5% com aprovação do vendedor para pedidos a partir de R$ 15.000,00."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O trecho em s0090 confirma que descontos acima de 5% até 8% exigem aprovação do gerente comercial."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "O trecho em s0090 afirma que descontos acima de 8% não são permitidos."
+          },
+          {
+            "claim_id": "c006",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0090"
+            ],
+            "reason": "A conclusão é uma dedução lógica direta das regras estabelecidas em s0090."
+          }
+        ],
+        "explanation": "A resposta responde diretamente à pergunta do usuário utilizando as informações contidas no documento de política comercial fornecido, confirmando que descontos de 9% não são permitidos sob nenhuma circunstância de aprovação gerencial.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "Responde diretamente à pergunta do usuário."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Contextualiza a fonte da informação."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Fornece detalhes da política para embasar a resposta."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Fornece detalhes da política para embasar a resposta."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Fornece a regra específica que veta o desconto de 9%."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": true,
+            "reason": "Conclui a explicação sobre a alçada gerencial."
+          }
+        ]
+      },
+      "latency_ms": 2462.255
+    },
+    {
+      "case_id": "G10",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 26624,
+        "output": 2515,
+        "total": 29139
+      },
+      "budget_admission": {
+        "id": "e1d90375dcbf412eab880011e33141d8",
+        "model": "gemini-3.1-flash-lite",
+        "estimated_budget_tokens": 85461,
+        "debited_before_dispatch": true
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "claim_id": "c001",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0001",
+              "s0183",
+              "s0184"
+            ],
+            "reason": "O período de análise e a data da fotografia de estoque estão alinhados com os metadados fornecidos."
+          },
+          {
+            "claim_id": "c002",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c003",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0006",
+              "s0007",
+              "s0362",
+              "s0363",
+              "s0364"
+            ],
+            "reason": "Os valores de carteira, número de linhas e pedidos coincidem com os dados de impacto de rupturas totais."
+          },
+          {
+            "claim_id": "c004",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0365"
+            ],
+            "reason": "O custo da carteira em ruptura está sustentado pelo snippet s0365."
+          },
+          {
+            "claim_id": "c005",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0366",
+              "s0367"
+            ],
+            "reason": "O impacto na margem bruta e a margem percentual estão sustentados pelos dados de impacto de rupturas totais."
+          },
+          {
+            "claim_id": "c006",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Título sem afirmação factual."
+          },
+          {
+            "claim_id": "c007",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0172"
+            ],
+            "reason": "A definição de ruptura observada como disponível zero está confirmada."
+          },
+          {
+            "claim_id": "c008",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0013",
+              "s0014",
+              "s0015",
+              "s0018"
+            ],
+            "reason": "Os dados do produto PRD-00012 estão corretos conforme o snippet s0018."
+          },
+          {
+            "claim_id": "c009",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0021",
+              "s0022",
+              "s0023",
+              "s0026"
+            ],
+            "reason": "Os dados do produto PRD-00016 estão corretos conforme o snippet s0026."
+          },
+          {
+            "claim_id": "c010",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0029",
+              "s0030",
+              "s0031",
+              "s0034"
+            ],
+            "reason": "Os dados do produto PRD-00002 estão corretos conforme o snippet s0034."
+          },
+          {
+            "claim_id": "c011",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0037",
+              "s0038",
+              "s0039",
+              "s0042"
+            ],
+            "reason": "Os dados do produto PRD-00006 estão corretos conforme o snippet s0042."
+          },
+          {
+            "claim_id": "c012",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0045",
+              "s0046",
+              "s0047",
+              "s0050"
+            ],
+            "reason": "Os dados do produto PRD-00002 estão corretos conforme o snippet s0050."
+          },
+          {
+            "claim_id": "c013",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0053",
+              "s0054",
+              "s0055",
+              "s0058"
+            ],
+            "reason": "Os dados do produto PRD-00014 estão corretos conforme o snippet s0058."
+          },
+          {
+            "claim_id": "c014",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0061",
+              "s0062",
+              "s0063",
+              "s0066"
+            ],
+            "reason": "Os dados do produto PRD-00010 estão corretos conforme o snippet s0066."
+          },
+          {
+            "claim_id": "c015",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0069",
+              "s0070",
+              "s0071",
+              "s0074"
+            ],
+            "reason": "Os dados do produto PRD-00017 estão corretos conforme o snippet s0074."
+          },
+          {
+            "claim_id": "c016",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0093",
+              "s0094",
+              "s0095",
+              "s0098"
+            ],
+            "reason": "Os dados do produto PRD-00011 estão corretos conforme o snippet s0098."
+          },
+          {
+            "claim_id": "c017",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0117",
+              "s0118",
+              "s0119",
+              "s0122"
+            ],
+            "reason": "Os dados do produto PRD-00001 estão corretos conforme o snippet s0122."
+          },
+          {
+            "claim_id": "c018",
+            "factual": true,
+            "supported": true,
+            "snippet_ids": [
+              "s0373"
+            ],
+            "reason": "A diretriz sobre pedidos pendentes está confirmada no documento de política comercial."
+          },
+          {
+            "claim_id": "c019",
+            "factual": false,
+            "supported": false,
+            "snippet_ids": [],
+            "reason": "Aviso sobre o processo de geração da resposta."
+          }
+        ],
+        "explanation": "A resposta fornece os dados solicitados sobre rupturas de estoque, impacto financeiro e carteira pendente, utilizando as evidências disponíveis. Os valores numéricos foram verificados contra os snippets de dados de estoque e indicadores comerciais. As exclusões de factualidade referem-se a títulos e avisos de sistema.",
+        "verdicts": [
+          {
+            "unit_id": "u001",
+            "relevant": true,
+            "reason": "Contextualiza o período e a natureza dos dados."
+          },
+          {
+            "unit_id": "u002",
+            "relevant": true,
+            "reason": "Título relevante para a seção de impacto comercial."
+          },
+          {
+            "unit_id": "u003",
+            "relevant": true,
+            "reason": "Responde diretamente ao valor exato da carteira em saldo zero."
+          },
+          {
+            "unit_id": "u004",
+            "relevant": true,
+            "reason": "Fornece o custo da carteira, parte do impacto comercial."
+          },
+          {
+            "unit_id": "u005",
+            "relevant": true,
+            "reason": "Informa o impacto na margem bruta, respondendo à pergunta."
+          },
+          {
+            "unit_id": "u006",
+            "relevant": true,
+            "reason": "Título relevante para a lista de rupturas."
+          },
+          {
+            "unit_id": "u007",
+            "relevant": true,
+            "reason": "Introduz a lista de rupturas de maior valor."
+          },
+          {
+            "unit_id": "u008",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u009",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u010",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u011",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u012",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u013",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u014",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u015",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u016",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u017",
+            "relevant": true,
+            "reason": "Detalha uma das principais rupturas."
+          },
+          {
+            "unit_id": "u018",
+            "relevant": true,
+            "reason": "Esclarece a natureza contábil dos pedidos pendentes."
+          },
+          {
+            "unit_id": "u019",
+            "relevant": false,
+            "reason": "Digressão sobre o processo de geração da resposta."
+          }
+        ]
+      },
+      "latency_ms": 6699.294
+    }
+  ],
+  "results": [
+    {
+      "id": "G10",
+      "category": "pedidos_rupturas_composta",
+      "question": "Quais rupturas de estoque afetam pedidos pendentes e qual o impacto comercial nas margens? Informe a carteira em saldo zero com valor exato.",
+      "expected_behavior": "Dois agentes; distinguir saldo zero do grupo amplo; carteira não é perda nem receita realizada.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos",
+        "duckdb_comercial",
+        "duckdb_impacto_pares",
+        "duckdb_impacto_rupturas_total"
+      ],
+      "references": [
+        "sql:rupture_pending",
+        "sql:ruptures"
+      ],
+      "checks": [
+        "rupture_pending"
+      ],
+      "generation_status": "reused",
+      "answer": "No período de 01/10/2025 a 30/09/2026 (com fotografia de estoque em 30/09/2026), foram analisadas as rupturas observadas (itens com disponível zero) que afetam os pedidos pendentes. Todos os dados são fictícios.\n\n### Impacto Comercial e Carteira em Saldo Zero\n* **Valor Exato da Carteira em Ruptura:** **R$ 4.399.084,73** (abrangendo 103 linhas de pedidos e 101 pedidos distintos, distribuídos em 41 pares produto-centro em ruptura com carteira).\n* **Custo da Carteira:** R$ 3.506.069,23.\n* **Impacto Comercial na Margem Bruta:** **R$ 893.015,50**, o que representa uma margem percentual teórica de **20,3%** retida na carteira pendente.\n\n### Principais Rupturas que Afetam Pedidos Pendentes (Amostra de Prioridades)\nAs rupturas observadas (disponível zero) de maior valor na carteira pendente incluem:\n* **PRD-00012** (CTR-004, tonelada): R$ 378.888,68 em carteira pendente;\n* **PRD-00016** (CTR-002, tonelada): R$ 339.247,27;\n* **PRD-00002** (CTR-006, tonelada): R$ 275.189,64;\n* **PRD-00006** (CTR-003, tonelada): R$ 262.012,62;\n* **PRD-00002** (CTR-005, tonelada): R$ 231.883,34;\n* **PRD-00014** (CTR-012, tonelada): R$ 201.914,05;\n* **PRD-00010** (CTR-015, tonelada): R$ 180.987,80;\n* **PRD-00017** (CTR-006, KG): R$ 166.603,01;\n* **PRD-00011** (CTR-001, KG): R$ 146.315,83;\n* **PRD-00001** (CTR-001, KG): R$ 125.904,66.\n\nConforme estabelecido em nossa diretriz [politica_comercial.md, trecho 1], pedidos pendentes não constituem receita faturada e a carteira pendente não deve ser somada à receita realizada.\n\n**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "estoque.abastecimento",
+          "content": {
+            "totais": {
+              "data_estoque": "2026-09-30",
+              "posicoes": 3000,
+              "rupturas_observadas": 60,
+              "excessos": 60,
+              "pares_sinalizados": 755,
+              "rupturas_com_carteira": 41,
+              "carteira_em_ruptura": "4399084.73",
+              "insuficiencias_com_saldo": 695,
+              "carteira_em_insuficiencia_com_saldo": "69752075.66",
+              "carteira_nos_pares_sinalizados": "74151160.39"
+            },
+            "prioridades_amostra": [
+              {
+                "produto_id": 12,
+                "centro_id": 4,
+                "produto": "PRD-00012",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 97,
+                "carteira_valor": "378888.68"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 2,
+                "produto": "PRD-00016",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 96,
+                "carteira_valor": "339247.27"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 6,
+                "produto": "PRD-00002",
+                "centro": "CTR-006",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 70,
+                "carteira_valor": "275189.64"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 3,
+                "produto": "PRD-00006",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 94,
+                "carteira_valor": "262012.62"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 5,
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 57,
+                "carteira_valor": "231883.34"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 12,
+                "produto": "PRD-00014",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "201914.05"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 15,
+                "produto": "PRD-00010",
+                "centro": "CTR-015",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 43,
+                "carteira_valor": "180987.80"
+              },
+              {
+                "produto_id": 17,
+                "centro_id": 6,
+                "produto": "PRD-00017",
+                "centro": "CTR-006",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 38360,
+                "carteira_valor": "166603.01"
+              },
+              {
+                "produto_id": 8,
+                "centro_id": 8,
+                "produto": "PRD-00008",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 31,
+                "carteira_valor": "150070.70"
+              },
+              {
+                "produto_id": 18,
+                "centro_id": 8,
+                "produto": "PRD-00018",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 53,
+                "carteira_valor": "146376.94"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 1,
+                "produto": "PRD-00011",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 31816,
+                "carteira_valor": "146315.83"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 1,
+                "produto": "PRD-00016",
+                "centro": "CTR-001",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "144517.20"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 3,
+                "produto": "PRD-00016",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 38,
+                "carteira_valor": "136034.11"
+              },
+              {
+                "produto_id": 1,
+                "centro_id": 1,
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 25560,
+                "carteira_valor": "125904.66"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 14,
+                "produto": "PRD-00010",
+                "centro": "CTR-014",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 30,
+                "carteira_valor": "120044.40"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 10,
+                "produto": "PRD-00014",
+                "centro": "CTR-010",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 24,
+                "carteira_valor": "115767.38"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 11,
+                "produto": "PRD-00004",
+                "centro": "CTR-011",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 54,
+                "carteira_valor": "115522.44"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 12,
+                "produto": "PRD-00004",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 50,
+                "carteira_valor": "104552.45"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 2,
+                "produto": "PRD-00006",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 35,
+                "carteira_valor": "102186.49"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 3,
+                "produto": "PRD-00011",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 21388,
+                "carteira_valor": "101511.89"
+              }
+            ],
+            "escopo_prioridades": "ruptura",
+            "natureza": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ],
+            "estoque_resumo": [
+              {
+                "unidade": "KG",
+                "pares_produto_centro": 300,
+                "disponivel": 233446,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "888117.83"
+              },
+              {
+                "unidade": "L",
+                "pares_produto_centro": 1200,
+                "disponivel": 425332,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "41312128.07"
+              },
+              {
+                "unidade": "saca_20KG",
+                "pares_produto_centro": 600,
+                "disponivel": 208296,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "141845310.52"
+              },
+              {
+                "unidade": "saca_40KG",
+                "pares_produto_centro": 600,
+                "disponivel": 218247,
+                "rupturas": 0,
+                "excessos": 0,
+                "valor_estoque": "69955289.47"
+              },
+              {
+                "unidade": "tonelada",
+                "pares_produto_centro": 300,
+                "disponivel": 233878,
+                "rupturas": 30,
+                "excessos": 30,
+                "valor_estoque": "834991667.58"
+              }
+            ],
+            "alertas_estoque": [
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00021",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00022",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 5000,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "excesso"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-002",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00001",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              },
+              {
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "estoque_minimo": 40,
+                "estoque_maximo": 1000,
+                "cenario": "ruptura"
+              }
+            ],
+            "carteira_por_vencimento": [
+              {
+                "mes_vencimento": "2025-10",
+                "pedidos": 3,
+                "valor_pendente": "355618.39"
+              },
+              {
+                "mes_vencimento": "2025-11",
+                "pedidos": 79,
+                "valor_pendente": "6197664.84"
+              },
+              {
+                "mes_vencimento": "2025-12",
+                "pedidos": 138,
+                "valor_pendente": "11541416.05"
+              },
+              {
+                "mes_vencimento": "2026-01",
+                "pedidos": 181,
+                "valor_pendente": "13042189.79"
+              },
+              {
+                "mes_vencimento": "2026-02",
+                "pedidos": 116,
+                "valor_pendente": "9408354.34"
+              },
+              {
+                "mes_vencimento": "2026-03",
+                "pedidos": 75,
+                "valor_pendente": "6321954.41"
+              },
+              {
+                "mes_vencimento": "2026-04",
+                "pedidos": 86,
+                "valor_pendente": "7846921.01"
+              },
+              {
+                "mes_vencimento": "2026-05",
+                "pedidos": 86,
+                "valor_pendente": "8724113.42"
+              },
+              {
+                "mes_vencimento": "2026-06",
+                "pedidos": 88,
+                "valor_pendente": "7943327.79"
+              },
+              {
+                "mes_vencimento": "2026-07",
+                "pedidos": 99,
+                "valor_pendente": "9360460.00"
+              },
+              {
+                "mes_vencimento": "2026-08",
+                "pedidos": 135,
+                "valor_pendente": "11773447.39"
+              },
+              {
+                "mes_vencimento": "2026-09",
+                "pedidos": 168,
+                "valor_pendente": "15047823.53"
+              },
+              {
+                "mes_vencimento": "2026-10",
+                "pedidos": 262,
+                "valor_pendente": "19619103.47"
+              },
+              {
+                "mes_vencimento": "2026-11",
+                "pedidos": 217,
+                "valor_pendente": "19763707.29"
+              },
+              {
+                "mes_vencimento": "2026-12",
+                "pedidos": 99,
+                "valor_pendente": "8200261.82"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e3",
+          "origin": "comercial.impacto_compartilhado",
+          "content": {
+            "escopo": "somente os até 20 pares priorizados pelo agente de estoque; não é total global",
+            "pares_consultados": 20,
+            "por_familia": [
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "tonelada",
+                "linhas_pendentes": 46,
+                "pedidos": 46,
+                "carteira_pendente": "3005195.51",
+                "margem_carteira": "650582.93"
+              },
+              {
+                "categoria": "Fertilizantes",
+                "unidade": "KG",
+                "linhas_pendentes": 23,
+                "pedidos": 23,
+                "carteira_pendente": "540335.39",
+                "margem_carteira": "85460.74"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e4",
+          "origin": "comercial.impacto_rupturas_total",
+          "content": {
+            "escopo": "todos os pares com disponível zero; não apenas os 20 prioritários",
+            "totais": {
+              "linhas_pendentes": 103,
+              "pedidos_distintos": 101,
+              "carteira_pendente": "4399084.73",
+              "custo_carteira": "3506069.23",
+              "margem_carteira": "893015.50",
+              "margem_pct": 20.3
+            },
+            "natureza": "Valores da carteira, não faturamento, perda comprovada ou previsão ML."
+          }
+        },
+        {
+          "id": "e5",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.39267706871032715
+            },
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.39659643173217773
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.41168808937072754
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "agent": "estoque",
+          "tool": "duckdb_estoque_pedidos",
+          "status": "ok"
+        },
+        {
+          "agent": "estoque",
+          "tool": "gemini_analise",
+          "status": "failed",
+          "category": "timeout",
+          "http": null,
+          "reference": "03a2191d3454"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_pares",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "duckdb_impacto_rupturas_total",
+          "status": "ok",
+          "depends_on": "estoque.duckdb_estoque_pedidos"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 16,
+          "claims": 16,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.9473684210526315,
+          "relevant": 18,
+          "units": 19,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "generation_attempted": false,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "rejected_cached_responses": [],
+      "response_key": "03bf15463ab1b62ef253afcbb5afddf5b1ecab0bc3d6d7e88787f71d48fd57ea",
+      "response_origin": {
+        "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T125121Z-pipeline-6b67fd\\generate-G10\\results.json",
+        "fresh_generation": true
+      },
+      "historical_api_failures": [
+        {
+          "stage": "gemini_analise",
+          "category": "timeout",
+          "http_code": null
+        }
+      ],
+      "generation_latency_ms": null,
+      "deterministic": [
+        {
+          "check": "rupture_pending",
+          "status": "passed",
+          "reference_rows": [
+            {
+              "valor": "4399084.73"
+            }
+          ],
+          "missing_or_inaccurate_values": []
+        }
+      ],
+      "completeness": {
+        "status": "not_applicable"
+      },
+      "reused_metrics": [],
+      "requested_metrics": [
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "current_assessment": {
+        "faithfulness": {
+          "status": "evaluated",
+          "score": 1.0,
+          "supported": 16,
+          "claims": 16,
+          "protocol": "indexed_claim_evidence_v2"
+        },
+        "faithfulness_judgment": {
+          "claims": [
+            {
+              "claim_id": "c001",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0001",
+                "s0183",
+                "s0184"
+              ],
+              "reason": "O período de análise e a data da fotografia de estoque estão alinhados com os metadados fornecidos.",
+              "quote": "No período de 01/10/2025 a 30/09/2026 (com fotografia de estoque em 30/09/2026), foram analisadas as rupturas observadas (itens com disponível zero) que afetam os pedidos pendentes. Todos os dados são fictícios.",
+              "start": 0,
+              "end": 211,
+              "evidence": [
+                {
+                  "snippet_id": "s0001",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/totais/data_estoque",
+                  "value": "2026-09-30"
+                },
+                {
+                  "snippet_id": "s0183",
+                  "evidence_id": "e2",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/inicio",
+                  "value": "2025-10-01"
+                },
+                {
+                  "snippet_id": "s0184",
+                  "evidence_id": "e2",
+                  "origin": "comercial.indicadores",
+                  "path": "/content/totais/fim",
+                  "value": "2026-09-30"
+                }
+              ]
+            },
+            {
+              "claim_id": "c002",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título sem afirmação factual.",
+              "quote": "### Impacto Comercial e Carteira em Saldo Zero",
+              "start": 213,
+              "end": 259,
+              "evidence": []
+            },
+            {
+              "claim_id": "c003",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0006",
+                "s0007",
+                "s0362",
+                "s0363",
+                "s0364"
+              ],
+              "reason": "Os valores de carteira, número de linhas e pedidos coincidem com os dados de impacto de rupturas totais.",
+              "quote": "* **Valor Exato da Carteira em Ruptura:** **R$ 4.399.084,73** (abrangendo 103 linhas de pedidos e 101 pedidos distintos, distribuídos em 41 pares produto-centro em ruptura com carteira).",
+              "start": 260,
+              "end": 446,
+              "evidence": [
+                {
+                  "snippet_id": "s0006",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/totais/rupturas_com_carteira",
+                  "value": 41
+                },
+                {
+                  "snippet_id": "s0007",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/totais/carteira_em_ruptura",
+                  "value": "4399084.73"
+                },
+                {
+                  "snippet_id": "s0362",
+                  "evidence_id": "e4",
+                  "origin": "comercial.impacto_rupturas_total",
+                  "path": "/content/totais/linhas_pendentes",
+                  "value": 103
+                },
+                {
+                  "snippet_id": "s0363",
+                  "evidence_id": "e4",
+                  "origin": "comercial.impacto_rupturas_total",
+                  "path": "/content/totais/pedidos_distintos",
+                  "value": 101
+                },
+                {
+                  "snippet_id": "s0364",
+                  "evidence_id": "e4",
+                  "origin": "comercial.impacto_rupturas_total",
+                  "path": "/content/totais/carteira_pendente",
+                  "value": "4399084.73"
+                }
+              ]
+            },
+            {
+              "claim_id": "c004",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0365"
+              ],
+              "reason": "O custo da carteira em ruptura está sustentado pelo snippet s0365.",
+              "quote": "* **Custo da Carteira:** R$ 3.506.069,23.",
+              "start": 447,
+              "end": 488,
+              "evidence": [
+                {
+                  "snippet_id": "s0365",
+                  "evidence_id": "e4",
+                  "origin": "comercial.impacto_rupturas_total",
+                  "path": "/content/totais/custo_carteira",
+                  "value": "3506069.23"
+                }
+              ]
+            },
+            {
+              "claim_id": "c005",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0366",
+                "s0367"
+              ],
+              "reason": "O impacto na margem bruta e a margem percentual estão sustentados pelos dados de impacto de rupturas totais.",
+              "quote": "* **Impacto Comercial na Margem Bruta:** **R$ 893.015,50**, o que representa uma margem percentual teórica de **20,3%** retida na carteira pendente.",
+              "start": 489,
+              "end": 637,
+              "evidence": [
+                {
+                  "snippet_id": "s0366",
+                  "evidence_id": "e4",
+                  "origin": "comercial.impacto_rupturas_total",
+                  "path": "/content/totais/margem_carteira",
+                  "value": "893015.50"
+                },
+                {
+                  "snippet_id": "s0367",
+                  "evidence_id": "e4",
+                  "origin": "comercial.impacto_rupturas_total",
+                  "path": "/content/totais/margem_pct",
+                  "value": 20.3
+                }
+              ]
+            },
+            {
+              "claim_id": "c006",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Título sem afirmação factual.",
+              "quote": "### Principais Rupturas que Afetam Pedidos Pendentes (Amostra de Prioridades)",
+              "start": 639,
+              "end": 716,
+              "evidence": []
+            },
+            {
+              "claim_id": "c007",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0172"
+              ],
+              "reason": "A definição de ruptura observada como disponível zero está confirmada.",
+              "quote": "As rupturas observadas (disponível zero) de maior valor na carteira pendente incluem:",
+              "start": 717,
+              "end": 802,
+              "evidence": [
+                {
+                  "snippet_id": "s0172",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/natureza",
+                  "value": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+                }
+              ]
+            },
+            {
+              "claim_id": "c008",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0013",
+                "s0014",
+                "s0015",
+                "s0018"
+              ],
+              "reason": "Os dados do produto PRD-00012 estão corretos conforme o snippet s0018.",
+              "quote": "* **PRD-00012** (CTR-004, tonelada): R$ 378.888,68 em carteira pendente;",
+              "start": 803,
+              "end": 875,
+              "evidence": [
+                {
+                  "snippet_id": "s0013",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/0/produto",
+                  "value": "PRD-00012"
+                },
+                {
+                  "snippet_id": "s0014",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/0/centro",
+                  "value": "CTR-004"
+                },
+                {
+                  "snippet_id": "s0015",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/0/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0018",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/0/carteira_valor",
+                  "value": "378888.68"
+                }
+              ]
+            },
+            {
+              "claim_id": "c009",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0021",
+                "s0022",
+                "s0023",
+                "s0026"
+              ],
+              "reason": "Os dados do produto PRD-00016 estão corretos conforme o snippet s0026.",
+              "quote": "* **PRD-00016** (CTR-002, tonelada): R$ 339.247,27;",
+              "start": 876,
+              "end": 927,
+              "evidence": [
+                {
+                  "snippet_id": "s0021",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/1/produto",
+                  "value": "PRD-00016"
+                },
+                {
+                  "snippet_id": "s0022",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/1/centro",
+                  "value": "CTR-002"
+                },
+                {
+                  "snippet_id": "s0023",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/1/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0026",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/1/carteira_valor",
+                  "value": "339247.27"
+                }
+              ]
+            },
+            {
+              "claim_id": "c010",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0029",
+                "s0030",
+                "s0031",
+                "s0034"
+              ],
+              "reason": "Os dados do produto PRD-00002 estão corretos conforme o snippet s0034.",
+              "quote": "* **PRD-00002** (CTR-006, tonelada): R$ 275.189,64;",
+              "start": 928,
+              "end": 979,
+              "evidence": [
+                {
+                  "snippet_id": "s0029",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/2/produto",
+                  "value": "PRD-00002"
+                },
+                {
+                  "snippet_id": "s0030",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/2/centro",
+                  "value": "CTR-006"
+                },
+                {
+                  "snippet_id": "s0031",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/2/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0034",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/2/carteira_valor",
+                  "value": "275189.64"
+                }
+              ]
+            },
+            {
+              "claim_id": "c011",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0037",
+                "s0038",
+                "s0039",
+                "s0042"
+              ],
+              "reason": "Os dados do produto PRD-00006 estão corretos conforme o snippet s0042.",
+              "quote": "* **PRD-00006** (CTR-003, tonelada): R$ 262.012,62;",
+              "start": 980,
+              "end": 1031,
+              "evidence": [
+                {
+                  "snippet_id": "s0037",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/3/produto",
+                  "value": "PRD-00006"
+                },
+                {
+                  "snippet_id": "s0038",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/3/centro",
+                  "value": "CTR-003"
+                },
+                {
+                  "snippet_id": "s0039",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/3/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0042",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/3/carteira_valor",
+                  "value": "262012.62"
+                }
+              ]
+            },
+            {
+              "claim_id": "c012",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0045",
+                "s0046",
+                "s0047",
+                "s0050"
+              ],
+              "reason": "Os dados do produto PRD-00002 estão corretos conforme o snippet s0050.",
+              "quote": "* **PRD-00002** (CTR-005, tonelada): R$ 231.883,34;",
+              "start": 1032,
+              "end": 1083,
+              "evidence": [
+                {
+                  "snippet_id": "s0045",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/4/produto",
+                  "value": "PRD-00002"
+                },
+                {
+                  "snippet_id": "s0046",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/4/centro",
+                  "value": "CTR-005"
+                },
+                {
+                  "snippet_id": "s0047",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/4/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0050",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/4/carteira_valor",
+                  "value": "231883.34"
+                }
+              ]
+            },
+            {
+              "claim_id": "c013",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0053",
+                "s0054",
+                "s0055",
+                "s0058"
+              ],
+              "reason": "Os dados do produto PRD-00014 estão corretos conforme o snippet s0058.",
+              "quote": "* **PRD-00014** (CTR-012, tonelada): R$ 201.914,05;",
+              "start": 1084,
+              "end": 1135,
+              "evidence": [
+                {
+                  "snippet_id": "s0053",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/5/produto",
+                  "value": "PRD-00014"
+                },
+                {
+                  "snippet_id": "s0054",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/5/centro",
+                  "value": "CTR-012"
+                },
+                {
+                  "snippet_id": "s0055",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/5/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0058",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/5/carteira_valor",
+                  "value": "201914.05"
+                }
+              ]
+            },
+            {
+              "claim_id": "c014",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0061",
+                "s0062",
+                "s0063",
+                "s0066"
+              ],
+              "reason": "Os dados do produto PRD-00010 estão corretos conforme o snippet s0066.",
+              "quote": "* **PRD-00010** (CTR-015, tonelada): R$ 180.987,80;",
+              "start": 1136,
+              "end": 1187,
+              "evidence": [
+                {
+                  "snippet_id": "s0061",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/6/produto",
+                  "value": "PRD-00010"
+                },
+                {
+                  "snippet_id": "s0062",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/6/centro",
+                  "value": "CTR-015"
+                },
+                {
+                  "snippet_id": "s0063",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/6/unidade",
+                  "value": "tonelada"
+                },
+                {
+                  "snippet_id": "s0066",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/6/carteira_valor",
+                  "value": "180987.80"
+                }
+              ]
+            },
+            {
+              "claim_id": "c015",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0069",
+                "s0070",
+                "s0071",
+                "s0074"
+              ],
+              "reason": "Os dados do produto PRD-00017 estão corretos conforme o snippet s0074.",
+              "quote": "* **PRD-00017** (CTR-006, KG): R$ 166.603,01;",
+              "start": 1188,
+              "end": 1233,
+              "evidence": [
+                {
+                  "snippet_id": "s0069",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/7/produto",
+                  "value": "PRD-00017"
+                },
+                {
+                  "snippet_id": "s0070",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/7/centro",
+                  "value": "CTR-006"
+                },
+                {
+                  "snippet_id": "s0071",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/7/unidade",
+                  "value": "KG"
+                },
+                {
+                  "snippet_id": "s0074",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/7/carteira_valor",
+                  "value": "166603.01"
+                }
+              ]
+            },
+            {
+              "claim_id": "c016",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0093",
+                "s0094",
+                "s0095",
+                "s0098"
+              ],
+              "reason": "Os dados do produto PRD-00011 estão corretos conforme o snippet s0098.",
+              "quote": "* **PRD-00011** (CTR-001, KG): R$ 146.315,83;",
+              "start": 1234,
+              "end": 1279,
+              "evidence": [
+                {
+                  "snippet_id": "s0093",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/10/produto",
+                  "value": "PRD-00011"
+                },
+                {
+                  "snippet_id": "s0094",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/10/centro",
+                  "value": "CTR-001"
+                },
+                {
+                  "snippet_id": "s0095",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/10/unidade",
+                  "value": "KG"
+                },
+                {
+                  "snippet_id": "s0098",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/10/carteira_valor",
+                  "value": "146315.83"
+                }
+              ]
+            },
+            {
+              "claim_id": "c017",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0117",
+                "s0118",
+                "s0119",
+                "s0122"
+              ],
+              "reason": "Os dados do produto PRD-00001 estão corretos conforme o snippet s0122.",
+              "quote": "* **PRD-00001** (CTR-001, KG): R$ 125.904,66.",
+              "start": 1280,
+              "end": 1325,
+              "evidence": [
+                {
+                  "snippet_id": "s0117",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/13/produto",
+                  "value": "PRD-00001"
+                },
+                {
+                  "snippet_id": "s0118",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/13/centro",
+                  "value": "CTR-001"
+                },
+                {
+                  "snippet_id": "s0119",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/13/unidade",
+                  "value": "KG"
+                },
+                {
+                  "snippet_id": "s0122",
+                  "evidence_id": "e1",
+                  "origin": "estoque.abastecimento",
+                  "path": "/content/prioridades_amostra/13/carteira_valor",
+                  "value": "125904.66"
+                }
+              ]
+            },
+            {
+              "claim_id": "c018",
+              "factual": true,
+              "supported": true,
+              "snippet_ids": [
+                "s0373"
+              ],
+              "reason": "A diretriz sobre pedidos pendentes está confirmada no documento de política comercial.",
+              "quote": "Conforme estabelecido em nossa diretriz [politica_comercial.md, trecho 1], pedidos pendentes não constituem receita faturada e a carteira pendente não deve ser somada à receita realizada.",
+              "start": 1327,
+              "end": 1514,
+              "evidence": [
+                {
+                  "snippet_id": "s0373",
+                  "evidence_id": "e5",
+                  "origin": "comercial.documentos",
+                  "path": "/content/1/text",
+                  "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+                }
+              ]
+            },
+            {
+              "claim_id": "c019",
+              "factual": false,
+              "supported": false,
+              "snippet_ids": [],
+              "reason": "Aviso sobre o processo de geração da resposta.",
+              "quote": "**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+              "start": 1516,
+              "end": 1713,
+              "evidence": []
+            }
+          ],
+          "explanation": "A resposta fornece os dados solicitados sobre rupturas de estoque, impacto financeiro e carteira pendente, utilizando as evidências disponíveis. Os valores numéricos foram verificados contra os snippets de dados de estoque e indicadores comerciais. As exclusões de factualidade referem-se a títulos e avisos de sistema."
+        },
+        "claim_units": [
+          {
+            "claim_id": "c001",
+            "text": "No período de 01/10/2025 a 30/09/2026 (com fotografia de estoque em 30/09/2026), foram analisadas as rupturas observadas (itens com disponível zero) que afetam os pedidos pendentes. Todos os dados são fictícios.",
+            "start": 0,
+            "end": 211
+          },
+          {
+            "claim_id": "c002",
+            "text": "### Impacto Comercial e Carteira em Saldo Zero",
+            "start": 213,
+            "end": 259
+          },
+          {
+            "claim_id": "c003",
+            "text": "* **Valor Exato da Carteira em Ruptura:** **R$ 4.399.084,73** (abrangendo 103 linhas de pedidos e 101 pedidos distintos, distribuídos em 41 pares produto-centro em ruptura com carteira).",
+            "start": 260,
+            "end": 446
+          },
+          {
+            "claim_id": "c004",
+            "text": "* **Custo da Carteira:** R$ 3.506.069,23.",
+            "start": 447,
+            "end": 488
+          },
+          {
+            "claim_id": "c005",
+            "text": "* **Impacto Comercial na Margem Bruta:** **R$ 893.015,50**, o que representa uma margem percentual teórica de **20,3%** retida na carteira pendente.",
+            "start": 489,
+            "end": 637
+          },
+          {
+            "claim_id": "c006",
+            "text": "### Principais Rupturas que Afetam Pedidos Pendentes (Amostra de Prioridades)",
+            "start": 639,
+            "end": 716
+          },
+          {
+            "claim_id": "c007",
+            "text": "As rupturas observadas (disponível zero) de maior valor na carteira pendente incluem:",
+            "start": 717,
+            "end": 802
+          },
+          {
+            "claim_id": "c008",
+            "text": "* **PRD-00012** (CTR-004, tonelada): R$ 378.888,68 em carteira pendente;",
+            "start": 803,
+            "end": 875
+          },
+          {
+            "claim_id": "c009",
+            "text": "* **PRD-00016** (CTR-002, tonelada): R$ 339.247,27;",
+            "start": 876,
+            "end": 927
+          },
+          {
+            "claim_id": "c010",
+            "text": "* **PRD-00002** (CTR-006, tonelada): R$ 275.189,64;",
+            "start": 928,
+            "end": 979
+          },
+          {
+            "claim_id": "c011",
+            "text": "* **PRD-00006** (CTR-003, tonelada): R$ 262.012,62;",
+            "start": 980,
+            "end": 1031
+          },
+          {
+            "claim_id": "c012",
+            "text": "* **PRD-00002** (CTR-005, tonelada): R$ 231.883,34;",
+            "start": 1032,
+            "end": 1083
+          },
+          {
+            "claim_id": "c013",
+            "text": "* **PRD-00014** (CTR-012, tonelada): R$ 201.914,05;",
+            "start": 1084,
+            "end": 1135
+          },
+          {
+            "claim_id": "c014",
+            "text": "* **PRD-00010** (CTR-015, tonelada): R$ 180.987,80;",
+            "start": 1136,
+            "end": 1187
+          },
+          {
+            "claim_id": "c015",
+            "text": "* **PRD-00017** (CTR-006, KG): R$ 166.603,01;",
+            "start": 1188,
+            "end": 1233
+          },
+          {
+            "claim_id": "c016",
+            "text": "* **PRD-00011** (CTR-001, KG): R$ 146.315,83;",
+            "start": 1234,
+            "end": 1279
+          },
+          {
+            "claim_id": "c017",
+            "text": "* **PRD-00001** (CTR-001, KG): R$ 125.904,66.",
+            "start": 1280,
+            "end": 1325
+          },
+          {
+            "claim_id": "c018",
+            "text": "Conforme estabelecido em nossa diretriz [politica_comercial.md, trecho 1], pedidos pendentes não constituem receita faturada e a carteira pendente não deve ser somada à receita realizada.",
+            "start": 1327,
+            "end": 1514
+          },
+          {
+            "claim_id": "c019",
+            "text": "**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+            "start": 1516,
+            "end": 1713
+          }
+        ],
+        "evidence_snippets": [
+          {
+            "snippet_id": "s0001",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/data_estoque",
+            "value": "2026-09-30"
+          },
+          {
+            "snippet_id": "s0002",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/posicoes",
+            "value": 3000
+          },
+          {
+            "snippet_id": "s0003",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/rupturas_observadas",
+            "value": 60
+          },
+          {
+            "snippet_id": "s0004",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/excessos",
+            "value": 60
+          },
+          {
+            "snippet_id": "s0005",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/pares_sinalizados",
+            "value": 755
+          },
+          {
+            "snippet_id": "s0006",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/rupturas_com_carteira",
+            "value": 41
+          },
+          {
+            "snippet_id": "s0007",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/carteira_em_ruptura",
+            "value": "4399084.73"
+          },
+          {
+            "snippet_id": "s0008",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/insuficiencias_com_saldo",
+            "value": 695
+          },
+          {
+            "snippet_id": "s0009",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/carteira_em_insuficiencia_com_saldo",
+            "value": "69752075.66"
+          },
+          {
+            "snippet_id": "s0010",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/totais/carteira_nos_pares_sinalizados",
+            "value": "74151160.39"
+          },
+          {
+            "snippet_id": "s0011",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/produto_id",
+            "value": 12
+          },
+          {
+            "snippet_id": "s0012",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/centro_id",
+            "value": 4
+          },
+          {
+            "snippet_id": "s0013",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/produto",
+            "value": "PRD-00012"
+          },
+          {
+            "snippet_id": "s0014",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/centro",
+            "value": "CTR-004"
+          },
+          {
+            "snippet_id": "s0015",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0016",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0017",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/carteira_quantidade",
+            "value": 97
+          },
+          {
+            "snippet_id": "s0018",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/0/carteira_valor",
+            "value": "378888.68"
+          },
+          {
+            "snippet_id": "s0019",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/produto_id",
+            "value": 16
+          },
+          {
+            "snippet_id": "s0020",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/centro_id",
+            "value": 2
+          },
+          {
+            "snippet_id": "s0021",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/produto",
+            "value": "PRD-00016"
+          },
+          {
+            "snippet_id": "s0022",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/centro",
+            "value": "CTR-002"
+          },
+          {
+            "snippet_id": "s0023",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0024",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0025",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/carteira_quantidade",
+            "value": 96
+          },
+          {
+            "snippet_id": "s0026",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/1/carteira_valor",
+            "value": "339247.27"
+          },
+          {
+            "snippet_id": "s0027",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/produto_id",
+            "value": 2
+          },
+          {
+            "snippet_id": "s0028",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/centro_id",
+            "value": 6
+          },
+          {
+            "snippet_id": "s0029",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/produto",
+            "value": "PRD-00002"
+          },
+          {
+            "snippet_id": "s0030",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/centro",
+            "value": "CTR-006"
+          },
+          {
+            "snippet_id": "s0031",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0032",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0033",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/carteira_quantidade",
+            "value": 70
+          },
+          {
+            "snippet_id": "s0034",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/2/carteira_valor",
+            "value": "275189.64"
+          },
+          {
+            "snippet_id": "s0035",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/produto_id",
+            "value": 6
+          },
+          {
+            "snippet_id": "s0036",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/centro_id",
+            "value": 3
+          },
+          {
+            "snippet_id": "s0037",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/produto",
+            "value": "PRD-00006"
+          },
+          {
+            "snippet_id": "s0038",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/centro",
+            "value": "CTR-003"
+          },
+          {
+            "snippet_id": "s0039",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0040",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0041",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/carteira_quantidade",
+            "value": 94
+          },
+          {
+            "snippet_id": "s0042",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/3/carteira_valor",
+            "value": "262012.62"
+          },
+          {
+            "snippet_id": "s0043",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/produto_id",
+            "value": 2
+          },
+          {
+            "snippet_id": "s0044",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/centro_id",
+            "value": 5
+          },
+          {
+            "snippet_id": "s0045",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/produto",
+            "value": "PRD-00002"
+          },
+          {
+            "snippet_id": "s0046",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/centro",
+            "value": "CTR-005"
+          },
+          {
+            "snippet_id": "s0047",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0048",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0049",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/carteira_quantidade",
+            "value": 57
+          },
+          {
+            "snippet_id": "s0050",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/4/carteira_valor",
+            "value": "231883.34"
+          },
+          {
+            "snippet_id": "s0051",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/produto_id",
+            "value": 14
+          },
+          {
+            "snippet_id": "s0052",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/centro_id",
+            "value": 12
+          },
+          {
+            "snippet_id": "s0053",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/produto",
+            "value": "PRD-00014"
+          },
+          {
+            "snippet_id": "s0054",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/centro",
+            "value": "CTR-012"
+          },
+          {
+            "snippet_id": "s0055",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0056",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0057",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/carteira_quantidade",
+            "value": 41
+          },
+          {
+            "snippet_id": "s0058",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/5/carteira_valor",
+            "value": "201914.05"
+          },
+          {
+            "snippet_id": "s0059",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/produto_id",
+            "value": 10
+          },
+          {
+            "snippet_id": "s0060",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/centro_id",
+            "value": 15
+          },
+          {
+            "snippet_id": "s0061",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/produto",
+            "value": "PRD-00010"
+          },
+          {
+            "snippet_id": "s0062",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/centro",
+            "value": "CTR-015"
+          },
+          {
+            "snippet_id": "s0063",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0064",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0065",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/carteira_quantidade",
+            "value": 43
+          },
+          {
+            "snippet_id": "s0066",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/6/carteira_valor",
+            "value": "180987.80"
+          },
+          {
+            "snippet_id": "s0067",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/produto_id",
+            "value": 17
+          },
+          {
+            "snippet_id": "s0068",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/centro_id",
+            "value": 6
+          },
+          {
+            "snippet_id": "s0069",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/produto",
+            "value": "PRD-00017"
+          },
+          {
+            "snippet_id": "s0070",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/centro",
+            "value": "CTR-006"
+          },
+          {
+            "snippet_id": "s0071",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0072",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0073",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/carteira_quantidade",
+            "value": 38360
+          },
+          {
+            "snippet_id": "s0074",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/7/carteira_valor",
+            "value": "166603.01"
+          },
+          {
+            "snippet_id": "s0075",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/produto_id",
+            "value": 8
+          },
+          {
+            "snippet_id": "s0076",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/centro_id",
+            "value": 8
+          },
+          {
+            "snippet_id": "s0077",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/produto",
+            "value": "PRD-00008"
+          },
+          {
+            "snippet_id": "s0078",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/centro",
+            "value": "CTR-008"
+          },
+          {
+            "snippet_id": "s0079",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0080",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0081",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/carteira_quantidade",
+            "value": 31
+          },
+          {
+            "snippet_id": "s0082",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/8/carteira_valor",
+            "value": "150070.70"
+          },
+          {
+            "snippet_id": "s0083",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/produto_id",
+            "value": 18
+          },
+          {
+            "snippet_id": "s0084",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/centro_id",
+            "value": 8
+          },
+          {
+            "snippet_id": "s0085",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/produto",
+            "value": "PRD-00018"
+          },
+          {
+            "snippet_id": "s0086",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/centro",
+            "value": "CTR-008"
+          },
+          {
+            "snippet_id": "s0087",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0088",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0089",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/carteira_quantidade",
+            "value": 53
+          },
+          {
+            "snippet_id": "s0090",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/9/carteira_valor",
+            "value": "146376.94"
+          },
+          {
+            "snippet_id": "s0091",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/produto_id",
+            "value": 11
+          },
+          {
+            "snippet_id": "s0092",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/centro_id",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0093",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/produto",
+            "value": "PRD-00011"
+          },
+          {
+            "snippet_id": "s0094",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/centro",
+            "value": "CTR-001"
+          },
+          {
+            "snippet_id": "s0095",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0096",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0097",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/carteira_quantidade",
+            "value": 31816
+          },
+          {
+            "snippet_id": "s0098",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/10/carteira_valor",
+            "value": "146315.83"
+          },
+          {
+            "snippet_id": "s0099",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/produto_id",
+            "value": 16
+          },
+          {
+            "snippet_id": "s0100",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/centro_id",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0101",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/produto",
+            "value": "PRD-00016"
+          },
+          {
+            "snippet_id": "s0102",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/centro",
+            "value": "CTR-001"
+          },
+          {
+            "snippet_id": "s0103",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0104",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0105",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/carteira_quantidade",
+            "value": 41
+          },
+          {
+            "snippet_id": "s0106",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/11/carteira_valor",
+            "value": "144517.20"
+          },
+          {
+            "snippet_id": "s0107",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/produto_id",
+            "value": 16
+          },
+          {
+            "snippet_id": "s0108",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/centro_id",
+            "value": 3
+          },
+          {
+            "snippet_id": "s0109",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/produto",
+            "value": "PRD-00016"
+          },
+          {
+            "snippet_id": "s0110",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/centro",
+            "value": "CTR-003"
+          },
+          {
+            "snippet_id": "s0111",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0112",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0113",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/carteira_quantidade",
+            "value": 38
+          },
+          {
+            "snippet_id": "s0114",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/12/carteira_valor",
+            "value": "136034.11"
+          },
+          {
+            "snippet_id": "s0115",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/produto_id",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0116",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/centro_id",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0117",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/produto",
+            "value": "PRD-00001"
+          },
+          {
+            "snippet_id": "s0118",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/centro",
+            "value": "CTR-001"
+          },
+          {
+            "snippet_id": "s0119",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0120",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0121",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/carteira_quantidade",
+            "value": 25560
+          },
+          {
+            "snippet_id": "s0122",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/13/carteira_valor",
+            "value": "125904.66"
+          },
+          {
+            "snippet_id": "s0123",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/produto_id",
+            "value": 10
+          },
+          {
+            "snippet_id": "s0124",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/centro_id",
+            "value": 14
+          },
+          {
+            "snippet_id": "s0125",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/produto",
+            "value": "PRD-00010"
+          },
+          {
+            "snippet_id": "s0126",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/centro",
+            "value": "CTR-014"
+          },
+          {
+            "snippet_id": "s0127",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0128",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0129",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/carteira_quantidade",
+            "value": 30
+          },
+          {
+            "snippet_id": "s0130",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/14/carteira_valor",
+            "value": "120044.40"
+          },
+          {
+            "snippet_id": "s0131",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/produto_id",
+            "value": 14
+          },
+          {
+            "snippet_id": "s0132",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/centro_id",
+            "value": 10
+          },
+          {
+            "snippet_id": "s0133",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/produto",
+            "value": "PRD-00014"
+          },
+          {
+            "snippet_id": "s0134",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/centro",
+            "value": "CTR-010"
+          },
+          {
+            "snippet_id": "s0135",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0136",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0137",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/carteira_quantidade",
+            "value": 24
+          },
+          {
+            "snippet_id": "s0138",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/15/carteira_valor",
+            "value": "115767.38"
+          },
+          {
+            "snippet_id": "s0139",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/produto_id",
+            "value": 4
+          },
+          {
+            "snippet_id": "s0140",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/centro_id",
+            "value": 11
+          },
+          {
+            "snippet_id": "s0141",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/produto",
+            "value": "PRD-00004"
+          },
+          {
+            "snippet_id": "s0142",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/centro",
+            "value": "CTR-011"
+          },
+          {
+            "snippet_id": "s0143",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0144",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0145",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/carteira_quantidade",
+            "value": 54
+          },
+          {
+            "snippet_id": "s0146",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/16/carteira_valor",
+            "value": "115522.44"
+          },
+          {
+            "snippet_id": "s0147",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/produto_id",
+            "value": 4
+          },
+          {
+            "snippet_id": "s0148",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/centro_id",
+            "value": 12
+          },
+          {
+            "snippet_id": "s0149",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/produto",
+            "value": "PRD-00004"
+          },
+          {
+            "snippet_id": "s0150",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/centro",
+            "value": "CTR-012"
+          },
+          {
+            "snippet_id": "s0151",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0152",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0153",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/carteira_quantidade",
+            "value": 50
+          },
+          {
+            "snippet_id": "s0154",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/17/carteira_valor",
+            "value": "104552.45"
+          },
+          {
+            "snippet_id": "s0155",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/produto_id",
+            "value": 6
+          },
+          {
+            "snippet_id": "s0156",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/centro_id",
+            "value": 2
+          },
+          {
+            "snippet_id": "s0157",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/produto",
+            "value": "PRD-00006"
+          },
+          {
+            "snippet_id": "s0158",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/centro",
+            "value": "CTR-002"
+          },
+          {
+            "snippet_id": "s0159",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0160",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0161",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/carteira_quantidade",
+            "value": 35
+          },
+          {
+            "snippet_id": "s0162",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/18/carteira_valor",
+            "value": "102186.49"
+          },
+          {
+            "snippet_id": "s0163",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/produto_id",
+            "value": 11
+          },
+          {
+            "snippet_id": "s0164",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/centro_id",
+            "value": 3
+          },
+          {
+            "snippet_id": "s0165",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/produto",
+            "value": "PRD-00011"
+          },
+          {
+            "snippet_id": "s0166",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/centro",
+            "value": "CTR-003"
+          },
+          {
+            "snippet_id": "s0167",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0168",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0169",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/carteira_quantidade",
+            "value": 21388
+          },
+          {
+            "snippet_id": "s0170",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/prioridades_amostra/19/carteira_valor",
+            "value": "101511.89"
+          },
+          {
+            "snippet_id": "s0171",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/escopo_prioridades",
+            "value": "ruptura"
+          },
+          {
+            "snippet_id": "s0172",
+            "evidence_id": "e1",
+            "origin": "estoque.abastecimento",
+            "path": "/content/natureza",
+            "value": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+          },
+          {
+            "snippet_id": "s0173",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/regra",
+            "value": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas."
+          },
+          {
+            "snippet_id": "s0174",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/limite_por_consulta",
+            "value": 20
+          },
+          {
+            "snippet_id": "s0175",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/regioes",
+            "value": 5
+          },
+          {
+            "snippet_id": "s0176",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/centros",
+            "value": 15
+          },
+          {
+            "snippet_id": "s0177",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/clientes",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0178",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/produtos",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0179",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/historico_precos",
+            "value": 12000
+          },
+          {
+            "snippet_id": "s0180",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/pedidos",
+            "value": 8000
+          },
+          {
+            "snippet_id": "s0181",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/vendas",
+            "value": 20000
+          },
+          {
+            "snippet_id": "s0182",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/contagens/estoque",
+            "value": 3000
+          },
+          {
+            "snippet_id": "s0183",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/inicio",
+            "value": "2025-10-01"
+          },
+          {
+            "snippet_id": "s0184",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/fim",
+            "value": "2026-09-30"
+          },
+          {
+            "snippet_id": "s0185",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/receita_faturada",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0186",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/custo_faturado",
+            "value": "393103460.81"
+          },
+          {
+            "snippet_id": "s0187",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/margem_faturada",
+            "value": "100023056.21"
+          },
+          {
+            "snippet_id": "s0188",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/carteira_pendente",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0189",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/totais/valor_cancelado",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0190",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/status",
+            "value": "cancelada"
+          },
+          {
+            "snippet_id": "s0191",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/linhas",
+            "value": 1008
+          },
+          {
+            "snippet_id": "s0192",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/pedidos",
+            "value": 396
+          },
+          {
+            "snippet_id": "s0193",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/0/valor",
+            "value": "34784595.17"
+          },
+          {
+            "snippet_id": "s0194",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/status",
+            "value": "faturada"
+          },
+          {
+            "snippet_id": "s0195",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/linhas",
+            "value": 14431
+          },
+          {
+            "snippet_id": "s0196",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/pedidos",
+            "value": 5772
+          },
+          {
+            "snippet_id": "s0197",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/1/valor",
+            "value": "493126517.02"
+          },
+          {
+            "snippet_id": "s0198",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/status",
+            "value": "pendente"
+          },
+          {
+            "snippet_id": "s0199",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/linhas",
+            "value": 4561
+          },
+          {
+            "snippet_id": "s0200",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/pedidos",
+            "value": 1832
+          },
+          {
+            "snippet_id": "s0201",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/resumo/2/valor",
+            "value": "155146363.54"
+          },
+          {
+            "snippet_id": "s0202",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/0/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0203",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/0/pares_produto_centro",
+            "value": 300
+          },
+          {
+            "snippet_id": "s0204",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/0/disponivel",
+            "value": 233446
+          },
+          {
+            "snippet_id": "s0205",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/0/rupturas",
+            "value": 30
+          },
+          {
+            "snippet_id": "s0206",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/0/excessos",
+            "value": 30
+          },
+          {
+            "snippet_id": "s0207",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/0/valor_estoque",
+            "value": "888117.83"
+          },
+          {
+            "snippet_id": "s0208",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/1/unidade",
+            "value": "L"
+          },
+          {
+            "snippet_id": "s0209",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/1/pares_produto_centro",
+            "value": 1200
+          },
+          {
+            "snippet_id": "s0210",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/1/disponivel",
+            "value": 425332
+          },
+          {
+            "snippet_id": "s0211",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/1/rupturas",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0212",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/1/excessos",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0213",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/1/valor_estoque",
+            "value": "41312128.07"
+          },
+          {
+            "snippet_id": "s0214",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/2/unidade",
+            "value": "saca_20KG"
+          },
+          {
+            "snippet_id": "s0215",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/2/pares_produto_centro",
+            "value": 600
+          },
+          {
+            "snippet_id": "s0216",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/2/disponivel",
+            "value": 208296
+          },
+          {
+            "snippet_id": "s0217",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/2/rupturas",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0218",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/2/excessos",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0219",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/2/valor_estoque",
+            "value": "141845310.52"
+          },
+          {
+            "snippet_id": "s0220",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/3/unidade",
+            "value": "saca_40KG"
+          },
+          {
+            "snippet_id": "s0221",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/3/pares_produto_centro",
+            "value": 600
+          },
+          {
+            "snippet_id": "s0222",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/3/disponivel",
+            "value": 218247
+          },
+          {
+            "snippet_id": "s0223",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/3/rupturas",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0224",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/3/excessos",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0225",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/3/valor_estoque",
+            "value": "69955289.47"
+          },
+          {
+            "snippet_id": "s0226",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/4/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0227",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/4/pares_produto_centro",
+            "value": 300
+          },
+          {
+            "snippet_id": "s0228",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/4/disponivel",
+            "value": 233878
+          },
+          {
+            "snippet_id": "s0229",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/4/rupturas",
+            "value": 30
+          },
+          {
+            "snippet_id": "s0230",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/4/excessos",
+            "value": 30
+          },
+          {
+            "snippet_id": "s0231",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/estoque_resumo/4/valor_estoque",
+            "value": "834991667.58"
+          },
+          {
+            "snippet_id": "s0232",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/produto",
+            "value": "PRD-00021"
+          },
+          {
+            "snippet_id": "s0233",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/centro",
+            "value": "CTR-001"
+          },
+          {
+            "snippet_id": "s0234",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0235",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/disponivel",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0236",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0237",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0238",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/0/cenario",
+            "value": "excesso"
+          },
+          {
+            "snippet_id": "s0239",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/produto",
+            "value": "PRD-00021"
+          },
+          {
+            "snippet_id": "s0240",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/centro",
+            "value": "CTR-002"
+          },
+          {
+            "snippet_id": "s0241",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0242",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/disponivel",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0243",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0244",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0245",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/1/cenario",
+            "value": "excesso"
+          },
+          {
+            "snippet_id": "s0246",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/produto",
+            "value": "PRD-00021"
+          },
+          {
+            "snippet_id": "s0247",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/centro",
+            "value": "CTR-003"
+          },
+          {
+            "snippet_id": "s0248",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0249",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/disponivel",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0250",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0251",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0252",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/2/cenario",
+            "value": "excesso"
+          },
+          {
+            "snippet_id": "s0253",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/produto",
+            "value": "PRD-00022"
+          },
+          {
+            "snippet_id": "s0254",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/centro",
+            "value": "CTR-004"
+          },
+          {
+            "snippet_id": "s0255",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0256",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/disponivel",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0257",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0258",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0259",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/3/cenario",
+            "value": "excesso"
+          },
+          {
+            "snippet_id": "s0260",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/produto",
+            "value": "PRD-00022"
+          },
+          {
+            "snippet_id": "s0261",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/centro",
+            "value": "CTR-005"
+          },
+          {
+            "snippet_id": "s0262",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0263",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/disponivel",
+            "value": 5000
+          },
+          {
+            "snippet_id": "s0264",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0265",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0266",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/4/cenario",
+            "value": "excesso"
+          },
+          {
+            "snippet_id": "s0267",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/produto",
+            "value": "PRD-00001"
+          },
+          {
+            "snippet_id": "s0268",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/centro",
+            "value": "CTR-001"
+          },
+          {
+            "snippet_id": "s0269",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0270",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0271",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0272",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0273",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/5/cenario",
+            "value": "ruptura"
+          },
+          {
+            "snippet_id": "s0274",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/produto",
+            "value": "PRD-00001"
+          },
+          {
+            "snippet_id": "s0275",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/centro",
+            "value": "CTR-002"
+          },
+          {
+            "snippet_id": "s0276",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0277",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0278",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0279",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0280",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/6/cenario",
+            "value": "ruptura"
+          },
+          {
+            "snippet_id": "s0281",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/produto",
+            "value": "PRD-00001"
+          },
+          {
+            "snippet_id": "s0282",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/centro",
+            "value": "CTR-003"
+          },
+          {
+            "snippet_id": "s0283",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0284",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0285",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0286",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0287",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/7/cenario",
+            "value": "ruptura"
+          },
+          {
+            "snippet_id": "s0288",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/produto",
+            "value": "PRD-00002"
+          },
+          {
+            "snippet_id": "s0289",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/centro",
+            "value": "CTR-004"
+          },
+          {
+            "snippet_id": "s0290",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0291",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0292",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0293",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0294",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/8/cenario",
+            "value": "ruptura"
+          },
+          {
+            "snippet_id": "s0295",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/produto",
+            "value": "PRD-00002"
+          },
+          {
+            "snippet_id": "s0296",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/centro",
+            "value": "CTR-005"
+          },
+          {
+            "snippet_id": "s0297",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0298",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/disponivel",
+            "value": 0
+          },
+          {
+            "snippet_id": "s0299",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/estoque_minimo",
+            "value": 40
+          },
+          {
+            "snippet_id": "s0300",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/estoque_maximo",
+            "value": 1000
+          },
+          {
+            "snippet_id": "s0301",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/alertas_estoque/9/cenario",
+            "value": "ruptura"
+          },
+          {
+            "snippet_id": "s0302",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/0/mes_vencimento",
+            "value": "2025-10"
+          },
+          {
+            "snippet_id": "s0303",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/0/pedidos",
+            "value": 3
+          },
+          {
+            "snippet_id": "s0304",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/0/valor_pendente",
+            "value": "355618.39"
+          },
+          {
+            "snippet_id": "s0305",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/1/mes_vencimento",
+            "value": "2025-11"
+          },
+          {
+            "snippet_id": "s0306",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/1/pedidos",
+            "value": 79
+          },
+          {
+            "snippet_id": "s0307",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/1/valor_pendente",
+            "value": "6197664.84"
+          },
+          {
+            "snippet_id": "s0308",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/2/mes_vencimento",
+            "value": "2025-12"
+          },
+          {
+            "snippet_id": "s0309",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/2/pedidos",
+            "value": 138
+          },
+          {
+            "snippet_id": "s0310",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/2/valor_pendente",
+            "value": "11541416.05"
+          },
+          {
+            "snippet_id": "s0311",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/3/mes_vencimento",
+            "value": "2026-01"
+          },
+          {
+            "snippet_id": "s0312",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/3/pedidos",
+            "value": 181
+          },
+          {
+            "snippet_id": "s0313",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/3/valor_pendente",
+            "value": "13042189.79"
+          },
+          {
+            "snippet_id": "s0314",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/4/mes_vencimento",
+            "value": "2026-02"
+          },
+          {
+            "snippet_id": "s0315",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/4/pedidos",
+            "value": 116
+          },
+          {
+            "snippet_id": "s0316",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/4/valor_pendente",
+            "value": "9408354.34"
+          },
+          {
+            "snippet_id": "s0317",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/5/mes_vencimento",
+            "value": "2026-03"
+          },
+          {
+            "snippet_id": "s0318",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/5/pedidos",
+            "value": 75
+          },
+          {
+            "snippet_id": "s0319",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/5/valor_pendente",
+            "value": "6321954.41"
+          },
+          {
+            "snippet_id": "s0320",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/6/mes_vencimento",
+            "value": "2026-04"
+          },
+          {
+            "snippet_id": "s0321",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/6/pedidos",
+            "value": 86
+          },
+          {
+            "snippet_id": "s0322",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/6/valor_pendente",
+            "value": "7846921.01"
+          },
+          {
+            "snippet_id": "s0323",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/7/mes_vencimento",
+            "value": "2026-05"
+          },
+          {
+            "snippet_id": "s0324",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/7/pedidos",
+            "value": 86
+          },
+          {
+            "snippet_id": "s0325",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/7/valor_pendente",
+            "value": "8724113.42"
+          },
+          {
+            "snippet_id": "s0326",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/8/mes_vencimento",
+            "value": "2026-06"
+          },
+          {
+            "snippet_id": "s0327",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/8/pedidos",
+            "value": 88
+          },
+          {
+            "snippet_id": "s0328",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/8/valor_pendente",
+            "value": "7943327.79"
+          },
+          {
+            "snippet_id": "s0329",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/9/mes_vencimento",
+            "value": "2026-07"
+          },
+          {
+            "snippet_id": "s0330",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/9/pedidos",
+            "value": 99
+          },
+          {
+            "snippet_id": "s0331",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/9/valor_pendente",
+            "value": "9360460.00"
+          },
+          {
+            "snippet_id": "s0332",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/10/mes_vencimento",
+            "value": "2026-08"
+          },
+          {
+            "snippet_id": "s0333",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/10/pedidos",
+            "value": 135
+          },
+          {
+            "snippet_id": "s0334",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/10/valor_pendente",
+            "value": "11773447.39"
+          },
+          {
+            "snippet_id": "s0335",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/11/mes_vencimento",
+            "value": "2026-09"
+          },
+          {
+            "snippet_id": "s0336",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/11/pedidos",
+            "value": 168
+          },
+          {
+            "snippet_id": "s0337",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/11/valor_pendente",
+            "value": "15047823.53"
+          },
+          {
+            "snippet_id": "s0338",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/12/mes_vencimento",
+            "value": "2026-10"
+          },
+          {
+            "snippet_id": "s0339",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/12/pedidos",
+            "value": 262
+          },
+          {
+            "snippet_id": "s0340",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/12/valor_pendente",
+            "value": "19619103.47"
+          },
+          {
+            "snippet_id": "s0341",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/13/mes_vencimento",
+            "value": "2026-11"
+          },
+          {
+            "snippet_id": "s0342",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/13/pedidos",
+            "value": 217
+          },
+          {
+            "snippet_id": "s0343",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/13/valor_pendente",
+            "value": "19763707.29"
+          },
+          {
+            "snippet_id": "s0344",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/14/mes_vencimento",
+            "value": "2026-12"
+          },
+          {
+            "snippet_id": "s0345",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/14/pedidos",
+            "value": 99
+          },
+          {
+            "snippet_id": "s0346",
+            "evidence_id": "e2",
+            "origin": "comercial.indicadores",
+            "path": "/content/carteira_por_vencimento/14/valor_pendente",
+            "value": "8200261.82"
+          },
+          {
+            "snippet_id": "s0347",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/escopo",
+            "value": "somente os até 20 pares priorizados pelo agente de estoque; não é total global"
+          },
+          {
+            "snippet_id": "s0348",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/pares_consultados",
+            "value": 20
+          },
+          {
+            "snippet_id": "s0349",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/0/categoria",
+            "value": "Fertilizantes"
+          },
+          {
+            "snippet_id": "s0350",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/0/unidade",
+            "value": "tonelada"
+          },
+          {
+            "snippet_id": "s0351",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/0/linhas_pendentes",
+            "value": 46
+          },
+          {
+            "snippet_id": "s0352",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/0/pedidos",
+            "value": 46
+          },
+          {
+            "snippet_id": "s0353",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/0/carteira_pendente",
+            "value": "3005195.51"
+          },
+          {
+            "snippet_id": "s0354",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/0/margem_carteira",
+            "value": "650582.93"
+          },
+          {
+            "snippet_id": "s0355",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/1/categoria",
+            "value": "Fertilizantes"
+          },
+          {
+            "snippet_id": "s0356",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/1/unidade",
+            "value": "KG"
+          },
+          {
+            "snippet_id": "s0357",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/1/linhas_pendentes",
+            "value": 23
+          },
+          {
+            "snippet_id": "s0358",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/1/pedidos",
+            "value": 23
+          },
+          {
+            "snippet_id": "s0359",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/1/carteira_pendente",
+            "value": "540335.39"
+          },
+          {
+            "snippet_id": "s0360",
+            "evidence_id": "e3",
+            "origin": "comercial.impacto_compartilhado",
+            "path": "/content/por_familia/1/margem_carteira",
+            "value": "85460.74"
+          },
+          {
+            "snippet_id": "s0361",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/escopo",
+            "value": "todos os pares com disponível zero; não apenas os 20 prioritários"
+          },
+          {
+            "snippet_id": "s0362",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/totais/linhas_pendentes",
+            "value": 103
+          },
+          {
+            "snippet_id": "s0363",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/totais/pedidos_distintos",
+            "value": 101
+          },
+          {
+            "snippet_id": "s0364",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/totais/carteira_pendente",
+            "value": "4399084.73"
+          },
+          {
+            "snippet_id": "s0365",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/totais/custo_carteira",
+            "value": "3506069.23"
+          },
+          {
+            "snippet_id": "s0366",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/totais/margem_carteira",
+            "value": "893015.50"
+          },
+          {
+            "snippet_id": "s0367",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/totais/margem_pct",
+            "value": 20.3
+          },
+          {
+            "snippet_id": "s0368",
+            "evidence_id": "e4",
+            "origin": "comercial.impacto_rupturas_total",
+            "path": "/content/natureza",
+            "value": "Valores da carteira, não faturamento, perda comprovada ou previsão ML."
+          },
+          {
+            "snippet_id": "s0369",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/0/text",
+            "value": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n"
+          },
+          {
+            "snippet_id": "s0370",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/0/source",
+            "value": "logistica_atendimento.md"
+          },
+          {
+            "snippet_id": "s0371",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/0/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0372",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/0/distance",
+            "value": 0.39267706871032715
+          },
+          {
+            "snippet_id": "s0373",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/1/text",
+            "value": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n"
+          },
+          {
+            "snippet_id": "s0374",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/1/source",
+            "value": "politica_comercial.md"
+          },
+          {
+            "snippet_id": "s0375",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/1/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0376",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/1/distance",
+            "value": 0.39659643173217773
+          },
+          {
+            "snippet_id": "s0377",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/2/text",
+            "value": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n"
+          },
+          {
+            "snippet_id": "s0378",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/2/source",
+            "value": "catalogo_comercial.md"
+          },
+          {
+            "snippet_id": "s0379",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/2/chunk",
+            "value": 1
+          },
+          {
+            "snippet_id": "s0380",
+            "evidence_id": "e5",
+            "origin": "comercial.documentos",
+            "path": "/content/2/distance",
+            "value": 0.41168808937072754
+          }
+        ],
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 0.9473684210526315,
+          "relevant": 18,
+          "units": 19,
+          "protocol": "indexed_answer_lines_v2"
+        },
+        "relevancy_judgment": {
+          "verdicts": [
+            {
+              "unit_id": "u001",
+              "relevant": true,
+              "reason": "Contextualiza o período e a natureza dos dados.",
+              "quote": "No período de 01/10/2025 a 30/09/2026 (com fotografia de estoque em 30/09/2026), foram analisadas as rupturas observadas (itens com disponível zero) que afetam os pedidos pendentes. Todos os dados são fictícios.",
+              "start": 0,
+              "end": 211
+            },
+            {
+              "unit_id": "u002",
+              "relevant": true,
+              "reason": "Título relevante para a seção de impacto comercial.",
+              "quote": "### Impacto Comercial e Carteira em Saldo Zero",
+              "start": 213,
+              "end": 259
+            },
+            {
+              "unit_id": "u003",
+              "relevant": true,
+              "reason": "Responde diretamente ao valor exato da carteira em saldo zero.",
+              "quote": "* **Valor Exato da Carteira em Ruptura:** **R$ 4.399.084,73** (abrangendo 103 linhas de pedidos e 101 pedidos distintos, distribuídos em 41 pares produto-centro em ruptura com carteira).",
+              "start": 260,
+              "end": 446
+            },
+            {
+              "unit_id": "u004",
+              "relevant": true,
+              "reason": "Fornece o custo da carteira, parte do impacto comercial.",
+              "quote": "* **Custo da Carteira:** R$ 3.506.069,23.",
+              "start": 447,
+              "end": 488
+            },
+            {
+              "unit_id": "u005",
+              "relevant": true,
+              "reason": "Informa o impacto na margem bruta, respondendo à pergunta.",
+              "quote": "* **Impacto Comercial na Margem Bruta:** **R$ 893.015,50**, o que representa uma margem percentual teórica de **20,3%** retida na carteira pendente.",
+              "start": 489,
+              "end": 637
+            },
+            {
+              "unit_id": "u006",
+              "relevant": true,
+              "reason": "Título relevante para a lista de rupturas.",
+              "quote": "### Principais Rupturas que Afetam Pedidos Pendentes (Amostra de Prioridades)",
+              "start": 639,
+              "end": 716
+            },
+            {
+              "unit_id": "u007",
+              "relevant": true,
+              "reason": "Introduz a lista de rupturas de maior valor.",
+              "quote": "As rupturas observadas (disponível zero) de maior valor na carteira pendente incluem:",
+              "start": 717,
+              "end": 802
+            },
+            {
+              "unit_id": "u008",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00012** (CTR-004, tonelada): R$ 378.888,68 em carteira pendente;",
+              "start": 803,
+              "end": 875
+            },
+            {
+              "unit_id": "u009",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00016** (CTR-002, tonelada): R$ 339.247,27;",
+              "start": 876,
+              "end": 927
+            },
+            {
+              "unit_id": "u010",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00002** (CTR-006, tonelada): R$ 275.189,64;",
+              "start": 928,
+              "end": 979
+            },
+            {
+              "unit_id": "u011",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00006** (CTR-003, tonelada): R$ 262.012,62;",
+              "start": 980,
+              "end": 1031
+            },
+            {
+              "unit_id": "u012",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00002** (CTR-005, tonelada): R$ 231.883,34;",
+              "start": 1032,
+              "end": 1083
+            },
+            {
+              "unit_id": "u013",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00014** (CTR-012, tonelada): R$ 201.914,05;",
+              "start": 1084,
+              "end": 1135
+            },
+            {
+              "unit_id": "u014",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00010** (CTR-015, tonelada): R$ 180.987,80;",
+              "start": 1136,
+              "end": 1187
+            },
+            {
+              "unit_id": "u015",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00017** (CTR-006, KG): R$ 166.603,01;",
+              "start": 1188,
+              "end": 1233
+            },
+            {
+              "unit_id": "u016",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00011** (CTR-001, KG): R$ 146.315,83;",
+              "start": 1234,
+              "end": 1279
+            },
+            {
+              "unit_id": "u017",
+              "relevant": true,
+              "reason": "Detalha uma das principais rupturas.",
+              "quote": "* **PRD-00001** (CTR-001, KG): R$ 125.904,66.",
+              "start": 1280,
+              "end": 1325
+            },
+            {
+              "unit_id": "u018",
+              "relevant": true,
+              "reason": "Esclarece a natureza contábil dos pedidos pendentes.",
+              "quote": "Conforme estabelecido em nossa diretriz [politica_comercial.md, trecho 1], pedidos pendentes não constituem receita faturada e a carteira pendente não deve ser somada à receita realizada.",
+              "start": 1327,
+              "end": 1514
+            },
+            {
+              "unit_id": "u019",
+              "relevant": false,
+              "reason": "Digressão sobre o processo de geração da resposta.",
+              "quote": "**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+              "start": 1516,
+              "end": 1713
+            }
+          ],
+          "explanation": "A resposta fornece os dados solicitados sobre rupturas de estoque, impacto financeiro e carteira pendente, utilizando as evidências disponíveis. Os valores numéricos foram verificados contra os snippets de dados de estoque e indicadores comerciais. As exclusões de factualidade referem-se a títulos e avisos de sistema."
+        },
+        "answer_units": [
+          {
+            "unit_id": "u001",
+            "start": 0,
+            "end": 211,
+            "text": "No período de 01/10/2025 a 30/09/2026 (com fotografia de estoque em 30/09/2026), foram analisadas as rupturas observadas (itens com disponível zero) que afetam os pedidos pendentes. Todos os dados são fictícios."
+          },
+          {
+            "unit_id": "u002",
+            "start": 213,
+            "end": 259,
+            "text": "### Impacto Comercial e Carteira em Saldo Zero"
+          },
+          {
+            "unit_id": "u003",
+            "start": 260,
+            "end": 446,
+            "text": "* **Valor Exato da Carteira em Ruptura:** **R$ 4.399.084,73** (abrangendo 103 linhas de pedidos e 101 pedidos distintos, distribuídos em 41 pares produto-centro em ruptura com carteira)."
+          },
+          {
+            "unit_id": "u004",
+            "start": 447,
+            "end": 488,
+            "text": "* **Custo da Carteira:** R$ 3.506.069,23."
+          },
+          {
+            "unit_id": "u005",
+            "start": 489,
+            "end": 637,
+            "text": "* **Impacto Comercial na Margem Bruta:** **R$ 893.015,50**, o que representa uma margem percentual teórica de **20,3%** retida na carteira pendente."
+          },
+          {
+            "unit_id": "u006",
+            "start": 639,
+            "end": 716,
+            "text": "### Principais Rupturas que Afetam Pedidos Pendentes (Amostra de Prioridades)"
+          },
+          {
+            "unit_id": "u007",
+            "start": 717,
+            "end": 802,
+            "text": "As rupturas observadas (disponível zero) de maior valor na carteira pendente incluem:"
+          },
+          {
+            "unit_id": "u008",
+            "start": 803,
+            "end": 875,
+            "text": "* **PRD-00012** (CTR-004, tonelada): R$ 378.888,68 em carteira pendente;"
+          },
+          {
+            "unit_id": "u009",
+            "start": 876,
+            "end": 927,
+            "text": "* **PRD-00016** (CTR-002, tonelada): R$ 339.247,27;"
+          },
+          {
+            "unit_id": "u010",
+            "start": 928,
+            "end": 979,
+            "text": "* **PRD-00002** (CTR-006, tonelada): R$ 275.189,64;"
+          },
+          {
+            "unit_id": "u011",
+            "start": 980,
+            "end": 1031,
+            "text": "* **PRD-00006** (CTR-003, tonelada): R$ 262.012,62;"
+          },
+          {
+            "unit_id": "u012",
+            "start": 1032,
+            "end": 1083,
+            "text": "* **PRD-00002** (CTR-005, tonelada): R$ 231.883,34;"
+          },
+          {
+            "unit_id": "u013",
+            "start": 1084,
+            "end": 1135,
+            "text": "* **PRD-00014** (CTR-012, tonelada): R$ 201.914,05;"
+          },
+          {
+            "unit_id": "u014",
+            "start": 1136,
+            "end": 1187,
+            "text": "* **PRD-00010** (CTR-015, tonelada): R$ 180.987,80;"
+          },
+          {
+            "unit_id": "u015",
+            "start": 1188,
+            "end": 1233,
+            "text": "* **PRD-00017** (CTR-006, KG): R$ 166.603,01;"
+          },
+          {
+            "unit_id": "u016",
+            "start": 1234,
+            "end": 1279,
+            "text": "* **PRD-00011** (CTR-001, KG): R$ 146.315,83;"
+          },
+          {
+            "unit_id": "u017",
+            "start": 1280,
+            "end": 1325,
+            "text": "* **PRD-00001** (CTR-001, KG): R$ 125.904,66."
+          },
+          {
+            "unit_id": "u018",
+            "start": 1327,
+            "end": 1514,
+            "text": "Conforme estabelecido em nossa diretriz [politica_comercial.md, trecho 1], pedidos pendentes não constituem receita faturada e a carteira pendente não deve ser somada à receita realizada."
+          },
+          {
+            "unit_id": "u019",
+            "start": 1516,
+            "end": 1713,
+            "text": "**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas."
+          }
+        ],
+        "usage": {
+          "input": 26624,
+          "output": 2515,
+          "total": 29139
+        },
+        "judge_model": "gemini-3.1-flash-lite",
+        "cost": null,
+        "protocols": {
+          "faithfulness": "indexed_claim_evidence_v2",
+          "answer_relevancy": "indexed_answer_lines_v2"
+        },
+        "response_model_version": "gemini-3.1-flash-lite"
+      },
+      "evaluation_latency_ms": 48941.778,
+      "metric_origins": {
+        "faithfulness": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G10\\results.json"
+        },
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261018T131059Z-pipeline-c774fe\\judge-G10\\results.json"
+        }
+      },
+      "total_latency_ms": 48989.316
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 5,
+  "stop_reason": null,
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 1,
+    "api_failed_questions": 0,
+    "cost": null,
+    "questions_with_any_metric": 1,
+    "questions_fully_evaluated": 1,
+    "questions_partially_evaluated": 0,
+    "faithfulness": {
+      "evaluated": 1,
+      "mean": 1.0,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 1,
+      "mean": 0.9473684210526315,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "review_verdicts_and_deterministic_checks",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 1,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

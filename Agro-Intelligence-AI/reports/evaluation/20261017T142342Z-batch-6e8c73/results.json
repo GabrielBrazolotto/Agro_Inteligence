@@ -1,0 +1,539 @@
+{
+  "run_id": "20261017T142342Z-batch-6e8c73",
+  "selected_cases": [
+    "G02"
+  ],
+  "mode": "live",
+  "concurrency": 1,
+  "case_definitions": [
+    {
+      "id": "G02",
+      "category": "estoque",
+      "question": "Quantas posições de estoque estão em ruptura observada, definida como disponível igual a zero?",
+      "expected_behavior": "Contar posições produto/centro com saldo zero; não confundir insuficiência com ruptura.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos"
+      ],
+      "references": [
+        "sql:ruptures"
+      ],
+      "checks": [
+        "ruptures"
+      ]
+    }
+  ],
+  "reference_state": {
+    "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+    "documents": {
+      "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+      "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+      "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+    },
+    "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+    "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+  },
+  "max_calls": 1,
+  "calls": [
+    {
+      "case_id": "G02",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 2527,
+        "output": 527,
+        "total": 3054
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "quote": "foram registradas 60 posições de estoque em ruptura observada",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O documento informa explicitamente que o total de rupturas observadas é 60."
+          },
+          {
+            "quote": "de um total de 3.000 posições monitoradas",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O documento informa que o total de posições é 3000."
+          },
+          {
+            "quote": "41 apresentam carteira de pedidos pendentes",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O documento informa que o número de rupturas com carteira é 41."
+          },
+          {
+            "quote": "totalizando R$ 4.399.084,73",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O documento informa que a carteira em ruptura é 4399084.73."
+          },
+          {
+            "quote": "insuficiência com saldo positivo (695 posições",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O documento informa que o número de insuficiências com saldo é 695."
+          },
+          {
+            "quote": "O total de 755 pares sinalizados representa a união das rupturas observadas (60) com as insuficiências com saldo (695)",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "A soma de 60 e 695 resulta em 755, que é o valor de pares sinalizados informado no documento."
+          }
+        ],
+        "explanation": "A resposta reflete com precisão os dados numéricos fornecidos na evidência e respeita as definições de categorias apresentadas no documento."
+      },
+      "latency_ms": 6502.551
+    }
+  ],
+  "results": [
+    {
+      "id": "G02",
+      "category": "estoque",
+      "question": "Quantas posições de estoque estão em ruptura observada, definida como disponível igual a zero?",
+      "expected_behavior": "Contar posições produto/centro com saldo zero; não confundir insuficiência com ruptura.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos"
+      ],
+      "references": [
+        "sql:ruptures"
+      ],
+      "checks": [
+        "ruptures"
+      ],
+      "generation_status": "reused",
+      "answer": "Em **30 de setembro de 2026**, foram registradas **60 posições de estoque em ruptura observada** (definidas estritamente como quantidade disponível igual a zero), de um total de 3.000 posições monitoradas.\n\nDetalhamento e contextualização das evidências:\n\n* **Carteira em Ruptura:** Das 60 posições em ruptura observada, 41 apresentam carteira de pedidos pendentes, totalizando R$ 4.399.084,73. Este valor refere-se a pedidos represados e não deve ser interpretado como receita realizada ou perda financeira confirmada.\n* **Diferenciação de Categorias:** A ruptura observada (disponível igual a zero) é uma categoria mutuamente exclusiva da *insuficiência com saldo positivo* (695 posições, nas quais existe estoque, porém em quantidade inferior à carteira).\n* **Consolidação do Grupo Sinalizado:** O total de 755 pares sinalizados representa a união das rupturas observadas (60) com as insuficiências com saldo (695). O valor total deste grupo amplo não deve ser atribuído unicamente às rupturas.\n\nOs dados refletem uma fotografia estática do abastecimento na data informada, sem aplicação de modelos de Machine Learning ou previsões estatísticas de perda.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "estoque.abastecimento",
+          "content": {
+            "totais": {
+              "data_estoque": "2026-09-30",
+              "posicoes": 3000,
+              "rupturas_observadas": 60,
+              "excessos": 60,
+              "pares_sinalizados": 755,
+              "rupturas_com_carteira": 41,
+              "carteira_em_ruptura": "4399084.73",
+              "insuficiencias_com_saldo": 695,
+              "carteira_em_insuficiencia_com_saldo": "69752075.66",
+              "carteira_nos_pares_sinalizados": "74151160.39"
+            },
+            "prioridades_amostra": [
+              {
+                "produto_id": 12,
+                "centro_id": 4,
+                "produto": "PRD-00012",
+                "centro": "CTR-004",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 97,
+                "carteira_valor": "378888.68"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 2,
+                "produto": "PRD-00016",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 96,
+                "carteira_valor": "339247.27"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 6,
+                "produto": "PRD-00002",
+                "centro": "CTR-006",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 70,
+                "carteira_valor": "275189.64"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 3,
+                "produto": "PRD-00006",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 94,
+                "carteira_valor": "262012.62"
+              },
+              {
+                "produto_id": 2,
+                "centro_id": 5,
+                "produto": "PRD-00002",
+                "centro": "CTR-005",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 57,
+                "carteira_valor": "231883.34"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 12,
+                "produto": "PRD-00014",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "201914.05"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 15,
+                "produto": "PRD-00010",
+                "centro": "CTR-015",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 43,
+                "carteira_valor": "180987.80"
+              },
+              {
+                "produto_id": 17,
+                "centro_id": 6,
+                "produto": "PRD-00017",
+                "centro": "CTR-006",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 38360,
+                "carteira_valor": "166603.01"
+              },
+              {
+                "produto_id": 8,
+                "centro_id": 8,
+                "produto": "PRD-00008",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 31,
+                "carteira_valor": "150070.70"
+              },
+              {
+                "produto_id": 18,
+                "centro_id": 8,
+                "produto": "PRD-00018",
+                "centro": "CTR-008",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 53,
+                "carteira_valor": "146376.94"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 1,
+                "produto": "PRD-00011",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 31816,
+                "carteira_valor": "146315.83"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 1,
+                "produto": "PRD-00016",
+                "centro": "CTR-001",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 41,
+                "carteira_valor": "144517.20"
+              },
+              {
+                "produto_id": 16,
+                "centro_id": 3,
+                "produto": "PRD-00016",
+                "centro": "CTR-003",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 38,
+                "carteira_valor": "136034.11"
+              },
+              {
+                "produto_id": 1,
+                "centro_id": 1,
+                "produto": "PRD-00001",
+                "centro": "CTR-001",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 25560,
+                "carteira_valor": "125904.66"
+              },
+              {
+                "produto_id": 10,
+                "centro_id": 14,
+                "produto": "PRD-00010",
+                "centro": "CTR-014",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 30,
+                "carteira_valor": "120044.40"
+              },
+              {
+                "produto_id": 14,
+                "centro_id": 10,
+                "produto": "PRD-00014",
+                "centro": "CTR-010",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 24,
+                "carteira_valor": "115767.38"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 11,
+                "produto": "PRD-00004",
+                "centro": "CTR-011",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 54,
+                "carteira_valor": "115522.44"
+              },
+              {
+                "produto_id": 4,
+                "centro_id": 12,
+                "produto": "PRD-00004",
+                "centro": "CTR-012",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 50,
+                "carteira_valor": "104552.45"
+              },
+              {
+                "produto_id": 6,
+                "centro_id": 2,
+                "produto": "PRD-00006",
+                "centro": "CTR-002",
+                "unidade": "tonelada",
+                "disponivel": 0,
+                "carteira_quantidade": 35,
+                "carteira_valor": "102186.49"
+              },
+              {
+                "produto_id": 11,
+                "centro_id": 3,
+                "produto": "PRD-00011",
+                "centro": "CTR-003",
+                "unidade": "KG",
+                "disponivel": 0,
+                "carteira_quantidade": 21388,
+                "carteira_valor": "101511.89"
+              }
+            ],
+            "escopo_prioridades": "ruptura",
+            "natureza": "Ruptura observada = disponível zero; insuficiência com saldo positivo = carteira maior que disponível. O grupo amplo sinalizados é a união, não sinônimo de ruptura. Categorias mutuamente exclusivas. por produto/centro e mesma unidade. Não é previsão estatística nem score ML. Estoque é fotografia independente; carteira não é perda estimada."
+          }
+        }
+      ],
+      "tools": [
+        {
+          "agent": "estoque",
+          "tool": "duckdb_estoque_pedidos",
+          "status": "ok"
+        },
+        {
+          "agent": "estoque",
+          "tool": "gemini_analise",
+          "status": "ok"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "api_failures": [],
+      "metrics": {
+        "faithfulness": {
+          "status": "invalid_judgment",
+          "score": null,
+          "reason": "invalid_quote"
+        },
+        "answer_relevancy": {
+          "status": "evaluated",
+          "score": 1.0,
+          "relevant": 6,
+          "units": 6,
+          "protocol": "indexed_answer_lines_v2"
+        }
+      },
+      "generation_attempted": false,
+      "reference_state": {
+        "database": "b362df59dcaae0e29e65c8a77fca9de117fa6a57804d4b9b3856be0f624e3e15",
+        "documents": {
+          "catalogo_comercial.md": "b6d7699c2c367d8d895ad8a86ddeacaa7701c32ec231306dbfab57f1d11ee72e",
+          "logistica_atendimento.md": "8a8bc96b7c65e3c7aa4729e5416165b1d32e302f6522fa7bf235e8050eefd1d2",
+          "politica_comercial.md": "a93913c1fd452e70cb70f490f58a41c9c3ad012184c3e550cd272c9c1b518b87"
+        },
+        "ml_artifact": "6dc5d2f51edeaf948ee347862cd0c925e4fd00e79f6f71ce50aa07858ad3666e",
+        "ml_metadata": "65af470b41cddcfbfc346becee59fd53472096462c19cfd57c8259a6b487ccab"
+      },
+      "response_key": "f017e660685a473054c95d8495a32686531011806d33439788e9d2b54079c4e6",
+      "response_origin": {
+        "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T142045Z-batch-d6b957\\results.json",
+        "fresh_generation": true
+      },
+      "historical_api_failures": [],
+      "generation_latency_ms": null,
+      "deterministic": [
+        {
+          "check": "ruptures",
+          "status": "passed",
+          "reference_rows": [
+            {
+              "valor": 60
+            }
+          ],
+          "missing_or_inaccurate_values": []
+        }
+      ],
+      "reused_metrics": [
+        "answer_relevancy"
+      ],
+      "requested_metrics": [
+        "faithfulness"
+      ],
+      "current_assessment": {
+        "faithfulness": {
+          "status": "invalid_judgment",
+          "score": null,
+          "reason": "invalid_quote"
+        },
+        "faithfulness_judgment": {
+          "claims": [
+            {
+              "quote": "foram registradas 60 posições de estoque em ruptura observada",
+              "supported": true,
+              "evidence_ids": [
+                "e1"
+              ],
+              "reason": "O documento informa explicitamente que o total de rupturas observadas é 60."
+            },
+            {
+              "quote": "de um total de 3.000 posições monitoradas",
+              "supported": true,
+              "evidence_ids": [
+                "e1"
+              ],
+              "reason": "O documento informa que o total de posições é 3000."
+            },
+            {
+              "quote": "41 apresentam carteira de pedidos pendentes",
+              "supported": true,
+              "evidence_ids": [
+                "e1"
+              ],
+              "reason": "O documento informa que o número de rupturas com carteira é 41."
+            },
+            {
+              "quote": "totalizando R$ 4.399.084,73",
+              "supported": true,
+              "evidence_ids": [
+                "e1"
+              ],
+              "reason": "O documento informa que a carteira em ruptura é 4399084.73."
+            },
+            {
+              "quote": "insuficiência com saldo positivo (695 posições",
+              "supported": true,
+              "evidence_ids": [
+                "e1"
+              ],
+              "reason": "O documento informa que o número de insuficiências com saldo é 695."
+            },
+            {
+              "quote": "O total de 755 pares sinalizados representa a união das rupturas observadas (60) com as insuficiências com saldo (695)",
+              "supported": true,
+              "evidence_ids": [
+                "e1"
+              ],
+              "reason": "A soma de 60 e 695 resulta em 755, que é o valor de pares sinalizados informado no documento."
+            }
+          ],
+          "explanation": "A resposta reflete com precisão os dados numéricos fornecidos na evidência e respeita as definições de categorias apresentadas no documento."
+        },
+        "usage": {
+          "input": 2527,
+          "output": 527,
+          "total": 3054
+        },
+        "judge_model": "gemini-3.1-flash-lite",
+        "cost": null,
+        "protocols": {
+          "faithfulness": "claim_verdict_judge_v1"
+        }
+      },
+      "evaluation_latency_ms": 7103.121,
+      "metric_origins": {
+        "answer_relevancy": {
+          "report": "D:\\Agro-Intelligence-AI\\reports\\evaluation\\20261017T142045Z-batch-d6b957\\results.json"
+        }
+      },
+      "total_latency_ms": 7127.011
+    }
+  ],
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "min_interval_seconds": 15.0,
+  "historical_results_modified": false,
+  "actual_api_calls": 1,
+  "stop_reason": null,
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 1,
+    "api_failed_questions": 0,
+    "cost": null,
+    "questions_with_any_metric": 1,
+    "questions_fully_evaluated": 0,
+    "questions_partially_evaluated": 1,
+    "faithfulness": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 1,
+      "mean": 1.0,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "review_verdicts_and_deterministic_checks",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 1,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

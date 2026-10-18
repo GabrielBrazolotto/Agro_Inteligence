@@ -1,0 +1,286 @@
+{
+  "run_id": "20261017T134643Z-two-cases",
+  "mode": "live",
+  "selected_cases": [
+    "G01",
+    "G02"
+  ],
+  "maximum_cases": 2,
+  "golden_sha256": "1581baedb41d384e3ab38a960961b0a1d6eaecf2e1d0f6ac29224d256a644fdf",
+  "case_definitions": [
+    {
+      "id": "G01",
+      "category": "faturamento",
+      "question": "Qual é a receita líquida faturada total no período disponível? Informe o valor exato em reais.",
+      "expected_behavior": "Somar somente itens faturados, informar período e não adicionar carteira.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:revenue"
+      ],
+      "checks": [
+        "revenue"
+      ]
+    },
+    {
+      "id": "G02",
+      "category": "estoque",
+      "question": "Quantas posições de estoque estão em ruptura observada, definida como disponível igual a zero?",
+      "expected_behavior": "Contar posições produto/centro com saldo zero; não confundir insuficiência com ruptura.",
+      "expected_tools": [
+        "duckdb_estoque_pedidos"
+      ],
+      "references": [
+        "sql:ruptures"
+      ],
+      "checks": [
+        "ruptures"
+      ]
+    }
+  ],
+  "source_report": "reports\\evaluation\\20261017T130820Z\\results.json",
+  "concurrency": 1,
+  "source_report_sha256": "f266fb2125634d78f97cdb6fa88421b3c58bdb425656734f71ba4f1f09c1c31b",
+  "min_interval_seconds": 15.0,
+  "max_calls": 4,
+  "generator_model": "gemini-3.5-flash",
+  "agent_model": "gemini-3.1-flash-lite",
+  "judge_model": "gemini-3.1-flash-lite",
+  "metric_implementation": "claim_verdict_judge_v1",
+  "results": [
+    {
+      "id": "G01",
+      "category": "faturamento",
+      "question": "Qual é a receita líquida faturada total no período disponível? Informe o valor exato em reais.",
+      "generation_status": "reused",
+      "answer": "A receita líquida faturada total no período disponível (de **01/10/2025 a 30/09/2026**) é de **R$ 493.126.517,02**.\n\n**Detalhes da apuração:**\n* **Status considerado:** Apuração restrita a itens com status **faturada** (totalizando 5.772 pedidos e 14.431 linhas de venda).\n* **Exclusões:** Conforme as diretrizes comerciais [politica_comercial.md, trecho 1], os valores em carteira pendente (R$ 155.146.363,54) e os pedidos cancelados (R$ 34.784.595,17) não compõem a receita realizada e foram excluídos do indicador.\n\n*Nota: Todos os dados apresentados são 100% sintéticos e utilizados estritamente para fins acadêmicos.*\n\n**Resposta com limitação:** uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "comercial.indicadores",
+          "content": {
+            "regra": "Dados 100% sintéticos. Receita somente de itens faturados; carteira somente pendente. Pedidos e linhas são visões da mesma operação: não somar entre si. Receita líquida = bruta - descontos; impostos/devoluções não simulados. Margem bruta comercial = receita líquida - custo, não lucro líquido. Rankings e amostras são limitados; não concluir ausência a partir deles. KG, L, toneladas, sacas de 40KG e de 20KG são unidades distintas.",
+            "limite_por_consulta": 20,
+            "contagens": {
+              "regioes": 5,
+              "centros": 15,
+              "clientes": 5000,
+              "produtos": 1000,
+              "historico_precos": 12000,
+              "pedidos": 8000,
+              "vendas": 20000,
+              "estoque": 3000
+            },
+            "totais": {
+              "inicio": "2025-10-01",
+              "fim": "2026-09-30",
+              "receita_faturada": "493126517.02",
+              "custo_faturado": "393103460.81",
+              "margem_faturada": "100023056.21",
+              "carteira_pendente": "155146363.54",
+              "valor_cancelado": "34784595.17"
+            },
+            "resumo": [
+              {
+                "status": "cancelada",
+                "linhas": 1008,
+                "pedidos": 396,
+                "valor": "34784595.17"
+              },
+              {
+                "status": "faturada",
+                "linhas": 14431,
+                "pedidos": 5772,
+                "valor": "493126517.02"
+              },
+              {
+                "status": "pendente",
+                "linhas": 4561,
+                "pedidos": 1832,
+                "valor": "155146363.54"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e2",
+          "origin": "comercial.documentos",
+          "content": [
+            {
+              "text": "# Política comercial fictícia — Agro Intelligence AI\nDocumento PC-001. Vigência didática: setembro a dezembro de 2026.\n\nDesconto de até 5% sobre o preço de lista pode ser aprovado pelo vendedor em pedidos a partir de R$ 15.000. Descontos acima de 5% e até 8% exigem aprovação do gerente comercial. Acima de 8% não são permitidos nesta política.\n\nPagamento padrão: 30 dias após o faturamento, sujeito à análise de crédito. Pagamento à vista permite desconto de 2%, sem acumular com outros descontos. Pedidos pendentes não constituem receita faturada. Pedidos cancelados devem ser excluídos dos indicadores de vendas realizadas.\n\nTodos os nomes, valores e condições são fictícios para a disciplina AI Factory da PUCPR.\n",
+              "source": "politica_comercial.md",
+              "chunk": 1,
+              "distance": 0.3629607558250427
+            },
+            {
+              "text": "# Entrega e atendimento fictícios\nDocumento LOG-001. Vigência didática: setembro a dezembro de 2026.\n\nAtendimento comercial de segunda a sexta-feira, das 8h às 18h, horário de Brasília. Entregas para Castro, Ponta Grossa e Guarapuava, no Paraná, têm prazo estimado de 3 a 5 dias úteis após aprovação de crédito e confirmação do pedido.\n\nFrete gratuito para pedidos a partir de R$ 20.000 nas três cidades atendidas. Abaixo desse valor, o frete é cotado separadamente. Solicitações de devolução por avaria devem ser registradas em até 7 dias corridos após o recebimento, com fotos e número do pedido, para análise da equipe.\n\nTodas as condições são simulações acadêmicas e não representam uma empresa real.\n",
+              "source": "logistica_atendimento.md",
+              "chunk": 1,
+              "distance": 0.36496657133102417
+            },
+            {
+              "text": "# Catálogo comercial fictício\nDocumento CAT-001. Vigência didática: setembro a dezembro de 2026.\n\nFertilizante NPK 10-10-10: saca de 50 kg, preço de lista de R$ 180,00. Semente de soja Aurora: saca de 40 kg, preço de lista de R$ 320,00. Condicionador de solo Terra Viva: litro, preço de lista de R$ 45,00.\n\nOs produtos e suas marcas são fictícios. A disponibilidade de estoque deve ser confirmada com a equipe comercial; este catálogo não informa estoque. O material não constitui recomendação agronômica, indicação de dose ou garantia de produtividade.\n",
+              "source": "catalogo_comercial.md",
+              "chunk": 1,
+              "distance": 0.3672947287559509
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "api_error"
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "api_error"
+        }
+      },
+      "api_failures": [],
+      "deterministic": [
+        {
+          "check": "revenue",
+          "status": "passed",
+          "reference_rows": [
+            {
+              "valor": "493126517.02"
+            }
+          ],
+          "missing_or_inaccurate_values": []
+        }
+      ],
+      "trace_id": "e4eb3921f85b8d07466cb15b17246116",
+      "tools": [
+        {
+          "agent": "comercial",
+          "tool": "duckdb_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "chroma_rag_comercial",
+          "status": "ok"
+        },
+        {
+          "agent": "comercial",
+          "tool": "gemini_analise",
+          "status": "failed",
+          "category": "api",
+          "http": 429,
+          "reference": "7f247489f2af"
+        },
+        {
+          "agent": "orquestrador",
+          "tool": "gemini_sintese",
+          "status": "ok"
+        }
+      ],
+      "generation_latency_ms": null,
+      "expected_tools_missing": [],
+      "total_latency_ms": 2026.319,
+      "expected_behavior": "Somar somente itens faturados, informar período e não adicionar carteira.",
+      "expected_tools": [
+        "duckdb_comercial"
+      ],
+      "references": [
+        "sql:revenue"
+      ],
+      "original_generation_status": "degraded",
+      "reused_from": "reports\\evaluation\\20261017T130820Z\\results.json",
+      "historical_api_failures": [
+        {
+          "stage": "gemini_analise",
+          "http_code": 429,
+          "category": "api"
+        }
+      ],
+      "historical_generation_latency_ms": 36938.273,
+      "tools_executed_current": [],
+      "evaluation_failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 400
+      },
+      "evaluation_latency_ms": 2026.319
+    },
+    {
+      "id": "G02",
+      "question": "Quantas posições de estoque estão em ruptura observada, definida como disponível igual a zero?",
+      "generation_status": "not_executed",
+      "skip_reason": "api_failure_or_limit",
+      "metrics": {
+        "faithfulness": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "api_failure_or_limit"
+        },
+        "answer_relevancy": {
+          "status": "not_executed",
+          "score": null,
+          "reason": "api_failure_or_limit"
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "case_id": "G01",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 400
+      },
+      "latency_ms": 1885.232
+    }
+  ],
+  "actual_api_calls": 1,
+  "scheduled_calls": 1,
+  "reused_answers": 1,
+  "new_generation_cases": 0,
+  "summary": {
+    "attempted_questions": 1,
+    "answers_received": 1,
+    "questions_evaluated": 0,
+    "api_failed_questions": 1,
+    "cost": null,
+    "faithfulness": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "answer_relevancy": {
+      "evaluated": 0,
+      "mean": null,
+      "below_threshold": 0,
+      "threshold": 0.8
+    },
+    "deterministic": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "analysis": {
+    "quality_conclusion": "insufficient_judged_answers",
+    "operational_failures_separate_from_quality": true,
+    "financial_checks": {
+      "passed": 1,
+      "failed": 0
+    },
+    "improvements": [
+      "Verificar limites Gemini antes de repetir casos com 429; manter concorrência 1 e intervalo de pelo menos 15s.",
+      "Revisar manualmente afirmações e vereditos e calibrar o limiar 0,8 com exemplos humanos.",
+      "Conferir roteamento e associação de valores a regiões/meses se o oráculo financeiro falhar.",
+      "Avaliar esclarecimento/recusa para casos ambíguos e fora de escopo antes de alterar o roteador.",
+      "Considerar juiz independente do gerador para reduzir viés correlacionado."
+    ]
+  }
+}

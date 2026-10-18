@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+data/runtime/
+data/backups/
+*.log
+data/ml/raw/
+data/ml/split_assignments.csv

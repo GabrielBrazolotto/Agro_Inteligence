@@ -1,0 +1,252 @@
+{
+  "summary": {
+    "gemini_api_calls": 6,
+    "all_judge_calls": true,
+    "generation_api_calls": 0,
+    "embedding_api_calls": 0,
+    "successful_api_calls": 3,
+    "http_400_calls": 3,
+    "known_usage": {
+      "input": 4641,
+      "output": 2428,
+      "total": 7069
+    },
+    "calls_without_usage": 3,
+    "cost": null
+  },
+  "calls": [
+    {
+      "case_id": "G01",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 400
+      },
+      "latency_ms": 414.131,
+      "report": "20261017T134451Z-two-cases",
+      "session_call_number": 1
+    },
+    {
+      "case_id": "G01",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge_diagnostic",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 400
+      },
+      "latency_ms": 359.853,
+      "report": "20261017T134451Z-two-cases/diagnostic.json",
+      "session_call_number": 2
+    },
+    {
+      "case_id": "G01",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "failed",
+      "usage": null,
+      "failure": {
+        "status": "api_error",
+        "error_category": "api",
+        "http_code": 400
+      },
+      "latency_ms": 1885.232,
+      "report": "20261017T134643Z-two-cases",
+      "session_call_number": 3
+    },
+    {
+      "case_id": "G01",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 1866,
+        "output": 771,
+        "total": 2637
+      },
+      "latency_ms": 9901.835,
+      "report": "20261017T134757Z-two-cases",
+      "session_call_number": 4
+    },
+    {
+      "case_id": "G01",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 1866,
+        "output": 771,
+        "total": 2637
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "quote": "A receita líquida faturada total no período disponível (de 01/10/2025 a 30/09/2026) é de R$ 493.126.517,02.",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor e o período coincidem com os dados fornecidos em 'totais' e 'resumo' na evidência e1."
+          },
+          {
+            "quote": "totalizando 5.772 pedidos e 14.431 linhas de venda",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "Os números de pedidos e linhas de venda para o status 'faturada' estão corretos conforme a evidência e1."
+          },
+          {
+            "quote": "os valores em carteira pendente (R$ 155.146.363,54) e os pedidos cancelados (R$ 34.784.595,17) não compõem a receita realizada e foram excluídos do indicador.",
+            "supported": true,
+            "evidence_ids": [
+              "e1",
+              "e2"
+            ],
+            "reason": "Os valores citados correspondem aos dados da evidência e1 e a exclusão está alinhada com a diretriz da política comercial na evidência e2."
+          }
+        ],
+        "relevance_units": [
+          {
+            "quote": "A receita líquida faturada total no período disponível (de 01/10/2025 a 30/09/2026) é de R$ 493.126.517,02.",
+            "relevant": true,
+            "reason": "Responde diretamente à pergunta sobre a receita líquida total."
+          },
+          {
+            "quote": "Detalhes da apuração: Status considerado: Apuração restrita a itens com status faturada (totalizando 5.772 pedidos e 14.431 linhas de venda). Exclusões: Conforme as diretrizes comerciais [politica_comercial.md, trecho 1], os valores em carteira pendente (R$ 155.146.363,54) e os pedidos cancelados (R$ 34.784.595,17) não compõem a receita realizada e foram excluídos do indicador.",
+            "relevant": true,
+            "reason": "Fornece contexto relevante sobre a composição do valor e critérios de exclusão."
+          },
+          {
+            "quote": "Resposta com limitação: uma análise de agente ficou indisponível. A síntese final utiliza as evidências disponíveis; a análise desse agente ficou incompleta. Consulte o registro de ferramentas.",
+            "relevant": false,
+            "reason": "Trata-se de metadados sobre o processo de geração da resposta, sem valor para a gestão comercial."
+          }
+        ],
+        "explanation": "A resposta responde corretamente à pergunta, fornecendo o valor exato da receita líquida faturada e o período correspondente, além de detalhar os critérios de exclusão de pedidos pendentes e cancelados, conforme solicitado pelas evidências."
+      },
+      "latency_ms": 2665.375,
+      "report": "20261017T134931Z-two-cases",
+      "session_call_number": 5
+    },
+    {
+      "case_id": "G12",
+      "model": "gemini-3.1-flash-lite",
+      "kind": "judge",
+      "status": "success",
+      "usage": {
+        "input": 909,
+        "output": 886,
+        "total": 1795
+      },
+      "raw_judgment": {
+        "claims": [
+          {
+            "quote": "Score da classe backorder: 0.9267",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor corresponde ao score fornecido na evidência (0.9266898444319546 arredondado)."
+          },
+          {
+            "quote": "limiar validado: 0.91",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor corresponde ao threshold fornecido na evidência (0.9099999999999999 arredondado)."
+          },
+          {
+            "quote": "national_inv: 10",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature national_inv na evidência."
+          },
+          {
+            "quote": "lead_time: 8",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature lead_time na evidência."
+          },
+          {
+            "quote": "in_transit_qty: 0",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature in_transit_qty na evidência."
+          },
+          {
+            "quote": "forecast_3_month: 100",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature forecast_3_month na evidência."
+          },
+          {
+            "quote": "sales_1_month: 20",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature sales_1_month na evidência."
+          },
+          {
+            "quote": "sales_3_month: 60",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature sales_3_month na evidência."
+          },
+          {
+            "quote": "min_bank: 15",
+            "supported": true,
+            "evidence_ids": [
+              "e1"
+            ],
+            "reason": "O valor coincide com a feature min_bank na evidência."
+          }
+        ],
+        "relevance_units": [
+          {
+            "quote": "Previsão ML experimental: Risco sinalizado de backorder.",
+            "relevant": true,
+            "reason": "Responde diretamente à solicitação de previsão de risco."
+          },
+          {
+            "quote": "Score da classe backorder: 0.9267; limiar validado: 0.91.",
+            "relevant": true,
+            "reason": "Fornece os dados quantitativos que fundamentam a previsão."
+          },
+          {
+            "quote": "Atributos usados pelo modelo: ...",
+            "relevant": true,
+            "reason": "Confirma os parâmetros utilizados para a inferência."
+          },
+          {
+            "quote": "Não validado para uma cooperativa agroindustrial brasileira; backorder é um proxy de indisponibilidade para atender pedidos, não um diagnóstico agronômico ou um alerta operacional certificado.",
+            "relevant": true,
+            "reason": "Esclarece as limitações e o escopo da ferramenta, o que é relevante para a gestão comercial."
+          }
+        ],
+        "explanation": "A resposta utilizou corretamente os dados da evidência fornecida para realizar a inferência solicitada, mantendo a transparência sobre a natureza experimental do modelo e suas limitações de aplicação."
+      },
+      "latency_ms": 2535.555,
+      "report": "20261017T134931Z-two-cases",
+      "session_call_number": 6
+    }
+  ]
+}

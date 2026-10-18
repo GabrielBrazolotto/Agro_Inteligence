@@ -1,0 +1,21 @@
+[
+  {
+    "case_id": "G06",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "judge",
+    "status": "failed",
+    "usage": null,
+    "budget_admission": {
+      "id": "4b906747783948019d9260d0b46a738b",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 37508,
+      "debited_before_dispatch": true
+    },
+    "failure": {
+      "status": "api_error",
+      "error_category": "api",
+      "http_code": 503
+    },
+    "latency_ms": 28264.011
+  }
+]

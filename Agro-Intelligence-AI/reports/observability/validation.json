@@ -1,0 +1,141 @@
+{
+  "requested_questions": 5,
+  "executed_questions": 5,
+  "created_traces": 5,
+  "server_confirmed_traces": 5,
+  "ui_visually_confirmed": false,
+  "results": [
+    {
+      "question_number": 1,
+      "status": "ok",
+      "agents": [
+        "comercial"
+      ],
+      "trace_id": "c5041274d2604310b2b437adc0038c7d",
+      "complete": true,
+      "observations": 15,
+      "names": [
+        "agro.agent.comercial",
+        "agro.agent.tool",
+        "agro.chat.question",
+        "agro.chat.request",
+        "agro.chat.response",
+        "agro.chroma.retrieve",
+        "agro.chroma.synchronize",
+        "agro.duckdb.commercial_snapshot",
+        "agro.gemini.embeddings",
+        "agro.gemini.generate",
+        "agro.orchestration.prepare",
+        "agro.orchestration.response"
+      ]
+    },
+    {
+      "question_number": 2,
+      "status": "ok",
+      "agents": [
+        "estoque"
+      ],
+      "trace_id": "d266da08849f0b3d9444b89bb9d816e2",
+      "complete": true,
+      "observations": 12,
+      "names": [
+        "agro.agent.estoque",
+        "agro.agent.tool",
+        "agro.chat.question",
+        "agro.chat.request",
+        "agro.chat.response",
+        "agro.duckdb.stock_and_orders",
+        "agro.gemini.generate",
+        "agro.orchestration.prepare",
+        "agro.orchestration.response"
+      ]
+    },
+    {
+      "question_number": 3,
+      "status": "fallback",
+      "agents": [
+        "comercial"
+      ],
+      "trace_id": "35033a7f2aec215060ef4e398f72609f",
+      "complete": true,
+      "observations": 15,
+      "names": [
+        "agro.agent.comercial",
+        "agro.agent.tool",
+        "agro.chat.question",
+        "agro.chat.request",
+        "agro.chat.response",
+        "agro.chroma.retrieve",
+        "agro.chroma.synchronize",
+        "agro.duckdb.commercial_snapshot",
+        "agro.gemini.embeddings",
+        "agro.gemini.generate",
+        "agro.orchestration.prepare",
+        "agro.orchestration.response"
+      ]
+    },
+    {
+      "question_number": 4,
+      "status": "fallback",
+      "agents": [
+        "estoque",
+        "comercial"
+      ],
+      "trace_id": "56808ce669396cc15a463959bed3cd3a",
+      "complete": true,
+      "observations": 24,
+      "names": [
+        "agro.agent.comercial",
+        "agro.agent.estoque",
+        "agro.agent.tool",
+        "agro.chat.question",
+        "agro.chat.request",
+        "agro.chat.response",
+        "agro.chroma.retrieve",
+        "agro.chroma.synchronize",
+        "agro.duckdb.commercial_impact",
+        "agro.duckdb.commercial_snapshot",
+        "agro.duckdb.rupture_impact",
+        "agro.duckdb.stock_and_orders",
+        "agro.gemini.embeddings",
+        "agro.gemini.generate",
+        "agro.orchestration.prepare",
+        "agro.orchestration.response"
+      ]
+    },
+    {
+      "question_number": 5,
+      "status": "fallback",
+      "agents": [
+        "estoque",
+        "comercial"
+      ],
+      "trace_id": "05d850d53c649d6b63c95cf8349e33fd",
+      "complete": true,
+      "observations": 25,
+      "names": [
+        "agro.agent.comercial",
+        "agro.agent.estoque",
+        "agro.agent.tool",
+        "agro.chat.question",
+        "agro.chat.request",
+        "agro.chat.response",
+        "agro.chroma.retrieve",
+        "agro.chroma.synchronize",
+        "agro.duckdb.commercial_impact",
+        "agro.duckdb.commercial_snapshot",
+        "agro.duckdb.stock_and_orders",
+        "agro.gemini.embeddings",
+        "agro.gemini.generate",
+        "agro.ml.predict_backorder",
+        "agro.orchestration.prepare",
+        "agro.orchestration.response"
+      ]
+    }
+  ],
+  "authentication": {
+    "ok": true,
+    "category": "ok"
+  },
+  "flush_completed": true
+}

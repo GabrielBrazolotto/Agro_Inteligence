@@ -1,0 +1,23 @@
+{
+  "case_id": "G01",
+  "additional_api_calls": 1,
+  "status": "failed",
+  "failure": {
+    "status": "api_error",
+    "error_category": "api",
+    "http_code": 400
+  },
+  "diagnostic_flags": {
+    "too many states": false,
+    "schema": true,
+    "maxItems": false,
+    "additionalProperties": false,
+    "unknown name": true,
+    "unsupported": false,
+    "constraint": false,
+    "nesting": false,
+    "payload size": false,
+    "temperature": false
+  },
+  "latency_ms": 359.853
+}

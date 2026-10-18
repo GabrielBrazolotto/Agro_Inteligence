@@ -1,0 +1,72 @@
+[
+  {
+    "case_id": "G11",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "budget_admission": {
+      "id": "f76c63c7cc5c477aa541eab6a638ec1d",
+      "model": "gemini-embedding-001",
+      "estimated_budget_tokens": 1238,
+      "debited_before_dispatch": true
+    },
+    "latency_ms": 528.965
+  },
+  {
+    "case_id": "G11",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2257,
+      "output": 284,
+      "total": 2541
+    },
+    "budget_admission": {
+      "id": "0575d99abff8493e86a2768276ec435b",
+      "model": "gemini-3.1-flash-lite",
+      "estimated_budget_tokens": 16732,
+      "debited_before_dispatch": true
+    },
+    "latency_ms": 1704.682
+  },
+  {
+    "case_id": "G11",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "failed",
+    "usage": null,
+    "budget_admission": {
+      "id": "cf5cde8221c844a8b372872c35455377",
+      "model": "gemini-3.5-flash",
+      "estimated_budget_tokens": 17632,
+      "debited_before_dispatch": true
+    },
+    "failure": {
+      "status": "api_error",
+      "error_category": "api",
+      "http_code": 503
+    },
+    "latency_ms": 3958.442
+  },
+  {
+    "case_id": "G11",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "failed",
+    "usage": null,
+    "budget_admission": {
+      "id": "09f5dd9f8979400a9c1249bdad0a7cc1",
+      "model": "gemini-3.5-flash",
+      "estimated_budget_tokens": 17632,
+      "debited_before_dispatch": true
+    },
+    "failure": {
+      "status": "api_error",
+      "error_category": "api",
+      "http_code": 503
+    },
+    "latency_ms": 3575.612
+  }
+]

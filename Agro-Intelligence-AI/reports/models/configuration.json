@@ -1,0 +1,23 @@
+{
+  "configured": {
+    "main": "gemini-3.5-flash",
+    "agents": "gemini-3.1-flash-lite",
+    "judge": "gemini-3.1-flash-lite",
+    "embedding": "gemini-embedding-001",
+    "min_interval_seconds": 15.0
+  },
+  "key_present": true,
+  "generation_calls": 1,
+  "chroma": {
+    "expected_collection": "comercial-dfcbe9f7e20159a1133bf09d",
+    "existing": true,
+    "embedding_model": "gemini-embedding-001",
+    "count": 3,
+    "dimensions": 768
+  },
+  "response_model_version": "gemini-3.1-flash-lite",
+  "probe": {
+    "status": "success",
+    "structured_json_valid": true
+  }
+}

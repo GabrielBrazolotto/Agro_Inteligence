@@ -1,0 +1,238 @@
+[
+  {
+    "case_id": "G04",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "latency_ms": 547.719
+  },
+  {
+    "case_id": "G04",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2268,
+      "output": 434,
+      "total": 2702
+    },
+    "latency_ms": 1684.004
+  },
+  {
+    "case_id": "G04",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2724,
+      "output": 390,
+      "total": 4334,
+      "reasoning": 1220
+    },
+    "latency_ms": 6912.216
+  },
+  {
+    "case_id": "G06",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "latency_ms": 434.586
+  },
+  {
+    "case_id": "G06",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2655,
+      "output": 206,
+      "total": 2861
+    },
+    "latency_ms": 19791.49
+  },
+  {
+    "case_id": "G06",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "failed",
+    "usage": null,
+    "failure": {
+      "status": "api_error",
+      "error_category": "api",
+      "http_code": 503
+    },
+    "latency_ms": 3179.381
+  },
+  {
+    "case_id": "G06",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2870,
+      "output": 400,
+      "total": 4613,
+      "reasoning": 1343
+    },
+    "latency_ms": 8631.146
+  },
+  {
+    "case_id": "G07",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "latency_ms": 444.22
+  },
+  {
+    "case_id": "G07",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2292,
+      "output": 62,
+      "total": 2354
+    },
+    "latency_ms": 4376.386
+  },
+  {
+    "case_id": "G07",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2360,
+      "output": 154,
+      "total": 3024,
+      "reasoning": 510
+    },
+    "latency_ms": 3748.69
+  },
+  {
+    "case_id": "G08",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "latency_ms": 463.615
+  },
+  {
+    "case_id": "G08",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2290,
+      "output": 217,
+      "total": 2507
+    },
+    "latency_ms": 1811.605
+  },
+  {
+    "case_id": "G08",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2516,
+      "output": 53,
+      "total": 2949,
+      "reasoning": 380
+    },
+    "latency_ms": 3008.307
+  },
+  {
+    "case_id": "G09",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "latency_ms": 432.796
+  },
+  {
+    "case_id": "G09",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2287,
+      "output": 111,
+      "total": 2398
+    },
+    "latency_ms": 6375.67
+  },
+  {
+    "case_id": "G09",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 2404,
+      "output": 175,
+      "total": 3185,
+      "reasoning": 606
+    },
+    "latency_ms": 4887.728
+  },
+  {
+    "case_id": "G10",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "failed",
+    "usage": null,
+    "failure": {
+      "status": "api_error",
+      "error_category": "timeout"
+    },
+    "latency_ms": 30131.989
+  },
+  {
+    "case_id": "G10",
+    "model": "gemini-embedding-001",
+    "kind": "embedding",
+    "status": "success",
+    "usage": null,
+    "latency_ms": 417.094
+  },
+  {
+    "case_id": "G10",
+    "model": "gemini-3.1-flash-lite",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 3437,
+      "output": 298,
+      "total": 3735
+    },
+    "latency_ms": 2903.019
+  },
+  {
+    "case_id": "G10",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "failed",
+    "usage": null,
+    "failure": {
+      "status": "api_error",
+      "error_category": "api",
+      "http_code": 503
+    },
+    "latency_ms": 27291.453
+  },
+  {
+    "case_id": "G10",
+    "model": "gemini-3.5-flash",
+    "kind": "generation",
+    "status": "success",
+    "usage": {
+      "input": 5357,
+      "output": 684,
+      "total": 8226,
+      "reasoning": 2185
+    },
+    "latency_ms": 13594.261
+  }
+]
